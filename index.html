@@ -3,9 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TEOLOGANDO</title>
 
 <style>
+
+/* =========================================================
+   BASE
+========================================================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -34,8 +40,7 @@ body {
     padding-bottom: 78px;
 }
 
-button,
-select {
+button {
     font-family: inherit;
 }
 
@@ -44,7 +49,10 @@ select {
     margin: auto;
 }
 
-/* HERO */
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero {
     min-height: 92vh;
@@ -95,6 +103,7 @@ select {
     min-height: 56px;
     padding: 0 28px;
     border: 1px solid rgba(255,255,255,.2);
+    border-radius: 999px;
     background: #fff;
     color: #050505;
     font-size: 14px;
@@ -109,7 +118,10 @@ select {
     box-shadow: 0 12px 35px rgba(255,255,255,.1);
 }
 
-/* SECTIONS */
+
+/* =========================================================
+   SEÇÕES
+========================================================= */
 
 section {
     padding: 90px 0;
@@ -129,7 +141,10 @@ section {
     letter-spacing: -.045em;
 }
 
-/* RULES */
+
+/* =========================================================
+   REGRAS
+========================================================= */
 
 .rules {
     border-top: 1px solid var(--line);
@@ -170,6 +185,7 @@ section {
 .source-tag {
     border: 1px solid var(--line);
     padding: 8px 12px;
+    border-radius: 999px;
     color: var(--muted);
     font-size: 11px;
     text-transform: uppercase;
@@ -181,6 +197,7 @@ section {
     min-height: 50px;
     padding: 0 22px;
     border: 1px solid var(--line);
+    border-radius: 999px;
     background: transparent;
     color: white;
     font-weight: 800;
@@ -195,76 +212,82 @@ section {
     color: black;
 }
 
-/* SELECTOR */
+
+/* =========================================================
+   SELETOR
+========================================================= */
 
 .selector {
     padding-top: 100px;
 }
 
-.selector-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-top: 42px;
+.choice-group {
+    margin-top: 34px;
 }
 
-.selector-card {
-    border: 1px solid var(--line);
-    background: var(--card);
-    padding: 24px;
-}
-
-.selector-card label {
-    display: block;
+.choice-label {
     color: var(--muted);
     font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .15em;
     text-transform: uppercase;
-    letter-spacing: .12em;
     margin-bottom: 13px;
 }
 
-.selector-card select {
-    width: 100%;
-    min-height: 48px;
-    padding: 0 12px;
-    background: var(--card2);
-    color: white;
-    border: 1px solid var(--line);
-    outline: none;
-    cursor: pointer;
-}
-
-.time-options {
+.choice-buttons {
     display: flex;
-    gap: 8px;
+    flex-wrap: wrap;
+    gap: 9px;
 }
 
-.time-button {
-    flex: 1;
-    min-height: 48px;
-    border: 1px solid var(--line);
-    background: var(--card2);
-    color: var(--muted);
+.choice-button {
+    min-height: 46px;
+    padding: 0 18px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 999px;
+    background: #111319;
+    color: #9da2ab;
+    font-size: 11px;
     font-weight: 800;
+    letter-spacing: .06em;
     cursor: pointer;
+    transition: .2s ease;
 }
 
-.time-button.active {
+.choice-button:hover {
+    border-color: rgba(255,255,255,.35);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.choice-button.active {
     background: white;
-    color: black;
     border-color: white;
+    color: #050505;
 }
 
-.time-button.locked {
-    opacity: .45;
+.choice-button.locked {
+    opacity: .35;
     cursor: not-allowed;
+}
+
+.selected-area {
+    min-height: 20px;
+    margin-top: 38px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .12em;
+    text-transform: uppercase;
 }
 
 .main-action {
     width: 100%;
-    margin-top: 25px;
+    margin-top: 14px;
     min-height: 64px;
     border: none;
+    border-radius: 999px;
     background: white;
     color: black;
     font-size: 15px;
@@ -276,9 +299,13 @@ section {
 
 .main-action:hover {
     transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(255,255,255,.1);
 }
 
-/* RESULT */
+
+/* =========================================================
+   RESULTADO
+========================================================= */
 
 .result-section {
     display: none;
@@ -307,7 +334,7 @@ section {
 }
 
 .roulette-window {
-    min-height: 110px;
+    min-height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -344,6 +371,7 @@ section {
     margin: 35px auto 0;
     padding: 25px;
     border: 1px solid var(--line);
+    border-radius: 18px;
     background: var(--card);
     color: #d6d8dc;
     line-height: 1.6;
@@ -366,7 +394,52 @@ section {
     display: none;
 }
 
-/* STUDY */
+
+/* =========================================================
+   BOTÕES DO RESULTADO
+========================================================= */
+
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.result-action {
+    min-height: 52px;
+    padding: 0 25px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.2);
+    background: white;
+    color: black;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .1em;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.result-action:hover {
+    transform: translateY(-2px);
+}
+
+.result-action.secondary {
+    background: transparent;
+    color: white;
+    border-color: rgba(255,255,255,.15);
+}
+
+.result-action.secondary:hover {
+    background: white;
+    color: black;
+}
+
+
+/* =========================================================
+   ESTUDO
+========================================================= */
 
 .study-section {
     display: none;
@@ -381,6 +454,7 @@ section {
     margin: auto;
     text-align: center;
     border: 1px solid var(--line);
+    border-radius: 24px;
     background: var(--card);
     padding: 55px 30px;
 }
@@ -391,18 +465,19 @@ section {
     letter-spacing: -.04em;
 }
 
-.timer {
-    margin-top: 35px;
-    font-size: clamp(65px, 14vw, 120px);
-    font-weight: 900;
-    letter-spacing: -.07em;
-}
-
 .timer-label {
+    margin-top: 28px;
     color: var(--muted);
     font-size: 11px;
     letter-spacing: .14em;
     text-transform: uppercase;
+}
+
+.timer {
+    margin-top: 8px;
+    font-size: clamp(65px, 14vw, 120px);
+    font-weight: 900;
+    letter-spacing: -.07em;
 }
 
 .study-buttons {
@@ -417,6 +492,7 @@ section {
     min-height: 48px;
     padding: 0 20px;
     border: 1px solid var(--line);
+    border-radius: 999px;
     background: transparent;
     color: white;
     font-weight: 800;
@@ -428,7 +504,10 @@ section {
     color: black;
 }
 
-/* RESPONSE */
+
+/* =========================================================
+   RESPOSTA
+========================================================= */
 
 .response-section {
     display: none;
@@ -443,6 +522,7 @@ section {
     margin: auto;
     text-align: center;
     border: 1px solid var(--line);
+    border-radius: 24px;
     background: var(--card);
     padding: 55px 30px;
 }
@@ -450,16 +530,20 @@ section {
 .response-topic {
     font-size: clamp(27px, 5vw, 50px);
     font-weight: 900;
+    letter-spacing: -.04em;
 }
 
 .response-timer {
-    margin-top: 30px;
-    font-size: 90px;
+    margin-top: 8px;
+    font-size: clamp(65px, 13vw, 100px);
     font-weight: 900;
     letter-spacing: -.07em;
 }
 
-/* FINISH */
+
+/* =========================================================
+   FINAL
+========================================================= */
 
 .finish-section {
     display: none;
@@ -486,7 +570,10 @@ section {
     line-height: 1.6;
 }
 
-/* INSTAGRAM */
+
+/* =========================================================
+   INSTAGRAM
+========================================================= */
 
 .instagram-bar {
     position: fixed;
@@ -564,7 +651,10 @@ section {
     letter-spacing: .12em;
 }
 
-/* RESPONSIVE */
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
 
 @media (max-width: 750px) {
 
@@ -572,12 +662,13 @@ section {
         grid-template-columns: 1fr;
     }
 
-    .selector-grid {
-        grid-template-columns: 1fr;
-    }
-
     section {
         padding: 70px 0;
+    }
+
+    .choice-button {
+        min-height: 44px;
+        padding: 0 15px;
     }
 
     .instagram-kicker {
@@ -587,6 +678,7 @@ section {
     .instagram-action {
         font-size: 8px;
     }
+
 }
 
 @media (max-width: 430px) {
@@ -599,18 +691,27 @@ section {
     .instagram-action {
         display: none;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- HERO -->
+
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="hero" id="inicio">
+
     <div class="container hero-inner">
 
-        <div class="logo">TEOLOGANDO</div>
+        <div class="logo">
+            TEOLOGANDO
+        </div>
 
         <div class="slogan">
             Estude. Pense. Explique.
@@ -621,16 +722,23 @@ section {
             O Teologando escolhe a <strong>pauta</strong>.
         </div>
 
-        <button class="primary-button"
-                onclick="document.getElementById('regras').scrollIntoView({behavior:'smooth'})">
+        <button
+            class="primary-button"
+            onclick="scrollToSection('regras')">
+
             TEOLOGAR →
+
         </button>
 
     </div>
+
 </section>
 
 
-<!-- REGRAS -->
+
+<!-- =========================================================
+     REGRAS
+========================================================= -->
 
 <section class="rules" id="regras">
 
@@ -639,19 +747,26 @@ section {
         <div class="rules-grid">
 
             <div>
-                <div class="section-label">Antes de começar</div>
+
+                <div class="section-label">
+                    Antes de começar
+                </div>
 
                 <h2 class="section-title">
                     O desafio começa<br>
                     antes da resposta.
                 </h2>
+
             </div>
+
 
             <div>
 
                 <div class="warning">
 
-                    <strong>NÃO USE IA PARA PESQUISAR.</strong>
+                    <strong>
+                        NÃO USE IA PARA PESQUISAR.
+                    </strong>
 
                     <p>
                         A pesquisa é parte do desafio.
@@ -659,19 +774,40 @@ section {
                         artigos acadêmicos e outras fontes confiáveis.
                     </p>
 
+
                     <div class="sources">
-                        <span class="source-tag">Bíblia</span>
-                        <span class="source-tag">Livros</span>
-                        <span class="source-tag">Comentários</span>
-                        <span class="source-tag">Artigos</span>
-                        <span class="source-tag">Fontes acadêmicas</span>
+
+                        <span class="source-tag">
+                            Bíblia
+                        </span>
+
+                        <span class="source-tag">
+                            Livros
+                        </span>
+
+                        <span class="source-tag">
+                            Comentários
+                        </span>
+
+                        <span class="source-tag">
+                            Artigos
+                        </span>
+
+                        <span class="source-tag">
+                            Fontes acadêmicas
+                        </span>
+
                     </div>
 
                 </div>
 
-                <button class="secondary-button"
-                        onclick="document.getElementById('seletor').scrollIntoView({behavior:'smooth'})">
+
+                <button
+                    class="secondary-button"
+                    onclick="scrollToSection('seletor')">
+
                     ENTENDI. VAMOS TEOLOGAR →
+
                 </button>
 
             </div>
@@ -683,119 +819,234 @@ section {
 </section>
 
 
-<!-- SELETOR -->
+
+<!-- =========================================================
+     SELETOR
+========================================================= -->
 
 <section class="selector" id="seletor">
 
     <div class="container">
 
-        <div class="section-label">Prepare seu estudo</div>
+        <div class="section-label">
+            Prepare seu estudo
+        </div>
 
         <h2 class="section-title">
             Escolha como<br>
             você quer teologar.
         </h2>
 
-        <div class="selector-grid">
 
-            <!-- NÍVEL -->
 
-            <div class="selector-card">
+        <!-- NÍVEL -->
 
-                <label for="level">Nível</label>
+        <div class="choice-group">
 
-                <select id="level" onchange="updateLevel()">
-                    <option value="fundamental">Fundamental</option>
-                    <option value="intermediario">Intermediário</option>
-                    <option value="avancado">Avançado</option>
-                </select>
-
+            <div class="choice-label">
+                NÍVEL
             </div>
 
+            <div class="choice-buttons">
 
-            <!-- TEMPO -->
+                <button
+                    class="choice-button active"
+                    data-level="fundamental"
+                    onclick="selectLevel('fundamental')">
 
-            <div class="selector-card">
+                    FUNDAMENTAL
 
-                <label>Tempo de estudo</label>
-
-                <div class="time-options">
-
-                    <button id="time10"
-                            class="time-button active"
-                            onclick="selectTime(10)">
-                        10 MIN
-                    </button>
-
-                    <button id="time20"
-                            class="time-button"
-                            onclick="selectTime(20)">
-                        20 MIN
-                    </button>
-
-                </div>
-
-            </div>
+                </button>
 
 
-            <!-- ÁREA -->
+                <button
+                    class="choice-button"
+                    data-level="intermediario"
+                    onclick="selectLevel('intermediario')">
 
-            <div class="selector-card">
+                    INTERMEDIÁRIO
 
-                <label for="area">Área</label>
+                </button>
 
-                <select id="area" onchange="updateArea()">
 
-                    <option value="">
-                        Escolha uma área
-                    </option>
+                <button
+                    class="choice-button"
+                    data-level="avancado"
+                    onclick="selectLevel('avancado')">
 
-                    <option value="teologia_sistematica">
-                        Teologia Sistemática
-                    </option>
+                    AVANÇADO
 
-                    <option value="historia_da_igreja">
-                        História da Igreja
-                    </option>
-
-                    <option value="panorama_antigo_testamento">
-                        Panorama do Antigo Testamento
-                    </option>
-
-                    <option value="panorama_novo_testamento">
-                        Panorama do Novo Testamento
-                    </option>
-
-                    <option value="apologetica">
-                        Apologética
-                    </option>
-
-                    <option value="teologia_pratica">
-                        Teologia Prática
-                    </option>
-
-                    <option value="movimentos_tradicoes">
-                        Movimentos e Tradições
-                    </option>
-
-                    <option value="personagens_historia_teologia">
-                        Personagens da História da Teologia
-                    </option>
-
-                    <option value="personagens_biblicos">
-                        Personagens Bíblicos
-                    </option>
-
-                </select>
+                </button>
 
             </div>
 
         </div>
 
 
-        <button class="main-action"
-                onclick="startRoulette()">
+
+        <!-- TEMPO -->
+
+        <div class="choice-group">
+
+            <div class="choice-label">
+                TEMPO DE ESTUDO
+            </div>
+
+            <div class="choice-buttons">
+
+                <button
+                    class="choice-button active"
+                    id="time10"
+                    onclick="selectTime(10)">
+
+                    10 MIN
+
+                </button>
+
+
+                <button
+                    class="choice-button"
+                    id="time20"
+                    onclick="selectTime(20)">
+
+                    20 MIN
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ÁREA -->
+
+        <div class="choice-group">
+
+            <div class="choice-label">
+                ÁREA DE CONHECIMENTO
+            </div>
+
+
+            <div class="choice-buttons">
+
+
+                <button
+                    class="choice-button"
+                    data-area="teologia_sistematica"
+                    onclick="selectArea('teologia_sistematica')">
+
+                    TEOLOGIA SISTEMÁTICA
+
+                </button>
+
+
+                <button
+                    class="choice-button"
+                    data-area="historia_da_igreja"
+                    onclick="selectArea('historia_da_igreja')">
+
+                    HISTÓRIA DA IGREJA
+
+                </button>
+
+
+                <button
+                    class="choice-button"
+                    data-area="panorama_antigo_testamento"
+                    onclick="selectArea('panorama_antigo_testamento')">
+
+                    PANORAMA DO ANTIGO TESTAMENTO
+
+                </button>
+
+
+                <button
+                    class="choice-button"
+                    data-area="panorama_novo_testamento"
+                    onclick="selectArea('panorama_novo_testamento')">
+
+                    PANORAMA DO NOVO TESTAMENTO
+
+                </button>
+
+
+                <button
+                    class="choice-button"
+                    data-area="apologetica"
+                    onclick="selectArea('apologetica')">
+
+                    APOLOGÉTICA
+
+                </button>
+
+
+                <button
+                    class="choice-button"
+                    data-area="teologia_pratica"
+                    onclick="selectArea('teologia_pratica')">
+
+                    TEOLOGIA PRÁTICA
+
+                </button>
+
+
+                <button
+                    class="choice-button"
+                    data-area="movimentos_tradicoes"
+                    onclick="selectArea('movimentos_tradicoes')">
+
+                    MOVIMENTOS E TRADIÇÕES
+
+                </button>
+
+
+                <button
+                    class="choice-button"
+                    data-area="personagens_historia_teologia"
+                    onclick="selectArea('personagens_historia_teologia')">
+
+                    PERSONAGENS DA HISTÓRIA DA TEOLOGIA
+
+                </button>
+
+
+                <button
+                    class="choice-button"
+                    data-area="personagens_biblicos"
+                    onclick="selectArea('personagens_biblicos')">
+
+                    PERSONAGENS BÍBLICOS
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ÁREA ESCOLHIDA -->
+
+        <div
+            class="selected-area"
+            id="selectedArea">
+
+            ESCOLHA UMA ÁREA
+
+        </div>
+
+
+
+        <!-- BOTÃO TEOLOGAR -->
+
+        <button
+            class="main-action"
+            onclick="startRoulette()">
+
             TEOLOGAR →
+
         </button>
 
     </div>
@@ -803,63 +1054,122 @@ section {
 </section>
 
 
-<!-- RESULTADO -->
 
-<section class="result-section" id="resultado">
+<!-- =========================================================
+     RESULTADO
+========================================================= -->
+
+<section
+    class="result-section"
+    id="resultado">
 
     <div class="container">
 
         <div class="result-box">
 
-            <div class="roulette-label" id="rouletteLabel">
+
+            <div
+                class="roulette-label"
+                id="rouletteLabel">
+
                 SEU TEMA ESTÁ SENDO ESCOLHIDO...
+
             </div>
+
 
             <div class="roulette-window">
 
-                <!-- ESTE É O ÚNICO LOCAL ONDE O TEMA/NOME APARECE -->
+                <div
+                    class="roulette-word"
+                    id="rouletteWord">
 
-                <div class="roulette-word"
-                     id="rouletteWord">
                     —
+
                 </div>
 
             </div>
 
 
-            <div class="result-content" id="resultContent">
 
-                <!-- RESULTADO NORMAL -->
+            <div
+                class="result-content"
+                id="resultContent">
+
+
+                <!-- TEMAS NORMAIS -->
 
                 <div id="normalResult">
 
-                    <div class="final-area"
-                         id="finalArea">
+                    <div
+                        class="final-area"
+                        id="finalArea">
+
                     </div>
 
-                    <div class="guiding-question"
-                         id="guidingQuestion"
-                         style="display:none;">
+
+                    <div
+                        class="guiding-question"
+                        id="guidingQuestion"
+                        style="display:none;">
+
                     </div>
 
-                    <div class="book-questions"
-                         id="bookQuestions"
-                         style="display:none;">
+
+                    <div
+                        class="book-questions"
+                        id="bookQuestions"
+                        style="display:none;">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PERSONAGENS -->
+
+                <div
+                    id="characterResult"
+                    style="display:none;">
+
+                    <div
+                        class="final-area"
+                        id="characterArea">
+
                     </div>
 
                 </div>
 
 
-                <!-- RESULTADO PERSONAGEM -->
 
-                <div id="characterResult"
-                     style="display:none;">
+                <!-- BOTÕES -->
 
-                    <div class="final-area"
-                         id="characterArea">
-                    </div>
+                <div
+                    class="result-actions"
+                    id="resultActions"
+                    style="display:none;">
+
+
+                    <button
+                        class="result-action"
+                        onclick="startStudy()">
+
+                        COMEÇAR →
+
+                    </button>
+
+
+                    <button
+                        class="result-action secondary"
+                        onclick="startRoulette()">
+
+                        SORTEAR NOVAMENTE ↻
+
+                    </button>
+
 
                 </div>
+
 
             </div>
 
@@ -870,9 +1180,14 @@ section {
 </section>
 
 
-<!-- ESTUDO -->
 
-<section class="study-section" id="studySection">
+<!-- =========================================================
+     ESTUDO
+========================================================= -->
+
+<section
+    class="study-section"
+    id="studySection">
 
     <div class="container">
 
@@ -882,27 +1197,43 @@ section {
                 Tempo de estudo
             </div>
 
-            <div class="study-topic"
-                 id="studyTopic">
+
+            <div
+                class="study-topic"
+                id="studyTopic">
+
             </div>
+
 
             <div class="timer-label">
                 Você tem
             </div>
 
-            <div class="timer"
-                 id="studyTimer">
+
+            <div
+                class="timer"
+                id="studyTimer">
+
                 10:00
+
             </div>
+
 
             <div class="study-buttons">
 
-                <button onclick="finishStudy()">
+                <button
+                    onclick="finishStudy()">
+
                     ENCERRAR
+
                 </button>
 
-                <button onclick="addStudyTime()">
+
+                <button
+                    onclick="addStudyTime()">
+
                     ESTUDAR UM POUCO MAIS
+
                 </button>
 
             </div>
@@ -914,10 +1245,14 @@ section {
 </section>
 
 
-<!-- RESPOSTA -->
 
-<section class="response-section"
-         id="responseSection">
+<!-- =========================================================
+     RESPOSTA
+========================================================= -->
+
+<section
+    class="response-section"
+    id="responseSection">
 
     <div class="container">
 
@@ -927,17 +1262,25 @@ section {
                 Agora explique
             </div>
 
-            <div class="response-topic"
-                 id="responseTopic">
+
+            <div
+                class="response-topic"
+                id="responseTopic">
+
             </div>
+
 
             <div class="timer-label">
                 Tempo para sua resposta
             </div>
 
-            <div class="response-timer"
-                 id="responseTimer">
+
+            <div
+                class="response-timer"
+                id="responseTimer">
+
                 01:00
+
             </div>
 
         </div>
@@ -947,10 +1290,14 @@ section {
 </section>
 
 
-<!-- FINAL -->
 
-<section class="finish-section"
-         id="finishSection">
+<!-- =========================================================
+     FINAL
+========================================================= -->
+
+<section
+    class="finish-section"
+    id="finishSection">
 
     <div class="container">
 
@@ -960,10 +1307,12 @@ section {
                 Teologando concluído
             </div>
 
+
             <h2>
                 Agora você<br>
                 precisa explicar.
             </h2>
+
 
             <p>
                 O conhecimento não termina na pesquisa.
@@ -971,9 +1320,13 @@ section {
                 e explicado.
             </p>
 
-            <button class="primary-button"
-                    onclick="resetTeologando()">
+
+            <button
+                class="primary-button"
+                onclick="resetTeologando()">
+
                 TEOLOGAR NOVAMENTE →
+
             </button>
 
         </div>
@@ -983,49 +1336,61 @@ section {
 </section>
 
 
-<!-- INSTAGRAM -->
+
+<!-- =========================================================
+     INSTAGRAM
+========================================================= -->
 
 <div class="instagram-bar">
 
-    <a class="instagram-link"
-       href="https://www.instagram.com/samuelmenezes.ievad/"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Abrir Instagram de Samuel Menezes">
+    <a
+        class="instagram-link"
+        href="https://www.instagram.com/samuelmenezes.ievad/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir Instagram de Samuel Menezes">
+
 
         <span class="instagram-icon">
 
-            <svg viewBox="0 0 24 24"
-                 aria-hidden="true">
+            <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true">
 
-                <rect x="3"
-                      y="3"
-                      width="18"
-                      height="18"
-                      rx="5">
+                <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5">
                 </rect>
 
-                <circle cx="12"
-                        cy="12"
-                        r="4.2">
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="4.2">
                 </circle>
 
-                <circle cx="17.3"
-                        cy="6.8"
-                        r="1">
+                <circle
+                    cx="17.3"
+                    cy="6.8"
+                    r="1">
                 </circle>
 
             </svg>
 
         </span>
 
+
         <span class="instagram-kicker">
             DESENVOLVIDO POR
         </span>
 
+
         <span class="instagram-handle">
             @samuelmenezes.ievad
         </span>
+
 
         <span class="instagram-action">
             ABRIR INSTAGRAM ↗
@@ -1036,10 +1401,12 @@ section {
 </div>
 
 
+
 <script>
 
+
 /* =========================================================
-   DADOS
+   BANCO DE TEMAS
 ========================================================= */
 
 const DATA = {
@@ -1563,6 +1930,7 @@ const DATA = {
 
 
     personagens_historia_teologia: [
+
         "Inácio de Antioquia",
         "Justino Mártir",
         "Irineu de Lyon",
@@ -1593,10 +1961,12 @@ const DATA = {
         "J. I. Packer",
         "Gordon Fee",
         "Stanley Horton"
+
     ],
 
 
     personagens_biblicos: [
+
         "Adão",
         "Eva",
         "Caim",
@@ -1690,6 +2060,7 @@ const DATA = {
         "Herodes",
         "Pôncio Pilatos",
         "Barrabás"
+
     ]
 
 };
@@ -1759,30 +2130,6 @@ const AREAS = [
 
 
 /* =========================================================
-   ESTADO
-========================================================= */
-
-const state = {
-
-    level: "fundamental",
-    time: 10,
-    areaKey: "",
-    areaName: "",
-    topic: "",
-    isCharacter: false,
-
-    studySeconds: 600,
-    responseSeconds: 60,
-
-    studyInterval: null,
-    responseInterval: null,
-
-    extraTime: false
-
-};
-
-
-/* =========================================================
    PERGUNTAS
 ========================================================= */
 
@@ -1817,53 +2164,140 @@ const BOOK_QUESTIONS = [
 
 
 /* =========================================================
-   ELEMENTOS
+   ESTADO
 ========================================================= */
 
-const levelSelect = document.getElementById("level");
-const areaSelect = document.getElementById("area");
+const state = {
 
-const time10 = document.getElementById("time10");
-const time20 = document.getElementById("time20");
+    level: "fundamental",
 
-const resultado = document.getElementById("resultado");
-const rouletteLabel = document.getElementById("rouletteLabel");
-const rouletteWord = document.getElementById("rouletteWord");
+    time: 10,
 
-const resultContent = document.getElementById("resultContent");
+    areaKey: "",
 
-const normalResult = document.getElementById("normalResult");
-const characterResult = document.getElementById("characterResult");
+    areaName: "",
 
-const finalArea = document.getElementById("finalArea");
-const characterArea = document.getElementById("characterArea");
+    topic: "",
 
-const guidingQuestion = document.getElementById("guidingQuestion");
-const bookQuestions = document.getElementById("bookQuestions");
+    isCharacter: false,
 
-const studySection = document.getElementById("studySection");
-const studyTopic = document.getElementById("studyTopic");
-const studyTimer = document.getElementById("studyTimer");
+    studySeconds: 600,
 
-const responseSection = document.getElementById("responseSection");
-const responseTopic = document.getElementById("responseTopic");
-const responseTimer = document.getElementById("responseTimer");
+    responseSeconds: 60,
 
-const finishSection = document.getElementById("finishSection");
+    studyInterval: null,
+
+    responseInterval: null
+
+};
 
 
 /* =========================================================
-   NÍVEL
+   ELEMENTOS
 ========================================================= */
 
-function updateLevel() {
+const time10 =
+    document.getElementById("time10");
 
-    state.level = levelSelect.value;
+const time20 =
+    document.getElementById("time20");
 
-    const isFundamental = state.level === "fundamental";
-    const isAdvanced = state.level === "avancado";
+const resultado =
+    document.getElementById("resultado");
 
-    if (isFundamental) {
+const rouletteLabel =
+    document.getElementById("rouletteLabel");
+
+const rouletteWord =
+    document.getElementById("rouletteWord");
+
+const resultContent =
+    document.getElementById("resultContent");
+
+const normalResult =
+    document.getElementById("normalResult");
+
+const characterResult =
+    document.getElementById("characterResult");
+
+const finalArea =
+    document.getElementById("finalArea");
+
+const characterArea =
+    document.getElementById("characterArea");
+
+const guidingQuestion =
+    document.getElementById("guidingQuestion");
+
+const bookQuestions =
+    document.getElementById("bookQuestions");
+
+const studySection =
+    document.getElementById("studySection");
+
+const studyTopic =
+    document.getElementById("studyTopic");
+
+const studyTimer =
+    document.getElementById("studyTimer");
+
+const responseSection =
+    document.getElementById("responseSection");
+
+const responseTopic =
+    document.getElementById("responseTopic");
+
+const responseTimer =
+    document.getElementById("responseTimer");
+
+const finishSection =
+    document.getElementById("finishSection");
+
+
+let rouletteInterval = null;
+
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+function scrollToSection(id) {
+
+    const element =
+        document.getElementById(id);
+
+    if (!element) return;
+
+    element.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+
+/* =========================================================
+   SELEÇÃO DO NÍVEL
+========================================================= */
+
+function selectLevel(level) {
+
+    state.level = level;
+
+
+    document
+        .querySelectorAll("[data-level]")
+        .forEach(button => {
+
+            button.classList.toggle(
+                "active",
+                button.dataset.level === level
+            );
+
+        });
+
+
+    if (level === "fundamental") {
 
         state.time = 10;
 
@@ -1875,7 +2309,7 @@ function updateLevel() {
 
     }
 
-    else if (isAdvanced) {
+    else if (level === "avancado") {
 
         state.time = 20;
 
@@ -1892,42 +2326,13 @@ function updateLevel() {
         time10.classList.remove("locked");
         time20.classList.remove("locked");
 
-        selectTime(state.time);
-
     }
 
 }
 
 
 /* =========================================================
-   ÁREA
-========================================================= */
-
-function updateArea() {
-
-    state.areaKey = areaSelect.value;
-
-    const area = AREAS.find(
-        item => item.key === state.areaKey
-    );
-
-    if (!area) {
-
-        state.areaName = "";
-        state.isCharacter = false;
-
-        return;
-
-    }
-
-    state.areaName = area.name;
-    state.isCharacter = !!area.characters;
-
-}
-
-
-/* =========================================================
-   TEMPO
+   SELEÇÃO DO TEMPO
 ========================================================= */
 
 function selectTime(minutes) {
@@ -1939,12 +2344,15 @@ function selectTime(minutes) {
         return;
     }
 
+
     state.time = minutes;
+
 
     time10.classList.toggle(
         "active",
         minutes === 10
     );
+
 
     time20.classList.toggle(
         "active",
@@ -1955,7 +2363,69 @@ function selectTime(minutes) {
 
 
 /* =========================================================
-   OBTÉM ITENS
+   SELEÇÃO DA ÁREA
+========================================================= */
+
+function selectArea(areaKey) {
+
+    state.areaKey = areaKey;
+
+
+    const area =
+        AREAS.find(
+            item => item.key === areaKey
+        );
+
+
+    if (!area) return;
+
+
+    state.areaName =
+        area.name;
+
+    state.isCharacter =
+        !!area.characters;
+
+
+    document
+        .querySelectorAll("[data-area]")
+        .forEach(button => {
+
+            button.classList.toggle(
+                "active",
+                button.dataset.area === areaKey
+            );
+
+        });
+
+
+    document.getElementById(
+        "selectedArea"
+    ).textContent =
+        area.name;
+
+
+    /*
+       Leva automaticamente
+       para o botão TEOLOGAR
+    */
+
+    setTimeout(() => {
+
+        document
+            .querySelector(".main-action")
+            .scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+    }, 150);
+
+}
+
+
+/* =========================================================
+   OBTÉM TEMAS
 ========================================================= */
 
 function getTopics() {
@@ -1964,39 +2434,42 @@ function getTopics() {
         return [];
     }
 
+
     if (state.isCharacter) {
 
         return DATA[state.areaKey] || [];
 
     }
 
+
     return (
-        DATA[state.areaKey]?.[state.level] || []
+        DATA[state.areaKey]?.[state.level]
+        || []
     );
 
 }
 
 
 /* =========================================================
-   ROULETTE
+   SORTEIO
 ========================================================= */
-
-let rouletteInterval = null;
-
 
 function startRoulette() {
 
-    updateArea();
-
     if (!state.areaKey) {
 
-        alert("Escolha uma área para começar.");
+        alert(
+            "Escolha uma área para começar."
+        );
 
         return;
 
     }
 
-    const topics = getTopics();
+
+    const topics =
+        getTopics();
+
 
     if (!topics.length) {
 
@@ -2009,16 +2482,38 @@ function startRoulette() {
     }
 
 
-    clearInterval(rouletteInterval);
+    clearInterval(
+        rouletteInterval
+    );
 
-    resultContent.classList.remove("visible");
 
-    resultado.classList.add("visible");
+    /*
+       Esconde os botões enquanto
+       o novo sorteio acontece.
+    */
+
+    document.getElementById(
+        "resultActions"
+    ).style.display =
+        "none";
+
+
+    resultContent.classList.remove(
+        "visible"
+    );
+
+
+    resultado.classList.add(
+        "visible"
+    );
+
 
     rouletteLabel.textContent =
         "SEU TEMA ESTÁ SENDO ESCOLHIDO...";
 
-    rouletteWord.textContent = "—";
+
+    rouletteWord.textContent =
+        "—";
 
 
     resultado.scrollIntoView({
@@ -2029,105 +2524,148 @@ function startRoulette() {
 
     let counter = 0;
 
-    rouletteInterval = setInterval(() => {
 
-        const random =
-            topics[
-                Math.floor(
-                    Math.random() * topics.length
-                )
-            ];
+    rouletteInterval =
+        setInterval(() => {
 
-        rouletteWord.textContent =
-            random.toUpperCase();
 
-        counter++;
-
-        if (counter >= 22) {
-
-            clearInterval(rouletteInterval);
-
-            const finalTopic =
+            const random =
                 topics[
                     Math.floor(
-                        Math.random() * topics.length
+                        Math.random() *
+                        topics.length
                     )
                 ];
 
-            showFinalTopic(finalTopic);
 
-        }
+            rouletteWord.textContent =
+                random.toUpperCase();
 
-    }, 85);
+
+            counter++;
+
+
+            if (counter >= 22) {
+
+                clearInterval(
+                    rouletteInterval
+                );
+
+
+                const finalTopic =
+                    topics[
+                        Math.floor(
+                            Math.random() *
+                            topics.length
+                        )
+                    ];
+
+
+                showFinalTopic(
+                    finalTopic
+                );
+
+            }
+
+        }, 85);
 
 }
 
 
 /* =========================================================
-   MOSTRA RESULTADO
+   MOSTRA TEMA FINAL
 ========================================================= */
 
 function showFinalTopic(topic) {
 
-    state.topic = topic;
+    state.topic =
+        topic;
 
-    resultContent.classList.add("visible");
+
+    resultContent.classList.add(
+        "visible"
+    );
 
 
-    /* -----------------------------------------
-       PERSONAGENS
-    ----------------------------------------- */
+    /*
+       PERSONAGEM
+    */
 
     if (state.isCharacter) {
 
-        rouletteLabel.textContent = "QUEM FOI";
+        rouletteLabel.textContent =
+            "QUEM FOI";
+
 
         rouletteWord.textContent =
             topic.toUpperCase() + "?";
 
 
-        normalResult.style.display = "none";
-        characterResult.style.display = "block";
+        normalResult.style.display =
+            "none";
+
+
+        characterResult.style.display =
+            "block";
+
 
         characterArea.textContent =
-            "Área: " + state.areaName;
+            "Área: " +
+            state.areaName;
 
 
-        guidingQuestion.style.display = "none";
-        bookQuestions.style.display = "none";
+        guidingQuestion.style.display =
+            "none";
 
+
+        bookQuestions.style.display =
+            "none";
 
     }
 
 
-    /* -----------------------------------------
-       TEMAS NORMAIS
-    ----------------------------------------- */
+    /*
+       TEMA NORMAL
+    */
 
     else {
 
         rouletteLabel.textContent =
             "SEU TEMA É";
 
+
         rouletteWord.textContent =
             topic.toUpperCase();
 
 
-        normalResult.style.display = "block";
-        characterResult.style.display = "none";
+        normalResult.style.display =
+            "block";
+
+
+        characterResult.style.display =
+            "none";
+
 
         finalArea.textContent =
-            "Área: " + state.areaName;
+            "Área: " +
+            state.areaName;
 
 
-        /* PERGUNTA GUIA */
+        /*
+           PERGUNTA ORIENTADORA
+        */
 
         if (
-            GUIDING_QUESTIONS[state.areaKey]
+            GUIDING_QUESTIONS[
+                state.areaKey
+            ]
         ) {
 
             guidingQuestion.textContent =
-                GUIDING_QUESTIONS[state.areaKey];
+                GUIDING_QUESTIONS[
+                    state.areaKey
+                ];
+
 
             guidingQuestion.style.display =
                 "block";
@@ -2142,34 +2680,50 @@ function showFinalTopic(topic) {
         }
 
 
-        /* PERGUNTAS DOS PANORAMAS */
+        /*
+           PERGUNTAS DOS LIVROS
+        */
 
         if (
-            state.areaKey ===
-                "panorama_antigo_testamento" ||
 
             state.areaKey ===
-                "panorama_novo_testamento"
+            "panorama_antigo_testamento"
+
+            ||
+
+            state.areaKey ===
+            "panorama_novo_testamento"
+
         ) {
 
-            bookQuestions.innerHTML = "";
+            bookQuestions.innerHTML =
+                "";
+
 
             BOOK_QUESTIONS.forEach(
                 question => {
 
                     const div =
-                        document.createElement("div");
+                        document.createElement(
+                            "div"
+                        );
+
 
                     div.className =
                         "book-question";
 
+
                     div.textContent =
                         question;
 
-                    bookQuestions.appendChild(div);
+
+                    bookQuestions.appendChild(
+                        div
+                    );
 
                 }
             );
+
 
             bookQuestions.style.display =
                 "block";
@@ -2186,7 +2740,20 @@ function showFinalTopic(topic) {
     }
 
 
-    /* CONFIGURA TEMPO */
+    /*
+       MOSTRA OS BOTÕES
+    */
+
+    document.getElementById(
+        "resultActions"
+    ).style.display =
+        "flex";
+
+
+    /*
+       Prepara os cronômetros,
+       mas NÃO inicia nenhum deles.
+    */
 
     setTimeState();
 
@@ -2202,48 +2769,90 @@ function setTimeState() {
     state.studySeconds =
         state.time * 60;
 
+
     state.responseSeconds =
         state.time === 20
             ? 120
             : 60;
 
+
+    studyTimer.textContent =
+        formatTime(
+            state.studySeconds
+        );
+
+
+    responseTimer.textContent =
+        formatTime(
+            state.responseSeconds
+        );
+
 }
 
 
 /* =========================================================
-   INICIA ESTUDO
+   COMEÇAR ESTUDO
 ========================================================= */
 
 function startStudy() {
 
-    resultContent.classList.remove("visible");
+    clearInterval(
+        state.studyInterval
+    );
 
-    studySection.classList.add("visible");
+    clearInterval(
+        state.responseInterval
+    );
+
+
+    setTimeState();
+
+
+    resultado.classList.remove(
+        "visible"
+    );
+
+
+    studySection.classList.add(
+        "visible"
+    );
+
 
     studyTopic.textContent =
         state.isCharacter
-            ? "QUEM FOI " + state.topic + "?"
+            ? "QUEM FOI " +
+              state.topic +
+              "?"
             : state.topic.toUpperCase();
 
-    state.studySeconds =
-        state.time * 60;
 
     updateStudyTimer();
 
-    clearInterval(state.studyInterval);
+
+    studySection.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
 
     state.studyInterval =
         setInterval(() => {
 
+
             state.studySeconds--;
+
 
             updateStudyTimer();
 
-            if (state.studySeconds <= 0) {
+
+            if (
+                state.studySeconds <= 0
+            ) {
 
                 clearInterval(
                     state.studyInterval
                 );
+
 
                 startResponse();
 
@@ -2255,13 +2864,15 @@ function startStudy() {
 
 
 /* =========================================================
-   TIMER ESTUDO
+   TIMER DE ESTUDO
 ========================================================= */
 
 function updateStudyTimer() {
 
     studyTimer.textContent =
-        formatTime(state.studySeconds);
+        formatTime(
+            state.studySeconds
+        );
 
 }
 
@@ -2276,18 +2887,21 @@ function finishStudy() {
         state.studyInterval
     );
 
+
     startResponse();
 
 }
 
 
 /* =========================================================
-   MAIS TEMPO
+   ESTUDAR MAIS
 ========================================================= */
 
 function addStudyTime() {
 
-    state.studySeconds += 300;
+    state.studySeconds +=
+        300;
+
 
     updateStudyTimer();
 
@@ -2304,36 +2918,52 @@ function startResponse() {
         state.studyInterval
     );
 
-    studySection.classList.remove(
-        "visible"
-    );
 
     responseSection.classList.add(
         "visible"
     );
+
+
+    studySection.classList.remove(
+        "visible"
+    );
+
 
     responseTopic.textContent =
         state.isCharacter
             ? state.topic + "?"
             : state.topic;
 
+
     state.responseSeconds =
         state.time === 20
             ? 120
             : 60;
 
+
     updateResponseTimer();
+
+
+    responseSection.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
 
     clearInterval(
         state.responseInterval
     );
 
+
     state.responseInterval =
         setInterval(() => {
 
+
             state.responseSeconds--;
 
+
             updateResponseTimer();
+
 
             if (
                 state.responseSeconds <= 0
@@ -2342,6 +2972,7 @@ function startResponse() {
                 clearInterval(
                     state.responseInterval
                 );
+
 
                 finishTeologando();
 
@@ -2353,7 +2984,7 @@ function startResponse() {
 
 
 /* =========================================================
-   TIMER RESPOSTA
+   TIMER DE RESPOSTA
 ========================================================= */
 
 function updateResponseTimer() {
@@ -2373,22 +3004,36 @@ function updateResponseTimer() {
 function formatTime(seconds) {
 
     const minutes =
-        Math.floor(seconds / 60);
+        Math.floor(
+            seconds / 60
+        );
+
 
     const secs =
         seconds % 60;
 
+
     return (
-        String(minutes).padStart(2, "0")
-        + ":" +
-        String(secs).padStart(2, "0")
+
+        String(minutes)
+            .padStart(2, "0")
+
+        +
+
+        ":"
+
+        +
+
+        String(secs)
+            .padStart(2, "0")
+
     );
 
 }
 
 
 /* =========================================================
-   FINAL
+   FINALIZA
 ========================================================= */
 
 function finishTeologando() {
@@ -2397,17 +3042,21 @@ function finishTeologando() {
         state.studyInterval
     );
 
+
     clearInterval(
         state.responseInterval
     );
+
 
     responseSection.classList.remove(
         "visible"
     );
 
+
     finishSection.classList.add(
         "visible"
     );
+
 
     finishSection.scrollIntoView({
         behavior: "smooth",
@@ -2427,9 +3076,11 @@ function resetTeologando() {
         state.studyInterval
     );
 
+
     clearInterval(
         state.responseInterval
     );
+
 
     clearInterval(
         rouletteInterval
@@ -2442,40 +3093,65 @@ function resetTeologando() {
     state.isCharacter = false;
 
 
-    areaSelect.value = "";
+    document.getElementById(
+        "selectedArea"
+    ).textContent =
+        "ESCOLHA UMA ÁREA";
+
+
+    document
+        .querySelectorAll("[data-area]")
+        .forEach(button => {
+
+            button.classList.remove(
+                "active"
+            );
+
+        });
+
 
     resultado.classList.remove(
         "visible"
     );
 
+
     resultContent.classList.remove(
         "visible"
     );
+
 
     studySection.classList.remove(
         "visible"
     );
 
+
     responseSection.classList.remove(
         "visible"
     );
+
 
     finishSection.classList.remove(
         "visible"
     );
 
 
-    rouletteWord.textContent = "—";
+    document.getElementById(
+        "resultActions"
+    ).style.display =
+        "none";
+
+
+    rouletteWord.textContent =
+        "—";
+
 
     rouletteLabel.textContent =
         "SEU TEMA ESTÁ SENDO ESCOLHIDO...";
 
 
-    document
-        .getElementById("seletor")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    scrollToSection(
+        "seletor"
+    );
 
 }
 
@@ -2484,7 +3160,7 @@ function resetTeologando() {
    INICIALIZAÇÃO
 ========================================================= */
 
-updateLevel();
+selectLevel("fundamental");
 
 </script>
 
