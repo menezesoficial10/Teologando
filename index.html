@@ -65,10 +65,6 @@ button{
     text-align:center;
 }
 
-/* =========================
-   HERO
-========================= */
-
 .hero{
     min-height:100svh;
 }
@@ -114,10 +110,6 @@ button{
     box-shadow:0 16px 55px rgba(255,255,255,.14);
 }
 
-/* =========================
-   TITLES
-========================= */
-
 .eyebrow{
     color:#70747f;
     font-size:11px;
@@ -141,10 +133,6 @@ button{
     line-height:1.55;
     font-size:14px;
 }
-
-/* =========================
-   RULES
-========================= */
 
 .rules-card{
     background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
@@ -192,10 +180,6 @@ button{
     font-size:13px;
     line-height:1.45;
 }
-
-/* =========================
-   CHOICES
-========================= */
 
 .choice-group{
     margin:24px auto;
@@ -256,10 +240,6 @@ button{
     letter-spacing:2px;
     text-transform:uppercase;
 }
-
-/* =========================
-   ROULETTE
-========================= */
 
 .roulette-page{
     position:relative;
@@ -395,10 +375,6 @@ button{
     color:var(--highlight2);
 }
 
-/* =========================
-   STUDY
-========================= */
-
 .study-page,
 .response-page,
 .finish-page{
@@ -492,10 +468,6 @@ button{
     box-shadow:0 9px 28px rgba(255,92,92,.18);
 }
 
-/* =========================
-   EXPLICAÇÃO COMPACTA
-========================= */
-
 .response-page{
     min-height:100svh;
     padding:22px 16px;
@@ -542,16 +514,12 @@ button{
     padding:14px 18px;
 }
 
-/* =========================
-   FINAL
-========================= */
-
 .finish-page .study-topic{
     margin:25px auto;
 }
 
 /* =========================
-   SAVED THEMES
+   TEMAS SALVOS
 ========================= */
 
 .saved-section{
@@ -600,7 +568,8 @@ button{
 }
 
 .saved-item{
-    padding:15px 18px;
+    position:relative;
+    padding:15px 55px 15px 18px;
     border-bottom:1px solid var(--line);
     cursor:pointer;
     transition:.2s;
@@ -627,9 +596,34 @@ button{
     letter-spacing:1px;
 }
 
-/* =========================
-   INSTAGRAM / FOOTER
-========================= */
+/* BOTÃO PARA REMOVER TEMA SALVO */
+
+.remove-saved-theme{
+    position:absolute;
+    top:50%;
+    right:15px;
+    transform:translateY(-50%);
+    width:30px;
+    height:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:50%;
+    background:transparent;
+    color:#777b85;
+    font-size:20px;
+    font-weight:400;
+    line-height:1;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.remove-saved-theme:hover{
+    color:#ff6b6b;
+    border-color:rgba(255,107,107,.4);
+    background:rgba(255,107,107,.08);
+}
 
 .bottom-area{
     position:fixed;
@@ -795,15 +789,17 @@ button{
         width:16px;
         height:16px;
     }
+
+    .remove-saved-theme{
+        right:12px;
+        width:28px;
+        height:28px;
+    }
 }
 </style>
 </head>
 
 <body>
-
-<!-- =========================
-     1. INÍCIO
-========================= -->
 
 <section class="page hero" id="inicio">
     <div class="page-inner">
@@ -824,11 +820,6 @@ button{
 
     </div>
 </section>
-
-
-<!-- =========================
-     2. REGRAS
-========================= -->
 
 <section class="page" id="regras">
     <div class="page-inner">
@@ -851,9 +842,7 @@ button{
                 <div class="rule-number">01</div>
                 <div>
                     <strong>Escolha seu nível</strong>
-                    <p>
-                        Defina o nível de profundidade do estudo.
-                    </p>
+                    <p>Defina o nível de profundidade do estudo.</p>
                 </div>
             </div>
 
@@ -861,9 +850,7 @@ button{
                 <div class="rule-number">02</div>
                 <div>
                     <strong>Escolha o tempo</strong>
-                    <p>
-                        Determine quanto tempo terá para pesquisar.
-                    </p>
+                    <p>Determine quanto tempo terá para pesquisar.</p>
                 </div>
             </div>
 
@@ -871,9 +858,7 @@ button{
                 <div class="rule-number">03</div>
                 <div>
                     <strong>Escolha uma área</strong>
-                    <p>
-                        O tema será sorteado dentro dela.
-                    </p>
+                    <p>O tema será sorteado dentro dela.</p>
                 </div>
             </div>
 
@@ -881,9 +866,7 @@ button{
                 <div class="rule-number">04</div>
                 <div>
                     <strong>Pesquise e explique</strong>
-                    <p>
-                        Depois da pesquisa, explique o que você aprendeu.
-                    </p>
+                    <p>Depois da pesquisa, explique o que você aprendeu.</p>
                 </div>
             </div>
 
@@ -895,11 +878,6 @@ button{
 
     </div>
 </section>
-
-
-<!-- =========================
-     3. NÍVEL + TEMPO
-========================= -->
 
 <section class="page" id="configuracao">
     <div class="page-inner">
@@ -918,22 +896,19 @@ button{
 
             <div class="choices">
 
-                <button
-                    class="choice-button active"
+                <button class="choice-button active"
                     data-level="fundamental"
                     onclick="selectLevel('fundamental')">
                     FUNDAMENTAL
                 </button>
 
-                <button
-                    class="choice-button"
+                <button class="choice-button"
                     data-level="intermediario"
                     onclick="selectLevel('intermediario')">
                     INTERMEDIÁRIO
                 </button>
 
-                <button
-                    class="choice-button"
+                <button class="choice-button"
                     data-level="avancado"
                     onclick="selectLevel('avancado')">
                     AVANÇADO
@@ -943,7 +918,6 @@ button{
 
         </div>
 
-
         <div class="choice-group">
 
             <div class="choice-title">
@@ -952,15 +926,13 @@ button{
 
             <div class="choices">
 
-                <button
-                    class="choice-button active"
+                <button class="choice-button active"
                     id="time10"
                     onclick="selectTime(10)">
                     10 MIN
                 </button>
 
-                <button
-                    class="choice-button"
+                <button class="choice-button"
                     id="time20"
                     onclick="selectTime(20)">
                     20 MIN
@@ -970,18 +942,12 @@ button{
 
         </div>
 
-
         <button class="main-action" onclick="goTo('areas')">
             CONTINUAR →
         </button>
 
     </div>
 </section>
-
-
-<!-- =========================
-     4. ÁREAS
-========================= -->
 
 <section class="page" id="areas">
     <div class="page-inner">
@@ -1061,11 +1027,6 @@ button{
     </div>
 </section>
 
-
-<!-- =========================
-     5. SORTEIO
-========================= -->
-
 <section class="page roulette-page" id="sorteio">
     <div class="page-inner">
 
@@ -1122,11 +1083,6 @@ button{
     </div>
 </section>
 
-
-<!-- =========================
-     6. PESQUISA
-========================= -->
-
 <section class="page study-page" id="pesquisa">
     <div class="page-inner">
 
@@ -1172,11 +1128,6 @@ button{
     </div>
 </section>
 
-
-<!-- =========================
-     7. EXPLICAÇÃO
-========================= -->
-
 <section class="page response-page" id="explicacao">
     <div class="page-inner">
 
@@ -1214,11 +1165,6 @@ button{
 
     </div>
 </section>
-
-
-<!-- =========================
-     8. FINAL
-========================= -->
 
 <section class="page finish-page" id="final">
     <div class="page-inner">
@@ -1259,11 +1205,6 @@ button{
     </div>
 </section>
 
-
-<!-- =========================
-     9. TEMAS SALVOS
-========================= -->
-
 <section class="saved-section">
     <div class="saved-inner">
 
@@ -1280,11 +1221,6 @@ button{
 
     </div>
 </section>
-
-
-<!-- =========================
-     INSTAGRAM
-========================= -->
 
 <div class="bottom-area">
 
@@ -1319,268 +1255,117 @@ button{
 
 </div>
 
-
 <script>
-
-/* =========================================================
-   DADOS
-========================================================= */
 
 const DATA = {
 
 teologia_sistematica:{
     fundamental:[
-        "Bibliologia",
-        "Teologia Própria / Teontologia",
-        "Cristologia",
-        "Pneumatologia",
-        "Antropologia",
-        "Hamartiologia",
-        "Soteriologia",
-        "Eclesiologia",
-        "Escatologia"
+        "Bibliologia","Teologia Própria / Teontologia","Cristologia",
+        "Pneumatologia","Antropologia","Hamartiologia","Soteriologia",
+        "Eclesiologia","Escatologia"
     ],
 
     intermediario:[
-        "Revelação",
-        "Inspiração",
-        "Iluminação",
-        "Cânon",
-        "Autoridade das Escrituras",
-        "Inerrância",
-        "Infalibilidade",
-        "Suficiência das Escrituras",
-        "Preservação das Escrituras",
-        "Interpretação bíblica",
-        "Existência de Deus",
-        "Atributos de Deus",
-        "Onipotência",
-        "Onisciência",
-        "Onipresença",
-        "Santidade de Deus",
-        "Justiça de Deus",
-        "Amor de Deus",
-        "Soberania de Deus",
-        "Trindade",
-        "Pessoa de Cristo",
-        "Divindade de Cristo",
-        "Humanidade de Cristo",
-        "Encarnação",
-        "Nascimento virginal",
-        "Kenosis",
-        "União hipostática",
-        "Morte de Cristo",
-        "Ressurreição",
-        "Ascensão",
-        "Exaltação de Cristo",
-        "Segunda vinda",
-        "Pessoa do Espírito Santo",
-        "Divindade do Espírito Santo",
-        "Obra do Espírito Santo",
-        "Regeneração",
-        "Batismo no Espírito Santo",
-        "Dons espirituais",
-        "Fruto do Espírito",
-        "Plenitude do Espírito",
-        "Santificação pelo Espírito",
-        "Dons ministeriais",
-        "Criação do ser humano",
-        "Imago Dei",
-        "Corpo, alma e espírito",
-        "Liberdade humana",
-        "Vontade humana",
-        "Consciência",
-        "Propósito da humanidade",
-        "Queda do ser humano",
-        "Natureza do pecado",
-        "Origem do pecado",
-        "Pecado original",
-        "Pecado e morte",
-        "Pecado voluntário e involuntário",
-        "Pecado individual e coletivo",
-        "Consequências do pecado",
-        "Corrupção humana",
-        "Arrependimento",
-        "Graça",
-        "Fé",
-        "Conversão",
-        "Justificação",
-        "Adoção",
-        "Santificação",
-        "Perseverança",
-        "Glorificação",
-        "Eleição",
-        "Predestinação",
-        "Segurança da salvação",
-        "Natureza da Igreja",
-        "Missão da Igreja",
-        "Igreja local e universal",
-        "Governo da Igreja",
-        "Batismo",
-        "Ceia do Senhor",
-        "Disciplina eclesiástica",
-        "Liderança da Igreja",
-        "Unidade da Igreja",
-        "Estado intermediário",
-        "Ressurreição dos mortos",
-        "Arrebatamento",
-        "Tribulação",
-        "Milênio",
-        "Juízo final",
-        "Novo céu e nova terra",
-        "Vida eterna",
-        "Inferno"
+        "Revelação","Inspiração","Iluminação","Cânon",
+        "Autoridade das Escrituras","Inerrância","Infalibilidade",
+        "Suficiência das Escrituras","Preservação das Escrituras",
+        "Interpretação bíblica","Existência de Deus","Atributos de Deus",
+        "Onipotência","Onisciência","Onipresença","Santidade de Deus",
+        "Justiça de Deus","Amor de Deus","Soberania de Deus","Trindade",
+        "Pessoa de Cristo","Divindade de Cristo","Humanidade de Cristo",
+        "Encarnação","Nascimento virginal","Kenosis","União hipostática",
+        "Morte de Cristo","Ressurreição","Ascensão","Exaltação de Cristo",
+        "Segunda vinda","Pessoa do Espírito Santo","Divindade do Espírito Santo",
+        "Obra do Espírito Santo","Regeneração","Batismo no Espírito Santo",
+        "Dons espirituais","Fruto do Espírito","Plenitude do Espírito",
+        "Santificação pelo Espírito","Dons ministeriais","Criação do ser humano",
+        "Imago Dei","Corpo, alma e espírito","Liberdade humana","Vontade humana",
+        "Consciência","Propósito da humanidade","Queda do ser humano",
+        "Natureza do pecado","Origem do pecado","Pecado original","Pecado e morte",
+        "Pecado voluntário e involuntário","Pecado individual e coletivo",
+        "Consequências do pecado","Corrupção humana","Arrependimento","Graça",
+        "Fé","Conversão","Justificação","Adoção","Santificação","Perseverança",
+        "Glorificação","Eleição","Predestinação","Segurança da salvação",
+        "Natureza da Igreja","Missão da Igreja","Igreja local e universal",
+        "Governo da Igreja","Batismo","Ceia do Senhor","Disciplina eclesiástica",
+        "Liderança da Igreja","Unidade da Igreja","Estado intermediário",
+        "Ressurreição dos mortos","Arrebatamento","Tribulação","Milênio",
+        "Juízo final","Novo céu e nova terra","Vida eterna","Inferno"
     ],
 
     avancado:[
-        "Teologia trinitária",
-        "Pericorese",
-        "Simplicidade divina",
-        "Impassibilidade divina",
-        "União hipostática",
-        "Kenosis",
-        "Comunicação das propriedades",
-        "Monergismo e sinergismo",
-        "Ordo salutis",
-        "Eleição e predestinação",
-        "Perseverança dos santos",
-        "Dons espirituais: cessacionismo e continuísmo",
-        "Teodiceia",
-        "Debates escatológicos",
-        "Crítica textual e autoridade bíblica"
+        "Teologia trinitária","Pericorese","Simplicidade divina",
+        "Impassibilidade divina","União hipostática","Kenosis",
+        "Comunicação das propriedades","Monergismo e sinergismo",
+        "Ordo salutis","Eleição e predestinação","Perseverança dos santos",
+        "Dons espirituais: cessacionismo e continuísmo","Teodiceia",
+        "Debates escatológicos","Crítica textual e autoridade bíblica"
     ]
 },
 
 historia_da_igreja:{
     fundamental:[
-        "Igreja Primitiva",
-        "Igreja Antiga",
-        "Igreja Medieval",
-        "Reforma Protestante",
-        "Contrarreforma",
-        "Igreja Moderna",
+        "Igreja Primitiva","Igreja Antiga","Igreja Medieval",
+        "Reforma Protestante","Contrarreforma","Igreja Moderna",
         "Igreja Contemporânea"
     ],
 
     intermediario:[
-        "Igreja Apostólica",
-        "Perseguições aos cristãos",
-        "Pais Apostólicos",
-        "Inácio de Antioquia",
-        "Justino Mártir",
-        "Irineu de Lyon",
-        "Tertuliano",
-        "Orígenes",
-        "Constantino",
-        "Édito de Milão",
-        "Concílio de Niceia",
-        "Concílio de Constantinopla",
-        "Concílio de Éfeso",
-        "Concílio de Calcedônia",
-        "Atanásio",
-        "Agostinho de Hipona",
-        "Patrística",
-        "Monasticismo",
-        "Escolástica",
-        "Anselmo de Cantuária",
-        "Tomás de Aquino",
-        "Cruzadas",
-        "Inquisição",
-        "Cisma do Oriente",
-        "Pré-Reformadores",
-        "Martinho Lutero",
-        "João Calvino",
-        "Ulrico Zuínglio",
-        "Reforma Radical",
-        "Anabatistas",
-        "Reforma na Inglaterra",
-        "Reforma na Escócia",
-        "Contrarreforma",
-        "Concílio de Trento",
-        "Puritanismo",
-        "Pietismo",
-        "Metodismo",
-        "Avivamentos",
-        "Iluminismo e cristianismo",
-        "Liberalismo teológico",
-        "Fundamentalismo",
-        "Evangelicalismo",
-        "Pentecostalismo",
+        "Igreja Apostólica","Perseguições aos cristãos","Pais Apostólicos",
+        "Inácio de Antioquia","Justino Mártir","Irineu de Lyon","Tertuliano",
+        "Orígenes","Constantino","Édito de Milão","Concílio de Niceia",
+        "Concílio de Constantinopla","Concílio de Éfeso","Concílio de Calcedônia",
+        "Atanásio","Agostinho de Hipona","Patrística","Monasticismo",
+        "Escolástica","Anselmo de Cantuária","Tomás de Aquino","Cruzadas",
+        "Inquisição","Cisma do Oriente","Pré-Reformadores","Martinho Lutero",
+        "João Calvino","Ulrico Zuínglio","Reforma Radical","Anabatistas",
+        "Reforma na Inglaterra","Reforma na Escócia","Contrarreforma",
+        "Concílio de Trento","Puritanismo","Pietismo","Metodismo",
+        "Avivamentos","Iluminismo e cristianismo","Liberalismo teológico",
+        "Fundamentalismo","Evangelicalismo","Pentecostalismo",
         "Movimento Carismático"
     ],
 
     avancado:[
-        "Concílio de Jerusalém",
-        "Primeiro Concílio de Niceia",
-        "Primeiro Concílio de Constantinopla",
-        "Concílio de Éfeso",
-        "Concílio de Calcedônia",
-        "Segundo Concílio de Constantinopla",
-        "Terceiro Concílio de Constantinopla",
-        "Segundo Concílio de Niceia",
-        "Concílio de Trento",
-        "Controvérsia Ariana",
-        "Controvérsias Cristológicas",
-        "Agostinianismo",
-        "Pelagianismo",
-        "Semipelagianismo",
-        "Tomismo",
-        "Escolástica",
-        "Cisma do Oriente",
-        "Confessionalização Protestante",
-        "Guerra dos Trinta Anos",
-        "Iluminismo e cristianismo",
-        "Liberalismo Teológico",
-        "Fundamentalismo",
-        "Pentecostalismo",
+        "Concílio de Jerusalém","Primeiro Concílio de Niceia",
+        "Primeiro Concílio de Constantinopla","Concílio de Éfeso",
+        "Concílio de Calcedônia","Segundo Concílio de Constantinopla",
+        "Terceiro Concílio de Constantinopla","Segundo Concílio de Niceia",
+        "Concílio de Trento","Controvérsia Ariana","Controvérsias Cristológicas",
+        "Agostinianismo","Pelagianismo","Semipelagianismo","Tomismo",
+        "Escolástica","Cisma do Oriente","Confessionalização Protestante",
+        "Guerra dos Trinta Anos","Iluminismo e cristianismo",
+        "Liberalismo Teológico","Fundamentalismo","Pentecostalismo",
         "História dos Avivamentos"
     ]
 },
 
 panorama_antigo_testamento:{
     fundamental:[
-        "Pentateuco",
-        "Livros Históricos",
-        "Livros Poéticos",
-        "Profetas Maiores",
-        "Profetas Menores"
+        "Pentateuco","Livros Históricos","Livros Poéticos",
+        "Profetas Maiores","Profetas Menores"
     ],
 
     intermediario:[
         "Gênesis","Êxodo","Levítico","Números","Deuteronômio",
-        "Josué","Juízes","Rute","1 Samuel","2 Samuel",
-        "1 Reis","2 Reis","1 Crônicas","2 Crônicas",
-        "Esdras","Neemias","Ester","Jó","Salmos",
-        "Provérbios","Eclesiastes","Cantares",
-        "Isaías","Jeremias","Lamentações","Ezequiel",
-        "Daniel","Oséias","Joel","Amós","Obadias",
-        "Jonas","Miquéias","Naum","Habacuque","Sofonias",
-        "Ageu","Zacarias","Malaquias"
+        "Josué","Juízes","Rute","1 Samuel","2 Samuel","1 Reis","2 Reis",
+        "1 Crônicas","2 Crônicas","Esdras","Neemias","Ester","Jó","Salmos",
+        "Provérbios","Eclesiastes","Cantares","Isaías","Jeremias",
+        "Lamentações","Ezequiel","Daniel","Oséias","Joel","Amós","Obadias",
+        "Jonas","Miquéias","Naum","Habacuque","Sofonias","Ageu",
+        "Zacarias","Malaquias"
     ],
 
     avancado:[
-        "Autoria do Pentateuco",
-        "Datação do Pentateuco",
-        "Formação do Pentateuco",
-        "Hipótese Documentária",
-        "Crítica das fontes",
-        "Crítica da forma",
-        "Crítica da redação",
-        "Crítica textual do Antigo Testamento",
-        "Texto Massorético",
-        "Septuaginta",
-        "Transmissão do texto hebraico",
-        "Teologia do Antigo Testamento",
-        "Aliança no Antigo Testamento",
-        "Reino de Deus",
-        "Messianismo",
-        "Profecia",
-        "Profecia e cumprimento",
-        "Lei e graça",
-        "Teologia da criação",
-        "Teologia da sabedoria",
-        "Literatura sapiencial",
-        "Problema do mal em Jó",
+        "Autoria do Pentateuco","Datação do Pentateuco","Formação do Pentateuco",
+        "Hipótese Documentária","Crítica das fontes","Crítica da forma",
+        "Crítica da redação","Crítica textual do Antigo Testamento",
+        "Texto Massorético","Septuaginta","Transmissão do texto hebraico",
+        "Teologia do Antigo Testamento","Aliança no Antigo Testamento",
+        "Reino de Deus","Messianismo","Profecia","Profecia e cumprimento",
+        "Lei e graça","Teologia da criação","Teologia da sabedoria",
+        "Literatura sapiencial","Problema do mal em Jó",
         "Intertextualidade no Antigo Testamento",
         "Estrutura literária do Antigo Testamento"
     ]
@@ -1588,224 +1373,110 @@ panorama_antigo_testamento:{
 
 panorama_novo_testamento:{
     fundamental:[
-        "Evangelhos",
-        "Atos dos Apóstolos",
-        "Cartas",
-        "Apocalipse"
+        "Evangelhos","Atos dos Apóstolos","Cartas","Apocalipse"
     ],
 
     intermediario:[
         "Mateus","Marcos","Lucas","João","Atos dos Apóstolos",
-        "Romanos","1 Coríntios","2 Coríntios","Gálatas",
-        "Efésios","Filipenses","Colossenses",
-        "1 Tessalonicenses","2 Tessalonicenses",
-        "1 Timóteo","2 Timóteo","Tito","Filemom",
-        "Hebreus","Tiago","1 Pedro","2 Pedro",
-        "1 João","2 João","3 João","Judas","Apocalipse"
+        "Romanos","1 Coríntios","2 Coríntios","Gálatas","Efésios",
+        "Filipenses","Colossenses","1 Tessalonicenses","2 Tessalonicenses",
+        "1 Timóteo","2 Timóteo","Tito","Filemom","Hebreus","Tiago",
+        "1 Pedro","2 Pedro","1 João","2 João","3 João","Judas","Apocalipse"
     ],
 
     avancado:[
-        "Problema dos Evangelhos Sinóticos",
-        "Questão Sinótica",
-        "Prioridade de Marcos",
-        "Fonte Q",
-        "Autoria dos Evangelhos",
-        "Datação dos Evangelhos",
-        "Formação dos Evangelhos",
-        "Crítica textual do Novo Testamento",
-        "Manuscritos do Novo Testamento",
-        "Texto Majoritário",
-        "Texto Crítico",
-        "Cânon do Novo Testamento",
-        "Autoria de Atos",
-        "Historicidade de Atos",
-        "Autoria das Cartas Paulinas",
-        "Pseudepigrafia",
-        "Nova Perspectiva sobre Paulo",
-        "Justificação em Paulo",
-        "União com Cristo",
-        "Teologia Paulina",
-        "Autoria de Hebreus",
-        "Contexto de Hebreus",
-        "Cristologia de Hebreus",
-        "Escatologia do Novo Testamento",
-        "Literatura apocalíptica",
-        "Interpretação do Apocalipse",
-        "Milênio em Apocalipse 20",
-        "Datação do Apocalipse",
-        "Autoria do Apocalipse"
+        "Problema dos Evangelhos Sinóticos","Questão Sinótica",
+        "Prioridade de Marcos","Fonte Q","Autoria dos Evangelhos",
+        "Datação dos Evangelhos","Formação dos Evangelhos",
+        "Crítica textual do Novo Testamento","Manuscritos do Novo Testamento",
+        "Texto Majoritário","Texto Crítico","Cânon do Novo Testamento",
+        "Autoria de Atos","Historicidade de Atos","Autoria das Cartas Paulinas",
+        "Pseudepigrafia","Nova Perspectiva sobre Paulo",
+        "Justificação em Paulo","União com Cristo","Teologia Paulina",
+        "Autoria de Hebreus","Contexto de Hebreus","Cristologia de Hebreus",
+        "Escatologia do Novo Testamento","Literatura apocalíptica",
+        "Interpretação do Apocalipse","Milênio em Apocalipse 20",
+        "Datação do Apocalipse","Autoria do Apocalipse"
     ]
 },
 
 apologetica:{
     avancado:[
-        "Existência de Deus",
-        "Argumento cosmológico",
-        "Argumento teleológico",
-        "Argumento moral",
-        "Argumento ontológico",
-        "Ateísmo",
-        "Agnosticismo",
-        "Confiabilidade da Bíblia",
-        "Inspiração bíblica",
-        "Inerrância",
-        "Cânon bíblico",
-        "Crítica textual",
-        "Supostas contradições bíblicas",
-        "Manuscritos bíblicos",
-        "Existência histórica de Jesus",
-        "Divindade de Jesus",
-        "Ressurreição de Jesus",
-        "Confiabilidade dos Evangelhos",
-        "Milagres de Jesus",
-        "Cristianismo e ciência",
-        "Criacionismo e evolução",
-        "Big Bang e cristianismo",
-        "Origem da vida",
-        "Design inteligente",
-        "Milagres e ciência",
-        "Problema do mal",
-        "Sofrimento e existência de Deus",
-        "Inferno",
-        "Exclusividade da salvação",
-        "Religião e violência",
-        "Cristianismo e outras religiões",
-        "Hipocrisia religiosa",
-        "Deus do Antigo Testamento",
-        "Pecado e justiça divina"
+        "Existência de Deus","Argumento cosmológico","Argumento teleológico",
+        "Argumento moral","Argumento ontológico","Ateísmo","Agnosticismo",
+        "Confiabilidade da Bíblia","Inspiração bíblica","Inerrância",
+        "Cânon bíblico","Crítica textual","Supostas contradições bíblicas",
+        "Manuscritos bíblicos","Existência histórica de Jesus",
+        "Divindade de Jesus","Ressurreição de Jesus",
+        "Confiabilidade dos Evangelhos","Milagres de Jesus",
+        "Cristianismo e ciência","Criacionismo e evolução",
+        "Big Bang e cristianismo","Origem da vida","Design inteligente",
+        "Milagres e ciência","Problema do mal","Sofrimento e existência de Deus",
+        "Inferno","Exclusividade da salvação","Religião e violência",
+        "Cristianismo e outras religiões","Hipocrisia religiosa",
+        "Deus do Antigo Testamento","Pecado e justiça divina"
     ]
 },
 
 teologia_pratica:{
     fundamental:[
-        "Oração",
-        "Discipulado",
-        "Evangelismo",
-        "Missões",
-        "Pregação",
-        "Ensino",
-        "Liderança",
-        "Adoração",
-        "Vida Cristã",
-        "Serviço Cristão"
+        "Oração","Discipulado","Evangelismo","Missões","Pregação",
+        "Ensino","Liderança","Adoração","Vida Cristã","Serviço Cristão"
     ],
 
     intermediario:[
-        "Homilética",
-        "Preparação de Sermões",
-        "Interpretação Bíblica para Pregação",
-        "Comunicação",
-        "Pedagogia Cristã",
-        "Formação de Líderes",
-        "Discipulado Cristão",
-        "Aconselhamento",
-        "Pastoreio",
-        "Evangelização",
-        "Missões Transculturais",
-        "Escola Bíblica Dominical",
-        "Liderança Cristã",
-        "Administração Eclesiástica",
-        "Culto Cristão",
-        "Dons Ministeriais",
+        "Homilética","Preparação de Sermões",
+        "Interpretação Bíblica para Pregação","Comunicação","Pedagogia Cristã",
+        "Formação de Líderes","Discipulado Cristão","Aconselhamento",
+        "Pastoreio","Evangelização","Missões Transculturais",
+        "Escola Bíblica Dominical","Liderança Cristã",
+        "Administração Eclesiástica","Culto Cristão","Dons Ministeriais",
         "Ética Ministerial"
     ],
 
     avancado:[
-        "Teologia Pastoral",
-        "Modelos de Liderança Cristã",
-        "Eclesiologia Aplicada",
-        "Formação Ministerial",
-        "Ética Pastoral",
-        "Aconselhamento Pastoral",
-        "Teologia da Missão",
-        "Contextualização",
-        "Teologia do Culto",
-        "Teologia da Pregação",
-        "Espiritualidade Pastoral",
-        "Vocação Ministerial",
-        "Liderança Eclesiástica",
-        "Formação de Discípulos",
-        "Ministério e Cultura Contemporânea"
+        "Teologia Pastoral","Modelos de Liderança Cristã",
+        "Eclesiologia Aplicada","Formação Ministerial","Ética Pastoral",
+        "Aconselhamento Pastoral","Teologia da Missão","Contextualização",
+        "Teologia do Culto","Teologia da Pregação","Espiritualidade Pastoral",
+        "Vocação Ministerial","Liderança Eclesiástica",
+        "Formação de Discípulos","Ministério e Cultura Contemporânea"
     ]
 },
 
 movimentos_tradicoes:{
     intermediario:[
-        "Catolicismo Romano",
-        "Ortodoxia Oriental",
-        "Protestantismo",
-        "Luteranismo",
-        "Calvinismo",
-        "Arminianismo",
-        "Anglicanismo",
-        "Batistas",
-        "Anabatismo",
-        "Metodismo",
-        "Presbiterianismo",
-        "Pentecostalismo",
-        "Movimento Carismático",
-        "Adventismo",
-        "Puritanismo",
-        "Pietismo"
+        "Catolicismo Romano","Ortodoxia Oriental","Protestantismo",
+        "Luteranismo","Calvinismo","Arminianismo","Anglicanismo",
+        "Batistas","Anabatismo","Metodismo","Presbiterianismo",
+        "Pentecostalismo","Movimento Carismático","Adventismo",
+        "Puritanismo","Pietismo"
     ],
 
     avancado:[
-        "Teologia Calvinista",
-        "Cinco Pontos do Calvinismo",
-        "Teologia Arminiana",
-        "Cinco Artigos da Remonstrância",
-        "Confissão de Westminster",
-        "Confissão de Augsburgo",
-        "Teologia Luterana",
-        "Teologia Wesleyana",
-        "Teologia Pentecostal",
-        "Batismo no Espírito Santo na tradição pentecostal",
-        "Cessacionismo",
-        "Continuísmo",
-        "Credo Niceno na tradição cristã",
-        "Teologia Ortodoxa Oriental",
-        "Papado",
-        "Catolicismo Romano",
-        "Sola Scriptura",
-        "Sola Fide",
-        "Sola Gratia",
-        "Sacerdócio de todos os crentes",
-        "Predestinação no Calvinismo",
+        "Teologia Calvinista","Cinco Pontos do Calvinismo",
+        "Teologia Arminiana","Cinco Artigos da Remonstrância",
+        "Confissão de Westminster","Confissão de Augsburgo",
+        "Teologia Luterana","Teologia Wesleyana","Teologia Pentecostal",
+        "Batismo no Espírito Santo na tradição pentecostal","Cessacionismo",
+        "Continuísmo","Credo Niceno na tradição cristã",
+        "Teologia Ortodoxa Oriental","Papado","Catolicismo Romano",
+        "Sola Scriptura","Sola Fide","Sola Gratia",
+        "Sacerdócio de todos os crentes","Predestinação no Calvinismo",
         "Graça preveniente no Arminianismo"
     ]
 },
 
 personagens_historia_teologia:{
     characters:[
-        "Inácio de Antioquia",
-        "Justino Mártir",
-        "Irineu de Lyon",
-        "Tertuliano",
-        "Orígenes",
-        "Atanásio",
-        "Agostinho de Hipona",
-        "Anselmo de Cantuária",
-        "Tomás de Aquino",
-        "Martinho Lutero",
-        "Ulrico Zuínglio",
-        "João Calvino",
-        "Menno Simons",
-        "Jacó Armínio",
-        "John Wesley",
-        "Jonathan Edwards",
-        "John Knox",
-        "John Owen",
-        "Charles Spurgeon",
-        "Charles Finney",
-        "Friedrich Schleiermacher",
-        "Karl Barth",
-        "Rudolf Bultmann",
-        "C. S. Lewis",
-        "Jürgen Moltmann",
-        "Wolfhart Pannenberg",
-        "John Stott",
-        "J. I. Packer",
-        "Gordon Fee",
+        "Inácio de Antioquia","Justino Mártir","Irineu de Lyon",
+        "Tertuliano","Orígenes","Atanásio","Agostinho de Hipona",
+        "Anselmo de Cantuária","Tomás de Aquino","Martinho Lutero",
+        "Ulrico Zuínglio","João Calvino","Menno Simons","Jacó Armínio",
+        "John Wesley","Jonathan Edwards","John Knox","John Owen",
+        "Charles Spurgeon","Charles Finney","Friedrich Schleiermacher",
+        "Karl Barth","Rudolf Bultmann","C. S. Lewis","Jürgen Moltmann",
+        "Wolfhart Pannenberg","John Stott","J. I. Packer","Gordon Fee",
         "Stanley Horton"
     ]
 },
@@ -1814,30 +1485,23 @@ personagens_biblicos:{
     characters:[
         "Adão","Eva","Caim","Abel","Noé","Abraão","Sara","Ló",
         "Melquisedeque","Isaque","Rebeca","Jacó","Esaú","José",
-        "Moisés","Arão","Miriã","Josué","Calebe","Raabe",
-        "Débora","Baraque","Gideão","Jefté","Sansão","Rute",
-        "Noemi","Samuel","Saul","Jônatas","Davi","Abigail",
-        "Salomão","Elias","Eliseu","Ezequias","Josias","Manassés",
-        "Esdras","Neemias","Ester","Jó","Isaías","Jeremias",
-        "Daniel","Ezequiel","Jonas","Micaías","Hulda",
-        "Zacarias","Isabel","João Batista","Maria","José",
-        "Simeão","Ana","Nicodemos","José de Arimateia","Jesus",
-        "Pedro","André","Tiago","João","Filipe","Bartolomeu",
-        "Tomé","Mateus","Tiago filho de Alfeu","Judas Tadeu",
-        "Simão o Zelote","Judas Iscariotes","Marta","Maria de Betânia",
-        "Lázaro","Zaqueu","Jairo","Bartimeu","Estêvão","Barnabé",
-        "Paulo","Silas","Timóteo","Tito","Apolo","Priscila","Áquila",
-        "Onésimo","Filemom","Gamaliel","Caifás","Herodes",
+        "Moisés","Arão","Miriã","Josué","Calebe","Raabe","Débora",
+        "Baraque","Gideão","Jefté","Sansão","Rute","Noemi","Samuel",
+        "Saul","Jônatas","Davi","Abigail","Salomão","Elias","Eliseu",
+        "Ezequias","Josias","Manassés","Esdras","Neemias","Ester","Jó",
+        "Isaías","Jeremias","Daniel","Ezequiel","Jonas","Micaías","Hulda",
+        "Zacarias","Isabel","João Batista","Maria","José","Simeão","Ana",
+        "Nicodemos","José de Arimateia","Jesus","Pedro","André","Tiago",
+        "João","Filipe","Bartolomeu","Tomé","Mateus","Tiago filho de Alfeu",
+        "Judas Tadeu","Simão o Zelote","Judas Iscariotes","Marta",
+        "Maria de Betânia","Lázaro","Zaqueu","Jairo","Bartimeu","Estêvão",
+        "Barnabé","Paulo","Silas","Timóteo","Tito","Apolo","Priscila",
+        "Áquila","Onésimo","Filemom","Gamaliel","Caifás","Herodes",
         "Pôncio Pilatos","Barrabás"
     ]
 }
 
 };
-
-
-/* =========================================================
-   ÁREAS
-========================================================= */
 
 const AREAS = [
     {
@@ -1887,49 +1551,23 @@ const AREAS = [
     }
 ];
 
-
-/* =========================================================
-   ESTADO
-========================================================= */
-
 let state = {
-
     level:"fundamental",
-
     time:10,
-
     areaKey:null,
-
     areaName:"",
-
     isCharacter:false,
-
     topic:"",
-
     studying:false,
-
     responding:false,
-
     extraTimeUsed:false,
-
     studySeconds:600,
-
     responseSeconds:60,
-
     initialStudySeconds:600,
-
     initialResponseSeconds:60,
-
     studyInterval:null,
-
     responseInterval:null
-
 };
-
-
-/* =========================================================
-   NAVEGAÇÃO
-========================================================= */
 
 function goTo(id){
 
@@ -1942,11 +1580,6 @@ function goTo(id){
         block:"start"
     });
 }
-
-
-/* =========================================================
-   NÍVEL
-========================================================= */
 
 function selectLevel(level){
 
@@ -1977,11 +1610,6 @@ function selectLevel(level){
     }
 }
 
-
-/* =========================================================
-   TEMPO
-========================================================= */
-
 function selectTime(minutes){
 
     if(
@@ -2010,11 +1638,6 @@ function selectTime(minutes){
         .getElementById("time20")
         .classList.toggle("active",minutes === 20);
 }
-
-
-/* =========================================================
-   ÁREA
-========================================================= */
 
 function selectArea(areaKey){
 
@@ -2072,13 +1695,6 @@ function selectArea(areaKey){
         }
     }
 
-    /*
-       NOVO FLUXO:
-       Assim que a pessoa escolhe a área,
-       a tela desce automaticamente até
-       o botão TEOLOGAR.
-    */
-
     clearAllTimers();
 
     state.topic = "";
@@ -2093,11 +1709,6 @@ function selectArea(areaKey){
         goTo("sorteio");
     },150);
 }
-
-
-/* =========================================================
-   IR PARA O SORTEIO
-========================================================= */
 
 function goToRoulette(){
 
@@ -2122,11 +1733,6 @@ function goToRoulette(){
     goTo("sorteio");
 }
 
-
-/* =========================================================
-   RESET DO SORTEIO
-========================================================= */
-
 function resetRouletteDisplay(){
 
     document.getElementById("rouletteLabel").textContent =
@@ -2146,19 +1752,9 @@ function resetRouletteDisplay(){
     document.getElementById("saveThemeButton")
         .style.display = "none";
 
-    /*
-       Mostra novamente o botão TEOLOGAR
-       sempre que o sorteio for reiniciado.
-    */
-
     document.getElementById("rouletteStartButton")
         .classList.remove("hidden");
 }
-
-
-/* =========================================================
-   SORTEIO
-========================================================= */
 
 function startRoulette(){
 
@@ -2179,10 +1775,6 @@ function startRoulette(){
 
         return;
     }
-
-    /*
-       Esconde o botão enquanto o sorteio acontece.
-    */
 
     document.getElementById("rouletteStartButton")
         .classList.add("hidden");
@@ -2238,7 +1830,6 @@ function startRoulette(){
     word.classList.add("rolling");
 
     let cycles = 0;
-
     const totalCycles = 28;
 
     const interval = setInterval(()=>{
@@ -2259,16 +1850,10 @@ function startRoulette(){
                 pool[Math.floor(Math.random()*pool.length)];
 
             showFinalTopic(finalTopic);
-
         }
 
     },75);
 }
-
-
-/* =========================================================
-   TEMA FINAL
-========================================================= */
 
 function showFinalTopic(topic){
 
@@ -2300,19 +1885,9 @@ function showFinalTopic(topic){
     document.getElementById("resultActions")
         .classList.add("visible");
 
-    /*
-       O botão TEOLOGAR continua escondido
-       depois que o tema foi sorteado.
-    */
-
     document.getElementById("rouletteStartButton")
         .classList.add("hidden");
 }
-
-
-/* =========================================================
-   SALVAR TEMA
-========================================================= */
 
 function getSavedThemes(){
 
@@ -2328,7 +1903,6 @@ function getSavedThemes(){
     }
 }
 
-
 function setSavedThemes(themes){
 
     localStorage.setItem(
@@ -2336,7 +1910,6 @@ function setSavedThemes(themes){
         JSON.stringify(themes)
     );
 }
-
 
 function saveCurrentTheme(){
 
@@ -2365,7 +1938,6 @@ function saveCurrentTheme(){
 
     renderSavedThemes();
 }
-
 
 function updateSaveButton(){
 
@@ -2402,11 +1974,6 @@ function updateSaveButton(){
         text.textContent = "SALVAR TEMA";
     }
 }
-
-
-/* =========================================================
-   ESTUDO
-========================================================= */
 
 function startStudy(){
 
@@ -2453,11 +2020,6 @@ function startStudy(){
     startStudyTimer();
 }
 
-
-/* =========================================================
-   CRONÔMETRO DE PESQUISA
-========================================================= */
-
 function startStudyTimer(){
 
     clearInterval(state.studyInterval);
@@ -2480,7 +2042,6 @@ function startStudyTimer(){
     },1000);
 }
 
-
 function updateStudyTimer(){
 
     const timer =
@@ -2499,11 +2060,6 @@ function updateStudyTimer(){
     }
 }
 
-
-/* =========================================================
-   PEDIR MAIS TEMPO
-========================================================= */
-
 function requestExtraTime(){
 
     if(state.extraTimeUsed) return;
@@ -2521,11 +2077,6 @@ function requestExtraTime(){
 
     updateStudyTimer();
 }
-
-
-/* =========================================================
-   EXPLICAR
-========================================================= */
 
 function finishStudy(){
 
@@ -2553,11 +2104,6 @@ function finishStudy(){
     startResponseTimer();
 }
 
-
-/* =========================================================
-   CRONÔMETRO DE EXPLICAÇÃO
-========================================================= */
-
 function startResponseTimer(){
 
     clearInterval(state.responseInterval);
@@ -2580,7 +2126,6 @@ function startResponseTimer(){
     },1000);
 }
 
-
 function updateResponseTimer(){
 
     const timer =
@@ -2598,11 +2143,6 @@ function updateResponseTimer(){
         timer.classList.remove("warning");
     }
 }
-
-
-/* =========================================================
-   FINALIZAR
-========================================================= */
 
 function finishTeologando(){
 
@@ -2626,11 +2166,6 @@ function finishTeologando(){
     goTo("final");
 }
 
-
-/* =========================================================
-   NOVO TEMA
-========================================================= */
-
 function newTheme(){
 
     clearAllTimers();
@@ -2646,11 +2181,6 @@ function newTheme(){
 
     goTo("sorteio");
 }
-
-
-/* =========================================================
-   LIMPAR CRONÔMETROS
-========================================================= */
 
 function clearAllTimers(){
 
@@ -2668,11 +2198,6 @@ function clearAllTimers(){
         state.responseInterval = null;
     }
 }
-
-
-/* =========================================================
-   ESCONDER TELAS DE ESTUDO
-========================================================= */
 
 function hideStudySections(){
 
@@ -2692,11 +2217,6 @@ function hideStudySections(){
         .classList.remove("warning");
 }
 
-
-/* =========================================================
-   FORMATAR TEMPO
-========================================================= */
-
 function formatTime(seconds){
 
     const minutes =
@@ -2709,11 +2229,6 @@ function formatTime(seconds){
         + ":" +
         String(secs).padStart(2,"0");
 }
-
-
-/* =========================================================
-   TEMAS SALVOS
-========================================================= */
 
 function toggleSaved(){
 
@@ -2733,6 +2248,30 @@ function toggleSaved(){
     renderSavedThemes();
 }
 
+
+/* =========================================================
+   REMOVER TEMA SALVO
+========================================================= */
+
+function removeSavedTheme(topic,areaKey){
+
+    const saved = getSavedThemes();
+
+    const filtered = saved.filter(item=>
+        !(item.topic === topic && item.areaKey === areaKey)
+    );
+
+    setSavedThemes(filtered);
+
+    renderSavedThemes();
+
+    updateSaveButton();
+}
+
+
+/* =========================================================
+   TEMAS SALVOS
+========================================================= */
 
 function renderSavedThemes(){
 
@@ -2754,7 +2293,7 @@ function renderSavedThemes(){
 
     list.innerHTML = "";
 
-    [...saved].reverse().forEach((item,index)=>{
+    [...saved].reverse().forEach((item)=>{
 
         const div =
             document.createElement("div");
@@ -2764,6 +2303,13 @@ function renderSavedThemes(){
         div.innerHTML = `
             <strong>♥ ${escapeHTML(item.topic)}</strong>
             <span>${escapeHTML(item.areaName)}</span>
+
+            <button
+                class="remove-saved-theme"
+                type="button"
+                aria-label="Remover tema salvo">
+                ×
+            </button>
         `;
 
         div.onclick = ()=>{
@@ -2771,14 +2317,22 @@ function renderSavedThemes(){
             openSavedTheme(item);
         };
 
+        const removeButton =
+            div.querySelector(".remove-saved-theme");
+
+        removeButton.onclick = (event)=>{
+
+            event.stopPropagation();
+
+            removeSavedTheme(
+                item.topic,
+                item.areaKey
+            );
+        };
+
         list.appendChild(div);
     });
 }
-
-
-/* =========================================================
-   ABRIR TEMA SALVO
-========================================================= */
 
 function openSavedTheme(item){
 
@@ -2826,11 +2380,6 @@ function openSavedTheme(item){
     goTo("sorteio");
 }
 
-
-/* =========================================================
-   SEGURANÇA HTML
-========================================================= */
-
 function escapeHTML(text){
 
     const div =
@@ -2840,11 +2389,6 @@ function escapeHTML(text){
 
     return div.innerHTML;
 }
-
-
-/* =========================================================
-   INICIALIZAÇÃO
-========================================================= */
 
 renderSavedThemes();
 
