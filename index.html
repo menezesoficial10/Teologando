@@ -1,414 +1,778 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
 <title>TEOLOGANDO — Estude. Pense. Explique.</title>
 
+
 <style>
+
 :root{
+
     --bg:#050608;
     --bg2:#0b0d12;
+
     --card:#101218;
     --card2:#151821;
+
     --line:rgba(255,255,255,.09);
+
     --text:#f5f5f5;
     --muted:#858995;
+
     --accent:#ffffff;
     --accentText:#050608;
+
     --danger:#ff5c5c;
+
     --highlight:#8b5cf6;
     --highlight2:#a78bfa;
+
 }
 
+
 *{
+
     box-sizing:border-box;
     margin:0;
     padding:0;
+
 }
+
 
 html{
+
     scroll-behavior:smooth;
+
 }
+
 
 body{
+
     min-height:100vh;
+
     background:
-        radial-gradient(circle at 50% 0%, rgba(255,255,255,.055), transparent 32%),
-        radial-gradient(circle at 15% 55%, rgba(255,255,255,.025), transparent 30%),
-        linear-gradient(180deg,#050608 0%,#080a0e 48%,#040506 100%);
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255,255,255,.055),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 15% 55%,
+            rgba(255,255,255,.025),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #050608 0%,
+            #080a0e 48%,
+            #040506 100%
+        );
+
     color:var(--text);
-    font-family:Arial, Helvetica, sans-serif;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     overflow-x:hidden;
+
     padding-bottom:75px;
+
 }
+
 
 button{
+
     font-family:inherit;
+
     -webkit-tap-highlight-color:transparent;
+
 }
+
 
 .page{
+
     width:100%;
+
     min-height:100svh;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     padding:45px 20px;
+
     scroll-margin-top:10px;
+
 }
 
+
 .page-inner{
+
     width:100%;
+
     max-width:850px;
+
     text-align:center;
+
 }
+
 
 /* =========================
    HERO
 ========================= */
 
 .hero{
+
     min-height:100svh;
+
 }
+
 
 .logo{
+
     font-size:clamp(42px,10vw,82px);
+
     font-weight:900;
+
     letter-spacing:-4px;
+
     line-height:.95;
+
 }
+
 
 .hero-credit{
+
     display:inline-block;
+
     margin-top:10px;
+
     color:var(--highlight2);
+
     text-decoration:none;
+
     font-size:11px;
+
     font-weight:800;
+
     letter-spacing:.4px;
+
     transition:.22s;
+
 }
+
 
 .hero-credit:hover{
+
     color:#fff;
+
 }
+
 
 .tagline{
+
     margin-top:15px;
+
     font-size:clamp(16px,3vw,22px);
+
     color:var(--muted);
+
     letter-spacing:.5px;
+
 }
+
 
 .hero-description{
+
     max-width:580px;
+
     margin:24px auto 30px;
+
     color:#b5b8c0;
+
     font-size:15px;
+
     line-height:1.6;
+
 }
+
 
 .main-action{
+
     border:0;
+
     background:#fff;
+
     color:#050608;
+
     padding:16px 30px;
+
     border-radius:999px;
+
     font-size:14px;
+
     font-weight:900;
+
     letter-spacing:.5px;
+
     cursor:pointer;
+
     transition:.25s;
-    box-shadow:0 12px 45px rgba(255,255,255,.08);
+
+    box-shadow:
+        0 12px 45px rgba(255,255,255,.08);
+
 }
 
+
 .main-action:hover{
+
     transform:translateY(-3px);
-    box-shadow:0 16px 55px rgba(255,255,255,.14);
+
+    box-shadow:
+        0 16px 55px rgba(255,255,255,.14);
+
 }
+
 
 /* =========================
    TITLES
 ========================= */
 
 .eyebrow{
+
     color:#70747f;
+
     font-size:11px;
+
     font-weight:800;
+
     letter-spacing:3px;
+
     margin-bottom:11px;
+
     text-transform:uppercase;
+
 }
+
 
 .page-title{
+
     font-size:clamp(28px,6vw,52px);
+
     font-weight:900;
+
     letter-spacing:-2px;
+
     margin-bottom:12px;
+
 }
 
+
 .page-description{
+
     color:#9da1ab;
+
     max-width:620px;
+
     margin:0 auto 25px;
+
     line-height:1.55;
+
     font-size:14px;
+
 }
+
 
 /* =========================
    RULES
 ========================= */
 
 .rules-card{
-    background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.015)
+        );
+
     border:1px solid var(--line);
+
     border-radius:24px;
+
     padding:20px 25px;
+
     max-width:680px;
+
     margin:0 auto 22px;
+
     text-align:left;
+
 }
+
 
 .rule{
+
     display:flex;
+
     gap:14px;
+
     padding:14px 0;
+
     border-bottom:1px solid var(--line);
+
 }
+
 
 .rule:last-child{
+
     border-bottom:0;
+
     padding-bottom:0;
+
 }
+
 
 .rule-number{
+
     width:30px;
+
     height:30px;
+
     border:1px solid var(--line);
+
     border-radius:50%;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     flex:none;
+
     font-weight:800;
+
     font-size:12px;
+
 }
+
 
 .rule strong{
+
     display:block;
+
     margin-bottom:4px;
+
     font-size:14px;
+
 }
 
+
 .rule p{
+
     color:#8f939d;
+
     font-size:13px;
+
     line-height:1.45;
+
 }
+
 
 /* =========================
    CHOICES
 ========================= */
 
 .choice-group{
+
     margin:24px auto;
+
     max-width:760px;
+
 }
+
 
 .choice-title{
+
     color:#747984;
+
     font-size:10px;
+
     font-weight:900;
+
     letter-spacing:2px;
+
     margin-bottom:12px;
+
 }
+
 
 .choices{
+
     display:flex;
+
     flex-wrap:wrap;
+
     justify-content:center;
+
     gap:8px;
+
 }
+
 
 .choice-button{
+
     border:1px solid var(--line);
+
     background:rgba(255,255,255,.035);
+
     color:#bfc2c9;
+
     padding:11px 17px;
+
     border-radius:999px;
+
     font-size:11px;
+
     font-weight:900;
+
     letter-spacing:.4px;
+
     cursor:pointer;
+
     transition:.22s;
+
 }
+
 
 .choice-button:hover{
+
     background:rgba(255,255,255,.08);
+
     color:#fff;
+
 }
+
 
 .choice-button.active{
+
     background:#fff;
+
     color:#050608;
+
     border-color:#fff;
+
 }
+
 
 .choice-button.locked{
+
     opacity:.25;
+
     cursor:not-allowed;
+
     pointer-events:none;
+
 }
 
+
 .selected-area{
+
     margin:25px auto 0;
+
     min-height:18px;
+
     color:#aaaeb8;
+
     font-size:11px;
+
     font-weight:900;
+
     letter-spacing:2px;
+
     text-transform:uppercase;
+
 }
+
 
 /* =========================
    ROULETTE
 ========================= */
 
 .roulette-page{
+
     position:relative;
+
 }
+
 
 .roulette-box{
+
     max-width:760px;
+
     margin:0 auto;
+
 }
+
 
 .roulette-label{
+
     color:#767b86;
+
     font-size:11px;
+
     font-weight:900;
+
     letter-spacing:2.5px;
+
     margin-bottom:14px;
+
     text-transform:uppercase;
+
 }
+
 
 .roulette-start{
+
     border:0;
-    background:linear-gradient(135deg,var(--highlight),var(--highlight2));
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--highlight),
+            var(--highlight2)
+        );
+
     color:#fff;
+
     padding:16px 34px;
+
     border-radius:999px;
+
     font-size:14px;
+
     font-weight:900;
+
     letter-spacing:.6px;
+
     cursor:pointer;
-    box-shadow:0 12px 35px rgba(139,92,246,.25);
+
+    box-shadow:
+        0 12px 35px rgba(139,92,246,.25);
+
     transition:.25s;
+
     margin-bottom:10px;
+
 }
+
 
 .roulette-start:hover{
+
     transform:translateY(-3px);
-    box-shadow:0 17px 45px rgba(139,92,246,.35);
+
+    box-shadow:
+        0 17px 45px rgba(139,92,246,.35);
+
 }
+
 
 .roulette-start.hidden{
+
     display:none;
+
 }
+
 
 .roulette-window{
+
     min-height:125px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     padding:10px 15px;
+
 }
+
 
 .roulette-word{
+
     font-size:clamp(34px,8vw,74px);
+
     font-weight:900;
+
     line-height:1;
+
     letter-spacing:-3px;
+
     word-break:break-word;
+
     transition:.1s;
+
 }
+
 
 .roulette-word.rolling{
+
     filter:blur(.7px);
+
     opacity:.72;
+
     transform:scale(.98);
+
 }
+
 
 .result-area{
+
     margin-top:10px;
+
     color:#747984;
+
     font-size:11px;
+
     letter-spacing:2px;
+
     font-weight:800;
+
     text-transform:uppercase;
+
 }
+
 
 .result-actions{
+
     display:none;
+
     flex-direction:column;
+
     align-items:center;
+
     gap:9px;
+
     margin-top:22px;
+
 }
+
 
 .result-actions.visible{
+
     display:flex;
+
 }
+
 
 .result-action{
+
     width:min(350px,90vw);
+
     padding:15px 22px;
+
     border-radius:999px;
+
     border:1px solid var(--highlight);
+
     background:var(--highlight);
+
     color:#fff;
+
     font-size:12px;
+
     font-weight:900;
+
     cursor:pointer;
+
     transition:.22s;
-    box-shadow:0 8px 25px rgba(139,92,246,.18);
+
+    box-shadow:
+        0 8px 25px rgba(139,92,246,.18);
+
 }
+
 
 .result-action:hover{
+
     transform:translateY(-2px);
+
 }
+
 
 .result-action.secondary{
+
     background:transparent;
+
     color:#fff;
+
     border-color:var(--line);
+
     box-shadow:none;
+
 }
+
 
 .save-theme{
+
     margin:18px auto 0;
+
     border:0;
+
     background:transparent;
+
     color:#aeb2bb;
+
     display:flex;
+
     align-items:center;
+
     gap:8px;
+
     cursor:pointer;
+
     font-size:11px;
+
     font-weight:900;
+
     letter-spacing:.7px;
+
 }
+
 
 .save-theme span{
+
     font-size:20px;
+
     line-height:1;
+
 }
 
+
 .save-theme.saved{
+
     color:var(--highlight2);
+
 }
+
 
 /* =========================
    STUDY
@@ -417,734 +781,1617 @@ button{
 .study-page,
 .response-page,
 .finish-page{
+
     display:none;
+
 }
+
 
 .study-page.visible,
 .response-page.visible,
 .finish-page.visible{
+
     display:flex;
+
 }
+
 
 .timer-card{
+
     max-width:520px;
+
     margin:22px auto;
-    background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.012)
+        );
+
     border:1px solid var(--line);
+
     border-radius:26px;
+
     padding:25px 20px;
+
 }
+
 
 .timer-label{
+
     color:#747984;
+
     font-size:10px;
+
     font-weight:900;
+
     letter-spacing:2.5px;
+
     margin-bottom:12px;
+
 }
+
 
 .study-topic{
+
     font-size:clamp(23px,6vw,42px);
+
     font-weight:900;
+
     letter-spacing:-1.5px;
+
     margin-bottom:20px;
+
 }
+
 
 .timer{
+
     font-variant-numeric:tabular-nums;
+
     font-size:clamp(55px,15vw,90px);
+
     font-weight:900;
+
     letter-spacing:-5px;
+
     line-height:1;
+
     margin-bottom:22px;
+
 }
+
 
 .timer.warning{
+
     animation:pulse 1s infinite;
+
 }
+
 
 @keyframes pulse{
-    50%{opacity:.55;}
+
+    50%{
+        opacity:.55;
+    }
+
 }
+
 
 .study-buttons{
+
     display:flex;
+
     flex-direction:column;
+
     gap:9px;
+
     max-width:360px;
+
     margin:0 auto;
+
 }
+
 
 .study-button{
+
     padding:14px 20px;
+
     border-radius:999px;
+
     border:1px solid var(--line);
+
     background:rgba(255,255,255,.035);
+
     color:#fff;
+
     cursor:pointer;
+
     font-size:11px;
+
     font-weight:900;
+
     letter-spacing:.5px;
+
     transition:.22s;
+
 }
+
 
 .study-button:hover{
+
     background:rgba(255,255,255,.09);
+
     transform:translateY(-1px);
+
 }
+
 
 .study-button.primary{
+
     background:var(--highlight);
+
     color:#fff;
+
     border-color:var(--highlight);
-    box-shadow:0 9px 28px rgba(139,92,246,.22);
+
+    box-shadow:
+        0 9px 28px rgba(139,92,246,.22);
+
 }
+
 
 .study-button.danger{
+
     background:var(--danger);
+
     color:#fff;
+
     border-color:var(--danger);
-    box-shadow:0 9px 28px rgba(255,92,92,.18);
+
+    box-shadow:
+        0 9px 28px rgba(255,92,92,.18);
+
 }
 
+
 /* =========================
-   EXPLICAÇÃO COMPACTA
+   EXPLICAÇÃO
 ========================= */
 
 .response-page{
+
     min-height:100svh;
+
     padding:22px 16px;
+
 }
+
 
 .response-page .page-inner{
+
     max-width:520px;
+
 }
+
 
 .response-page .eyebrow{
+
     margin-bottom:7px;
+
 }
+
 
 .response-page .page-title{
+
     font-size:clamp(27px,7vw,40px);
+
     margin-bottom:7px;
+
 }
+
 
 .response-page .timer-card{
+
     margin:10px auto;
+
     padding:18px 15px;
+
     border-radius:22px;
+
 }
+
 
 .response-page .timer-label{
+
     margin-bottom:8px;
+
 }
+
 
 .response-page .study-topic{
+
     font-size:clamp(20px,5vw,32px);
+
     margin-bottom:12px;
+
 }
+
 
 .response-page .timer{
+
     font-size:clamp(48px,14vw,72px);
+
     margin-bottom:15px;
+
 }
+
 
 .response-page .study-buttons{
+
     max-width:280px;
+
 }
 
+
 .response-page .study-button{
+
     padding:14px 18px;
+
 }
+
 
 /* =========================
    FINAL
 ========================= */
 
 .finish-page .study-topic{
+
     margin:25px auto;
+
 }
+
 
 /* =========================
    SAVED THEMES
 ========================= */
 
 .saved-section{
+
     width:100%;
-    padding:30px 20px 90px;
+
+    padding:30px 20px 45px;
+
 }
+
 
 .saved-inner{
+
     max-width:760px;
+
     margin:0 auto;
+
 }
+
 
 .saved-toggle{
+
     width:100%;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     padding:17px 20px;
+
     border:1px solid var(--line);
+
     border-radius:18px;
+
     background:rgba(255,255,255,.025);
+
     color:#fff;
+
     cursor:pointer;
+
     font-size:12px;
+
     font-weight:900;
+
 }
+
 
 .saved-list{
+
     display:none;
+
     margin-top:8px;
+
     border:1px solid var(--line);
+
     border-radius:18px;
+
     overflow:hidden;
+
     background:#0b0d11;
+
 }
+
 
 .saved-list.open{
+
     display:block;
+
 }
+
 
 .saved-empty{
+
     padding:22px;
+
     color:#777b85;
+
     text-align:center;
+
     font-size:12px;
+
 }
+
 
 .saved-item{
+
     padding:15px 18px;
+
     border-bottom:1px solid var(--line);
+
     cursor:pointer;
+
     transition:.2s;
+
 }
+
 
 .saved-item:last-child{
+
     border-bottom:0;
+
 }
+
 
 .saved-item:hover{
+
     background:rgba(255,255,255,.045);
+
 }
+
 
 .saved-item strong{
+
     display:block;
+
     font-size:14px;
+
     margin-bottom:4px;
+
 }
 
+
 .saved-item span{
+
     color:#747984;
+
     font-size:10px;
+
     text-transform:uppercase;
+
     letter-spacing:1px;
+
 }
+
+
+/* =========================
+   APOIO AO PROJETO
+========================= */
+
+.support-section{
+
+    width:100%;
+
+    padding:15px 20px 40px;
+
+}
+
+
+.support-card{
+
+    max-width:600px;
+
+    margin:0 auto;
+
+    padding:25px 22px;
+
+    text-align:center;
+
+    border:1px solid var(--line);
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.012)
+        );
+
+}
+
+
+.support-label{
+
+    color:#70747f;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+}
+
+
+.support-title{
+
+    font-size:18px;
+
+    font-weight:900;
+
+    margin-bottom:8px;
+
+}
+
+
+.support-text{
+
+    color:#858995;
+
+    font-size:12px;
+
+    line-height:1.55;
+
+    max-width:430px;
+
+    margin:0 auto 17px;
+
+}
+
+
+.support-name{
+
+    color:#bfc2c9;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    margin-bottom:15px;
+
+}
+
+
+/* =========================
+   PIX
+========================= */
+
+.pix-box{
+
+    margin:18px auto 0;
+
+    padding:16px;
+
+    max-width:470px;
+
+    border:1px solid rgba(139,92,246,.25);
+
+    border-radius:18px;
+
+    background:rgba(139,92,246,.045);
+
+}
+
+
+.pix-label{
+
+    color:#777b85;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+
+}
+
+
+.pix-key{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid var(--line);
+
+    border-radius:12px;
+
+    background:rgba(0,0,0,.25);
+
+    color:#d9dbe0;
+
+    font-size:10px;
+
+    line-height:1.4;
+
+    word-break:break-all;
+
+    text-align:center;
+
+    user-select:all;
+
+}
+
+
+.pix-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    margin-top:10px;
+
+}
+
+
+.pix-button{
+
+    width:100%;
+
+    padding:12px 18px;
+
+    border:1px solid var(--line);
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.06);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:.6px;
+
+    transition:.22s;
+
+}
+
+
+.pix-button:hover{
+
+    background:rgba(255,255,255,.11);
+
+    transform:translateY(-1px);
+
+}
+
+
+.pix-button.primary{
+
+    background:var(--highlight);
+
+    border-color:var(--highlight);
+
+    box-shadow:
+        0 8px 25px rgba(139,92,246,.2);
+
+}
+
+
+.pix-status{
+
+    min-height:16px;
+
+    margin-top:10px;
+
+    color:var(--highlight2);
+
+    font-size:10px;
+
+    font-weight:800;
+
+}
+
+
+.pix-info{
+
+    color:#646873;
+
+    font-size:9px;
+
+    line-height:1.45;
+
+    margin-top:9px;
+
+}
+
+
+/* =========================
+   CONTADOR
+========================= */
+
+.play-counter{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:5px 20px 28px;
+
+}
+
+
+.play-counter-text{
+
+    color:#4f535c;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+
+.play-counter-number{
+
+    color:#696d76;
+
+    font-weight:900;
+
+}
+
 
 /* =========================
    INSTAGRAM / FOOTER
 ========================= */
 
 .bottom-area{
+
     position:fixed;
+
     left:0;
+
     right:0;
+
     bottom:0;
+
     z-index:100;
+
     padding:8px 12px;
+
     background:rgba(5,6,8,.92);
+
     backdrop-filter:blur(18px);
+
     border-top:1px solid rgba(255,255,255,.07);
+
 }
+
 
 .bottom-content{
+
     max-width:900px;
+
     margin:auto;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:12px;
+
 }
+
 
 .developed{
+
     color:#5f636d;
+
     font-size:8px;
+
     line-height:1.2;
+
     text-align:right;
+
 }
+
 
 .developed strong{
+
     color:#8a8e97;
+
     font-size:9px;
+
 }
+
 
 .instagram-button{
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:8px;
+
     text-decoration:none;
+
     color:#fff;
+
     border:1px solid var(--highlight);
+
     background:var(--highlight);
+
     border-radius:999px;
+
     padding:10px 17px;
+
     font-size:11px;
+
     font-weight:900;
+
     transition:.22s;
-    box-shadow:0 5px 20px rgba(139,92,246,.2);
+
+    box-shadow:
+        0 5px 20px rgba(139,92,246,.2);
+
 }
+
 
 .instagram-button:hover{
+
     background:var(--highlight2);
+
     border-color:var(--highlight2);
+
     transform:translateY(-1px);
+
 }
 
+
 .instagram-icon{
+
     width:17px;
+
     height:17px;
+
     fill:none;
+
     stroke:currentColor;
+
     stroke-width:1.8;
+
 }
+
 
 /* =========================
    INSPIRADO
 ========================= */
 
 .inspired-by{
+
     width:100%;
+
     text-align:center;
-    padding:25px 20px 100px;
+
+    padding:0 20px 100px;
+
     color:#4f535c;
+
     font-size:9px;
+
     font-weight:800;
+
     letter-spacing:1.5px;
+
 }
+
 
 .inspired-by a{
+
     color:#777b85;
+
     text-decoration:none;
+
     transition:.22s;
+
 }
 
+
 .inspired-by a:hover{
+
     color:var(--highlight2);
+
 }
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:600px){
 
     .page{
+
         min-height:100svh;
+
         padding:35px 16px;
+
     }
+
 
     .hero{
+
         min-height:100svh;
+
     }
+
 
     .logo{
+
         letter-spacing:-3px;
+
         font-size:clamp(39px,11vw,60px);
+
     }
+
 
     .hero-description{
+
         margin:20px auto 25px;
+
         font-size:14px;
+
     }
+
 
     .rules-card{
+
         padding:17px 20px;
+
         border-radius:20px;
+
     }
+
 
     .rule{
+
         padding:11px 0;
+
         gap:11px;
+
     }
+
 
     .rule-number{
+
         width:27px;
+
         height:27px;
+
         font-size:11px;
+
     }
+
 
     .rule strong{
+
         font-size:13px;
+
     }
+
 
     .rule p{
+
         font-size:12px;
+
     }
+
 
     .choice-group{
+
         margin:20px auto;
+
     }
+
 
     .choice-button{
+
         padding:10px 14px;
+
         font-size:10px;
+
     }
+
 
     .roulette-window{
+
         min-height:105px;
+
     }
+
 
     .roulette-word{
+
         letter-spacing:-2px;
+
     }
+
 
     .roulette-start{
+
         padding:15px 30px;
+
     }
+
 
     .timer-card{
+
         padding:21px 16px;
+
         margin:17px auto;
+
     }
+
 
     .response-page{
+
         padding:18px 14px;
+
     }
+
 
     .response-page .timer-card{
+
         margin:8px auto;
+
     }
+
 
     .bottom-content{
+
         gap:8px;
+
     }
+
 
     .developed{
+
         font-size:7px;
+
     }
+
 
     .developed strong{
+
         font-size:8px;
+
     }
+
 
     .instagram-button{
+
         padding:9px 14px;
+
         font-size:10px;
+
     }
+
 
     .instagram-icon{
+
         width:16px;
+
         height:16px;
+
     }
+
 
     .hero-credit{
+
         font-size:10px;
+
     }
+
 
     .inspired-by{
+
         font-size:8px;
+
         padding-bottom:100px;
+
     }
+
+
+    .play-counter{
+
+        padding-bottom:22px;
+
+    }
+
+
+    .play-counter-text{
+
+        font-size:8px;
+
+    }
+
+
+    .support-section{
+
+        padding-left:16px;
+
+        padding-right:16px;
+
+    }
+
+
+    .support-card{
+
+        padding:22px 18px;
+
+    }
+
+
+    .pix-key{
+
+        font-size:9px;
+
+    }
+
 }
+
 </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =========================
      1. INÍCIO
 ========================= -->
 
-<section class="page hero" id="inicio">
+<section
+    class="page hero"
+    id="inicio">
+
     <div class="page-inner">
 
-        <div class="logo">TEOLOGANDO</div>
+        <div class="logo">
+            TEOLOGANDO
+        </div>
+
 
         <a
             class="hero-credit"
             href="https://www.instagram.com/samuelmenezes.ievad/"
             target="_blank"
             rel="noopener">
+
             desenvolvido por @samuelmenezes.ievad
+
         </a>
 
+
         <div class="tagline">
+
             Estude. Pense. Explique.
+
         </div>
+
 
         <div class="hero-description">
-            Você escolhe a área. O Teologando escolhe o tema.
+
+            Você escolhe a área.
+            O Teologando escolhe o tema.
+
         </div>
 
-        <button class="main-action" onclick="goTo('regras')">
+
+        <button
+            class="main-action"
+            onclick="goTo('regras')">
+
             TEOLOGAR →
+
         </button>
 
     </div>
+
 </section>
+
 
 
 <!-- =========================
      2. REGRAS
 ========================= -->
 
-<section class="page" id="regras">
+<section
+    class="page"
+    id="regras">
+
     <div class="page-inner">
 
-        <div class="eyebrow">ANTES DE COMEÇAR</div>
+        <div class="eyebrow">
 
-        <h2 class="page-title">
-            Como funciona?
-        </h2>
-
-        <p class="page-description">
-            O Teologando sorteia um tema dentro da área escolhida.
-            Você terá um tempo para pesquisar e depois deverá explicar
-            o que aprendeu.
-        </p>
-
-        <div class="rules-card">
-
-            <div class="rule">
-                <div class="rule-number">01</div>
-                <div>
-                    <strong>Escolha seu nível</strong>
-                    <p>
-                        Defina o nível de profundidade do estudo.
-                    </p>
-                </div>
-            </div>
-
-            <div class="rule">
-                <div class="rule-number">02</div>
-                <div>
-                    <strong>Escolha o tempo</strong>
-                    <p>
-                        Determine quanto tempo terá para pesquisar.
-                    </p>
-                </div>
-            </div>
-
-            <div class="rule">
-                <div class="rule-number">03</div>
-                <div>
-                    <strong>Escolha uma área</strong>
-                    <p>
-                        O tema será sorteado dentro dela.
-                    </p>
-                </div>
-            </div>
-
-            <div class="rule">
-                <div class="rule-number">04</div>
-                <div>
-                    <strong>Pesquise e explique</strong>
-                    <p>
-                        Depois da pesquisa, explique o que você aprendeu.
-                    </p>
-                </div>
-            </div>
+            ANTES DE COMEÇAR
 
         </div>
 
-        <button class="main-action" onclick="goTo('configuracao')">
+
+        <h2 class="page-title">
+
+            Como funciona?
+
+        </h2>
+
+
+        <p class="page-description">
+
+            O Teologando sorteia um tema dentro da área escolhida.
+            Você terá um tempo para pesquisar e depois deverá explicar
+            o que aprendeu.
+
+        </p>
+
+
+        <div class="rules-card">
+
+
+            <div class="rule">
+
+                <div class="rule-number">
+                    01
+                </div>
+
+                <div>
+
+                    <strong>
+                        Escolha seu nível
+                    </strong>
+
+                    <p>
+                        Defina o nível de profundidade do estudo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="rule">
+
+                <div class="rule-number">
+                    02
+                </div>
+
+                <div>
+
+                    <strong>
+                        Escolha o tempo
+                    </strong>
+
+                    <p>
+                        Determine quanto tempo terá para pesquisar.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="rule">
+
+                <div class="rule-number">
+                    03
+                </div>
+
+                <div>
+
+                    <strong>
+                        Escolha uma área
+                    </strong>
+
+                    <p>
+                        O tema será sorteado dentro dela.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="rule">
+
+                <div class="rule-number">
+                    04
+                </div>
+
+                <div>
+
+                    <strong>
+                        Pesquise e explique
+                    </strong>
+
+                    <p>
+                        Depois da pesquisa, explique o que você aprendeu.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <button
+            class="main-action"
+            onclick="goTo('configuracao')">
+
             ENTENDI →
+
         </button>
 
     </div>
+
 </section>
+
 
 
 <!-- =========================
      3. NÍVEL + TEMPO
 ========================= -->
 
-<section class="page" id="configuracao">
+<section
+    class="page"
+    id="configuracao">
+
     <div class="page-inner">
 
-        <div class="eyebrow">PASSO 01</div>
+        <div class="eyebrow">
+            PASSO 01
+        </div>
+
 
         <h2 class="page-title">
+
             Como você quer estudar?
+
         </h2>
+
 
         <div class="choice-group">
 
             <div class="choice-title">
+
                 NÍVEL DE CONHECIMENTO
+
             </div>
 
+
             <div class="choices">
+
 
                 <button
                     class="choice-button active"
                     data-level="fundamental"
                     onclick="selectLevel('fundamental')">
+
                     FUNDAMENTAL
+
                 </button>
+
 
                 <button
                     class="choice-button"
                     data-level="intermediario"
                     onclick="selectLevel('intermediario')">
+
                     INTERMEDIÁRIO
+
                 </button>
+
 
                 <button
                     class="choice-button"
                     data-level="avancado"
                     onclick="selectLevel('avancado')">
+
                     AVANÇADO
+
                 </button>
+
 
             </div>
 
         </div>
+
 
 
         <div class="choice-group">
 
             <div class="choice-title">
+
                 TEMPO DE PESQUISA
+
             </div>
 
+
             <div class="choices">
+
 
                 <button
                     class="choice-button active"
                     id="time10"
                     onclick="selectTime(10)">
+
                     10 MIN
+
                 </button>
+
 
                 <button
                     class="choice-button"
                     id="time20"
                     onclick="selectTime(20)">
+
                     20 MIN
+
                 </button>
+
 
             </div>
 
         </div>
 
 
-        <button class="main-action" onclick="goTo('areas')">
+        <button
+            class="main-action"
+            onclick="goTo('areas')">
+
             CONTINUAR →
+
         </button>
 
     </div>
+
 </section>
+
 
 
 <!-- =========================
      4. ÁREAS
 ========================= -->
 
-<section class="page" id="areas">
+<section
+    class="page"
+    id="areas">
+
     <div class="page-inner">
 
-        <div class="eyebrow">PASSO 02</div>
+        <div class="eyebrow">
+            PASSO 02
+        </div>
+
 
         <h2 class="page-title">
+
             Escolha uma área
+
         </h2>
 
+
         <p class="page-description">
+
             Escolha a área que deseja estudar.
+
         </p>
+
 
         <div class="choices">
 
-            <button class="choice-button area-button"
+
+            <button
+                class="choice-button area-button"
                 data-area="teologia_sistematica"
                 onclick="selectArea('teologia_sistematica')">
+
                 TEOLOGIA SISTEMÁTICA
+
             </button>
 
-            <button class="choice-button area-button"
+
+            <button
+                class="choice-button area-button"
                 data-area="historia_da_igreja"
                 onclick="selectArea('historia_da_igreja')">
+
                 HISTÓRIA DA IGREJA
+
             </button>
 
-            <button class="choice-button area-button"
+
+            <button
+                class="choice-button area-button"
                 data-area="panorama_antigo_testamento"
                 onclick="selectArea('panorama_antigo_testamento')">
+
                 PANORAMA DO ANTIGO TESTAMENTO
+
             </button>
 
-            <button class="choice-button area-button"
+
+            <button
+                class="choice-button area-button"
                 data-area="panorama_novo_testamento"
                 onclick="selectArea('panorama_novo_testamento')">
+
                 PANORAMA DO NOVO TESTAMENTO
+
             </button>
 
-            <button class="choice-button area-button"
+
+            <button
+                class="choice-button area-button"
                 data-area="apologetica"
                 onclick="selectArea('apologetica')">
+
                 APOLOGÉTICA
+
             </button>
 
-            <button class="choice-button area-button"
+
+            <button
+                class="choice-button area-button"
                 data-area="teologia_pratica"
                 onclick="selectArea('teologia_pratica')">
+
                 TEOLOGIA PRÁTICA
+
             </button>
 
-            <button class="choice-button area-button"
+
+            <button
+                class="choice-button area-button"
                 data-area="movimentos_tradicoes"
                 onclick="selectArea('movimentos_tradicoes')">
+
                 MOVIMENTOS E TRADIÇÕES
+
             </button>
 
-            <button class="choice-button area-button"
+
+            <button
+                class="choice-button area-button"
                 data-area="personagens_historia_teologia"
                 onclick="selectArea('personagens_historia_teologia')">
+
                 PERSONAGENS DA HISTÓRIA DA TEOLOGIA
+
             </button>
 
-            <button class="choice-button area-button"
+
+            <button
+                class="choice-button area-button"
                 data-area="personagens_biblicos"
                 onclick="selectArea('personagens_biblicos')">
+
                 PERSONAGENS BÍBLICOS
+
             </button>
+
 
         </div>
 
-        <div class="selected-area" id="selectedArea">
+
+        <div
+            class="selected-area"
+            id="selectedArea">
+
             ESCOLHA UMA ÁREA
+
         </div>
 
     </div>
+
 </section>
+
 
 
 <!-- =========================
      5. SORTEIO
 ========================= -->
 
-<section class="page roulette-page" id="sorteio">
+<section
+    class="page roulette-page"
+    id="sorteio">
+
     <div class="page-inner">
 
         <div class="roulette-box">
 
-            <div class="roulette-label" id="rouletteLabel">
+
+            <div
+                class="roulette-label"
+                id="rouletteLabel">
+
                 CLIQUE EM TEOLOGAR PARA SORTEAR SEU TEMA
+
             </div>
+
 
             <button
                 class="roulette-start"
                 id="rouletteStartButton"
                 onclick="startRoulette()">
+
                 TEOLOGAR →
+
             </button>
 
+
             <div class="roulette-window">
-                <div class="roulette-word" id="rouletteWord">
+
+                <div
+                    class="roulette-word"
+                    id="rouletteWord">
+
                     —
+
                 </div>
+
             </div>
 
-            <div class="result-area" id="resultArea"></div>
+
+            <div
+                class="result-area"
+                id="resultArea">
+
+            </div>
+
 
             <button
                 class="save-theme"
@@ -1152,168 +2399,281 @@ button{
                 style="display:none;"
                 onclick="saveCurrentTheme()">
 
-                <span id="heartIcon">♡</span>
-                <span id="saveThemeText">SALVAR TEMA</span>
+                <span id="heartIcon">
+                    ♡
+                </span>
+
+                <span id="saveThemeText">
+                    SALVAR TEMA
+                </span>
 
             </button>
 
-            <div class="result-actions" id="resultActions">
+
+            <div
+                class="result-actions"
+                id="resultActions">
+
 
                 <button
                     class="result-action"
                     onclick="startStudy()">
+
                     COMEÇAR →
+
                 </button>
+
 
                 <button
                     class="result-action secondary"
                     onclick="startRoulette()">
+
                     SORTEAR NOVAMENTE ↻
+
                 </button>
 
+
             </div>
+
 
         </div>
 
     </div>
+
 </section>
+
 
 
 <!-- =========================
      6. PESQUISA
 ========================= -->
 
-<section class="page study-page" id="pesquisa">
+<section
+    class="page study-page"
+    id="pesquisa">
+
     <div class="page-inner">
 
-        <div class="eyebrow">PESQUISA</div>
+        <div class="eyebrow">
+
+            PESQUISA
+
+        </div>
+
 
         <h2 class="page-title">
+
             Pesquise.
+
         </h2>
+
 
         <div class="timer-card">
 
+
             <div class="timer-label">
+
                 SEU TEMA
+
             </div>
 
-            <div class="study-topic" id="studyTopic">
+
+            <div
+                class="study-topic"
+                id="studyTopic">
+
                 —
+
             </div>
 
-            <div class="timer" id="studyTimer">
+
+            <div
+                class="timer"
+                id="studyTimer">
+
                 10:00
+
             </div>
+
 
             <div class="study-buttons">
+
 
                 <button
                     class="study-button primary"
                     onclick="finishStudy()">
+
                     EXPLICAR →
+
                 </button>
+
 
                 <button
                     class="study-button"
                     id="extraTimeButton"
                     onclick="requestExtraTime()">
+
                     + PEDIR MAIS TEMPO
+
                 </button>
 
+
             </div>
+
 
         </div>
 
     </div>
+
 </section>
+
 
 
 <!-- =========================
      7. EXPLICAÇÃO
 ========================= -->
 
-<section class="page response-page" id="explicacao">
+<section
+    class="page response-page"
+    id="explicacao">
+
     <div class="page-inner">
 
-        <div class="eyebrow">EXPLICAÇÃO</div>
+        <div class="eyebrow">
+
+            EXPLICAÇÃO
+
+        </div>
+
 
         <h2 class="page-title">
+
             Explique.
+
         </h2>
+
 
         <div class="timer-card">
 
+
             <div class="timer-label">
+
                 EXPLIQUE O QUE VOCÊ APRENDEU
+
             </div>
 
-            <div class="study-topic" id="responseTopic">
+
+            <div
+                class="study-topic"
+                id="responseTopic">
+
                 —
+
             </div>
 
-            <div class="timer" id="responseTimer">
+
+            <div
+                class="timer"
+                id="responseTimer">
+
                 01:00
+
             </div>
+
 
             <div class="study-buttons">
+
 
                 <button
                     class="study-button danger"
                     onclick="finishTeologando()">
+
                     ENCERRAR
+
                 </button>
 
+
             </div>
+
 
         </div>
 
     </div>
+
 </section>
+
 
 
 <!-- =========================
      8. FINAL
 ========================= -->
 
-<section class="page finish-page" id="final">
+<section
+    class="page finish-page"
+    id="final">
+
     <div class="page-inner">
 
+
         <div class="eyebrow">
+
             CONCLUÍDO
+
         </div>
+
 
         <h2 class="page-title">
+
             TEOLOGANDO CONCLUÍDO
+
         </h2>
 
+
         <p class="page-description">
+
             Você pesquisou e explicou um tema.
             Continue estudando.
+
         </p>
 
-        <div class="study-topic" id="finishTopic">
+
+        <div
+            class="study-topic"
+            id="finishTopic">
+
             —
+
         </div>
 
+
         <div class="study-buttons">
+
 
             <button
                 class="study-button primary"
                 onclick="newTheme()">
+
                 NOVO TEMA →
+
             </button>
+
 
             <button
                 class="study-button"
                 onclick="goTo('sorteio')">
+
                 SORTEAR NOVAMENTE ↻
+
             </button>
+
 
         </div>
 
+
     </div>
+
 </section>
+
 
 
 <!-- =========================
@@ -1321,35 +2681,193 @@ button{
 ========================= -->
 
 <section class="saved-section">
+
     <div class="saved-inner">
+
 
         <button
             class="saved-toggle"
             onclick="toggleSaved()">
 
-            <span>♥ TEMAS SALVOS</span>
-            <span id="savedArrow">⌄</span>
+
+            <span>
+                ♥ TEMAS SALVOS
+            </span>
+
+
+            <span id="savedArrow">
+                ⌄
+            </span>
+
 
         </button>
 
-        <div class="saved-list" id="savedList"></div>
+
+        <div
+            class="saved-list"
+            id="savedList">
+
+        </div>
+
 
     </div>
+
 </section>
 
 
+
 <!-- =========================
-     INSTAGRAM
+     10. APOIO AO PROJETO
+========================= -->
+
+<section class="support-section">
+
+    <div class="support-card">
+
+
+        <div class="support-label">
+
+            MANTENHA O PROJETO GRATUITO
+
+        </div>
+
+
+        <div class="support-title">
+
+            Continue teologando.
+
+        </div>
+
+
+        <div class="support-text">
+
+            O Teologando foi criado para ser uma ferramenta
+            gratuita de estudo. Se você quiser contribuir para
+            manter o projeto no ar e continuar seu desenvolvimento,
+            você pode apoiar.
+
+        </div>
+
+
+        <div class="support-name">
+
+            Samuel Menezes — Teologando
+
+        </div>
+
+
+        <!-- =========================
+             PIX
+        ========================= -->
+
+        <div class="pix-box">
+
+            <div class="pix-label">
+
+                APOIE ATRAVÉS DO PIX
+
+            </div>
+
+
+            <div
+                class="pix-key"
+                id="pixKey">
+
+                19b0c0f3-d5f5-41c9-b337-089273746d11
+
+            </div>
+
+
+            <div class="pix-buttons">
+
+
+                <button
+                    class="pix-button"
+                    onclick="copyPixKey()">
+
+                    COPIAR CHAVE PIX
+
+                </button>
+
+
+                <button
+                    class="pix-button primary"
+                    onclick="copyPixCode()">
+
+                    COPIAR PIX COPIA E COLA →
+
+                </button>
+
+
+            </div>
+
+
+            <div
+                class="pix-status"
+                id="pixStatus">
+
+            </div>
+
+
+            <div class="pix-info">
+
+                Ao copiar o Pix Copia e Cola, abra o aplicativo
+                do seu banco e cole o código na opção Pix Copia e Cola.
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     11. CONTADOR GLOBAL
+========================= -->
+
+<div class="play-counter">
+
+    <div class="play-counter-text">
+
+        <span
+            class="play-counter-number"
+            id="playCount">
+
+            —
+
+        </span>
+
+        pessoas já usaram o Teologando
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     12. INSTAGRAM
 ========================= -->
 
 <div class="bottom-area">
 
     <div class="bottom-content">
 
+
         <div class="developed">
+
             desenvolvido por<br>
-            <strong>Samuel Menezes</strong>
+
+            <strong>
+                Samuel Menezes
+            </strong>
+
         </div>
+
 
         <a
             class="instagram-button"
@@ -1357,41 +2875,538 @@ button{
             target="_blank"
             rel="noopener">
 
+
             <svg
                 class="instagram-icon"
                 viewBox="0 0 24 24">
 
-                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                <circle cx="12" cy="12" r="4"></circle>
-                <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"></circle>
+
+                <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5">
+                </rect>
+
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="4">
+                </circle>
+
+
+                <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r=".8"
+                    fill="currentColor"
+                    stroke="none">
+                </circle>
+
 
             </svg>
 
+
             @samuelmenezes.ievad
 
+
         </a>
+
 
     </div>
 
 </div>
 
 
+
 <!-- =========================
-     INSPIRADO
+     13. INSPIRADO
 ========================= -->
 
 <div class="inspired-by">
+
     INSPIRADO NO TRABALHO DE
+
     <a
         href="https://www.instagram.com/bitterbuilds/"
         target="_blank"
         rel="noopener">
+
         @BITTERBUILDS
+
     </a>
+
 </div>
 
 
+
+<!-- =========================
+     COUNTER API
+========================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+
+
+
 <script>
+
+
+/* =========================================================
+   CONFIGURAÇÃO DO PIX
+========================================================= */
+
+const PIX_KEY =
+    "19b0c0f3-d5f5-41c9-b337-089273746d11";
+
+const PIX_NAME =
+    "Samuel Menezes Martins";
+
+const PIX_CITY =
+    "Rio de Janeiro";
+
+
+/* =========================================================
+   PIX — FUNÇÕES
+========================================================= */
+
+
+/*
+    Remove acentos e caracteres incompatíveis
+    com os campos do padrão Pix.
+*/
+
+function removeAccents(text){
+
+    return text
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"")
+        .replace(/[^A-Za-z0-9 ]/g,"")
+        .trim();
+
+}
+
+
+/*
+    Gera campo EMV:
+    ID + tamanho + valor.
+*/
+
+function pixField(id,value){
+
+    return (
+        id +
+        String(value.length).padStart(2,"0") +
+        value
+    );
+
+}
+
+
+/*
+    CRC16-CCITT utilizado no Pix.
+*/
+
+function crc16(payload){
+
+    let crc = 0xFFFF;
+
+
+    for(let i=0;i<payload.length;i++){
+
+        crc ^= payload.charCodeAt(i) << 8;
+
+
+        for(let j=0;j<8;j++){
+
+            if(crc & 0x8000){
+
+                crc =
+                    ((crc << 1) ^ 0x1021)
+                    & 0xFFFF;
+
+            }else{
+
+                crc =
+                    (crc << 1)
+                    & 0xFFFF;
+
+            }
+
+        }
+
+    }
+
+
+    return crc
+        .toString(16)
+        .toUpperCase()
+        .padStart(4,"0");
+
+}
+
+
+/*
+    Monta o Pix Copia e Cola.
+*/
+
+function generatePixCode(){
+
+    const name =
+        removeAccents(PIX_NAME)
+        .substring(0,25)
+        .toUpperCase();
+
+
+    const city =
+        removeAccents(PIX_CITY)
+        .substring(0,15)
+        .toUpperCase();
+
+
+    /*
+        Merchant Account Information
+        ID 26:
+
+        00 = GUI Pix
+        01 = chave Pix
+    */
+
+    const merchantAccountInformation =
+
+        pixField("00","BR.GOV.BCB.PIX") +
+
+        pixField("01",PIX_KEY);
+
+
+    const payload =
+
+        pixField(
+            "00",
+            "01"
+        )
+
+        +
+
+        pixField(
+            "26",
+            merchantAccountInformation
+        )
+
+        +
+
+        pixField(
+            "52",
+            "0000"
+        )
+
+        +
+
+        pixField(
+            "53",
+            "986"
+        )
+
+        +
+
+        pixField(
+            "58",
+            "BR"
+        )
+
+        +
+
+        pixField(
+            "59",
+            name
+        )
+
+        +
+
+        pixField(
+            "60",
+            city
+        )
+
+        +
+
+        pixField(
+            "62",
+            pixField("05","***")
+        );
+
+
+    const payloadWithCRC =
+        payload + "6304";
+
+
+    return (
+        payloadWithCRC +
+        crc16(payloadWithCRC)
+    );
+
+}
+
+
+/*
+    Copiar para área de transferência.
+*/
+
+async function copyToClipboard(text){
+
+    try{
+
+        await navigator.clipboard.writeText(text);
+
+        return true;
+
+    }catch(error){
+
+        try{
+
+            const textarea =
+                document.createElement("textarea");
+
+
+            textarea.value = text;
+
+            textarea.style.position =
+                "fixed";
+
+            textarea.style.opacity = "0";
+
+
+            document.body.appendChild(
+                textarea
+            );
+
+
+            textarea.focus();
+
+            textarea.select();
+
+
+            const success =
+                document.execCommand("copy");
+
+
+            document.body.removeChild(
+                textarea
+            );
+
+
+            return success;
+
+        }catch{
+
+            return false;
+
+        }
+
+    }
+
+}
+
+
+/*
+    Copia somente a chave Pix.
+*/
+
+async function copyPixKey(){
+
+    const success =
+        await copyToClipboard(PIX_KEY);
+
+
+    const status =
+        document.getElementById(
+            "pixStatus"
+        );
+
+
+    if(success){
+
+        status.textContent =
+            "✓ Chave Pix copiada!";
+
+    }else{
+
+        status.textContent =
+            "Não foi possível copiar automaticamente. Toque e segure a chave para copiar.";
+
+    }
+
+
+    setTimeout(()=>{
+
+        status.textContent = "";
+
+    },4000);
+
+}
+
+
+/*
+    Gera e copia o Pix Copia e Cola.
+*/
+
+async function copyPixCode(){
+
+    const pixCode =
+        generatePixCode();
+
+
+    const success =
+        await copyToClipboard(pixCode);
+
+
+    const status =
+        document.getElementById(
+            "pixStatus"
+        );
+
+
+    if(success){
+
+        status.textContent =
+            "✓ Pix Copia e Cola copiado! Abra seu banco e cole no Pix.";
+
+    }else{
+
+        status.textContent =
+            "Não foi possível copiar automaticamente. Tente novamente.";
+
+    }
+
+
+    setTimeout(()=>{
+
+        status.textContent = "";
+
+    },5000);
+
+}
+
+
+/* =========================================================
+   CONTADOR GLOBAL
+========================================================= */
+
+
+/*
+    Workspace do CounterAPI.
+*/
+
+const teologandoCounter = new Counter({
+
+    workspace:"teologando"
+
+});
+
+
+/*
+    Busca o número atual sem aumentar.
+*/
+
+function loadPlayCount(){
+
+
+    const counterElement =
+        document.getElementById("playCount");
+
+
+    if(!counterElement)
+        return;
+
+
+    teologandoCounter
+
+        .get("pessoas-teologaram")
+
+        .then(result=>{
+
+
+            counterElement.textContent =
+
+                Number(result.value)
+                    .toLocaleString("pt-BR");
+
+
+        })
+
+
+        .catch(error=>{
+
+
+            console.log(
+
+                "Não foi possível carregar o contador:",
+
+                error
+
+            );
+
+
+            counterElement.textContent =
+                "—";
+
+
+        });
+
+}
+
+
+/*
+    Registra uma nova utilização.
+*/
+
+function registerPlay(){
+
+
+    const counterElement =
+        document.getElementById("playCount");
+
+
+    teologandoCounter
+
+        .up("pessoas-teologaram")
+
+        .then(result=>{
+
+
+            if(counterElement){
+
+
+                counterElement.textContent =
+
+                    Number(result.value)
+                        .toLocaleString("pt-BR");
+
+
+            }
+
+
+        })
+
+
+        .catch(error=>{
+
+
+            console.log(
+
+                "Não foi possível registrar a utilização:",
+
+                error
+
+            );
+
+
+        });
+
+}
+
+
 
 /* =========================================================
    DADOS
@@ -1399,8 +3414,12 @@ button{
 
 const DATA = {
 
+
 teologia_sistematica:{
+
+
     fundamental:[
+
         "Bibliologia",
         "Teologia Própria / Teontologia",
         "Cristologia",
@@ -1410,9 +3429,12 @@ teologia_sistematica:{
         "Soteriologia",
         "Eclesiologia",
         "Escatologia"
+
     ],
 
+
     intermediario:[
+
         "Revelação",
         "Inspiração",
         "Iluminação",
@@ -1501,9 +3523,12 @@ teologia_sistematica:{
         "Novo céu e nova terra",
         "Vida eterna",
         "Inferno"
+
     ],
 
+
     avancado:[
+
         "Teologia trinitária",
         "Pericorese",
         "Simplicidade divina",
@@ -1519,11 +3544,18 @@ teologia_sistematica:{
         "Teodiceia",
         "Debates escatológicos",
         "Crítica textual e autoridade bíblica"
+
     ]
+
 },
 
+
+
 historia_da_igreja:{
+
+
     fundamental:[
+
         "Igreja Primitiva",
         "Igreja Antiga",
         "Igreja Medieval",
@@ -1531,9 +3563,12 @@ historia_da_igreja:{
         "Contrarreforma",
         "Igreja Moderna",
         "Igreja Contemporânea"
+
     ],
 
+
     intermediario:[
+
         "Igreja Apostólica",
         "Perseguições aos cristãos",
         "Pais Apostólicos",
@@ -1578,9 +3613,12 @@ historia_da_igreja:{
         "Evangelicalismo",
         "Pentecostalismo",
         "Movimento Carismático"
+
     ],
 
+
     avancado:[
+
         "Concílio de Jerusalém",
         "Primeiro Concílio de Niceia",
         "Primeiro Concílio de Constantinopla",
@@ -1605,31 +3643,74 @@ historia_da_igreja:{
         "Fundamentalismo",
         "Pentecostalismo",
         "História dos Avivamentos"
+
     ]
+
 },
 
+
+
 panorama_antigo_testamento:{
+
+
     fundamental:[
+
         "Pentateuco",
         "Livros Históricos",
         "Livros Poéticos",
         "Profetas Maiores",
         "Profetas Menores"
+
     ],
+
 
     intermediario:[
-        "Gênesis","Êxodo","Levítico","Números","Deuteronômio",
-        "Josué","Juízes","Rute","1 Samuel","2 Samuel",
-        "1 Reis","2 Reis","1 Crônicas","2 Crônicas",
-        "Esdras","Neemias","Ester","Jó","Salmos",
-        "Provérbios","Eclesiastes","Cantares",
-        "Isaías","Jeremias","Lamentações","Ezequiel",
-        "Daniel","Oséias","Joel","Amós","Obadias",
-        "Jonas","Miquéias","Naum","Habacuque","Sofonias",
-        "Ageu","Zacarias","Malaquias"
+
+        "Gênesis",
+        "Êxodo",
+        "Levítico",
+        "Números",
+        "Deuteronômio",
+        "Josué",
+        "Juízes",
+        "Rute",
+        "1 Samuel",
+        "2 Samuel",
+        "1 Reis",
+        "2 Reis",
+        "1 Crônicas",
+        "2 Crônicas",
+        "Esdras",
+        "Neemias",
+        "Ester",
+        "Jó",
+        "Salmos",
+        "Provérbios",
+        "Eclesiastes",
+        "Cantares",
+        "Isaías",
+        "Jeremias",
+        "Lamentações",
+        "Ezequiel",
+        "Daniel",
+        "Oséias",
+        "Joel",
+        "Amós",
+        "Obadias",
+        "Jonas",
+        "Miquéias",
+        "Naum",
+        "Habacuque",
+        "Sofonias",
+        "Ageu",
+        "Zacarias",
+        "Malaquias"
+
     ],
 
+
     avancado:[
+
         "Autoria do Pentateuco",
         "Datação do Pentateuco",
         "Formação do Pentateuco",
@@ -1654,28 +3735,61 @@ panorama_antigo_testamento:{
         "Problema do mal em Jó",
         "Intertextualidade no Antigo Testamento",
         "Estrutura literária do Antigo Testamento"
+
     ]
+
 },
 
+
+
 panorama_novo_testamento:{
+
+
     fundamental:[
+
         "Evangelhos",
         "Atos dos Apóstolos",
         "Cartas",
         "Apocalipse"
+
     ],
+
 
     intermediario:[
-        "Mateus","Marcos","Lucas","João","Atos dos Apóstolos",
-        "Romanos","1 Coríntios","2 Coríntios","Gálatas",
-        "Efésios","Filipenses","Colossenses",
-        "1 Tessalonicenses","2 Tessalonicenses",
-        "1 Timóteo","2 Timóteo","Tito","Filemom",
-        "Hebreus","Tiago","1 Pedro","2 Pedro",
-        "1 João","2 João","3 João","Judas","Apocalipse"
+
+        "Mateus",
+        "Marcos",
+        "Lucas",
+        "João",
+        "Atos dos Apóstolos",
+        "Romanos",
+        "1 Coríntios",
+        "2 Coríntios",
+        "Gálatas",
+        "Efésios",
+        "Filipenses",
+        "Colossenses",
+        "1 Tessalonicenses",
+        "2 Tessalonicenses",
+        "1 Timóteo",
+        "2 Timóteo",
+        "Tito",
+        "Filemom",
+        "Hebreus",
+        "Tiago",
+        "1 Pedro",
+        "2 Pedro",
+        "1 João",
+        "2 João",
+        "3 João",
+        "Judas",
+        "Apocalipse"
+
     ],
 
+
     avancado:[
+
         "Problema dos Evangelhos Sinóticos",
         "Questão Sinótica",
         "Prioridade de Marcos",
@@ -1705,11 +3819,18 @@ panorama_novo_testamento:{
         "Milênio em Apocalipse 20",
         "Datação do Apocalipse",
         "Autoria do Apocalipse"
+
     ]
+
 },
 
+
+
 apologetica:{
+
+
     avancado:[
+
         "Existência de Deus",
         "Argumento cosmológico",
         "Argumento teleológico",
@@ -1744,11 +3865,18 @@ apologetica:{
         "Hipocrisia religiosa",
         "Deus do Antigo Testamento",
         "Pecado e justiça divina"
+
     ]
+
 },
 
+
+
 teologia_pratica:{
+
+
     fundamental:[
+
         "Oração",
         "Discipulado",
         "Evangelismo",
@@ -1759,9 +3887,12 @@ teologia_pratica:{
         "Adoração",
         "Vida Cristã",
         "Serviço Cristão"
+
     ],
 
+
     intermediario:[
+
         "Homilética",
         "Preparação de Sermões",
         "Interpretação Bíblica para Pregação",
@@ -1779,9 +3910,12 @@ teologia_pratica:{
         "Culto Cristão",
         "Dons Ministeriais",
         "Ética Ministerial"
+
     ],
 
+
     avancado:[
+
         "Teologia Pastoral",
         "Modelos de Liderança Cristã",
         "Eclesiologia Aplicada",
@@ -1797,11 +3931,18 @@ teologia_pratica:{
         "Liderança Eclesiástica",
         "Formação de Discípulos",
         "Ministério e Cultura Contemporânea"
+
     ]
+
 },
 
+
+
 movimentos_tradicoes:{
+
+
     intermediario:[
+
         "Catolicismo Romano",
         "Ortodoxia Oriental",
         "Protestantismo",
@@ -1818,9 +3959,12 @@ movimentos_tradicoes:{
         "Adventismo",
         "Puritanismo",
         "Pietismo"
+
     ],
 
+
     avancado:[
+
         "Teologia Calvinista",
         "Cinco Pontos do Calvinismo",
         "Teologia Arminiana",
@@ -1843,11 +3987,18 @@ movimentos_tradicoes:{
         "Sacerdócio de todos os crentes",
         "Predestinação no Calvinismo",
         "Graça preveniente no Arminianismo"
+
     ]
+
 },
 
+
+
 personagens_historia_teologia:{
+
+
     characters:[
+
         "Inácio de Antioquia",
         "Justino Mártir",
         "Irineu de Lyon",
@@ -1878,32 +4029,118 @@ personagens_historia_teologia:{
         "J. I. Packer",
         "Gordon Fee",
         "Stanley Horton"
+
     ]
+
 },
 
+
+
 personagens_biblicos:{
+
+
     characters:[
-        "Adão","Eva","Caim","Abel","Noé","Abraão","Sara","Ló",
-        "Melquisedeque","Isaque","Rebeca","Jacó","Esaú","José",
-        "Moisés","Arão","Miriã","Josué","Calebe","Raabe",
-        "Débora","Baraque","Gideão","Jefté","Sansão","Rute",
-        "Noemi","Samuel","Saul","Jônatas","Davi","Abigail",
-        "Salomão","Elias","Eliseu","Ezequias","Josias","Manassés",
-        "Esdras","Neemias","Ester","Jó","Isaías","Jeremias",
-        "Daniel","Ezequiel","Jonas","Micaías","Hulda",
-        "Zacarias","Isabel","João Batista","Maria","José",
-        "Simeão","Ana","Nicodemos","José de Arimateia","Jesus",
-        "Pedro","André","Tiago","João","Filipe","Bartolomeu",
-        "Tomé","Mateus","Tiago filho de Alfeu","Judas Tadeu",
-        "Simão o Zelote","Judas Iscariotes","Marta","Maria de Betânia",
-        "Lázaro","Zaqueu","Jairo","Bartimeu","Estêvão","Barnabé",
-        "Paulo","Silas","Timóteo","Tito","Apolo","Priscila","Áquila",
-        "Onésimo","Filemom","Gamaliel","Caifás","Herodes",
-        "Pôncio Pilatos","Barrabás"
+
+        "Adão",
+        "Eva",
+        "Caim",
+        "Abel",
+        "Noé",
+        "Abraão",
+        "Sara",
+        "Ló",
+        "Melquisedeque",
+        "Isaque",
+        "Rebeca",
+        "Jacó",
+        "Esaú",
+        "José",
+        "Moisés",
+        "Arão",
+        "Miriã",
+        "Josué",
+        "Calebe",
+        "Raabe",
+        "Débora",
+        "Baraque",
+        "Gideão",
+        "Jefté",
+        "Sansão",
+        "Rute",
+        "Noemi",
+        "Samuel",
+        "Saul",
+        "Jônatas",
+        "Davi",
+        "Abigail",
+        "Salomão",
+        "Elias",
+        "Eliseu",
+        "Ezequias",
+        "Josias",
+        "Manassés",
+        "Esdras",
+        "Neemias",
+        "Ester",
+        "Jó",
+        "Isaías",
+        "Jeremias",
+        "Daniel",
+        "Ezequiel",
+        "Jonas",
+        "Micaías",
+        "Hulda",
+        "Zacarias",
+        "Isabel",
+        "João Batista",
+        "Maria",
+        "José",
+        "Simeão",
+        "Ana",
+        "Nicodemos",
+        "José de Arimateia",
+        "Jesus",
+        "Pedro",
+        "André",
+        "Tiago",
+        "João",
+        "Filipe",
+        "Bartolomeu",
+        "Tomé",
+        "Mateus",
+        "Tiago filho de Alfeu",
+        "Judas Tadeu",
+        "Simão o Zelote",
+        "Judas Iscariotes",
+        "Marta",
+        "Maria de Betânia",
+        "Lázaro",
+        "Zaqueu",
+        "Jairo",
+        "Bartimeu",
+        "Estêvão",
+        "Barnabé",
+        "Paulo",
+        "Silas",
+        "Timóteo",
+        "Tito",
+        "Apolo",
+        "Priscila",
+        "Áquila",
+        "Onésimo",
+        "Filemom",
+        "Gamaliel",
+        "Caifás",
+        "Herodes",
+        "Pôncio Pilatos",
+        "Barrabás"
+
     ]
+
 }
 
 };
+
 
 
 /* =========================================================
@@ -1911,52 +4148,97 @@ personagens_biblicos:{
 ========================================================= */
 
 const AREAS = [
+
+
     {
         key:"teologia_sistematica",
         name:"Teologia Sistemática",
-        levels:["fundamental","intermediario","avancado"]
+        levels:[
+            "fundamental",
+            "intermediario",
+            "avancado"
+        ]
     },
+
+
     {
         key:"historia_da_igreja",
         name:"História da Igreja",
-        levels:["fundamental","intermediario","avancado"]
+        levels:[
+            "fundamental",
+            "intermediario",
+            "avancado"
+        ]
     },
+
+
     {
         key:"panorama_antigo_testamento",
         name:"Panorama do Antigo Testamento",
-        levels:["fundamental","intermediario","avancado"]
+        levels:[
+            "fundamental",
+            "intermediario",
+            "avancado"
+        ]
     },
+
+
     {
         key:"panorama_novo_testamento",
         name:"Panorama do Novo Testamento",
-        levels:["fundamental","intermediario","avancado"]
+        levels:[
+            "fundamental",
+            "intermediario",
+            "avancado"
+        ]
     },
+
+
     {
         key:"apologetica",
         name:"Apologética",
-        levels:["avancado"]
+        levels:[
+            "avancado"
+        ]
     },
+
+
     {
         key:"teologia_pratica",
         name:"Teologia Prática",
-        levels:["fundamental","intermediario","avancado"]
+        levels:[
+            "fundamental",
+            "intermediario",
+            "avancado"
+        ]
     },
+
+
     {
         key:"movimentos_tradicoes",
         name:"Movimentos e Tradições",
-        levels:["intermediario","avancado"]
+        levels:[
+            "intermediario",
+            "avancado"
+        ]
     },
+
+
     {
         key:"personagens_historia_teologia",
         name:"Personagens da História da Teologia",
         characters:true
     },
+
+
     {
         key:"personagens_biblicos",
         name:"Personagens Bíblicos",
         characters:true
     }
+
 ];
+
 
 
 /* =========================================================
@@ -1964,6 +4246,7 @@ const AREAS = [
 ========================================================= */
 
 let state = {
+
 
     level:"fundamental",
 
@@ -1998,21 +4281,32 @@ let state = {
 };
 
 
+
 /* =========================================================
    NAVEGAÇÃO
 ========================================================= */
 
 function goTo(id){
 
-    const element = document.getElementById(id);
 
-    if(!element) return;
+    const element =
+        document.getElementById(id);
+
+
+    if(!element)
+        return;
+
 
     element.scrollIntoView({
+
         behavior:"smooth",
+
         block:"start"
+
     });
+
 }
+
 
 
 /* =========================================================
@@ -2021,32 +4315,57 @@ function goTo(id){
 
 function selectLevel(level){
 
+
     state.level = level;
+
 
     document
         .querySelectorAll("[data-level]")
         .forEach(btn=>{
+
+
             btn.classList.toggle(
+
                 "active",
+
                 btn.dataset.level === level
+
             );
+
         });
+
 
     if(!state.isCharacter){
 
+
         if(level === "fundamental"){
+
             selectTime(10);
+
         }
+
 
         if(level === "intermediario"){
-            selectTime(state.time === 20 ? 20 : 10);
+
+            selectTime(
+                state.time === 20
+                ? 20
+                : 10
+            );
+
         }
 
+
         if(level === "avancado"){
+
             selectTime(20);
+
         }
+
     }
+
 }
+
 
 
 /* =========================================================
@@ -2055,32 +4374,57 @@ function selectLevel(level){
 
 function selectTime(minutes){
 
-    if(
-        !state.isCharacter &&
-        state.level === "fundamental" &&
-        minutes !== 10
-    ){
-        return;
-    }
 
     if(
+
         !state.isCharacter &&
-        state.level === "avancado" &&
-        minutes !== 20
+
+        state.level === "fundamental" &&
+
+        minutes !== 10
+
     ){
+
         return;
+
     }
+
+
+    if(
+
+        !state.isCharacter &&
+
+        state.level === "avancado" &&
+
+        minutes !== 20
+
+    ){
+
+        return;
+
+    }
+
 
     state.time = minutes;
 
+
     document
         .getElementById("time10")
-        .classList.toggle("active",minutes === 10);
+        .classList.toggle(
+            "active",
+            minutes === 10
+        );
+
 
     document
         .getElementById("time20")
-        .classList.toggle("active",minutes === 20);
+        .classList.toggle(
+            "active",
+            minutes === 20
+        );
+
 }
+
 
 
 /* =========================================================
@@ -2089,102 +4433,120 @@ function selectTime(minutes){
 
 function selectArea(areaKey){
 
-    const area = AREAS.find(a=>a.key===areaKey);
 
-    if(!area) return;
+    const area =
+        AREAS.find(a=>a.key===areaKey);
+
+
+    if(!area)
+        return;
+
 
     state.areaKey = area.key;
+
     state.areaName = area.name;
-    state.isCharacter = !!area.characters;
+
+    state.isCharacter =
+        !!area.characters;
+
 
     document
         .querySelectorAll(".area-button")
         .forEach(btn=>{
+
+
             btn.classList.toggle(
+
                 "active",
+
                 btn.dataset.area === areaKey
+
             );
+
         });
 
-    document.getElementById("selectedArea").textContent =
+
+    document.getElementById(
+        "selectedArea"
+    ).textContent =
         area.name.toUpperCase();
 
+
+
     if(state.isCharacter){
+
 
         document.getElementById("time10")
             .classList.remove("locked");
 
+
         document.getElementById("time20")
             .classList.remove("locked");
 
+
     }else{
+
 
         if(state.level === "fundamental"){
 
+
             selectTime(10);
+
 
             document.getElementById("time20")
                 .classList.add("locked");
+
 
         }else if(state.level === "avancado"){
 
+
             selectTime(20);
+
 
             document.getElementById("time10")
                 .classList.add("locked");
 
+
         }else{
+
 
             document.getElementById("time10")
                 .classList.remove("locked");
 
+
             document.getElementById("time20")
                 .classList.remove("locked");
+
         }
+
     }
+
 
     clearAllTimers();
 
+
     state.topic = "";
+
     state.studying = false;
+
     state.responding = false;
+
     state.extraTimeUsed = false;
 
+
     hideStudySections();
+
     resetRouletteDisplay();
+
 
     setTimeout(()=>{
+
         goTo("sorteio");
+
     },150);
+
 }
 
-
-/* =========================================================
-   IR PARA O SORTEIO
-========================================================= */
-
-function goToRoulette(){
-
-    if(!state.areaKey){
-
-        alert("Escolha uma área primeiro.");
-
-        return;
-    }
-
-    clearAllTimers();
-
-    state.topic = "";
-    state.extraTimeUsed = false;
-    state.studying = false;
-    state.responding = false;
-
-    hideStudySections();
-
-    resetRouletteDisplay();
-
-    goTo("sorteio");
-}
 
 
 /* =========================================================
@@ -2193,26 +4555,45 @@ function goToRoulette(){
 
 function resetRouletteDisplay(){
 
-    document.getElementById("rouletteLabel").textContent =
+
+    document.getElementById(
+        "rouletteLabel"
+    ).textContent =
+
         "CLIQUE EM TEOLOGAR PARA SORTEAR SEU TEMA";
 
-    document.getElementById("rouletteWord").textContent =
-        "—";
 
-    document.getElementById("rouletteWord")
-        .classList.remove("rolling");
+    document.getElementById(
+        "rouletteWord"
+    ).textContent = "—";
 
-    document.getElementById("resultArea").textContent = "";
 
-    document.getElementById("resultActions")
-        .classList.remove("visible");
+    document.getElementById(
+        "rouletteWord"
+    ).classList.remove("rolling");
 
-    document.getElementById("saveThemeButton")
-        .style.display = "none";
 
-    document.getElementById("rouletteStartButton")
-        .classList.remove("hidden");
+    document.getElementById(
+        "resultArea"
+    ).textContent = "";
+
+
+    document.getElementById(
+        "resultActions"
+    ).classList.remove("visible");
+
+
+    document.getElementById(
+        "saveThemeButton"
+    ).style.display = "none";
+
+
+    document.getElementById(
+        "rouletteStartButton"
+    ).classList.remove("hidden");
+
 }
+
 
 
 /* =========================================================
@@ -2221,104 +4602,187 @@ function resetRouletteDisplay(){
 
 function startRoulette(){
 
+
     clearAllTimers();
 
+
     state.topic = "";
+
     state.extraTimeUsed = false;
+
     state.studying = false;
+
     state.responding = false;
+
 
     hideStudySections();
 
+
     if(!state.areaKey){
 
-        alert("Escolha uma área primeiro.");
+
+        alert(
+            "Escolha uma área primeiro."
+        );
+
 
         goTo("areas");
 
+
         return;
+
     }
 
-    document.getElementById("rouletteStartButton")
-        .classList.add("hidden");
 
-    const areaData = DATA[state.areaKey];
+    const areaData =
+        DATA[state.areaKey];
+
 
     let pool = [];
 
+
     if(state.isCharacter){
 
-        pool = areaData.characters || [];
+
+        pool =
+            areaData.characters || [];
+
 
     }else{
 
-        pool = areaData[state.level] || [];
+
+        pool =
+            areaData[state.level] || [];
+
 
         if(pool.length === 0){
 
-            Object.values(areaData).forEach(group=>{
 
-                if(Array.isArray(group)){
-                    pool.push(...group);
-                }
+            Object.values(areaData)
+                .forEach(group=>{
 
-            });
+
+                    if(Array.isArray(group)){
+
+                        pool.push(...group);
+
+                    }
+
+                });
+
         }
+
     }
+
 
     if(pool.length === 0){
 
-        alert("Nenhum tema disponível para essa combinação.");
 
-        document.getElementById("rouletteStartButton")
-            .classList.remove("hidden");
+        alert(
+            "Nenhum tema disponível para essa combinação."
+        );
+
 
         return;
+
     }
 
-    document.getElementById("rouletteLabel").textContent =
+
+    /*
+        REGISTRA A UTILIZAÇÃO
+        NO CONTADOR GLOBAL.
+    */
+
+    registerPlay();
+
+
+    document
+        .getElementById(
+            "rouletteStartButton"
+        )
+        .classList.add("hidden");
+
+
+    document.getElementById(
+        "rouletteLabel"
+    ).textContent =
+
         "SEU TEMA ESTÁ SENDO ESCOLHIDO...";
 
-    document.getElementById("resultActions")
-        .classList.remove("visible");
 
-    document.getElementById("saveThemeButton")
-        .style.display = "none";
+    document.getElementById(
+        "resultActions"
+    ).classList.remove("visible");
 
-    document.getElementById("resultArea")
-        .textContent = "";
 
-    const word = document.getElementById("rouletteWord");
+    document.getElementById(
+        "saveThemeButton"
+    ).style.display = "none";
+
+
+    document.getElementById(
+        "resultArea"
+    ).textContent = "";
+
+
+    const word =
+        document.getElementById(
+            "rouletteWord"
+        );
+
 
     word.classList.add("rolling");
+
 
     let cycles = 0;
 
     const totalCycles = 28;
 
-    const interval = setInterval(()=>{
 
-        const random =
-            pool[Math.floor(Math.random()*pool.length)];
+    const interval =
+        setInterval(()=>{
 
-        word.textContent =
-            random.toUpperCase();
 
-        cycles++;
+            const random =
+                pool[
+                    Math.floor(
+                        Math.random()*pool.length
+                    )
+                ];
 
-        if(cycles >= totalCycles){
 
-            clearInterval(interval);
+            word.textContent =
+                random.toUpperCase();
 
-            const finalTopic =
-                pool[Math.floor(Math.random()*pool.length)];
 
-            showFinalTopic(finalTopic);
+            cycles++;
 
-        }
 
-    },75);
+            if(cycles >= totalCycles){
+
+
+                clearInterval(interval);
+
+
+                const finalTopic =
+                    pool[
+                        Math.floor(
+                            Math.random()*pool.length
+                        )
+                    ];
+
+
+                showFinalTopic(
+                    finalTopic
+                );
+
+            }
+
+
+        },75);
+
 }
+
 
 
 /* =========================================================
@@ -2327,37 +4791,67 @@ function startRoulette(){
 
 function showFinalTopic(topic){
 
+
     state.topic = topic;
 
+
     const word =
-        document.getElementById("rouletteWord");
+        document.getElementById(
+            "rouletteWord"
+        );
 
-    word.classList.remove("rolling");
 
-    document.getElementById("rouletteLabel").textContent =
+    word.classList.remove(
+        "rolling"
+    );
+
+
+    document.getElementById(
+        "rouletteLabel"
+    ).textContent =
+
         state.isCharacter
         ? "QUEM FOI"
         : "SEU TEMA É";
 
+
     word.textContent =
+
         state.isCharacter
         ? topic.toUpperCase() + "?"
         : topic.toUpperCase();
 
-    document.getElementById("resultArea").textContent =
+
+    document.getElementById(
+        "resultArea"
+    ).textContent =
         state.areaName;
 
-    document.getElementById("saveThemeButton")
-        .style.display = "flex";
+
+    document.getElementById(
+        "saveThemeButton"
+    ).style.display =
+        "flex";
+
 
     updateSaveButton();
 
-    document.getElementById("resultActions")
-        .classList.add("visible");
 
-    document.getElementById("rouletteStartButton")
-        .classList.add("hidden");
+    document.getElementById(
+        "resultActions"
+    ).classList.add(
+        "visible"
+    );
+
+
+    document.getElementById(
+        "rouletteStartButton"
+    ).classList.add(
+        "hidden"
+    );
+
 }
+
 
 
 /* =========================================================
@@ -2366,92 +4860,163 @@ function showFinalTopic(topic){
 
 function getSavedThemes(){
 
+
     try{
 
+
         return JSON.parse(
-            localStorage.getItem("teologando_saved_themes")
+
+            localStorage.getItem(
+                "teologando_saved_themes"
+            )
+
         ) || [];
+
 
     }catch{
 
+
         return [];
+
     }
+
 }
+
 
 
 function setSavedThemes(themes){
 
+
     localStorage.setItem(
+
         "teologando_saved_themes",
+
         JSON.stringify(themes)
+
     );
+
 }
+
 
 
 function saveCurrentTheme(){
 
-    if(!state.topic) return;
 
-    let saved = getSavedThemes();
+    if(!state.topic)
+        return;
 
-    const alreadySaved = saved.some(item=>
-        item.topic === state.topic &&
-        item.areaKey === state.areaKey
-    );
+
+    let saved =
+        getSavedThemes();
+
+
+    const alreadySaved =
+        saved.some(item=>
+
+            item.topic === state.topic &&
+
+            item.areaKey === state.areaKey
+
+        );
+
 
     if(!alreadySaved){
 
+
         saved.push({
+
             topic:state.topic,
+
             areaKey:state.areaKey,
+
             areaName:state.areaName,
+
             date:new Date().toISOString()
+
         });
 
+
         setSavedThemes(saved);
+
     }
+
 
     updateSaveButton();
 
     renderSavedThemes();
+
 }
+
 
 
 function updateSaveButton(){
 
+
     const button =
-        document.getElementById("saveThemeButton");
+        document.getElementById(
+            "saveThemeButton"
+        );
+
 
     const icon =
-        document.getElementById("heartIcon");
+        document.getElementById(
+            "heartIcon"
+        );
+
 
     const text =
-        document.getElementById("saveThemeText");
+        document.getElementById(
+            "saveThemeText"
+        );
 
-    const saved = getSavedThemes();
 
-    const exists = saved.some(item=>
-        item.topic === state.topic &&
-        item.areaKey === state.areaKey
-    );
+    const saved =
+        getSavedThemes();
+
+
+    const exists =
+        saved.some(item=>
+
+            item.topic === state.topic &&
+
+            item.areaKey === state.areaKey
+
+        );
+
 
     if(exists){
 
-        button.classList.add("saved");
+
+        button.classList.add(
+            "saved"
+        );
+
 
         icon.textContent = "♥";
 
-        text.textContent = "TEMA SALVO";
+
+        text.textContent =
+            "TEMA SALVO";
+
 
     }else{
 
-        button.classList.remove("saved");
+
+        button.classList.remove(
+            "saved"
+        );
+
 
         icon.textContent = "♡";
 
-        text.textContent = "SALVAR TEMA";
+
+        text.textContent =
+            "SALVAR TEMA";
+
     }
+
 }
+
 
 
 /* =========================================================
@@ -2460,48 +5025,87 @@ function updateSaveButton(){
 
 function startStudy(){
 
-    if(!state.topic) return;
+
+    if(!state.topic)
+        return;
+
 
     clearAllTimers();
 
+
     state.studying = true;
+
     state.responding = false;
+
     state.extraTimeUsed = false;
+
 
     state.initialStudySeconds =
         state.time * 60;
 
+
     state.initialResponseSeconds =
-        Math.round(state.time / 10) * 60;
+        Math.round(
+            state.time / 10
+        ) * 60;
+
 
     state.studySeconds =
         state.initialStudySeconds;
 
+
     state.responseSeconds =
         state.initialResponseSeconds;
 
-    document.getElementById("studyTopic").textContent =
+
+    document.getElementById(
+        "studyTopic"
+    ).textContent =
         state.topic.toUpperCase();
 
-    document.getElementById("studyTimer").textContent =
-        formatTime(state.studySeconds);
 
-    document.getElementById("extraTimeButton")
-        .style.display = "block";
+    document.getElementById(
+        "studyTimer"
+    ).textContent =
+        formatTime(
+            state.studySeconds
+        );
 
-    document.getElementById("pesquisa")
-        .classList.add("visible");
 
-    document.getElementById("explicacao")
-        .classList.remove("visible");
+    document.getElementById(
+        "extraTimeButton"
+    ).style.display =
+        "block";
 
-    document.getElementById("final")
-        .classList.remove("visible");
+
+    document.getElementById(
+        "pesquisa"
+    ).classList.add(
+        "visible"
+    );
+
+
+    document.getElementById(
+        "explicacao"
+    ).classList.remove(
+        "visible"
+    );
+
+
+    document.getElementById(
+        "final"
+    ).classList.remove(
+        "visible"
+    );
+
 
     goTo("pesquisa");
 
+
     startStudyTimer();
+
 }
+
 
 
 /* =========================================================
@@ -2510,44 +5114,82 @@ function startStudy(){
 
 function startStudyTimer(){
 
-    clearInterval(state.studyInterval);
 
-    state.studyInterval = setInterval(()=>{
+    clearInterval(
+        state.studyInterval
+    );
 
-        if(state.studySeconds > 0){
 
-            state.studySeconds--;
+    state.studyInterval =
+        setInterval(()=>{
 
-            updateStudyTimer();
 
-        }else{
+            if(
+                state.studySeconds > 0
+            ){
 
-            clearInterval(state.studyInterval);
 
-            finishStudy();
-        }
+                state.studySeconds--;
 
-    },1000);
+
+                updateStudyTimer();
+
+
+            }else{
+
+
+                clearInterval(
+                    state.studyInterval
+                );
+
+
+                finishStudy();
+
+            }
+
+
+        },1000);
+
 }
+
 
 
 function updateStudyTimer(){
 
+
     const timer =
-        document.getElementById("studyTimer");
+        document.getElementById(
+            "studyTimer"
+        );
+
 
     timer.textContent =
-        formatTime(state.studySeconds);
+        formatTime(
+            state.studySeconds
+        );
 
-    if(state.studySeconds <= 30){
 
-        timer.classList.add("warning");
+    if(
+        state.studySeconds <= 30
+    ){
+
+
+        timer.classList.add(
+            "warning"
+        );
+
 
     }else{
 
-        timer.classList.remove("warning");
+
+        timer.classList.remove(
+            "warning"
+        );
+
     }
+
 }
+
 
 
 /* =========================================================
@@ -2556,21 +5198,32 @@ function updateStudyTimer(){
 
 function requestExtraTime(){
 
-    if(state.extraTimeUsed) return;
+
+    if(state.extraTimeUsed)
+        return;
+
 
     state.extraTimeUsed = true;
+
 
     state.studySeconds +=
         state.initialStudySeconds;
 
+
     state.responseSeconds =
         state.initialResponseSeconds * 2;
 
-    document.getElementById("extraTimeButton")
-        .style.display = "none";
+
+    document.getElementById(
+        "extraTimeButton"
+    ).style.display =
+        "none";
+
 
     updateStudyTimer();
+
 }
+
 
 
 /* =========================================================
@@ -2579,29 +5232,52 @@ function requestExtraTime(){
 
 function finishStudy(){
 
-    clearInterval(state.studyInterval);
+
+    clearInterval(
+        state.studyInterval
+    );
+
 
     state.studying = false;
+
     state.responding = true;
 
-    document.getElementById("responseTopic")
-        .textContent =
+
+    document.getElementById(
+        "responseTopic"
+    ).textContent =
         state.topic.toUpperCase();
 
-    document.getElementById("responseTimer")
-        .textContent =
-        formatTime(state.responseSeconds);
 
-    document.getElementById("pesquisa")
-        .classList.remove("visible");
+    document.getElementById(
+        "responseTimer"
+    ).textContent =
+        formatTime(
+            state.responseSeconds
+        );
 
-    document.getElementById("explicacao")
-        .classList.add("visible");
+
+    document.getElementById(
+        "pesquisa"
+    ).classList.remove(
+        "visible"
+    );
+
+
+    document.getElementById(
+        "explicacao"
+    ).classList.add(
+        "visible"
+    );
+
 
     goTo("explicacao");
 
+
     startResponseTimer();
+
 }
+
 
 
 /* =========================================================
@@ -2610,44 +5286,82 @@ function finishStudy(){
 
 function startResponseTimer(){
 
-    clearInterval(state.responseInterval);
 
-    state.responseInterval = setInterval(()=>{
+    clearInterval(
+        state.responseInterval
+    );
 
-        if(state.responseSeconds > 0){
 
-            state.responseSeconds--;
+    state.responseInterval =
+        setInterval(()=>{
 
-            updateResponseTimer();
 
-        }else{
+            if(
+                state.responseSeconds > 0
+            ){
 
-            clearInterval(state.responseInterval);
 
-            finishTeologando();
-        }
+                state.responseSeconds--;
 
-    },1000);
+
+                updateResponseTimer();
+
+
+            }else{
+
+
+                clearInterval(
+                    state.responseInterval
+                );
+
+
+                finishTeologando();
+
+            }
+
+
+        },1000);
+
 }
+
 
 
 function updateResponseTimer(){
 
+
     const timer =
-        document.getElementById("responseTimer");
+        document.getElementById(
+            "responseTimer"
+        );
+
 
     timer.textContent =
-        formatTime(state.responseSeconds);
+        formatTime(
+            state.responseSeconds
+        );
 
-    if(state.responseSeconds <= 15){
 
-        timer.classList.add("warning");
+    if(
+        state.responseSeconds <= 15
+    ){
+
+
+        timer.classList.add(
+            "warning"
+        );
+
 
     }else{
 
-        timer.classList.remove("warning");
+
+        timer.classList.remove(
+            "warning"
+        );
+
     }
+
 }
+
 
 
 /* =========================================================
@@ -2656,25 +5370,44 @@ function updateResponseTimer(){
 
 function finishTeologando(){
 
+
     clearAllTimers();
+
 
     state.responding = false;
 
-    document.getElementById("explicacao")
-        .classList.remove("visible");
 
-    document.getElementById("pesquisa")
-        .classList.remove("visible");
+    document.getElementById(
+        "explicacao"
+    ).classList.remove(
+        "visible"
+    );
 
-    document.getElementById("finishTopic")
-        .textContent =
+
+    document.getElementById(
+        "pesquisa"
+    ).classList.remove(
+        "visible"
+    );
+
+
+    document.getElementById(
+        "finishTopic"
+    ).textContent =
         state.topic.toUpperCase();
 
-    document.getElementById("final")
-        .classList.add("visible");
+
+    document.getElementById(
+        "final"
+    ).classList.add(
+        "visible"
+    );
+
 
     goTo("final");
+
 }
+
 
 
 /* =========================================================
@@ -2683,19 +5416,29 @@ function finishTeologando(){
 
 function newTheme(){
 
+
     clearAllTimers();
 
+
     state.topic = "";
+
     state.extraTimeUsed = false;
+
     state.studying = false;
+
     state.responding = false;
+
 
     hideStudySections();
 
+
     resetRouletteDisplay();
 
+
     goTo("sorteio");
+
 }
+
 
 
 /* =========================================================
@@ -2704,20 +5447,36 @@ function newTheme(){
 
 function clearAllTimers(){
 
+
     if(state.studyInterval){
 
-        clearInterval(state.studyInterval);
 
-        state.studyInterval = null;
+        clearInterval(
+            state.studyInterval
+        );
+
+
+        state.studyInterval =
+            null;
+
     }
+
 
     if(state.responseInterval){
 
-        clearInterval(state.responseInterval);
 
-        state.responseInterval = null;
+        clearInterval(
+            state.responseInterval
+        );
+
+
+        state.responseInterval =
+            null;
+
     }
+
 }
+
 
 
 /* =========================================================
@@ -2726,21 +5485,43 @@ function clearAllTimers(){
 
 function hideStudySections(){
 
-    document.getElementById("pesquisa")
-        .classList.remove("visible");
 
-    document.getElementById("explicacao")
-        .classList.remove("visible");
+    document.getElementById(
+        "pesquisa"
+    ).classList.remove(
+        "visible"
+    );
 
-    document.getElementById("final")
-        .classList.remove("visible");
 
-    document.getElementById("studyTimer")
-        .classList.remove("warning");
+    document.getElementById(
+        "explicacao"
+    ).classList.remove(
+        "visible"
+    );
 
-    document.getElementById("responseTimer")
-        .classList.remove("warning");
+
+    document.getElementById(
+        "final"
+    ).classList.remove(
+        "visible"
+    );
+
+
+    document.getElementById(
+        "studyTimer"
+    ).classList.remove(
+        "warning"
+    );
+
+
+    document.getElementById(
+        "responseTimer"
+    ).classList.remove(
+        "warning"
+    );
+
 }
+
 
 
 /* =========================================================
@@ -2749,16 +5530,27 @@ function hideStudySections(){
 
 function formatTime(seconds){
 
+
     const minutes =
-        Math.floor(seconds / 60);
+        Math.floor(
+            seconds / 60
+        );
+
 
     const secs =
         seconds % 60;
 
-    return String(minutes).padStart(2,"0")
+
+    return String(minutes)
+        .padStart(2,"0")
+
         + ":" +
-        String(secs).padStart(2,"0");
+
+        String(secs)
+        .padStart(2,"0");
+
 }
+
 
 
 /* =========================================================
@@ -2767,63 +5559,114 @@ function formatTime(seconds){
 
 function toggleSaved(){
 
+
     const list =
-        document.getElementById("savedList");
+        document.getElementById(
+            "savedList"
+        );
+
 
     const arrow =
-        document.getElementById("savedArrow");
+        document.getElementById(
+            "savedArrow"
+        );
 
-    list.classList.toggle("open");
+
+    list.classList.toggle(
+        "open"
+    );
+
 
     arrow.textContent =
-        list.classList.contains("open")
+
+        list.classList.contains(
+            "open"
+        )
+
         ? "⌃"
         : "⌄";
 
+
     renderSavedThemes();
+
 }
+
 
 
 function renderSavedThemes(){
 
+
     const list =
-        document.getElementById("savedList");
+        document.getElementById(
+            "savedList"
+        );
+
 
     const saved =
         getSavedThemes();
 
+
     if(saved.length === 0){
 
+
         list.innerHTML =
+
             `<div class="saved-empty">
+
                 Você ainda não salvou nenhum tema.
+
             </div>`;
 
+
         return;
+
     }
+
 
     list.innerHTML = "";
 
-    [...saved].reverse().forEach((item,index)=>{
 
-        const div =
-            document.createElement("div");
+    [...saved]
+        .reverse()
+        .forEach((item,index)=>{
 
-        div.className = "saved-item";
 
-        div.innerHTML = `
-            <strong>♥ ${escapeHTML(item.topic)}</strong>
-            <span>${escapeHTML(item.areaName)}</span>
-        `;
+            const div =
+                document.createElement(
+                    "div"
+                );
 
-        div.onclick = ()=>{
 
-            openSavedTheme(item);
-        };
+            div.className =
+                "saved-item";
 
-        list.appendChild(div);
-    });
+
+            div.innerHTML = `
+
+                <strong>
+                    ♥ ${escapeHTML(item.topic)}
+                </strong>
+
+                <span>
+                    ${escapeHTML(item.areaName)}
+                </span>
+
+            `;
+
+
+            div.onclick = ()=>{
+
+                openSavedTheme(item);
+
+            };
+
+
+            list.appendChild(div);
+
+        });
+
 }
+
 
 
 /* =========================================================
@@ -2832,49 +5675,86 @@ function renderSavedThemes(){
 
 function openSavedTheme(item){
 
+
     clearAllTimers();
 
-    state.topic = item.topic;
-    state.areaKey = item.areaKey;
-    state.areaName = item.areaName;
+
+    state.topic =
+        item.topic;
+
+
+    state.areaKey =
+        item.areaKey;
+
+
+    state.areaName =
+        item.areaName;
+
 
     const area =
-        AREAS.find(a=>a.key === item.areaKey);
+        AREAS.find(
+            a=>a.key === item.areaKey
+        );
+
 
     state.isCharacter =
         !!area?.characters;
 
+
     hideStudySections();
 
-    document.getElementById("rouletteLabel")
-        .textContent =
+
+    document.getElementById(
+        "rouletteLabel"
+    ).textContent =
+
         state.isCharacter
         ? "QUEM FOI"
         : "SEU TEMA É";
 
-    document.getElementById("rouletteWord")
-        .textContent =
+
+    document.getElementById(
+        "rouletteWord"
+    ).textContent =
+
         state.isCharacter
         ? item.topic.toUpperCase() + "?"
         : item.topic.toUpperCase();
 
-    document.getElementById("resultArea")
-        .textContent =
+
+    document.getElementById(
+        "resultArea"
+    ).textContent =
         item.areaName;
 
-    document.getElementById("saveThemeButton")
-        .style.display = "flex";
+
+    document.getElementById(
+        "saveThemeButton"
+    ).style.display =
+        "flex";
+
 
     updateSaveButton();
 
-    document.getElementById("resultActions")
-        .classList.add("visible");
 
-    document.getElementById("rouletteStartButton")
-        .classList.add("hidden");
+    document.getElementById(
+        "resultActions"
+    ).classList.add(
+        "visible"
+    );
+
+
+    document.getElementById(
+        "rouletteStartButton"
+    ).classList.add(
+        "hidden"
+    );
+
 
     goTo("sorteio");
+
 }
+
 
 
 /* =========================================================
@@ -2883,13 +5763,21 @@ function openSavedTheme(item){
 
 function escapeHTML(text){
 
-    const div =
-        document.createElement("div");
 
-    div.textContent = text;
+    const div =
+        document.createElement(
+            "div"
+        );
+
+
+    div.textContent =
+        text;
+
 
     return div.innerHTML;
+
 }
+
 
 
 /* =========================================================
@@ -2898,9 +5786,25 @@ function escapeHTML(text){
 
 renderSavedThemes();
 
-selectLevel("fundamental");
+
+selectLevel(
+    "fundamental"
+);
+
+
+/*
+    Carrega o contador quando
+    o site abre.
+
+    Isso NÃO aumenta o número.
+*/
+
+loadPlayCount();
+
 
 </script>
 
+
 </body>
+
 </html>
