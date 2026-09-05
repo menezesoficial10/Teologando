@@ -17,7 +17,9 @@
     --muted:#858995;
     --accent:#ffffff;
     --accentText:#050608;
-    --danger:#ff6b6b;
+    --danger:#ff5c5c;
+    --highlight:#8b5cf6;
+    --highlight2:#a78bfa;
 }
 
 *{
@@ -39,21 +41,22 @@ body{
     color:var(--text);
     font-family:Arial, Helvetica, sans-serif;
     overflow-x:hidden;
-    padding-bottom:95px;
+    padding-bottom:75px;
 }
 
 button{
     font-family:inherit;
+    -webkit-tap-highlight-color:transparent;
 }
 
 .page{
     width:100%;
-    min-height:100vh;
+    min-height:100svh;
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:80px 20px;
-    scroll-margin-top:20px;
+    padding:45px 20px;
+    scroll-margin-top:10px;
 }
 
 .page-inner{
@@ -67,7 +70,7 @@ button{
 ========================= */
 
 .hero{
-    min-height:100vh;
+    min-height:100svh;
 }
 
 .logo{
@@ -78,27 +81,27 @@ button{
 }
 
 .tagline{
-    margin-top:18px;
-    font-size:clamp(17px,3vw,22px);
+    margin-top:15px;
+    font-size:clamp(16px,3vw,22px);
     color:var(--muted);
     letter-spacing:.5px;
 }
 
 .hero-description{
     max-width:580px;
-    margin:28px auto 38px;
+    margin:24px auto 30px;
     color:#b5b8c0;
-    font-size:16px;
-    line-height:1.7;
+    font-size:15px;
+    line-height:1.6;
 }
 
 .main-action{
     border:0;
     background:#fff;
     color:#050608;
-    padding:18px 34px;
+    padding:16px 30px;
     border-radius:999px;
-    font-size:15px;
+    font-size:14px;
     font-weight:900;
     letter-spacing:.5px;
     cursor:pointer;
@@ -117,25 +120,26 @@ button{
 
 .eyebrow{
     color:#70747f;
-    font-size:12px;
+    font-size:11px;
     font-weight:800;
     letter-spacing:3px;
-    margin-bottom:15px;
+    margin-bottom:11px;
     text-transform:uppercase;
 }
 
 .page-title{
-    font-size:clamp(30px,6vw,52px);
+    font-size:clamp(28px,6vw,52px);
     font-weight:900;
     letter-spacing:-2px;
-    margin-bottom:18px;
+    margin-bottom:12px;
 }
 
 .page-description{
     color:#9da1ab;
     max-width:620px;
-    margin:0 auto 38px;
-    line-height:1.7;
+    margin:0 auto 25px;
+    line-height:1.55;
+    font-size:14px;
 }
 
 /* =========================
@@ -145,17 +149,17 @@ button{
 .rules-card{
     background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
     border:1px solid var(--line);
-    border-radius:28px;
-    padding:30px;
+    border-radius:24px;
+    padding:20px 25px;
     max-width:680px;
-    margin:0 auto 30px;
+    margin:0 auto 22px;
     text-align:left;
 }
 
 .rule{
     display:flex;
-    gap:18px;
-    padding:20px 0;
+    gap:14px;
+    padding:14px 0;
     border-bottom:1px solid var(--line);
 }
 
@@ -165,8 +169,8 @@ button{
 }
 
 .rule-number{
-    width:34px;
-    height:34px;
+    width:30px;
+    height:30px;
     border:1px solid var(--line);
     border-radius:50%;
     display:flex;
@@ -174,18 +178,19 @@ button{
     justify-content:center;
     flex:none;
     font-weight:800;
-    font-size:13px;
+    font-size:12px;
 }
 
 .rule strong{
     display:block;
-    margin-bottom:6px;
+    margin-bottom:4px;
+    font-size:14px;
 }
 
 .rule p{
     color:#8f939d;
-    font-size:14px;
-    line-height:1.6;
+    font-size:13px;
+    line-height:1.45;
 }
 
 /* =========================
@@ -193,32 +198,32 @@ button{
 ========================= */
 
 .choice-group{
-    margin:34px auto;
+    margin:24px auto;
     max-width:760px;
 }
 
 .choice-title{
     color:#747984;
-    font-size:11px;
+    font-size:10px;
     font-weight:900;
     letter-spacing:2px;
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
 .choices{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:10px;
+    gap:8px;
 }
 
 .choice-button{
     border:1px solid var(--line);
     background:rgba(255,255,255,.035);
     color:#bfc2c9;
-    padding:13px 20px;
+    padding:11px 17px;
     border-radius:999px;
-    font-size:12px;
+    font-size:11px;
     font-weight:900;
     letter-spacing:.4px;
     cursor:pointer;
@@ -243,10 +248,10 @@ button{
 }
 
 .selected-area{
-    margin:38px auto 18px;
+    margin:25px auto 0;
     min-height:18px;
     color:#aaaeb8;
-    font-size:12px;
+    font-size:11px;
     font-weight:900;
     letter-spacing:2px;
     text-transform:uppercase;
@@ -267,23 +272,47 @@ button{
 
 .roulette-label{
     color:#767b86;
-    font-size:12px;
+    font-size:11px;
     font-weight:900;
-    letter-spacing:3px;
-    margin-bottom:20px;
+    letter-spacing:2.5px;
+    margin-bottom:14px;
     text-transform:uppercase;
 }
 
+.roulette-start{
+    border:0;
+    background:linear-gradient(135deg,var(--highlight),var(--highlight2));
+    color:#fff;
+    padding:16px 34px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:900;
+    letter-spacing:.6px;
+    cursor:pointer;
+    box-shadow:0 12px 35px rgba(139,92,246,.25);
+    transition:.25s;
+    margin-bottom:10px;
+}
+
+.roulette-start:hover{
+    transform:translateY(-3px);
+    box-shadow:0 17px 45px rgba(139,92,246,.35);
+}
+
+.roulette-start.hidden{
+    display:none;
+}
+
 .roulette-window{
-    min-height:145px;
+    min-height:125px;
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:15px;
+    padding:10px 15px;
 }
 
 .roulette-word{
-    font-size:clamp(38px,8vw,74px);
+    font-size:clamp(34px,8vw,74px);
     font-weight:900;
     line-height:1;
     letter-spacing:-3px;
@@ -298,9 +327,9 @@ button{
 }
 
 .result-area{
-    margin-top:20px;
+    margin-top:10px;
     color:#747984;
-    font-size:12px;
+    font-size:11px;
     letter-spacing:2px;
     font-weight:800;
     text-transform:uppercase;
@@ -310,8 +339,8 @@ button{
     display:none;
     flex-direction:column;
     align-items:center;
-    gap:10px;
-    margin-top:35px;
+    gap:9px;
+    margin-top:22px;
 }
 
 .result-actions.visible{
@@ -320,15 +349,16 @@ button{
 
 .result-action{
     width:min(350px,90vw);
-    padding:16px 22px;
+    padding:15px 22px;
     border-radius:999px;
-    border:1px solid #fff;
-    background:#fff;
-    color:#050608;
-    font-size:13px;
+    border:1px solid var(--highlight);
+    background:var(--highlight);
+    color:#fff;
+    font-size:12px;
     font-weight:900;
     cursor:pointer;
     transition:.22s;
+    box-shadow:0 8px 25px rgba(139,92,246,.18);
 }
 
 .result-action:hover{
@@ -339,29 +369,30 @@ button{
     background:transparent;
     color:#fff;
     border-color:var(--line);
+    box-shadow:none;
 }
 
 .save-theme{
-    margin:25px auto 0;
+    margin:18px auto 0;
     border:0;
     background:transparent;
     color:#aeb2bb;
     display:flex;
     align-items:center;
-    gap:9px;
+    gap:8px;
     cursor:pointer;
-    font-size:12px;
+    font-size:11px;
     font-weight:900;
     letter-spacing:.7px;
 }
 
 .save-theme span{
-    font-size:21px;
+    font-size:20px;
     line-height:1;
 }
 
 .save-theme.saved{
-    color:#fff;
+    color:var(--highlight2);
 }
 
 /* =========================
@@ -381,36 +412,36 @@ button{
 }
 
 .timer-card{
-    max-width:560px;
-    margin:35px auto;
+    max-width:520px;
+    margin:22px auto;
     background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
     border:1px solid var(--line);
-    border-radius:32px;
-    padding:42px 25px;
+    border-radius:26px;
+    padding:25px 20px;
 }
 
 .timer-label{
     color:#747984;
-    font-size:11px;
+    font-size:10px;
     font-weight:900;
-    letter-spacing:3px;
-    margin-bottom:18px;
+    letter-spacing:2.5px;
+    margin-bottom:12px;
 }
 
 .study-topic{
-    font-size:clamp(25px,6vw,45px);
+    font-size:clamp(23px,6vw,42px);
     font-weight:900;
     letter-spacing:-1.5px;
-    margin-bottom:35px;
+    margin-bottom:20px;
 }
 
 .timer{
     font-variant-numeric:tabular-nums;
-    font-size:clamp(58px,15vw,100px);
+    font-size:clamp(55px,15vw,90px);
     font-weight:900;
     letter-spacing:-5px;
     line-height:1;
-    margin-bottom:35px;
+    margin-bottom:22px;
 }
 
 .timer.warning{
@@ -424,19 +455,19 @@ button{
 .study-buttons{
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap:9px;
     max-width:360px;
     margin:0 auto;
 }
 
 .study-button{
-    padding:15px 20px;
+    padding:14px 20px;
     border-radius:999px;
     border:1px solid var(--line);
     background:rgba(255,255,255,.035);
     color:#fff;
     cursor:pointer;
-    font-size:12px;
+    font-size:11px;
     font-weight:900;
     letter-spacing:.5px;
     transition:.22s;
@@ -444,16 +475,79 @@ button{
 
 .study-button:hover{
     background:rgba(255,255,255,.09);
+    transform:translateY(-1px);
 }
 
 .study-button.primary{
-    background:#fff;
-    color:#050608;
-    border-color:#fff;
+    background:var(--highlight);
+    color:#fff;
+    border-color:var(--highlight);
+    box-shadow:0 9px 28px rgba(139,92,246,.22);
 }
 
 .study-button.danger{
-    color:#ff8c8c;
+    background:var(--danger);
+    color:#fff;
+    border-color:var(--danger);
+    box-shadow:0 9px 28px rgba(255,92,92,.18);
+}
+
+/* =========================
+   EXPLICAÇÃO COMPACTA
+========================= */
+
+.response-page{
+    min-height:100svh;
+    padding:22px 16px;
+}
+
+.response-page .page-inner{
+    max-width:520px;
+}
+
+.response-page .eyebrow{
+    margin-bottom:7px;
+}
+
+.response-page .page-title{
+    font-size:clamp(27px,7vw,40px);
+    margin-bottom:7px;
+}
+
+.response-page .timer-card{
+    margin:10px auto;
+    padding:18px 15px;
+    border-radius:22px;
+}
+
+.response-page .timer-label{
+    margin-bottom:8px;
+}
+
+.response-page .study-topic{
+    font-size:clamp(20px,5vw,32px);
+    margin-bottom:12px;
+}
+
+.response-page .timer{
+    font-size:clamp(48px,14vw,72px);
+    margin-bottom:15px;
+}
+
+.response-page .study-buttons{
+    max-width:280px;
+}
+
+.response-page .study-button{
+    padding:14px 18px;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.finish-page .study-topic{
+    margin:25px auto;
 }
 
 /* =========================
@@ -462,7 +556,7 @@ button{
 
 .saved-section{
     width:100%;
-    padding:45px 20px 100px;
+    padding:30px 20px 90px;
 }
 
 .saved-inner{
@@ -475,21 +569,21 @@ button{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 22px;
+    padding:17px 20px;
     border:1px solid var(--line);
-    border-radius:20px;
+    border-radius:18px;
     background:rgba(255,255,255,.025);
     color:#fff;
     cursor:pointer;
-    font-size:13px;
+    font-size:12px;
     font-weight:900;
 }
 
 .saved-list{
     display:none;
-    margin-top:10px;
+    margin-top:8px;
     border:1px solid var(--line);
-    border-radius:20px;
+    border-radius:18px;
     overflow:hidden;
     background:#0b0d11;
 }
@@ -499,14 +593,14 @@ button{
 }
 
 .saved-empty{
-    padding:25px;
+    padding:22px;
     color:#777b85;
     text-align:center;
-    font-size:13px;
+    font-size:12px;
 }
 
 .saved-item{
-    padding:18px 20px;
+    padding:15px 18px;
     border-bottom:1px solid var(--line);
     cursor:pointer;
     transition:.2s;
@@ -522,13 +616,13 @@ button{
 
 .saved-item strong{
     display:block;
-    font-size:15px;
-    margin-bottom:5px;
+    font-size:14px;
+    margin-bottom:4px;
 }
 
 .saved-item span{
     color:#747984;
-    font-size:11px;
+    font-size:10px;
     text-transform:uppercase;
     letter-spacing:1px;
 }
@@ -543,8 +637,8 @@ button{
     right:0;
     bottom:0;
     z-index:100;
-    padding:10px 14px;
-    background:rgba(5,6,8,.88);
+    padding:8px 12px;
+    background:rgba(5,6,8,.92);
     backdrop-filter:blur(18px);
     border-top:1px solid rgba(255,255,255,.07);
 }
@@ -555,39 +649,41 @@ button{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:15px;
+    gap:12px;
 }
 
 .developed{
     color:#5f636d;
-    font-size:9px;
+    font-size:8px;
     line-height:1.2;
     text-align:right;
 }
 
 .developed strong{
     color:#8a8e97;
-    font-size:10px;
+    font-size:9px;
 }
 
 .instagram-button{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:9px;
+    gap:8px;
     text-decoration:none;
     color:#fff;
-    border:1px solid rgba(255,255,255,.12);
-    background:rgba(255,255,255,.045);
+    border:1px solid var(--highlight);
+    background:var(--highlight);
     border-radius:999px;
-    padding:10px 16px;
+    padding:10px 17px;
     font-size:11px;
     font-weight:900;
     transition:.22s;
+    box-shadow:0 5px 20px rgba(139,92,246,.2);
 }
 
 .instagram-button:hover{
-    background:rgba(255,255,255,.1);
+    background:var(--highlight2);
+    border-color:var(--highlight2);
     transform:translateY(-1px);
 }
 
@@ -600,29 +696,104 @@ button{
 }
 
 @media(max-width:600px){
+
     .page{
-        padding:70px 18px;
+        min-height:100svh;
+        padding:35px 16px;
     }
 
-    .rules-card{
-        padding:22px;
+    .hero{
+        min-height:100svh;
     }
 
     .logo{
         letter-spacing:-3px;
+        font-size:clamp(39px,11vw,60px);
+    }
+
+    .hero-description{
+        margin:20px auto 25px;
+        font-size:14px;
+    }
+
+    .rules-card{
+        padding:17px 20px;
+        border-radius:20px;
+    }
+
+    .rule{
+        padding:11px 0;
+        gap:11px;
+    }
+
+    .rule-number{
+        width:27px;
+        height:27px;
+        font-size:11px;
+    }
+
+    .rule strong{
+        font-size:13px;
+    }
+
+    .rule p{
+        font-size:12px;
+    }
+
+    .choice-group{
+        margin:20px auto;
+    }
+
+    .choice-button{
+        padding:10px 14px;
+        font-size:10px;
+    }
+
+    .roulette-window{
+        min-height:105px;
+    }
+
+    .roulette-word{
+        letter-spacing:-2px;
+    }
+
+    .roulette-start{
+        padding:15px 30px;
+    }
+
+    .timer-card{
+        padding:21px 16px;
+        margin:17px auto;
+    }
+
+    .response-page{
+        padding:18px 14px;
+    }
+
+    .response-page .timer-card{
+        margin:8px auto;
     }
 
     .bottom-content{
-        gap:9px;
+        gap:8px;
     }
 
     .developed{
+        font-size:7px;
+    }
+
+    .developed strong{
         font-size:8px;
     }
 
     .instagram-button{
-        padding:9px 13px;
+        padding:9px 14px;
         font-size:10px;
+    }
+
+    .instagram-icon{
+        width:16px;
+        height:16px;
     }
 }
 </style>
@@ -822,8 +993,7 @@ button{
         </h2>
 
         <p class="page-description">
-            O tema será sorteado somente depois que você clicar em
-            <strong>TEOLOGAR</strong>.
+            Escolha a área que deseja estudar.
         </p>
 
         <div class="choices">
@@ -888,10 +1058,6 @@ button{
             ESCOLHA UMA ÁREA
         </div>
 
-        <button class="main-action" onclick="goToRoulette()">
-            TEOLOGAR →
-        </button>
-
     </div>
 </section>
 
@@ -903,13 +1069,18 @@ button{
 <section class="page roulette-page" id="sorteio">
     <div class="page-inner">
 
-        <div class="eyebrow">PASSO 03</div>
-
         <div class="roulette-box">
 
             <div class="roulette-label" id="rouletteLabel">
                 CLIQUE EM TEOLOGAR PARA SORTEAR SEU TEMA
             </div>
+
+            <button
+                class="roulette-start"
+                id="rouletteStartButton"
+                onclick="startRoulette()">
+                TEOLOGAR →
+            </button>
 
             <div class="roulette-window">
                 <div class="roulette-word" id="rouletteWord">
@@ -1141,7 +1312,6 @@ button{
             </svg>
 
             @samuelmenezes.ievad
-            <span>ABRIR INSTAGRAM ↗</span>
 
         </a>
 
@@ -1719,33 +1889,6 @@ const AREAS = [
 
 
 /* =========================================================
-   PERGUNTAS
-========================================================= */
-
-const GUIDING_QUESTIONS = {
-
-    teologia_sistematica:
-        "O que a Bíblia ensina sobre esse tema e quais são as principais interpretações teológicas sobre ele?",
-
-    historia_da_igreja:
-        "O que aconteceu, por que aconteceu e qual foi sua importância para a história do cristianismo?",
-
-    apologetica:
-        "Quais são as principais objeções a esse tema e como podemos respondê-las para defender racionalmente a fé cristã?",
-
-    teologia_pratica:
-        "Qual é o fundamento bíblico desse tema e como ele pode ser aplicado à prática cristã?"
-};
-
-const BOOK_QUESTIONS = [
-    "Quem foi o autor e quando o livro foi escrito?",
-    "Qual era o contexto histórico em que o livro foi escrito?",
-    "Para quem o livro foi destinado?",
-    "Qual é a principal mensagem teológica do livro?"
-];
-
-
-/* =========================================================
    ESTADO
 ========================================================= */
 
@@ -1895,10 +2038,6 @@ function selectArea(areaKey){
     document.getElementById("selectedArea").textContent =
         area.name.toUpperCase();
 
-    /*
-       Personagens podem escolher livremente 10 ou 20 minutos.
-    */
-
     if(state.isCharacter){
 
         document.getElementById("time10")
@@ -1932,6 +2071,27 @@ function selectArea(areaKey){
                 .classList.remove("locked");
         }
     }
+
+    /*
+       NOVO FLUXO:
+       Assim que a pessoa escolhe a área,
+       a tela desce automaticamente até
+       o botão TEOLOGAR.
+    */
+
+    clearAllTimers();
+
+    state.topic = "";
+    state.studying = false;
+    state.responding = false;
+    state.extraTimeUsed = false;
+
+    hideStudySections();
+    resetRouletteDisplay();
+
+    setTimeout(()=>{
+        goTo("sorteio");
+    },150);
 }
 
 
@@ -1947,11 +2107,6 @@ function goToRoulette(){
 
         return;
     }
-
-    /*
-       Antes de entrar no sorteio,
-       limpamos qualquer cronômetro anterior.
-    */
 
     clearAllTimers();
 
@@ -1990,6 +2145,14 @@ function resetRouletteDisplay(){
 
     document.getElementById("saveThemeButton")
         .style.display = "none";
+
+    /*
+       Mostra novamente o botão TEOLOGAR
+       sempre que o sorteio for reiniciado.
+    */
+
+    document.getElementById("rouletteStartButton")
+        .classList.remove("hidden");
 }
 
 
@@ -1998,11 +2161,6 @@ function resetRouletteDisplay(){
 ========================================================= */
 
 function startRoulette(){
-
-    /*
-       Toda vez que o usuário clicar em TEOLOGAR,
-       zeramos completamente a tentativa anterior.
-    */
 
     clearAllTimers();
 
@@ -2022,6 +2180,13 @@ function startRoulette(){
         return;
     }
 
+    /*
+       Esconde o botão enquanto o sorteio acontece.
+    */
+
+    document.getElementById("rouletteStartButton")
+        .classList.add("hidden");
+
     const areaData = DATA[state.areaKey];
 
     let pool = [];
@@ -2033,12 +2198,6 @@ function startRoulette(){
     }else{
 
         pool = areaData[state.level] || [];
-
-        /*
-           Caso uma área não tenha conteúdo
-           no nível escolhido, usamos os conteúdos
-           disponíveis para aquela área.
-        */
 
         if(pool.length === 0){
 
@@ -2055,6 +2214,9 @@ function startRoulette(){
     if(pool.length === 0){
 
         alert("Nenhum tema disponível para essa combinação.");
+
+        document.getElementById("rouletteStartButton")
+            .classList.remove("hidden");
 
         return;
     }
@@ -2137,6 +2299,14 @@ function showFinalTopic(topic){
 
     document.getElementById("resultActions")
         .classList.add("visible");
+
+    /*
+       O botão TEOLOGAR continua escondido
+       depois que o tema foi sorteado.
+    */
+
+    document.getElementById("rouletteStartButton")
+        .classList.add("hidden");
 }
 
 
@@ -2251,12 +2421,6 @@ function startStudy(){
     state.initialStudySeconds =
         state.time * 60;
 
-    /*
-       Resposta normal:
-       10 minutos = 1 minuto
-       20 minutos = 2 minutos
-    */
-
     state.initialResponseSeconds =
         Math.round(state.time / 10) * 60;
 
@@ -2342,32 +2506,15 @@ function updateStudyTimer(){
 
 function requestExtraTime(){
 
-    /*
-       Pode ser usado no máximo uma vez.
-    */
-
     if(state.extraTimeUsed) return;
 
     state.extraTimeUsed = true;
 
-    /*
-       Adiciona novamente a mesma quantidade
-       do tempo inicial de pesquisa.
-    */
-
     state.studySeconds +=
         state.initialStudySeconds;
 
-    /*
-       E dobra automaticamente o tempo de resposta.
-    */
-
     state.responseSeconds =
         state.initialResponseSeconds * 2;
-
-    /*
-       O botão desaparece.
-    */
 
     document.getElementById("extraTimeButton")
         .style.display = "none";
@@ -2386,16 +2533,6 @@ function finishStudy(){
 
     state.studying = false;
     state.responding = true;
-
-    /*
-       Se não pediu tempo extra:
-       10 = 1 min
-       20 = 2 min
-
-       Se pediu:
-       10 = 2 min
-       20 = 4 min
-    */
 
     document.getElementById("responseTopic")
         .textContent =
@@ -2617,10 +2754,6 @@ function renderSavedThemes(){
 
     list.innerHTML = "";
 
-    /*
-       Mais recentes primeiro.
-    */
-
     [...saved].reverse().forEach((item,index)=>{
 
         const div =
@@ -2686,6 +2819,9 @@ function openSavedTheme(item){
 
     document.getElementById("resultActions")
         .classList.add("visible");
+
+    document.getElementById("rouletteStartButton")
+        .classList.add("hidden");
 
     goTo("sorteio");
 }
