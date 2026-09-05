@@ -1,616 +1,2784 @@
-{
-  "teologia_sistematica": {
-    "fundamental": [
-      "Bibliologia",
-      "Teologia Própria / Teontologia",
-      "Cristologia",
-      "Pneumatologia",
-      "Antropologia",
-      "Hamartiologia",
-      "Soteriologia",
-      "Eclesiologia",
-      "Escatologia"
-    ],
-    "intermediario": [
-      "Revelação",
-      "Inspiração",
-      "Iluminação",
-      "Cânon",
-      "Autoridade das Escrituras",
-      "Inerrância",
-      "Infalibilidade",
-      "Suficiência das Escrituras",
-      "Preservação das Escrituras",
-      "Interpretação bíblica",
-      "Existência de Deus",
-      "Atributos de Deus",
-      "Onipotência",
-      "Onisciência",
-      "Onipresença",
-      "Santidade de Deus",
-      "Justiça de Deus",
-      "Amor de Deus",
-      "Soberania de Deus",
-      "Trindade",
-      "Pessoa de Cristo",
-      "Divindade de Cristo",
-      "Humanidade de Cristo",
-      "Encarnação",
-      "Nascimento virginal",
-      "Kenosis",
-      "União hipostática",
-      "Morte de Cristo",
-      "Ressurreição",
-      "Ascensão",
-      "Exaltação de Cristo",
-      "Segunda vinda",
-      "Pessoa do Espírito Santo",
-      "Divindade do Espírito Santo",
-      "Obra do Espírito Santo",
-      "Regeneração",
-      "Batismo no Espírito Santo",
-      "Dons espirituais",
-      "Fruto do Espírito",
-      "Plenitude do Espírito",
-      "Santificação pelo Espírito",
-      "Dons ministeriais",
-      "Criação do ser humano",
-      "Imago Dei",
-      "Corpo, alma e espírito",
-      "Liberdade humana",
-      "Vontade humana",
-      "Consciência",
-      "Propósito da humanidade",
-      "Queda do ser humano",
-      "Natureza do pecado",
-      "Origem do pecado",
-      "Pecado original",
-      "Pecado e morte",
-      "Pecado voluntário e involuntário",
-      "Pecado individual e coletivo",
-      "Consequências do pecado",
-      "Corrupção humana",
-      "Arrependimento",
-      "Graça",
-      "Fé",
-      "Conversão",
-      "Justificação",
-      "Adoção",
-      "Santificação",
-      "Perseverança",
-      "Glorificação",
-      "Eleição",
-      "Predestinação",
-      "Segurança da salvação",
-      "Natureza da Igreja",
-      "Missão da Igreja",
-      "Igreja local e universal",
-      "Governo da Igreja",
-      "Batismo",
-      "Ceia do Senhor",
-      "Disciplina eclesiástica",
-      "Liderança da Igreja",
-      "Unidade da Igreja",
-      "Estado intermediário",
-      "Ressurreição dos mortos",
-      "Arrebatamento",
-      "Tribulação",
-      "Milênio",
-      "Juízo final",
-      "Novo céu e nova terra",
-      "Vida eterna",
-      "Inferno"
-    ],
-    "avancado": [
-      "Teologia trinitária",
-      "Pericorese",
-      "Simplicidade divina",
-      "Impassibilidade divina",
-      "União hipostática",
-      "Kenosis",
-      "Comunicação das propriedades",
-      "Monergismo e sinergismo",
-      "Ordo salutis",
-      "Eleição e predestinação",
-      "Perseverança dos santos",
-      "Dons espirituais: cessacionismo e continuísmo",
-      "Teodiceia",
-      "Debates escatológicos",
-      "Crítica textual e autoridade bíblica"
-    ]
-  },
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  "historia_da_igreja": {
-    "fundamental": [
-      "Igreja Primitiva",
-      "Igreja Antiga",
-      "Igreja Medieval",
-      "Reforma Protestante",
-      "Contrarreforma",
-      "Igreja Moderna",
-      "Igreja Contemporânea"
-    ],
-    "intermediario": [
-      "Igreja Apostólica",
-      "Perseguições aos cristãos",
-      "Pais Apostólicos",
-      "Inácio de Antioquia",
-      "Justino Mártir",
-      "Irineu de Lyon",
-      "Tertuliano",
-      "Orígenes",
-      "Constantino",
-      "Édito de Milão",
-      "Concílio de Niceia",
-      "Concílio de Constantinopla",
-      "Concílio de Éfeso",
-      "Concílio de Calcedônia",
-      "Atanásio",
-      "Agostinho de Hipona",
-      "Patrística",
-      "Monasticismo",
-      "Escolástica",
-      "Anselmo de Cantuária",
-      "Tomás de Aquino",
-      "Cruzadas",
-      "Inquisição",
-      "Cisma do Oriente",
-      "Pré-Reformadores",
-      "Martinho Lutero",
-      "João Calvino",
-      "Ulrico Zuínglio",
-      "Reforma Radical",
-      "Anabatistas",
-      "Reforma na Inglaterra",
-      "Reforma na Escócia",
-      "Contrarreforma",
-      "Concílio de Trento",
-      "Puritanismo",
-      "Pietismo",
-      "Metodismo",
-      "Avivamentos",
-      "Iluminismo e cristianismo",
-      "Liberalismo teológico",
-      "Fundamentalismo",
-      "Evangelicalismo",
-      "Pentecostalismo",
-      "Movimento Carismático"
-    ],
-    "avancado": [
-      "Concílio de Jerusalém",
-      "Primeiro Concílio de Niceia",
-      "Primeiro Concílio de Constantinopla",
-      "Concílio de Éfeso",
-      "Concílio de Calcedônia",
-      "Segundo Concílio de Constantinopla",
-      "Terceiro Concílio de Constantinopla",
-      "Segundo Concílio de Niceia",
-      "Concílio de Trento",
-      "Controvérsia Ariana",
-      "Controvérsias Cristológicas",
-      "Agostinianismo",
-      "Pelagianismo",
-      "Semipelagianismo",
-      "Tomismo",
-      "Escolástica",
-      "Cisma do Oriente",
-      "Confessionalização Protestante",
-      "Guerra dos Trinta Anos",
-      "Iluminismo e cristianismo",
-      "Liberalismo Teológico",
-      "Fundamentalismo",
-      "Pentecostalismo",
-      "História dos Avivamentos"
-    ]
-  },
+<title>TEOLOGANDO — Estude. Pense. Explique.</title>
 
-  "panorama_antigo_testamento": {
-    "fundamental": [
-      "Pentateuco",
-      "Livros Históricos",
-      "Livros Poéticos",
-      "Profetas Maiores",
-      "Profetas Menores"
-    ],
-    "intermediario": [
-      "Gênesis",
-      "Êxodo",
-      "Levítico",
-      "Números",
-      "Deuteronômio",
-      "Josué",
-      "Juízes",
-      "Rute",
-      "1 Samuel",
-      "2 Samuel",
-      "1 Reis",
-      "2 Reis",
-      "1 Crônicas",
-      "2 Crônicas",
-      "Esdras",
-      "Neemias",
-      "Ester",
-      "Jó",
-      "Salmos",
-      "Provérbios",
-      "Eclesiastes",
-      "Cantares",
-      "Isaías",
-      "Jeremias",
-      "Lamentações",
-      "Ezequiel",
-      "Daniel",
-      "Oséias",
-      "Joel",
-      "Amós",
-      "Obadias",
-      "Jonas",
-      "Miquéias",
-      "Naum",
-      "Habacuque",
-      "Sofonias",
-      "Ageu",
-      "Zacarias",
-      "Malaquias"
-    ],
-    "avancado": [
-      "Autoria do Pentateuco",
-      "Datação do Pentateuco",
-      "Formação do Pentateuco",
-      "Hipótese Documentária",
-      "Crítica das fontes",
-      "Crítica da forma",
-      "Crítica da redação",
-      "Crítica textual do Antigo Testamento",
-      "Texto Massorético",
-      "Septuaginta",
-      "Transmissão do texto hebraico",
-      "Teologia do Antigo Testamento",
-      "Aliança no Antigo Testamento",
-      "Reino de Deus",
-      "Messianismo",
-      "Profecia",
-      "Profecia e cumprimento",
-      "Lei e graça",
-      "Teologia da criação",
-      "Teologia da sabedoria",
-      "Literatura sapiencial",
-      "Problema do mal em Jó",
-      "Intertextualidade no Antigo Testamento",
-      "Estrutura literária do Antigo Testamento"
-    ]
-  },
+<style>
 
-  "panorama_novo_testamento": {
-    "fundamental": [
-      "Evangelhos",
-      "Atos dos Apóstolos",
-      "Cartas",
-      "Apocalipse"
-    ],
-    "intermediario": [
-      "Mateus",
-      "Marcos",
-      "Lucas",
-      "João",
-      "Atos dos Apóstolos",
-      "Romanos",
-      "1 Coríntios",
-      "2 Coríntios",
-      "Gálatas",
-      "Efésios",
-      "Filipenses",
-      "Colossenses",
-      "1 Tessalonicenses",
-      "2 Tessalonicenses",
-      "1 Timóteo",
-      "2 Timóteo",
-      "Tito",
-      "Filemom",
-      "Hebreus",
-      "Tiago",
-      "1 Pedro",
-      "2 Pedro",
-      "1 João",
-      "2 João",
-      "3 João",
-      "Judas",
-      "Apocalipse"
-    ],
-    "avancado": [
-      "Problema dos Evangelhos Sinóticos",
-      "Questão Sinótica",
-      "Prioridade de Marcos",
-      "Fonte Q",
-      "Autoria dos Evangelhos",
-      "Datação dos Evangelhos",
-      "Formação dos Evangelhos",
-      "Crítica textual do Novo Testamento",
-      "Manuscritos do Novo Testamento",
-      "Texto Majoritário",
-      "Texto Crítico",
-      "Cânon do Novo Testamento",
-      "Autoria de Atos",
-      "Historicidade de Atos",
-      "Autoria das Cartas Paulinas",
-      "Pseudepigrafia",
-      "Nova Perspectiva sobre Paulo",
-      "Justificação em Paulo",
-      "União com Cristo",
-      "Teologia Paulina",
-      "Autoria de Hebreus",
-      "Contexto de Hebreus",
-      "Cristologia de Hebreus",
-      "Escatologia do Novo Testamento",
-      "Literatura apocalíptica",
-      "Interpretação do Apocalipse",
-      "Milênio em Apocalipse 20",
-      "Datação do Apocalipse",
-      "Autoria do Apocalipse"
-    ]
-  },
-
-  "apologetica": {
-    "avancado": [
-      "Existência de Deus",
-      "Argumento cosmológico",
-      "Argumento teleológico",
-      "Argumento moral",
-      "Argumento ontológico",
-      "Ateísmo",
-      "Agnosticismo",
-      "Confiabilidade da Bíblia",
-      "Inspiração bíblica",
-      "Inerrância",
-      "Cânon bíblico",
-      "Crítica textual",
-      "Supostas contradições bíblicas",
-      "Manuscritos bíblicos",
-      "Existência histórica de Jesus",
-      "Divindade de Jesus",
-      "Ressurreição de Jesus",
-      "Confiabilidade dos Evangelhos",
-      "Milagres de Jesus",
-      "Cristianismo e ciência",
-      "Criacionismo e evolução",
-      "Big Bang e cristianismo",
-      "Origem da vida",
-      "Design inteligente",
-      "Milagres e ciência",
-      "Problema do mal",
-      "Sofrimento e existência de Deus",
-      "Inferno",
-      "Exclusividade da salvação",
-      "Religião e violência",
-      "Cristianismo e outras religiões",
-      "Hipocrisia religiosa",
-      "Deus do Antigo Testamento",
-      "Pecado e justiça divina"
-    ]
-  },
-
-  "teologia_pratica": {
-    "fundamental": [
-      "Oração",
-      "Discipulado",
-      "Evangelismo",
-      "Missões",
-      "Pregação",
-      "Ensino",
-      "Liderança",
-      "Adoração",
-      "Vida Cristã",
-      "Serviço Cristão"
-    ],
-    "intermediario": [
-      "Homilética",
-      "Preparação de Sermões",
-      "Interpretação Bíblica para Pregação",
-      "Comunicação",
-      "Pedagogia Cristã",
-      "Formação de Líderes",
-      "Discipulado Cristão",
-      "Aconselhamento",
-      "Pastoreio",
-      "Evangelização",
-      "Missões Transculturais",
-      "Escola Bíblica Dominical",
-      "Liderança Cristã",
-      "Administração Eclesiástica",
-      "Culto Cristão",
-      "Dons Ministeriais",
-      "Ética Ministerial"
-    ],
-    "avancado": [
-      "Teologia Pastoral",
-      "Modelos de Liderança Cristã",
-      "Eclesiologia Aplicada",
-      "Formação Ministerial",
-      "Ética Pastoral",
-      "Aconselhamento Pastoral",
-      "Teologia da Missão",
-      "Contextualização",
-      "Teologia do Culto",
-      "Teologia da Pregação",
-      "Espiritualidade Pastoral",
-      "Vocação Ministerial",
-      "Liderança Eclesiástica",
-      "Formação de Discípulos",
-      "Ministério e Cultura Contemporânea"
-    ]
-  },
-
-  "movimentos_tradicoes": {
-    "intermediario": [
-      "Catolicismo Romano",
-      "Ortodoxia Oriental",
-      "Protestantismo",
-      "Luteranismo",
-      "Calvinismo",
-      "Arminianismo",
-      "Anglicanismo",
-      "Batistas",
-      "Anabatismo",
-      "Metodismo",
-      "Presbiterianismo",
-      "Pentecostalismo",
-      "Movimento Carismático",
-      "Adventismo",
-      "Puritanismo",
-      "Pietismo"
-    ],
-    "avancado": [
-      "Teologia Calvinista",
-      "Cinco Pontos do Calvinismo",
-      "Teologia Arminiana",
-      "Cinco Artigos da Remonstrância",
-      "Confissão de Westminster",
-      "Confissão de Augsburgo",
-      "Teologia Luterana",
-      "Teologia Wesleyana",
-      "Teologia Pentecostal",
-      "Batismo no Espírito Santo na tradição pentecostal",
-      "Cessacionismo",
-      "Continuísmo",
-      "Credo Niceno na tradição cristã",
-      "Teologia Ortodoxa Oriental",
-      "Papado",
-      "Catolicismo Romano",
-      "Sola Scriptura",
-      "Sola Fide",
-      "Sola Gratia",
-      "Sacerdócio de todos os crentes",
-      "Predestinação no Calvinismo",
-      "Graça preveniente no Arminianismo"
-    ]
-  },
-
-  "personagens_historia_teologia": [
-    "Inácio de Antioquia",
-    "Justino Mártir",
-    "Irineu de Lyon",
-    "Tertuliano",
-    "Orígenes",
-    "Atanásio",
-    "Agostinho de Hipona",
-    "Anselmo de Cantuária",
-    "Tomás de Aquino",
-    "Martinho Lutero",
-    "Ulrico Zuínglio",
-    "João Calvino",
-    "Menno Simons",
-    "Jacó Armínio",
-    "John Wesley",
-    "Jonathan Edwards",
-    "John Knox",
-    "John Owen",
-    "Charles Spurgeon",
-    "Charles Finney",
-    "Friedrich Schleiermacher",
-    "Karl Barth",
-    "Rudolf Bultmann",
-    "C. S. Lewis",
-    "Jürgen Moltmann",
-    "Wolfhart Pannenberg",
-    "John Stott",
-    "J. I. Packer",
-    "Gordon Fee",
-    "Stanley Horton"
-  ],
-
-  "personagens_biblicos": [
-    "Adão",
-    "Eva",
-    "Caim",
-    "Abel",
-    "Noé",
-    "Abraão",
-    "Sara",
-    "Ló",
-    "Melquisedeque",
-    "Isaque",
-    "Rebeca",
-    "Jacó",
-    "Esaú",
-    "José",
-    "Moisés",
-    "Arão",
-    "Miriã",
-    "Josué",
-    "Calebe",
-    "Raabe",
-    "Débora",
-    "Baraque",
-    "Gideão",
-    "Jefté",
-    "Sansão",
-    "Rute",
-    "Noemi",
-    "Samuel",
-    "Saul",
-    "Jônatas",
-    "Davi",
-    "Abigail",
-    "Salomão",
-    "Elias",
-    "Eliseu",
-    "Ezequias",
-    "Josias",
-    "Manassés",
-    "Esdras",
-    "Neemias",
-    "Ester",
-    "Jó",
-    "Isaías",
-    "Jeremias",
-    "Daniel",
-    "Ezequiel",
-    "Jonas",
-    "Micaías",
-    "Hulda",
-    "Zacarias",
-    "Isabel",
-    "João Batista",
-    "Maria",
-    "José",
-    "Simeão",
-    "Ana",
-    "Nicodemos",
-    "José de Arimateia",
-    "Jesus",
-    "Pedro",
-    "André",
-    "Tiago",
-    "João",
-    "Filipe",
-    "Bartolomeu",
-    "Tomé",
-    "Mateus",
-    "Tiago filho de Alfeu",
-    "Judas Tadeu",
-    "Simão o Zelote",
-    "Judas Iscariotes",
-    "Marta",
-    "Maria de Betânia",
-    "Lázaro",
-    "Zaqueu",
-    "Jairo",
-    "Bartimeu",
-    "Estêvão",
-    "Barnabé",
-    "Paulo",
-    "Silas",
-    "Timóteo",
-    "Tito",
-    "Apolo",
-    "Priscila",
-    "Áquila",
-    "Onésimo",
-    "Filemom",
-    "Gamaliel",
-    "Caifás",
-    "Herodes",
-    "Pôncio Pilatos",
-    "Barrabás"
-  ]
+:root{
+    --black:#050505;
+    --black-2:#090909;
+    --black-3:#111111;
+    --card:#101010;
+    --card-hover:#171717;
+    --white:#f5f5f5;
+    --gray:#929292;
+    --gray-2:#5f5f5f;
+    --gold:#d6a84f;
+    --gold-light:#f0ca75;
+    --border:rgba(255,255,255,.09);
 }
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+        radial-gradient(circle at 15% 10%, rgba(214,168,79,.08), transparent 28%),
+        radial-gradient(circle at 85% 40%, rgba(255,255,255,.035), transparent 30%),
+        linear-gradient(180deg,#050505 0%,#080808 45%,#040404 100%);
+    color:var(--white);
+    font-family:Arial,Helvetica,sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+    z-index:999;
+}
+
+a{
+    color:inherit;
+}
+
+button{
+    font:inherit;
+}
+
+section{
+    position:relative;
+}
+
+.container{
+    width:min(1120px,calc(100% - 40px));
+    margin:auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:72px;
+    display:flex;
+    align-items:center;
+    z-index:100;
+    background:rgba(5,5,5,.72);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.header-inner{
+    width:min(1120px,calc(100% - 40px));
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.header-logo{
+    font-weight:900;
+    letter-spacing:-1px;
+    font-size:18px;
+}
+
+.header-logo span{
+    color:var(--gold);
+}
+
+.header-status{
+    color:var(--gray);
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:120px 0 80px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.eyebrow{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.logo{
+    font-size:clamp(55px,13vw,150px);
+    line-height:.85;
+    letter-spacing:-8px;
+    font-weight:950;
+}
+
+.slogan{
+    margin-top:30px;
+    font-size:clamp(18px,3vw,26px);
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:#c5c5c5;
+}
+
+.hero-description{
+    max-width:620px;
+    margin-top:35px;
+    color:var(--gray);
+    font-size:17px;
+    line-height:1.8;
+}
+
+.gold{
+    color:var(--gold);
+}
+
+.primary-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-top:40px;
+    border:1px solid var(--gold);
+    background:var(--gold);
+    color:#080808;
+    padding:17px 27px;
+    border-radius:3px;
+    font-weight:900;
+    letter-spacing:1.5px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.primary-button:hover{
+    background:var(--gold-light);
+    transform:translateY(-2px);
+}
+
+.scroll-indicator{
+    margin-top:80px;
+    color:var(--gray-2);
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section{
+    padding:120px 0;
+    border-top:1px solid rgba(255,255,255,.05);
+}
+
+.section-heading{
+    max-width:800px;
+    margin-bottom:50px;
+}
+
+.section-number{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:3px;
+    font-weight:700;
+    margin-bottom:16px;
+}
+
+.section-title{
+    font-size:clamp(35px,7vw,70px);
+    line-height:.95;
+    letter-spacing:-3px;
+    font-weight:900;
+}
+
+.section-description{
+    color:var(--gray);
+    line-height:1.8;
+    margin-top:20px;
+    max-width:650px;
+}
+
+/* =========================
+   REGRAS
+========================= */
+
+.warning{
+    border:1px solid rgba(214,168,79,.35);
+    background:
+        linear-gradient(135deg,rgba(214,168,79,.08),rgba(255,255,255,.015));
+    padding:30px;
+    margin-bottom:40px;
+}
+
+.warning-label{
+    color:var(--gold);
+    font-weight:900;
+    letter-spacing:3px;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.warning p{
+    color:#c8c8c8;
+    line-height:1.8;
+}
+
+.sources{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:12px;
+    margin-top:30px;
+}
+
+.source{
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.025);
+    padding:18px;
+    color:#aaa;
+    font-size:14px;
+}
+
+/* =========================
+   NÍVEIS
+========================= */
+
+.level-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.level-card{
+    position:relative;
+    background:
+        linear-gradient(145deg,#151515,#0c0c0c);
+    border:1px solid var(--border);
+    padding:28px;
+    min-height:230px;
+    cursor:pointer;
+    transition:.25s;
+    overflow:hidden;
+}
+
+.level-card::after{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:rgba(214,168,79,.08);
+    right:-45px;
+    bottom:-45px;
+}
+
+.level-card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(214,168,79,.5);
+}
+
+.level-card.selected{
+    border-color:var(--gold);
+    box-shadow:0 0 0 1px var(--gold);
+}
+
+.level-card h3{
+    font-size:23px;
+    margin-bottom:15px;
+}
+
+.level-card p{
+    color:var(--gray);
+    line-height:1.6;
+    font-size:14px;
+}
+
+.level-time{
+    position:absolute;
+    bottom:25px;
+    left:28px;
+    color:var(--gold);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+/* =========================
+   TEMPO
+========================= */
+
+.intermediate-time{
+    display:none;
+    margin-top:30px;
+    padding:25px;
+    border:1px solid var(--border);
+    background:#0d0d0d;
+}
+
+.intermediate-time.visible{
+    display:block;
+}
+
+.intermediate-title{
+    color:var(--gray);
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.time-grid{
+    display:flex;
+    gap:10px;
+}
+
+.time-button{
+    flex:1;
+    padding:18px;
+    background:#151515;
+    color:white;
+    border:1px solid var(--border);
+    cursor:pointer;
+    transition:.2s;
+}
+
+.time-button:hover,
+.time-button.selected{
+    border-color:var(--gold);
+    color:var(--gold);
+}
+
+/* =========================
+   ÁREAS
+========================= */
+
+.area-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+}
+
+.area-card{
+    position:relative;
+    background:linear-gradient(145deg,#151515,#0d0d0d);
+    border:1px solid var(--border);
+    padding:25px;
+    min-height:145px;
+    cursor:pointer;
+    transition:.25s;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.area-card:hover{
+    transform:translateY(-3px);
+    border-color:rgba(214,168,79,.45);
+    background:var(--card-hover);
+}
+
+.area-card.disabled{
+    opacity:.25;
+    cursor:not-allowed;
+}
+
+.area-card-number{
+    color:var(--gray-2);
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+.area-card h3{
+    font-size:18px;
+    line-height:1.25;
+    margin-top:20px;
+}
+
+.area-card-arrow{
+    color:var(--gold);
+    align-self:flex-end;
+}
+
+/* =========================
+   PAUTA
+========================= */
+
+.selection-area{
+    min-height:75vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+}
+
+.selection-box{
+    width:100%;
+}
+
+.selection-label{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:4px;
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+.rolling-topic{
+    min-height:130px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:clamp(38px,8vw,90px);
+    line-height:.95;
+    font-weight:950;
+    letter-spacing:-4px;
+}
+
+.rolling-area{
+    margin-top:25px;
+    color:var(--gray);
+}
+
+.topic-result{
+    display:none;
+}
+
+.topic-result.visible{
+    display:block;
+}
+
+.topic-prefix{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:4px;
+    font-weight:900;
+    margin-bottom:20px;
+}
+
+.topic-name{
+    font-size:clamp(42px,9vw,100px);
+    line-height:.9;
+    letter-spacing:-5px;
+    font-weight:950;
+}
+
+.topic-area{
+    color:var(--gray);
+    margin-top:20px;
+}
+
+.question-box{
+    max-width:750px;
+    margin:45px auto 0;
+    padding:25px;
+    border:1px solid var(--border);
+    background:#0d0d0d;
+    text-align:left;
+}
+
+.question-title{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:3px;
+    font-weight:900;
+    margin-bottom:20px;
+}
+
+.question{
+    border-top:1px solid var(--border);
+    padding:15px 0;
+    color:#c7c7c7;
+    line-height:1.6;
+}
+
+.question:first-of-type{
+    border-top:0;
+}
+
+.topic-actions{
+    text-align:center;
+}
+
+/* =========================
+   ESTUDO
+========================= */
+
+.study-section{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+}
+
+.study-content{
+    width:100%;
+}
+
+.study-label{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:4px;
+    font-weight:700;
+}
+
+.study-topic{
+    font-size:clamp(30px,7vw,65px);
+    font-weight:900;
+    letter-spacing:-3px;
+    margin-top:20px;
+}
+
+.timer{
+    font-size:clamp(75px,18vw,180px);
+    font-weight:900;
+    letter-spacing:-8px;
+    line-height:1;
+    margin:40px 0;
+    font-variant-numeric:tabular-nums;
+}
+
+.timer-instruction{
+    color:var(--gray);
+    line-height:1.7;
+}
+
+.response-preview{
+    margin-top:15px;
+    color:#666;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+/* =========================
+   RESPOSTA
+========================= */
+
+.response-section{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+}
+
+.response-title{
+    font-size:clamp(42px,9vw,95px);
+    line-height:.9;
+    letter-spacing:-5px;
+    font-weight:950;
+}
+
+.response-description{
+    max-width:600px;
+    margin:30px auto;
+    color:var(--gray);
+    line-height:1.8;
+}
+
+/* =========================
+   RESULTADO
+========================= */
+
+.result-section{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+}
+
+.result-label{
+    color:var(--gold);
+    letter-spacing:4px;
+    font-size:11px;
+    font-weight:900;
+}
+
+.result-topic{
+    font-size:clamp(35px,8vw,80px);
+    line-height:.95;
+    letter-spacing:-4px;
+    font-weight:950;
+    margin-top:20px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(2,200px);
+    justify-content:center;
+    gap:12px;
+    margin:40px 0;
+}
+
+.stat{
+    border:1px solid var(--border);
+    background:#0d0d0d;
+    padding:20px;
+}
+
+.stat span{
+    display:block;
+    color:#666;
+    font-size:10px;
+    letter-spacing:2px;
+    margin-bottom:8px;
+}
+
+.stat strong{
+    color:var(--gold);
+    font-size:22px;
+}
+
+.result-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid var(--border);
+    padding:60px 0;
+    text-align:center;
+}
+
+.footer-logo{
+    font-size:20px;
+    font-weight:900;
+}
+
+.footer-slogan{
+    color:#666;
+    margin-top:8px;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.footer-credit{
+    margin-top:25px;
+    color:#666;
+    font-size:12px;
+}
+
+.footer-credit a{
+    color:var(--gold);
+    text-decoration:none;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.loading{
+    position:fixed;
+    inset:0;
+    background:#050505;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.loading-logo{
+    font-size:40px;
+    font-weight:900;
+    letter-spacing:-2px;
+}
+
+.loading-text{
+    color:#666;
+    margin-top:15px;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:800px){
+
+    .level-grid{
+        grid-template-columns:1fr;
+    }
+
+    .area-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .logo{
+        letter-spacing:-5px;
+    }
+
+}
+
+@media(max-width:520px){
+
+    .container{
+        width:min(100% - 30px,1120px);
+    }
+
+    .header-status{
+        display:none;
+    }
+
+    .section{
+        padding:90px 0;
+    }
+
+    .area-grid{
+        grid-template-columns:1fr;
+    }
+
+    .sources{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .rolling-topic{
+        letter-spacing:-2px;
+    }
+
+    .topic-name{
+        letter-spacing:-3px;
+    }
+
+    .timer{
+        letter-spacing:-5px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOADING -->
+
+<div id="loading" class="loading">
+    <div class="loading-logo">TEOLOGANDO</div>
+    <div class="loading-text">CARREGANDO</div>
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-inner">
+
+        <div class="header-logo">
+            TEOLOGANDO<span>.</span>
+        </div>
+
+        <div class="header-status">
+            Estude. Pense. Explique.
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Uma experiência de estudo teológico
+            </div>
+
+            <div class="logo">
+                TEOLOGANDO
+            </div>
+
+            <div class="slogan">
+                Estude. Pense. Explique.
+            </div>
+
+            <p class="hero-description">
+                Você escolhe a área.
+                <span class="gold">O Teologando escolhe a pauta.</span>
+                <br><br>
+                Pesquise, compreenda e explique.
+                Não receba respostas prontas.
+            </p>
+
+            <button
+                class="primary-button"
+                onclick="scrollToSection('rules')">
+
+                TEOLOGAR
+
+                <span>→</span>
+
+            </button>
+
+            <div class="scroll-indicator">
+                Role para começar ↓
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REGRAS -->
+
+<section id="rules" class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                01 — ANTES DE COMEÇAR
+            </div>
+
+            <h2 class="section-title">
+                NÃO USE IA<br>
+                PARA PESQUISAR.
+            </h2>
+
+            <p class="section-description">
+                O objetivo do Teologando não é entregar respostas prontas.
+                A pesquisa é parte do desafio.
+            </p>
+
+        </div>
+
+
+        <div class="warning">
+
+            <div class="warning-label">
+                O DESAFIO
+            </div>
+
+            <p>
+                Pesquise. Leia. Compare. Compreenda.
+                Depois explique com suas próprias palavras.
+                <br><br>
+                O <strong>TEOLOGANDO</strong> não quer apenas que você
+                encontre uma resposta. Quer que você aprenda
+                a encontrá-la.
+            </p>
+
+        </div>
+
+
+        <h3 style="margin-bottom:15px;">
+            VOCÊ PODE PESQUISAR EM:
+        </h3>
+
+        <div class="sources">
+
+            <div class="source">Bíblia</div>
+            <div class="source">Livros</div>
+            <div class="source">Google Acadêmico</div>
+            <div class="source">Sites teológicos confiáveis</div>
+            <div class="source">Ferramentas de estudo bíblico</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NÍVEL -->
+
+<section id="level" class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                02 — NÍVEL
+            </div>
+
+            <h2 class="section-title">
+                QUAL É O<br>
+                SEU DESAFIO?
+            </h2>
+
+            <p class="section-description">
+                Escolha o nível. O tempo será definido
+                automaticamente conforme o desafio.
+            </p>
+
+        </div>
+
+
+        <div class="level-grid">
+
+            <div
+                class="level-card"
+                id="level-fundamental"
+                onclick="selectLevel('fundamental')">
+
+                <h3>Fundamental</h3>
+
+                <p>
+                    Para quem está começando a aprofundar
+                    seus estudos teológicos.
+                </p>
+
+                <div class="level-time">
+                    10 MIN DE ESTUDO · 1 MIN DE RESPOSTA
+                </div>
+
+            </div>
+
+
+            <div
+                class="level-card"
+                id="level-intermediario"
+                onclick="selectLevel('intermediario')">
+
+                <h3>Intermediário</h3>
+
+                <p>
+                    Para quem já possui uma base e quer
+                    aprofundar a pesquisa.
+                </p>
+
+                <div class="level-time">
+                    ESCOLHA 10 OU 20 MIN
+                </div>
+
+            </div>
+
+
+            <div
+                class="level-card"
+                id="level-avancado"
+                onclick="selectLevel('avancado')">
+
+                <h3>Avançado</h3>
+
+                <p>
+                    Questões mais complexas para uma
+                    pesquisa teológica aprofundada.
+                </p>
+
+                <div class="level-time">
+                    20 MIN DE ESTUDO · 2 MIN DE RESPOSTA
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="intermediateTime"
+            class="intermediate-time">
+
+            <div class="intermediate-title">
+                ESCOLHA O TEMPO DE ESTUDO
+            </div>
+
+            <div class="time-grid">
+
+                <button
+                    id="time10"
+                    class="time-button"
+                    onclick="selectIntermediateTime(10)">
+
+                    10 MIN
+                    <br>
+                    <small>1 MIN DE RESPOSTA</small>
+
+                </button>
+
+
+                <button
+                    id="time20"
+                    class="time-button"
+                    onclick="selectIntermediateTime(20)">
+
+                    20 MIN
+                    <br>
+                    <small>2 MIN DE RESPOSTA</small>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ÁREAS -->
+
+<section id="areas" class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                03 — ÁREA
+            </div>
+
+            <h2 class="section-title">
+                ESCOLHA<br>
+                ONDE ESTUDAR.
+            </h2>
+
+            <p class="section-description">
+                A área é sua escolha.
+                A pauta é do Teologando.
+            </p>
+
+        </div>
+
+
+        <div id="areaGrid" class="area-grid">
+
+            <!-- JS -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PAUTA -->
+
+<section id="selection" class="selection-area section">
+
+    <div class="container">
+
+        <div class="selection-box">
+
+            <div class="selection-label">
+                04 — O TEOLOGANDO ESTÁ ESCOLHENDO SUA PAUTA
+            </div>
+
+            <div
+                id="rollingTopic"
+                class="rolling-topic">
+
+                ...
+
+            </div>
+
+            <div
+                id="rollingArea"
+                class="rolling-area">
+
+            </div>
+
+
+            <div
+                id="topicResult"
+                class="topic-result">
+
+                <div
+                    id="topicPrefix"
+                    class="topic-prefix">
+
+                    SUA PAUTA
+
+                </div>
+
+                <div
+                    id="topicName"
+                    class="topic-name">
+
+                </div>
+
+                <div
+                    id="topicArea"
+                    class="topic-area">
+
+                </div>
+
+
+                <div
+                    id="questionBox"
+                    class="question-box">
+
+                </div>
+
+
+                <div class="topic-actions">
+
+                    <button
+                        class="primary-button"
+                        onclick="startStudy()">
+
+                        TEOLOGAR →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ESTUDO -->
+
+<section
+    id="study"
+    class="study-section section">
+
+    <div class="container">
+
+        <div class="study-content">
+
+            <div class="study-label">
+                05 — ESTUDE
+            </div>
+
+            <div
+                id="studyTopic"
+                class="study-topic">
+
+            </div>
+
+            <div
+                id="studyTimer"
+                class="timer">
+
+                00:00
+
+            </div>
+
+            <div class="timer-instruction">
+                PESQUISE. LEIA. COMPREENDA.
+            </div>
+
+            <div
+                id="responsePreview"
+                class="response-preview">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESPOSTA -->
+
+<section
+    id="response"
+    class="response-section section">
+
+    <div class="container">
+
+        <div>
+
+            <div class="study-label">
+                06 — SUA VEZ
+            </div>
+
+            <h2 class="response-title">
+                AGORA,<br>
+                EXPLIQUE.
+            </h2>
+
+            <p class="response-description">
+                Feche suas fontes.
+                Organize o que você aprendeu.
+                Explique com suas próprias palavras.
+            </p>
+
+            <div
+                id="responseTimer"
+                class="timer">
+
+                00:00
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESULTADO -->
+
+<section
+    id="result"
+    class="result-section section">
+
+    <div class="container">
+
+        <div>
+
+            <div class="result-label">
+                07 — TEOLOGAR CONCLUÍDO
+            </div>
+
+            <div
+                id="resultTopic"
+                class="result-topic">
+
+            </div>
+
+            <div
+                id="resultArea"
+                class="topic-area">
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <span>
+                        Estudo
+                    </span>
+
+                    <strong
+                        id="resultStudy">
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span>
+                        Resposta
+                    </span>
+
+                    <strong
+                        id="resultResponse">
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-buttons">
+
+                <button
+                    id="studyMoreBtn"
+                    class="primary-button"
+                    onclick="studyMore()">
+
+                    ESTUDAR UM POUCO MAIS
+
+                </button>
+
+
+                <button
+                    class="primary-button"
+                    style="
+                        background:transparent;
+                        color:white;
+                        border-color:#333;
+                    "
+                    onclick="newChallenge()">
+
+                    TEOLOGAR NOVAMENTE
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-logo">
+            TEOLOGANDO
+        </div>
+
+        <div class="footer-slogan">
+            ESTUDE. PENSE. EXPLIQUE.
+        </div>
+
+        <div class="footer-credit">
+
+            Desenvolvido por
+
+            <a
+                href="https://www.instagram.com/samuelmenezes.ievad/"
+                target="_blank">
+
+                @samuelmenezes.ievad
+
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   DADOS
+========================================================= */
+
+let DATA = null;
+
+
+/* =========================================================
+   ESTADO
+========================================================= */
+
+let state = {
+
+    level:null,
+
+    studyMinutes:0,
+
+    responseMinutes:0,
+
+    originalStudyMinutes:0,
+
+    originalResponseMinutes:0,
+
+    intermediateTime:null,
+
+    areaKey:null,
+
+    areaName:null,
+
+    topic:null,
+
+    usedStudyMore:false,
+
+    timer:null
+
+};
+
+
+/* =========================================================
+   ÁREAS
+========================================================= */
+
+const AREAS = [
+
+    {
+        key:"teologia_sistematica",
+        name:"Teologia Sistemática",
+        levels:["fundamental","intermediario","avancado"]
+    },
+
+    {
+        key:"historia_da_igreja",
+        name:"História da Igreja",
+        levels:["fundamental","intermediario","avancado"]
+    },
+
+    {
+        key:"panorama_antigo_testamento",
+        name:"Panorama do Antigo Testamento",
+        levels:["fundamental","intermediario","avancado"]
+    },
+
+    {
+        key:"panorama_novo_testamento",
+        name:"Panorama do Novo Testamento",
+        levels:["fundamental","intermediario","avancado"]
+    },
+
+    {
+        key:"apologetica",
+        name:"Apologética",
+        levels:["avancado"]
+    },
+
+    {
+        key:"teologia_pratica",
+        name:"Teologia Prática",
+        levels:["fundamental","intermediario","avancado"]
+    },
+
+    {
+        key:"movimentos_tradicoes",
+        name:"Movimentos e Tradições",
+        levels:["intermediario","avancado"]
+    },
+
+    {
+        key:"personagens_historia_teologia",
+        name:"Personagens da História da Teologia",
+        levels:["todos"]
+    },
+
+    {
+        key:"personagens_biblicos",
+        name:"Personagens Bíblicos",
+        levels:["todos"]
+    }
+
+];
+
+
+/* =========================================================
+   CARREGAR JSON
+========================================================= */
+
+async function loadData(){
+
+    try{
+
+        const response =
+            await fetch("data.json");
+
+        if(!response.ok){
+
+            throw new Error(
+                "data.json não encontrado."
+            );
+
+        }
+
+        DATA =
+            await response.json();
+
+        document
+            .getElementById("loading")
+            .style.display="none";
+
+        renderAreas();
+
+    }
+
+    catch(error){
+
+        document
+            .querySelector(".loading-text")
+            .innerHTML =
+            "ERRO AO CARREGAR DATA.JSON";
+
+        console.error(error);
+
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+function scrollToSection(id){
+
+    const section =
+        document.getElementById(id);
+
+    if(section){
+
+        section.scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
+
+}
+
+
+/* =========================================================
+   NÍVEL
+========================================================= */
+
+function selectLevel(level){
+
+    state.level=level;
+
+    document
+        .querySelectorAll(".level-card")
+        .forEach(card =>
+            card.classList.remove("selected")
+        );
+
+    document
+        .getElementById("level-"+level)
+        .classList.add("selected");
+
+
+    const timeBox =
+        document.getElementById(
+            "intermediateTime"
+        );
+
+
+    if(level==="fundamental"){
+
+        state.studyMinutes=10;
+        state.responseMinutes=1;
+
+        timeBox.classList.remove("visible");
+
+    }
+
+
+    if(level==="avancado"){
+
+        state.studyMinutes=20;
+        state.responseMinutes=2;
+
+        timeBox.classList.remove("visible");
+
+    }
+
+
+    if(level==="intermediario"){
+
+        timeBox.classList.add("visible");
+
+        if(!state.intermediateTime){
+
+            state.studyMinutes=0;
+            state.responseMinutes=0;
+
+        }
+
+    }
+
+
+    state.originalStudyMinutes =
+        state.studyMinutes;
+
+    state.originalResponseMinutes =
+        state.responseMinutes;
+
+
+    renderAreas();
+
+}
+
+
+/* =========================================================
+   TEMPO INTERMEDIÁRIO
+========================================================= */
+
+function selectIntermediateTime(minutes){
+
+    state.level="intermediario";
+
+    state.intermediateTime=minutes;
+
+    state.studyMinutes=minutes;
+
+    state.responseMinutes =
+        minutes===10 ? 1 : 2;
+
+    state.originalStudyMinutes=minutes;
+
+    state.originalResponseMinutes =
+        state.responseMinutes;
+
+
+    document
+        .querySelectorAll(".time-button")
+        .forEach(button =>
+            button.classList.remove("selected")
+        );
+
+
+    document
+        .getElementById(
+            minutes===10
+            ? "time10"
+            : "time20"
+        )
+        .classList.add("selected");
+
+
+    renderAreas();
+
+}
+
+
+/* =========================================================
+   ÁREAS
+========================================================= */
+
+function renderAreas(){
+
+    const grid =
+        document.getElementById(
+            "areaGrid"
+        );
+
+    grid.innerHTML="";
+
+
+    AREAS.forEach((area,index)=>{
+
+        const available =
+            area.levels.includes("todos") ||
+            area.levels.includes(state.level);
+
+
+        const card =
+            document.createElement("div");
+
+
+        card.className =
+            "area-card" +
+            (available ? "" : " disabled");
+
+
+        card.innerHTML=`
+
+            <div class="area-card-number">
+                ${String(index+1).padStart(2,"0")}
+            </div>
+
+            <h3>
+                ${area.name}
+            </h3>
+
+            <div class="area-card-arrow">
+                →
+            </div>
+
+        `;
+
+
+        if(available){
+
+            card.onclick =
+                ()=>selectArea(area);
+
+        }
+
+
+        grid.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+   ÁREA
+========================================================= */
+
+function selectArea(area){
+
+    state.areaKey =
+        area.key;
+
+    state.areaName =
+        area.name;
+
+
+    if(
+        area.key ===
+        "personagens_historia_teologia"
+        ||
+        area.key ===
+        "personagens_biblicos"
+    ){
+
+        chooseCharacterTime();
+
+        return;
+
+    }
+
+
+    startSelection();
+
+}
+
+
+/* =========================================================
+   TEMPO PERSONAGENS
+========================================================= */
+
+function chooseCharacterTime(){
+
+    const value =
+        prompt(
+            "Escolha o tempo de estudo:\n\n" +
+            "10, 20 ou 30 minutos."
+        );
+
+
+    const minutes =
+        Number(value);
+
+
+    if(
+        ![10,20,30].includes(minutes)
+    ){
+
+        alert(
+            "Escolha 10, 20 ou 30 minutos."
+        );
+
+        return;
+
+    }
+
+
+    state.studyMinutes =
+        minutes;
+
+
+    state.responseMinutes =
+        minutes===10
+        ? 1
+        : minutes===20
+        ? 2
+        : 3;
+
+
+    state.originalStudyMinutes =
+        minutes;
+
+
+    state.originalResponseMinutes =
+        state.responseMinutes;
+
+
+    startSelection();
+
+}
+
+
+/* =========================================================
+   OBTER PAUTAS
+========================================================= */
+
+function getTopics(){
+
+    if(!DATA) return [];
+
+
+    const area =
+        DATA[state.areaKey];
+
+
+    if(!area) return [];
+
+
+    /*
+      PERSONAGENS
+    */
+
+    if(Array.isArray(area)){
+
+        return area;
+
+    }
+
+
+    /*
+      ÁREA NORMAL
+      seleciona automaticamente
+      o nível escolhido.
+    */
+
+    if(
+        state.level &&
+        Array.isArray(
+            area[state.level]
+        )
+    ){
+
+        return area[state.level];
+
+    }
+
+
+    return [];
+
+}
+
+
+/* =========================================================
+   ESCOLHER PAUTA
+========================================================= */
+
+function startSelection(){
+
+    scrollToSection("selection");
+
+
+    const topics =
+        getTopics();
+
+
+    if(!topics.length){
+
+        document
+            .getElementById(
+                "rollingTopic"
+            )
+            .textContent =
+            "NENHUMA PAUTA";
+
+        return;
+
+    }
+
+
+    const rolling =
+        document.getElementById(
+            "rollingTopic"
+        );
+
+
+    const rollingArea =
+        document.getElementById(
+            "rollingArea"
+        );
+
+
+    const result =
+        document.getElementById(
+            "topicResult"
+        );
+
+
+    result.classList.remove("visible");
+
+
+    let count=0;
+
+    let delay=55;
+
+
+    function roll(){
+
+        const random =
+            topics[
+                Math.floor(
+                    Math.random()*topics.length
+                )
+            ];
+
+
+        rolling.textContent =
+            random;
+
+
+        count++;
+
+
+        if(count<25){
+
+            if(count>14){
+
+                delay+=18;
+
+            }
+
+
+            setTimeout(
+                roll,
+                delay
+            );
+
+
+            return;
+
+        }
+
+
+        const selected =
+            topics[
+                Math.floor(
+                    Math.random()*topics.length
+                )
+            ];
+
+
+        state.topic =
+            selected;
+
+
+        rolling.textContent =
+            selected;
+
+
+        rollingArea.textContent =
+            "Área: " +
+            state.areaName;
+
+
+        setTimeout(()=>{
+
+            showTopic();
+
+        },600);
+
+    }
+
+
+    roll();
+
+}
+
+
+/* =========================================================
+   MOSTRAR PAUTA
+========================================================= */
+
+function showTopic(){
+
+    const characters =
+        state.areaKey ===
+        "personagens_historia_teologia"
+        ||
+        state.areaKey ===
+        "personagens_biblicos";
+
+
+    if(characters){
+
+        document
+            .getElementById("topicPrefix")
+            .textContent =
+            "QUEM FOI";
+
+
+        document
+            .getElementById("topicName")
+            .textContent =
+            state.topic + "?";
+
+    }
+
+    else{
+
+        document
+            .getElementById("topicPrefix")
+            .textContent =
+            "SUA PAUTA";
+
+
+        document
+            .getElementById("topicName")
+            .textContent =
+            state.topic;
+
+    }
+
+
+    document
+        .getElementById("topicArea")
+        .textContent =
+        "Área: " +
+        state.areaName;
+
+
+    renderQuestions();
+
+
+    document
+        .getElementById("topicResult")
+        .classList.add("visible");
+
+
+    setTimeout(()=>{
+
+        document
+            .getElementById("topicResult")
+            .scrollIntoView({
+                behavior:"smooth",
+                block:"center"
+            });
+
+    },100);
+
+}
+
+
+/* =========================================================
+   PERGUNTAS
+========================================================= */
+
+function renderQuestions(){
+
+    const box =
+        document.getElementById(
+            "questionBox"
+        );
+
+
+    box.innerHTML="";
+
+
+    /*
+      PERSONAGENS
+    */
+
+    if(
+        state.areaKey ===
+        "personagens_historia_teologia"
+        ||
+        state.areaKey ===
+        "personagens_biblicos"
+    ){
+
+        box.style.display="none";
+
+        return;
+
+    }
+
+
+    box.style.display="block";
+
+
+    /*
+      AT / NT
+    */
+
+    if(
+        state.areaKey ===
+        "panorama_antigo_testamento"
+        ||
+        state.areaKey ===
+        "panorama_novo_testamento"
+    ){
+
+        const isNT =
+            state.areaKey ===
+            "panorama_novo_testamento";
+
+
+        const type =
+            isNT
+            ? "carta"
+            : "livro";
+
+
+        const questions=[
+
+            `Quem foi o autor e quando o ${type} foi escrito?`,
+
+            `Qual era o contexto histórico em que o ${type} foi escrito?`,
+
+            `Para quem o ${type} foi destinado?`,
+
+            `Qual é a principal mensagem teológica do ${type}?`
+
+        ];
+
+
+        box.innerHTML=`
+
+            <div class="question-title">
+                QUESTÕES PARA SUA PESQUISA
+            </div>
+
+            ${questions.map(
+                (q,i)=>`
+
+                <div class="question">
+                    <strong>${i+1}.</strong>
+                    ${q}
+                </div>
+
+            `).join("")}
+
+        `;
+
+
+        return;
+
+    }
+
+
+    /*
+      APOLOGÉTICA
+    */
+
+    if(
+        state.areaKey ===
+        "apologetica"
+    ){
+
+        box.innerHTML=`
+
+            <div class="question-title">
+                QUESTÃO-GUIA
+            </div>
+
+            <div class="question">
+                Quais são as principais objeções a esse tema
+                e como podemos respondê-las para defender
+                racionalmente a fé cristã?
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    /*
+      SISTEMÁTICA
+    */
+
+    if(
+        state.areaKey ===
+        "teologia_sistematica"
+        &&
+        state.level ===
+        "intermediario"
+    ){
+
+        box.innerHTML=`
+
+            <div class="question-title">
+                QUESTÃO-GUIA
+            </div>
+
+            <div class="question">
+                O que a Bíblia ensina sobre esse tema
+                e quais são as principais interpretações
+                teológicas sobre ele?
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    /*
+      HISTÓRIA
+    */
+
+    if(
+        state.areaKey ===
+        "historia_da_igreja"
+        &&
+        state.level ===
+        "intermediario"
+    ){
+
+        box.innerHTML=`
+
+            <div class="question-title">
+                QUESTÃO-GUIA
+            </div>
+
+            <div class="question">
+                O que aconteceu, por que aconteceu
+                e qual foi sua importância para a
+                história do cristianismo?
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    /*
+      TEOLOGIA PRÁTICA
+    */
+
+    if(
+        state.areaKey ===
+        "teologia_pratica"
+    ){
+
+        box.innerHTML=`
+
+            <div class="question-title">
+                QUESTÃO-GUIA
+            </div>
+
+            <div class="question">
+                Qual é o fundamento bíblico desse tema
+                e como ele pode ser aplicado à prática
+                cristã?
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+}
+
+
+/* =========================================================
+   INICIAR ESTUDO
+========================================================= */
+
+function startStudy(){
+
+    state.usedStudyMore=false;
+
+
+    document
+        .getElementById("studyTopic")
+        .textContent =
+        state.topic;
+
+
+    updateResponsePreview();
+
+
+    scrollToSection("study");
+
+
+    setTimeout(()=>{
+
+        runStudyTimer(
+            state.studyMinutes*60
+        );
+
+    },700);
+
+}
+
+
+/* =========================================================
+   PREVIEW
+========================================================= */
+
+function updateResponsePreview(){
+
+    document
+        .getElementById(
+            "responsePreview"
+        )
+        .textContent =
+        "DEPOIS: " +
+        state.responseMinutes +
+        (
+            state.responseMinutes===1
+            ? " MINUTO DE RESPOSTA"
+            : " MINUTOS DE RESPOSTA"
+        );
+
+}
+
+
+/* =========================================================
+   TIMER ESTUDO
+========================================================= */
+
+function runStudyTimer(seconds){
+
+    clearInterval(state.timer);
+
+
+    updateTimer(
+        "studyTimer",
+        seconds
+    );
+
+
+    state.timer =
+        setInterval(()=>{
+
+            seconds--;
+
+
+            updateTimer(
+                "studyTimer",
+                seconds
+            );
+
+
+            if(seconds<=0){
+
+                clearInterval(
+                    state.timer
+                );
+
+
+                playAlarm();
+
+
+                setTimeout(
+                    startResponse,
+                    900
+                );
+
+            }
+
+        },1000);
+
+}
+
+
+/* =========================================================
+   ALARME
+========================================================= */
+
+function playAlarm(){
+
+    try{
+
+        const AudioContext =
+            window.AudioContext ||
+            window.webkitAudioContext;
+
+
+        const context =
+            new AudioContext();
+
+
+        let start =
+            context.currentTime;
+
+
+        for(let i=0;i<8;i++){
+
+            const oscillator =
+                context.createOscillator();
+
+
+            const gain =
+                context.createGain();
+
+
+            oscillator.type="square";
+
+
+            oscillator.frequency.value =
+                i%2===0
+                ? 880
+                : 660;
+
+
+            gain.gain.setValueAtTime(
+                0.0001,
+                start
+            );
+
+
+            gain.gain.exponentialRampToValueAtTime(
+                0.15,
+                start+.01
+            );
+
+
+            gain.gain.exponentialRampToValueAtTime(
+                0.0001,
+                start+.17
+            );
+
+
+            oscillator.connect(gain);
+
+
+            gain.connect(
+                context.destination
+            );
+
+
+            oscillator.start(start);
+
+
+            oscillator.stop(
+                start+.18
+            );
+
+
+            start+=.23;
+
+        }
+
+    }
+
+    catch(error){
+
+        console.log(
+            "Áudio indisponível."
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPOSTA
+========================================================= */
+
+function startResponse(){
+
+    scrollToSection(
+        "response"
+    );
+
+
+    runResponseTimer(
+        state.responseMinutes*60
+    );
+
+}
+
+
+/* =========================================================
+   TIMER RESPOSTA
+========================================================= */
+
+function runResponseTimer(seconds){
+
+    clearInterval(
+        state.timer
+    );
+
+
+    updateTimer(
+        "responseTimer",
+        seconds
+    );
+
+
+    state.timer =
+        setInterval(()=>{
+
+            seconds--;
+
+
+            updateTimer(
+                "responseTimer",
+                seconds
+            );
+
+
+            if(seconds<=0){
+
+                clearInterval(
+                    state.timer
+                );
+
+
+                finishChallenge();
+
+            }
+
+        },1000);
+
+}
+
+
+/* =========================================================
+   ATUALIZAR TIMER
+========================================================= */
+
+function updateTimer(id,seconds){
+
+    const element =
+        document.getElementById(id);
+
+
+    element.textContent =
+        formatTime(seconds);
+
+}
+
+
+/* =========================================================
+   FORMATAR
+========================================================= */
+
+function formatTime(seconds){
+
+    seconds =
+        Math.max(
+            0,
+            seconds
+        );
+
+
+    const minutes =
+        Math.floor(
+            seconds/60
+        );
+
+
+    const secs =
+        seconds%60;
+
+
+    return (
+        String(minutes)
+            .padStart(2,"0")
+        +
+        ":"
+        +
+        String(secs)
+            .padStart(2,"0")
+    );
+
+}
+
+
+/* =========================================================
+   FINALIZAR
+========================================================= */
+
+function finishChallenge(){
+
+    clearInterval(
+        state.timer
+    );
+
+
+    document
+        .getElementById(
+            "resultTopic"
+        )
+        .textContent =
+        state.topic;
+
+
+    document
+        .getElementById(
+            "resultArea"
+        )
+        .textContent =
+        "Área: " +
+        state.areaName;
+
+
+    document
+        .getElementById(
+            "resultStudy"
+        )
+        .textContent =
+        state.studyMinutes +
+        " min";
+
+
+    document
+        .getElementById(
+            "resultResponse"
+        )
+        .textContent =
+        state.responseMinutes +
+        " min";
+
+
+    document
+        .getElementById(
+            "studyMoreBtn"
+        )
+        .style.display =
+        state.usedStudyMore
+        ? "none"
+        : "inline-flex";
+
+
+    scrollToSection(
+        "result"
+    );
+
+}
+
+
+/* =========================================================
+   ESTUDAR MAIS
+========================================================= */
+
+function studyMore(){
+
+    if(state.usedStudyMore){
+
+        return;
+
+    }
+
+
+    state.usedStudyMore=true;
+
+
+    const additionalStudy =
+        state.originalStudyMinutes*2;
+
+
+    state.studyMinutes =
+        additionalStudy;
+
+
+    state.responseMinutes =
+        state.originalResponseMinutes*2;
+
+
+    document
+        .getElementById(
+            "studyTopic"
+        )
+        .textContent =
+        state.topic;
+
+
+    updateResponsePreview();
+
+
+    scrollToSection(
+        "study"
+    );
+
+
+    setTimeout(()=>{
+
+        runStudyTimer(
+            additionalStudy*60
+        );
+
+    },700);
+
+}
+
+
+/* =========================================================
+   NOVO DESAFIO
+========================================================= */
+
+function newChallenge(){
+
+    clearInterval(
+        state.timer
+    );
+
+
+    state.level=null;
+
+    state.studyMinutes=0;
+
+    state.responseMinutes=0;
+
+    state.originalStudyMinutes=0;
+
+    state.originalResponseMinutes=0;
+
+    state.intermediateTime=null;
+
+    state.areaKey=null;
+
+    state.areaName=null;
+
+    state.topic=null;
+
+    state.usedStudyMore=false;
+
+
+    document
+        .querySelectorAll(".level-card")
+        .forEach(card =>
+            card.classList.remove(
+                "selected"
+            )
+        );
+
+
+    document
+        .querySelectorAll(".time-button")
+        .forEach(button =>
+            button.classList.remove(
+                "selected"
+            )
+        );
+
+
+    document
+        .getElementById(
+            "intermediateTime"
+        )
+        .classList.remove(
+            "visible"
+        );
+
+
+    scrollToSection(
+        "level"
+    );
+
+
+    renderAreas();
+
+}
+
+
+/* =========================================================
+   INICIAR
+========================================================= */
+
+loadData();
+
+</script>
+
+</body>
+</html>
