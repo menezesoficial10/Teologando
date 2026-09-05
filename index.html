@@ -4,878 +4,768 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TEOLOGANDO</title>
+<title>TEOLOGANDO — Estude. Pense. Explique.</title>
 
 <style>
-
-/* =========================================================
-   BASE
-========================================================= */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root{
+    --bg:#050608;
+    --bg2:#0b0d12;
+    --card:#101218;
+    --card2:#151821;
+    --line:rgba(255,255,255,.09);
+    --text:#f5f5f5;
+    --muted:#858995;
+    --accent:#ffffff;
+    --accentText:#050608;
+    --danger:#ff6b6b;
 }
 
-:root {
-    --bg: #07080b;
-    --card: #101217;
-    --card2: #15171d;
-    --text: #f4f4f5;
-    --muted: #9da2ab;
-    --line: rgba(255,255,255,.09);
-    --white: #ffffff;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
-    padding-bottom: 78px;
+body{
+    min-height:100vh;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(255,255,255,.055), transparent 32%),
+        radial-gradient(circle at 15% 55%, rgba(255,255,255,.025), transparent 30%),
+        linear-gradient(180deg,#050608 0%,#080a0e 48%,#040506 100%);
+    color:var(--text);
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+    padding-bottom:95px;
 }
 
-button {
-    font-family: inherit;
+button{
+    font-family:inherit;
 }
 
-.container {
-    width: min(1100px, calc(100% - 32px));
-    margin: auto;
+.page{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:80px 20px;
+    scroll-margin-top:20px;
 }
 
+.page-inner{
+    width:100%;
+    max-width:850px;
+    text-align:center;
+}
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
-.hero {
-    min-height: 92vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 70px 0;
+.hero{
+    min-height:100vh;
 }
 
-.hero-inner {
-    max-width: 850px;
-}
-
-.logo {
-    font-size: clamp(48px, 10vw, 100px);
-    font-weight: 900;
-    letter-spacing: -.07em;
-    line-height: .9;
-}
-
-.slogan {
-    margin-top: 18px;
-    color: var(--muted);
-    font-size: clamp(14px, 2vw, 18px);
-    letter-spacing: .12em;
-    text-transform: uppercase;
-}
-
-.hero-description {
-    max-width: 650px;
-    margin: 42px auto 0;
-    font-size: clamp(18px, 3vw, 27px);
-    line-height: 1.4;
-    font-weight: 500;
-}
+.logo{
+    font-size:clamp(42px,10vw,82px);
+    font-weight:900;
+    letter-spacing:-4px;
+    line-height:.95;
+}
 
-.hero-description strong {
-    color: #fff;
+.tagline{
+    margin-top:18px;
+    font-size:clamp(17px,3vw,22px);
+    color:var(--muted);
+    letter-spacing:.5px;
 }
 
-.primary-button {
-    margin-top: 38px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    min-height: 56px;
-    padding: 0 28px;
-    border: 1px solid rgba(255,255,255,.2);
-    border-radius: 999px;
-    background: #fff;
-    color: #050505;
-    font-size: 14px;
-    font-weight: 900;
-    letter-spacing: .08em;
-    cursor: pointer;
-    transition: .2s ease;
+.hero-description{
+    max-width:580px;
+    margin:28px auto 38px;
+    color:#b5b8c0;
+    font-size:16px;
+    line-height:1.7;
 }
 
-.primary-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 35px rgba(255,255,255,.1);
+.main-action{
+    border:0;
+    background:#fff;
+    color:#050608;
+    padding:18px 34px;
+    border-radius:999px;
+    font-size:15px;
+    font-weight:900;
+    letter-spacing:.5px;
+    cursor:pointer;
+    transition:.25s;
+    box-shadow:0 12px 45px rgba(255,255,255,.08);
 }
 
-
-/* =========================================================
-   SEÇÕES
-========================================================= */
-
-section {
-    padding: 90px 0;
+.main-action:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 55px rgba(255,255,255,.14);
 }
 
-.section-label {
-    color: var(--muted);
-    font-size: 11px;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
+/* =========================
+   TITLES
+========================= */
 
-.section-title {
-    font-size: clamp(30px, 6vw, 54px);
-    line-height: 1;
-    letter-spacing: -.045em;
+.eyebrow{
+    color:#70747f;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:3px;
+    margin-bottom:15px;
+    text-transform:uppercase;
 }
-
 
-/* =========================================================
-   REGRAS
-========================================================= */
-
-.rules {
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+.page-title{
+    font-size:clamp(30px,6vw,52px);
+    font-weight:900;
+    letter-spacing:-2px;
+    margin-bottom:18px;
 }
 
-.rules-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+.page-description{
+    color:#9da1ab;
+    max-width:620px;
+    margin:0 auto 38px;
+    line-height:1.7;
 }
 
-.warning {
-    margin-top: 30px;
-    padding: 28px;
-    border: 1px solid var(--line);
-    background: var(--card);
-}
+/* =========================
+   RULES
+========================= */
 
-.warning strong {
-    display: block;
-    font-size: 17px;
-    margin-bottom: 10px;
+.rules-card{
+    background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+    border:1px solid var(--line);
+    border-radius:28px;
+    padding:30px;
+    max-width:680px;
+    margin:0 auto 30px;
+    text-align:left;
 }
 
-.warning p {
-    color: var(--muted);
-    line-height: 1.6;
+.rule{
+    display:flex;
+    gap:18px;
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
 }
 
-.sources {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 22px;
+.rule:last-child{
+    border-bottom:0;
+    padding-bottom:0;
 }
 
-.source-tag {
-    border: 1px solid var(--line);
-    padding: 8px 12px;
-    border-radius: 999px;
-    color: var(--muted);
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: .08em;
+.rule-number{
+    width:34px;
+    height:34px;
+    border:1px solid var(--line);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:none;
+    font-weight:800;
+    font-size:13px;
 }
 
-.secondary-button {
-    margin-top: 28px;
-    min-height: 50px;
-    padding: 0 22px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: transparent;
-    color: white;
-    font-weight: 800;
-    font-size: 12px;
-    letter-spacing: .08em;
-    cursor: pointer;
-    transition: .2s ease;
+.rule strong{
+    display:block;
+    margin-bottom:6px;
 }
 
-.secondary-button:hover {
-    background: white;
-    color: black;
+.rule p{
+    color:#8f939d;
+    font-size:14px;
+    line-height:1.6;
 }
 
+/* =========================
+   CHOICES
+========================= */
 
-/* =========================================================
-   SELETOR
-========================================================= */
-
-.selector {
-    padding-top: 100px;
+.choice-group{
+    margin:34px auto;
+    max-width:760px;
 }
 
-.choice-group {
-    margin-top: 34px;
+.choice-title{
+    color:#747984;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:2px;
+    margin-bottom:15px;
 }
 
-.choice-label {
-    color: var(--muted);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    margin-bottom: 13px;
+.choices{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
 }
 
-.choice-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
+.choice-button{
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.035);
+    color:#bfc2c9;
+    padding:13px 20px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.4px;
+    cursor:pointer;
+    transition:.22s;
 }
 
-.choice-button {
-    min-height: 46px;
-    padding: 0 18px;
-    border: 1px solid rgba(255,255,255,.12);
-    border-radius: 999px;
-    background: #111319;
-    color: #9da2ab;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: .06em;
-    cursor: pointer;
-    transition: .2s ease;
+.choice-button:hover{
+    background:rgba(255,255,255,.08);
+    color:#fff;
 }
 
-.choice-button:hover {
-    border-color: rgba(255,255,255,.35);
-    color: white;
-    transform: translateY(-1px);
+.choice-button.active{
+    background:#fff;
+    color:#050608;
+    border-color:#fff;
 }
 
-.choice-button.active {
-    background: white;
-    border-color: white;
-    color: #050505;
+.choice-button.locked{
+    opacity:.25;
+    cursor:not-allowed;
+    pointer-events:none;
 }
 
-.choice-button.locked {
-    opacity: .35;
-    cursor: not-allowed;
+.selected-area{
+    margin:38px auto 18px;
+    min-height:18px;
+    color:#aaaeb8;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
 }
 
-.selected-area {
-    min-height: 20px;
-    margin-top: 38px;
-    text-align: center;
-    color: white;
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-}
+/* =========================
+   ROULETTE
+========================= */
 
-.main-action {
-    width: 100%;
-    margin-top: 14px;
-    min-height: 64px;
-    border: none;
-    border-radius: 999px;
-    background: white;
-    color: black;
-    font-size: 15px;
-    font-weight: 900;
-    letter-spacing: .12em;
-    cursor: pointer;
-    transition: .2s ease;
+.roulette-page{
+    position:relative;
 }
 
-.main-action:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 35px rgba(255,255,255,.1);
+.roulette-box{
+    max-width:760px;
+    margin:0 auto;
 }
 
-
-/* =========================================================
-   RESULTADO
-========================================================= */
-
-.result-section {
-    display: none;
-    text-align: center;
-    min-height: 70vh;
-    align-items: center;
+.roulette-label{
+    color:#767b86;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:3px;
+    margin-bottom:20px;
+    text-transform:uppercase;
 }
 
-.result-section.visible {
-    display: flex;
+.roulette-window{
+    min-height:145px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
 }
 
-.result-box {
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
+.roulette-word{
+    font-size:clamp(38px,8vw,74px);
+    font-weight:900;
+    line-height:1;
+    letter-spacing:-3px;
+    word-break:break-word;
+    transition:.1s;
 }
 
-.roulette-label {
-    color: var(--muted);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+.roulette-word.rolling{
+    filter:blur(.7px);
+    opacity:.72;
+    transform:scale(.98);
 }
 
-.roulette-window {
-    min-height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.result-area{
+    margin-top:20px;
+    color:#747984;
+    font-size:12px;
+    letter-spacing:2px;
+    font-weight:800;
+    text-transform:uppercase;
 }
 
-.roulette-word {
-    font-size: clamp(32px, 7vw, 76px);
-    font-weight: 900;
-    line-height: .98;
-    letter-spacing: -.055em;
-    text-transform: uppercase;
+.result-actions{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    margin-top:35px;
 }
 
-.result-content {
-    margin-top: 38px;
-    opacity: 0;
-    transform: translateY(15px);
-    transition: .5s ease;
+.result-actions.visible{
+    display:flex;
 }
 
-.result-content.visible {
-    opacity: 1;
-    transform: translateY(0);
+.result-action{
+    width:min(350px,90vw);
+    padding:16px 22px;
+    border-radius:999px;
+    border:1px solid #fff;
+    background:#fff;
+    color:#050608;
+    font-size:13px;
+    font-weight:900;
+    cursor:pointer;
+    transition:.22s;
 }
 
-.final-area {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 14px;
+.result-action:hover{
+    transform:translateY(-2px);
 }
 
-.guiding-question {
-    max-width: 700px;
-    margin: 35px auto 0;
-    padding: 25px;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    background: var(--card);
-    color: #d6d8dc;
-    line-height: 1.6;
+.result-action.secondary{
+    background:transparent;
+    color:#fff;
+    border-color:var(--line);
 }
 
-.book-questions {
-    max-width: 700px;
-    margin: 25px auto 0;
-    text-align: left;
+.save-theme{
+    margin:25px auto 0;
+    border:0;
+    background:transparent;
+    color:#aeb2bb;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    cursor:pointer;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.7px;
 }
 
-.book-question {
-    padding: 16px 0;
-    border-bottom: 1px solid var(--line);
-    color: #d6d8dc;
-    line-height: 1.5;
+.save-theme span{
+    font-size:21px;
+    line-height:1;
 }
 
-.character-title {
-    display: none;
+.save-theme.saved{
+    color:#fff;
 }
-
-
-/* =========================================================
-   BOTÕES DO RESULTADO
-========================================================= */
 
-.result-actions {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 32px;
-}
+/* =========================
+   STUDY
+========================= */
 
-.result-action {
-    min-height: 52px;
-    padding: 0 25px;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,.2);
-    background: white;
-    color: black;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: .1em;
-    cursor: pointer;
-    transition: .2s ease;
+.study-page,
+.response-page,
+.finish-page{
+    display:none;
 }
 
-.result-action:hover {
-    transform: translateY(-2px);
+.study-page.visible,
+.response-page.visible,
+.finish-page.visible{
+    display:flex;
 }
 
-.result-action.secondary {
-    background: transparent;
-    color: white;
-    border-color: rgba(255,255,255,.15);
+.timer-card{
+    max-width:560px;
+    margin:35px auto;
+    background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+    border:1px solid var(--line);
+    border-radius:32px;
+    padding:42px 25px;
 }
 
-.result-action.secondary:hover {
-    background: white;
-    color: black;
+.timer-label{
+    color:#747984;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:3px;
+    margin-bottom:18px;
 }
-
 
-/* =========================================================
-   ESTUDO
-========================================================= */
-
-.study-section {
-    display: none;
+.study-topic{
+    font-size:clamp(25px,6vw,45px);
+    font-weight:900;
+    letter-spacing:-1.5px;
+    margin-bottom:35px;
 }
 
-.study-section.visible {
-    display: block;
+.timer{
+    font-variant-numeric:tabular-nums;
+    font-size:clamp(58px,15vw,100px);
+    font-weight:900;
+    letter-spacing:-5px;
+    line-height:1;
+    margin-bottom:35px;
 }
 
-.study-card {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    border: 1px solid var(--line);
-    border-radius: 24px;
-    background: var(--card);
-    padding: 55px 30px;
+.timer.warning{
+    animation:pulse 1s infinite;
 }
 
-.study-topic {
-    font-size: clamp(25px, 5vw, 46px);
-    font-weight: 900;
-    letter-spacing: -.04em;
+@keyframes pulse{
+    50%{opacity:.55;}
 }
 
-.timer-label {
-    margin-top: 28px;
-    color: var(--muted);
-    font-size: 11px;
-    letter-spacing: .14em;
-    text-transform: uppercase;
+.study-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    max-width:360px;
+    margin:0 auto;
 }
 
-.timer {
-    margin-top: 8px;
-    font-size: clamp(65px, 14vw, 120px);
-    font-weight: 900;
-    letter-spacing: -.07em;
+.study-button{
+    padding:15px 20px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.035);
+    color:#fff;
+    cursor:pointer;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.5px;
+    transition:.22s;
 }
 
-.study-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 35px;
+.study-button:hover{
+    background:rgba(255,255,255,.09);
 }
 
-.study-buttons button {
-    min-height: 48px;
-    padding: 0 20px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: transparent;
-    color: white;
-    font-weight: 800;
-    cursor: pointer;
+.study-button.primary{
+    background:#fff;
+    color:#050608;
+    border-color:#fff;
 }
 
-.study-buttons button:hover {
-    background: white;
-    color: black;
+.study-button.danger{
+    color:#ff8c8c;
 }
-
 
-/* =========================================================
-   RESPOSTA
-========================================================= */
+/* =========================
+   SAVED THEMES
+========================= */
 
-.response-section {
-    display: none;
+.saved-section{
+    width:100%;
+    padding:45px 20px 100px;
 }
 
-.response-section.visible {
-    display: block;
+.saved-inner{
+    max-width:760px;
+    margin:0 auto;
 }
 
-.response-card {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    border: 1px solid var(--line);
-    border-radius: 24px;
-    background: var(--card);
-    padding: 55px 30px;
+.saved-toggle{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 22px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    background:rgba(255,255,255,.025);
+    color:#fff;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:900;
 }
 
-.response-topic {
-    font-size: clamp(27px, 5vw, 50px);
-    font-weight: 900;
-    letter-spacing: -.04em;
+.saved-list{
+    display:none;
+    margin-top:10px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    overflow:hidden;
+    background:#0b0d11;
 }
 
-.response-timer {
-    margin-top: 8px;
-    font-size: clamp(65px, 13vw, 100px);
-    font-weight: 900;
-    letter-spacing: -.07em;
+.saved-list.open{
+    display:block;
 }
 
-
-/* =========================================================
-   FINAL
-========================================================= */
-
-.finish-section {
-    display: none;
-    text-align: center;
+.saved-empty{
+    padding:25px;
+    color:#777b85;
+    text-align:center;
+    font-size:13px;
 }
 
-.finish-section.visible {
-    display: block;
+.saved-item{
+    padding:18px 20px;
+    border-bottom:1px solid var(--line);
+    cursor:pointer;
+    transition:.2s;
 }
 
-.finish-message {
-    max-width: 650px;
-    margin: auto;
+.saved-item:last-child{
+    border-bottom:0;
 }
 
-.finish-message h2 {
-    font-size: clamp(35px, 7vw, 70px);
-    letter-spacing: -.05em;
+.saved-item:hover{
+    background:rgba(255,255,255,.045);
 }
 
-.finish-message p {
-    color: var(--muted);
-    margin-top: 18px;
-    line-height: 1.6;
+.saved-item strong{
+    display:block;
+    font-size:15px;
+    margin-bottom:5px;
 }
-
-
-/* =========================================================
-   INSTAGRAM
-========================================================= */
 
-.instagram-bar {
-    position: fixed;
-    z-index: 100;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 16px;
-    border-top: 1px solid rgba(255,255,255,.08);
-    background: rgba(7,8,11,.94);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    text-align: center;
+.saved-item span{
+    color:#747984;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
 }
 
-.instagram-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    min-height: 44px;
-    padding: 8px 17px;
-    border: 1px solid rgba(255,255,255,.22);
-    border-radius: 999px;
-    background: rgba(255,255,255,.06);
-    color: white;
-    text-decoration: none;
-    box-shadow: 0 5px 25px rgba(0,0,0,.2);
-    transition: .2s ease;
-}
+/* =========================
+   INSTAGRAM / FOOTER
+========================= */
 
-.instagram-link:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255,255,255,.45);
-    background: rgba(255,255,255,.11);
+.bottom-area{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:100;
+    padding:10px 14px;
+    background:rgba(5,6,8,.88);
+    backdrop-filter:blur(18px);
+    border-top:1px solid rgba(255,255,255,.07);
 }
 
-.instagram-link:active {
-    transform: scale(.98);
+.bottom-content{
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
 }
 
-.instagram-icon {
-    width: 19px;
-    height: 19px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.developed{
+    color:#5f636d;
+    font-size:9px;
+    line-height:1.2;
+    text-align:right;
 }
 
-.instagram-icon svg {
-    width: 19px;
-    height: 19px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.8;
+.developed strong{
+    color:#8a8e97;
+    font-size:10px;
 }
 
-.instagram-kicker {
-    color: #9da2ab;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: .12em;
+.instagram-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    text-decoration:none;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.045);
+    border-radius:999px;
+    padding:10px 16px;
+    font-size:11px;
+    font-weight:900;
+    transition:.22s;
 }
 
-.instagram-handle {
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: .03em;
+.instagram-button:hover{
+    background:rgba(255,255,255,.1);
+    transform:translateY(-1px);
 }
 
-.instagram-action {
-    color: #bfc2c8;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: .12em;
+.instagram-icon{
+    width:17px;
+    height:17px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.8;
 }
-
-
-/* =========================================================
-   RESPONSIVO
-========================================================= */
-
-@media (max-width: 750px) {
 
-    .rules-grid {
-        grid-template-columns: 1fr;
+@media(max-width:600px){
+    .page{
+        padding:70px 18px;
     }
 
-    section {
-        padding: 70px 0;
+    .rules-card{
+        padding:22px;
     }
 
-    .choice-button {
-        min-height: 44px;
-        padding: 0 15px;
+    .logo{
+        letter-spacing:-3px;
     }
 
-    .instagram-kicker {
-        display: none;
+    .bottom-content{
+        gap:9px;
     }
 
-    .instagram-action {
-        font-size: 8px;
+    .developed{
+        font-size:8px;
     }
 
+    .instagram-button{
+        padding:9px 13px;
+        font-size:10px;
+    }
 }
-
-@media (max-width: 430px) {
-
-    .instagram-link {
-        width: 100%;
-        max-width: 340px;
-    }
-
-    .instagram-action {
-        display: none;
-    }
-
-}
-
 </style>
 </head>
 
-
 <body>
 
+<!-- =========================
+     1. INÍCIO
+========================= -->
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+<section class="page hero" id="inicio">
+    <div class="page-inner">
 
-<section class="hero" id="inicio">
+        <div class="logo">TEOLOGANDO</div>
 
-    <div class="container hero-inner">
-
-        <div class="logo">
-            TEOLOGANDO
-        </div>
-
-        <div class="slogan">
+        <div class="tagline">
             Estude. Pense. Explique.
         </div>
 
         <div class="hero-description">
-            Você escolhe a área.<br>
-            O Teologando escolhe a <strong>pauta</strong>.
+            Você escolhe a área. O Teologando escolhe o tema.
         </div>
 
-        <button
-            class="primary-button"
-            onclick="scrollToSection('regras')">
-
+        <button class="main-action" onclick="goTo('regras')">
             TEOLOGAR →
-
         </button>
 
     </div>
-
 </section>
 
 
+<!-- =========================
+     2. REGRAS
+========================= -->
 
-<!-- =========================================================
-     REGRAS
-========================================================= -->
+<section class="page" id="regras">
+    <div class="page-inner">
 
-<section class="rules" id="regras">
+        <div class="eyebrow">ANTES DE COMEÇAR</div>
 
-    <div class="container">
-
-        <div class="rules-grid">
-
-            <div>
-
-                <div class="section-label">
-                    Antes de começar
-                </div>
-
-                <h2 class="section-title">
-                    O desafio começa<br>
-                    antes da resposta.
-                </h2>
-
-            </div>
-
-
-            <div>
-
-                <div class="warning">
-
-                    <strong>
-                        NÃO USE IA PARA PESQUISAR.
-                    </strong>
-
-                    <p>
-                        A pesquisa é parte do desafio.
-                        Consulte a Bíblia, livros, comentários,
-                        artigos acadêmicos e outras fontes confiáveis.
-                    </p>
-
-
-                    <div class="sources">
-
-                        <span class="source-tag">
-                            Bíblia
-                        </span>
-
-                        <span class="source-tag">
-                            Livros
-                        </span>
-
-                        <span class="source-tag">
-                            Comentários
-                        </span>
-
-                        <span class="source-tag">
-                            Artigos
-                        </span>
-
-                        <span class="source-tag">
-                            Fontes acadêmicas
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <button
-                    class="secondary-button"
-                    onclick="scrollToSection('seletor')">
-
-                    ENTENDI. VAMOS TEOLOGAR →
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     SELETOR
-========================================================= -->
-
-<section class="selector" id="seletor">
-
-    <div class="container">
-
-        <div class="section-label">
-            Prepare seu estudo
-        </div>
-
-        <h2 class="section-title">
-            Escolha como<br>
-            você quer teologar.
+        <h2 class="page-title">
+            Como funciona?
         </h2>
 
+        <p class="page-description">
+            O Teologando sorteia um tema dentro da área escolhida.
+            Você terá um tempo para pesquisar e depois deverá explicar
+            o que aprendeu.
+        </p>
+
+        <div class="rules-card">
+
+            <div class="rule">
+                <div class="rule-number">01</div>
+                <div>
+                    <strong>Escolha seu nível</strong>
+                    <p>
+                        Defina o nível de profundidade do estudo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="rule">
+                <div class="rule-number">02</div>
+                <div>
+                    <strong>Escolha o tempo</strong>
+                    <p>
+                        Determine quanto tempo terá para pesquisar.
+                    </p>
+                </div>
+            </div>
+
+            <div class="rule">
+                <div class="rule-number">03</div>
+                <div>
+                    <strong>Escolha uma área</strong>
+                    <p>
+                        O tema será sorteado dentro dela.
+                    </p>
+                </div>
+            </div>
+
+            <div class="rule">
+                <div class="rule-number">04</div>
+                <div>
+                    <strong>Pesquise e explique</strong>
+                    <p>
+                        Depois da pesquisa, explique o que você aprendeu.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="main-action" onclick="goTo('configuracao')">
+            ENTENDI →
+        </button>
+
+    </div>
+</section>
 
 
-        <!-- NÍVEL -->
+<!-- =========================
+     3. NÍVEL + TEMPO
+========================= -->
+
+<section class="page" id="configuracao">
+    <div class="page-inner">
+
+        <div class="eyebrow">PASSO 01</div>
+
+        <h2 class="page-title">
+            Como você quer estudar?
+        </h2>
 
         <div class="choice-group">
 
-            <div class="choice-label">
-                NÍVEL
+            <div class="choice-title">
+                NÍVEL DE CONHECIMENTO
             </div>
 
-            <div class="choice-buttons">
+            <div class="choices">
 
                 <button
                     class="choice-button active"
                     data-level="fundamental"
                     onclick="selectLevel('fundamental')">
-
                     FUNDAMENTAL
-
                 </button>
-
 
                 <button
                     class="choice-button"
                     data-level="intermediario"
                     onclick="selectLevel('intermediario')">
-
                     INTERMEDIÁRIO
-
                 </button>
-
 
                 <button
                     class="choice-button"
                     data-level="avancado"
                     onclick="selectLevel('avancado')">
-
                     AVANÇADO
-
                 </button>
 
             </div>
@@ -883,34 +773,26 @@ section {
         </div>
 
 
-
-        <!-- TEMPO -->
-
         <div class="choice-group">
 
-            <div class="choice-label">
-                TEMPO DE ESTUDO
+            <div class="choice-title">
+                TEMPO DE PESQUISA
             </div>
 
-            <div class="choice-buttons">
+            <div class="choices">
 
                 <button
                     class="choice-button active"
                     id="time10"
                     onclick="selectTime(10)">
-
                     10 MIN
-
                 </button>
-
 
                 <button
                     class="choice-button"
                     id="time20"
                     onclick="selectTime(20)">
-
                     20 MIN
-
                 </button>
 
             </div>
@@ -918,322 +800,198 @@ section {
         </div>
 
 
-
-        <!-- ÁREA -->
-
-        <div class="choice-group">
-
-            <div class="choice-label">
-                ÁREA DE CONHECIMENTO
-            </div>
-
-
-            <div class="choice-buttons">
-
-
-                <button
-                    class="choice-button"
-                    data-area="teologia_sistematica"
-                    onclick="selectArea('teologia_sistematica')">
-
-                    TEOLOGIA SISTEMÁTICA
-
-                </button>
-
-
-                <button
-                    class="choice-button"
-                    data-area="historia_da_igreja"
-                    onclick="selectArea('historia_da_igreja')">
-
-                    HISTÓRIA DA IGREJA
-
-                </button>
-
-
-                <button
-                    class="choice-button"
-                    data-area="panorama_antigo_testamento"
-                    onclick="selectArea('panorama_antigo_testamento')">
-
-                    PANORAMA DO ANTIGO TESTAMENTO
-
-                </button>
-
-
-                <button
-                    class="choice-button"
-                    data-area="panorama_novo_testamento"
-                    onclick="selectArea('panorama_novo_testamento')">
-
-                    PANORAMA DO NOVO TESTAMENTO
-
-                </button>
-
-
-                <button
-                    class="choice-button"
-                    data-area="apologetica"
-                    onclick="selectArea('apologetica')">
-
-                    APOLOGÉTICA
-
-                </button>
-
-
-                <button
-                    class="choice-button"
-                    data-area="teologia_pratica"
-                    onclick="selectArea('teologia_pratica')">
-
-                    TEOLOGIA PRÁTICA
-
-                </button>
-
-
-                <button
-                    class="choice-button"
-                    data-area="movimentos_tradicoes"
-                    onclick="selectArea('movimentos_tradicoes')">
-
-                    MOVIMENTOS E TRADIÇÕES
-
-                </button>
-
-
-                <button
-                    class="choice-button"
-                    data-area="personagens_historia_teologia"
-                    onclick="selectArea('personagens_historia_teologia')">
-
-                    PERSONAGENS DA HISTÓRIA DA TEOLOGIA
-
-                </button>
-
-
-                <button
-                    class="choice-button"
-                    data-area="personagens_biblicos"
-                    onclick="selectArea('personagens_biblicos')">
-
-                    PERSONAGENS BÍBLICOS
-
-                </button>
-
-
-            </div>
-
-        </div>
-
-
-
-        <!-- ÁREA ESCOLHIDA -->
-
-        <div
-            class="selected-area"
-            id="selectedArea">
-
-            ESCOLHA UMA ÁREA
-
-        </div>
-
-
-
-        <!-- BOTÃO TEOLOGAR -->
-
-        <button
-            class="main-action"
-            onclick="startRoulette()">
-
-            TEOLOGAR →
-
+        <button class="main-action" onclick="goTo('areas')">
+            CONTINUAR →
         </button>
 
     </div>
-
 </section>
 
 
+<!-- =========================
+     4. ÁREAS
+========================= -->
 
-<!-- =========================================================
-     RESULTADO
-========================================================= -->
+<section class="page" id="areas">
+    <div class="page-inner">
 
-<section
-    class="result-section"
-    id="resultado">
+        <div class="eyebrow">PASSO 02</div>
 
-    <div class="container">
+        <h2 class="page-title">
+            Escolha uma área
+        </h2>
 
-        <div class="result-box">
+        <p class="page-description">
+            O tema será sorteado somente depois que você clicar em
+            <strong>TEOLOGAR</strong>.
+        </p>
+
+        <div class="choices">
+
+            <button class="choice-button area-button"
+                data-area="teologia_sistematica"
+                onclick="selectArea('teologia_sistematica')">
+                TEOLOGIA SISTEMÁTICA
+            </button>
+
+            <button class="choice-button area-button"
+                data-area="historia_da_igreja"
+                onclick="selectArea('historia_da_igreja')">
+                HISTÓRIA DA IGREJA
+            </button>
+
+            <button class="choice-button area-button"
+                data-area="panorama_antigo_testamento"
+                onclick="selectArea('panorama_antigo_testamento')">
+                PANORAMA DO ANTIGO TESTAMENTO
+            </button>
+
+            <button class="choice-button area-button"
+                data-area="panorama_novo_testamento"
+                onclick="selectArea('panorama_novo_testamento')">
+                PANORAMA DO NOVO TESTAMENTO
+            </button>
+
+            <button class="choice-button area-button"
+                data-area="apologetica"
+                onclick="selectArea('apologetica')">
+                APOLOGÉTICA
+            </button>
+
+            <button class="choice-button area-button"
+                data-area="teologia_pratica"
+                onclick="selectArea('teologia_pratica')">
+                TEOLOGIA PRÁTICA
+            </button>
+
+            <button class="choice-button area-button"
+                data-area="movimentos_tradicoes"
+                onclick="selectArea('movimentos_tradicoes')">
+                MOVIMENTOS E TRADIÇÕES
+            </button>
+
+            <button class="choice-button area-button"
+                data-area="personagens_historia_teologia"
+                onclick="selectArea('personagens_historia_teologia')">
+                PERSONAGENS DA HISTÓRIA DA TEOLOGIA
+            </button>
+
+            <button class="choice-button area-button"
+                data-area="personagens_biblicos"
+                onclick="selectArea('personagens_biblicos')">
+                PERSONAGENS BÍBLICOS
+            </button>
+
+        </div>
+
+        <div class="selected-area" id="selectedArea">
+            ESCOLHA UMA ÁREA
+        </div>
+
+        <button class="main-action" onclick="goToRoulette()">
+            TEOLOGAR →
+        </button>
+
+    </div>
+</section>
 
 
-            <div
-                class="roulette-label"
-                id="rouletteLabel">
+<!-- =========================
+     5. SORTEIO
+========================= -->
 
-                SEU TEMA ESTÁ SENDO ESCOLHIDO...
+<section class="page roulette-page" id="sorteio">
+    <div class="page-inner">
 
+        <div class="eyebrow">PASSO 03</div>
+
+        <div class="roulette-box">
+
+            <div class="roulette-label" id="rouletteLabel">
+                CLIQUE EM TEOLOGAR PARA SORTEAR SEU TEMA
             </div>
-
 
             <div class="roulette-window">
-
-                <div
-                    class="roulette-word"
-                    id="rouletteWord">
-
+                <div class="roulette-word" id="rouletteWord">
                     —
-
                 </div>
-
             </div>
 
+            <div class="result-area" id="resultArea"></div>
 
+            <button
+                class="save-theme"
+                id="saveThemeButton"
+                style="display:none;"
+                onclick="saveCurrentTheme()">
 
-            <div
-                class="result-content"
-                id="resultContent">
+                <span id="heartIcon">♡</span>
+                <span id="saveThemeText">SALVAR TEMA</span>
 
+            </button>
 
-                <!-- TEMAS NORMAIS -->
+            <div class="result-actions" id="resultActions">
 
-                <div id="normalResult">
+                <button
+                    class="result-action"
+                    onclick="startStudy()">
+                    COMEÇAR →
+                </button>
 
-                    <div
-                        class="final-area"
-                        id="finalArea">
-
-                    </div>
-
-
-                    <div
-                        class="guiding-question"
-                        id="guidingQuestion"
-                        style="display:none;">
-
-                    </div>
-
-
-                    <div
-                        class="book-questions"
-                        id="bookQuestions"
-                        style="display:none;">
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- PERSONAGENS -->
-
-                <div
-                    id="characterResult"
-                    style="display:none;">
-
-                    <div
-                        class="final-area"
-                        id="characterArea">
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- BOTÕES -->
-
-                <div
-                    class="result-actions"
-                    id="resultActions"
-                    style="display:none;">
-
-
-                    <button
-                        class="result-action"
-                        onclick="startStudy()">
-
-                        COMEÇAR →
-
-                    </button>
-
-
-                    <button
-                        class="result-action secondary"
-                        onclick="startRoulette()">
-
-                        SORTEAR NOVAMENTE ↻
-
-                    </button>
-
-
-                </div>
-
+                <button
+                    class="result-action secondary"
+                    onclick="startRoulette()">
+                    SORTEAR NOVAMENTE ↻
+                </button>
 
             </div>
 
         </div>
 
     </div>
-
 </section>
 
 
+<!-- =========================
+     6. PESQUISA
+========================= -->
 
-<!-- =========================================================
-     ESTUDO
-========================================================= -->
+<section class="page study-page" id="pesquisa">
+    <div class="page-inner">
 
-<section
-    class="study-section"
-    id="studySection">
+        <div class="eyebrow">PESQUISA</div>
 
-    <div class="container">
+        <h2 class="page-title">
+            Pesquise.
+        </h2>
 
-        <div class="study-card">
-
-            <div class="section-label">
-                Tempo de estudo
-            </div>
-
-
-            <div
-                class="study-topic"
-                id="studyTopic">
-
-            </div>
-
+        <div class="timer-card">
 
             <div class="timer-label">
-                Você tem
+                SEU TEMA
             </div>
 
+            <div class="study-topic" id="studyTopic">
+                —
+            </div>
 
-            <div
-                class="timer"
-                id="studyTimer">
-
+            <div class="timer" id="studyTimer">
                 10:00
-
             </div>
-
 
             <div class="study-buttons">
 
                 <button
+                    class="study-button primary"
                     onclick="finishStudy()">
-
-                    ENCERRAR
-
+                    EXPLICAR →
                 </button>
-
 
                 <button
-                    onclick="addStudyTime()">
-
-                    ESTUDAR UM POUCO MAIS
-
+                    class="study-button"
+                    id="extraTimeButton"
+                    onclick="requestExtraTime()">
+                    + PEDIR MAIS TEMPO
                 </button>
 
             </div>
@@ -1241,696 +999,614 @@ section {
         </div>
 
     </div>
-
 </section>
 
 
+<!-- =========================
+     7. EXPLICAÇÃO
+========================= -->
 
-<!-- =========================================================
-     RESPOSTA
-========================================================= -->
+<section class="page response-page" id="explicacao">
+    <div class="page-inner">
 
-<section
-    class="response-section"
-    id="responseSection">
+        <div class="eyebrow">EXPLICAÇÃO</div>
 
-    <div class="container">
+        <h2 class="page-title">
+            Explique.
+        </h2>
 
-        <div class="response-card">
-
-            <div class="section-label">
-                Agora explique
-            </div>
-
-
-            <div
-                class="response-topic"
-                id="responseTopic">
-
-            </div>
-
+        <div class="timer-card">
 
             <div class="timer-label">
-                Tempo para sua resposta
+                EXPLIQUE O QUE VOCÊ APRENDEU
             </div>
 
+            <div class="study-topic" id="responseTopic">
+                —
+            </div>
 
-            <div
-                class="response-timer"
-                id="responseTimer">
-
+            <div class="timer" id="responseTimer">
                 01:00
+            </div>
+
+            <div class="study-buttons">
+
+                <button
+                    class="study-button danger"
+                    onclick="finishTeologando()">
+                    ENCERRAR
+                </button>
 
             </div>
 
         </div>
 
     </div>
-
 </section>
 
 
+<!-- =========================
+     8. FINAL
+========================= -->
 
-<!-- =========================================================
-     FINAL
-========================================================= -->
+<section class="page finish-page" id="final">
+    <div class="page-inner">
 
-<section
-    class="finish-section"
-    id="finishSection">
+        <div class="eyebrow">
+            CONCLUÍDO
+        </div>
 
-    <div class="container">
+        <h2 class="page-title">
+            TEOLOGANDO CONCLUÍDO
+        </h2>
 
-        <div class="finish-message">
+        <p class="page-description">
+            Você pesquisou e explicou um tema.
+            Continue estudando.
+        </p>
 
-            <div class="section-label">
-                Teologando concluído
-            </div>
+        <div class="study-topic" id="finishTopic">
+            —
+        </div>
 
-
-            <h2>
-                Agora você<br>
-                precisa explicar.
-            </h2>
-
-
-            <p>
-                O conhecimento não termina na pesquisa.
-                Ele precisa ser compreendido, organizado
-                e explicado.
-            </p>
-
+        <div class="study-buttons">
 
             <button
-                class="primary-button"
-                onclick="resetTeologando()">
+                class="study-button primary"
+                onclick="newTheme()">
+                NOVO TEMA →
+            </button>
 
-                TEOLOGAR NOVAMENTE →
-
+            <button
+                class="study-button"
+                onclick="goTo('sorteio')">
+                SORTEAR NOVAMENTE ↻
             </button>
 
         </div>
 
     </div>
-
 </section>
 
 
+<!-- =========================
+     9. TEMAS SALVOS
+========================= -->
 
-<!-- =========================================================
+<section class="saved-section">
+    <div class="saved-inner">
+
+        <button
+            class="saved-toggle"
+            onclick="toggleSaved()">
+
+            <span>♥ TEMAS SALVOS</span>
+            <span id="savedArrow">⌄</span>
+
+        </button>
+
+        <div class="saved-list" id="savedList"></div>
+
+    </div>
+</section>
+
+
+<!-- =========================
      INSTAGRAM
-========================================================= -->
+========================= -->
 
-<div class="instagram-bar">
+<div class="bottom-area">
 
-    <a
-        class="instagram-link"
-        href="https://www.instagram.com/samuelmenezes.ievad/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Abrir Instagram de Samuel Menezes">
+    <div class="bottom-content">
 
+        <div class="developed">
+            desenvolvido por<br>
+            <strong>Samuel Menezes</strong>
+        </div>
 
-        <span class="instagram-icon">
+        <a
+            class="instagram-button"
+            href="https://www.instagram.com/samuelmenezes.ievad/"
+            target="_blank"
+            rel="noopener">
 
             <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true">
+                class="instagram-icon"
+                viewBox="0 0 24 24">
 
-                <rect
-                    x="3"
-                    y="3"
-                    width="18"
-                    height="18"
-                    rx="5">
-                </rect>
-
-                <circle
-                    cx="12"
-                    cy="12"
-                    r="4.2">
-                </circle>
-
-                <circle
-                    cx="17.3"
-                    cy="6.8"
-                    r="1">
-                </circle>
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"></circle>
 
             </svg>
 
-        </span>
-
-
-        <span class="instagram-kicker">
-            DESENVOLVIDO POR
-        </span>
-
-
-        <span class="instagram-handle">
             @samuelmenezes.ievad
-        </span>
+            <span>ABRIR INSTAGRAM ↗</span>
 
+        </a>
 
-        <span class="instagram-action">
-            ABRIR INSTAGRAM ↗
-        </span>
-
-    </a>
+    </div>
 
 </div>
 
 
-
 <script>
 
-
 /* =========================================================
-   BANCO DE TEMAS
+   DADOS
 ========================================================= */
 
 const DATA = {
 
-    teologia_sistematica: {
+teologia_sistematica:{
+    fundamental:[
+        "Bibliologia",
+        "Teologia Própria / Teontologia",
+        "Cristologia",
+        "Pneumatologia",
+        "Antropologia",
+        "Hamartiologia",
+        "Soteriologia",
+        "Eclesiologia",
+        "Escatologia"
+    ],
 
-        fundamental: [
-            "Bibliologia",
-            "Teologia Própria / Teontologia",
-            "Cristologia",
-            "Pneumatologia",
-            "Antropologia",
-            "Hamartiologia",
-            "Soteriologia",
-            "Eclesiologia",
-            "Escatologia"
-        ],
+    intermediario:[
+        "Revelação",
+        "Inspiração",
+        "Iluminação",
+        "Cânon",
+        "Autoridade das Escrituras",
+        "Inerrância",
+        "Infalibilidade",
+        "Suficiência das Escrituras",
+        "Preservação das Escrituras",
+        "Interpretação bíblica",
+        "Existência de Deus",
+        "Atributos de Deus",
+        "Onipotência",
+        "Onisciência",
+        "Onipresença",
+        "Santidade de Deus",
+        "Justiça de Deus",
+        "Amor de Deus",
+        "Soberania de Deus",
+        "Trindade",
+        "Pessoa de Cristo",
+        "Divindade de Cristo",
+        "Humanidade de Cristo",
+        "Encarnação",
+        "Nascimento virginal",
+        "Kenosis",
+        "União hipostática",
+        "Morte de Cristo",
+        "Ressurreição",
+        "Ascensão",
+        "Exaltação de Cristo",
+        "Segunda vinda",
+        "Pessoa do Espírito Santo",
+        "Divindade do Espírito Santo",
+        "Obra do Espírito Santo",
+        "Regeneração",
+        "Batismo no Espírito Santo",
+        "Dons espirituais",
+        "Fruto do Espírito",
+        "Plenitude do Espírito",
+        "Santificação pelo Espírito",
+        "Dons ministeriais",
+        "Criação do ser humano",
+        "Imago Dei",
+        "Corpo, alma e espírito",
+        "Liberdade humana",
+        "Vontade humana",
+        "Consciência",
+        "Propósito da humanidade",
+        "Queda do ser humano",
+        "Natureza do pecado",
+        "Origem do pecado",
+        "Pecado original",
+        "Pecado e morte",
+        "Pecado voluntário e involuntário",
+        "Pecado individual e coletivo",
+        "Consequências do pecado",
+        "Corrupção humana",
+        "Arrependimento",
+        "Graça",
+        "Fé",
+        "Conversão",
+        "Justificação",
+        "Adoção",
+        "Santificação",
+        "Perseverança",
+        "Glorificação",
+        "Eleição",
+        "Predestinação",
+        "Segurança da salvação",
+        "Natureza da Igreja",
+        "Missão da Igreja",
+        "Igreja local e universal",
+        "Governo da Igreja",
+        "Batismo",
+        "Ceia do Senhor",
+        "Disciplina eclesiástica",
+        "Liderança da Igreja",
+        "Unidade da Igreja",
+        "Estado intermediário",
+        "Ressurreição dos mortos",
+        "Arrebatamento",
+        "Tribulação",
+        "Milênio",
+        "Juízo final",
+        "Novo céu e nova terra",
+        "Vida eterna",
+        "Inferno"
+    ],
 
-        intermediario: [
-            "Revelação",
-            "Inspiração",
-            "Iluminação",
-            "Cânon",
-            "Autoridade das Escrituras",
-            "Inerrância",
-            "Infalibilidade",
-            "Suficiência das Escrituras",
-            "Preservação das Escrituras",
-            "Interpretação bíblica",
-            "Existência de Deus",
-            "Atributos de Deus",
-            "Onipotência",
-            "Onisciência",
-            "Onipresença",
-            "Santidade de Deus",
-            "Justiça de Deus",
-            "Amor de Deus",
-            "Soberania de Deus",
-            "Trindade",
-            "Pessoa de Cristo",
-            "Divindade de Cristo",
-            "Humanidade de Cristo",
-            "Encarnação",
-            "Nascimento virginal",
-            "Kenosis",
-            "União hipostática",
-            "Morte de Cristo",
-            "Ressurreição",
-            "Ascensão",
-            "Exaltação de Cristo",
-            "Segunda vinda",
-            "Pessoa do Espírito Santo",
-            "Divindade do Espírito Santo",
-            "Obra do Espírito Santo",
-            "Regeneração",
-            "Batismo no Espírito Santo",
-            "Dons espirituais",
-            "Fruto do Espírito",
-            "Plenitude do Espírito",
-            "Santificação pelo Espírito",
-            "Dons ministeriais",
-            "Criação do ser humano",
-            "Imago Dei",
-            "Corpo, alma e espírito",
-            "Liberdade humana",
-            "Vontade humana",
-            "Consciência",
-            "Propósito da humanidade",
-            "Queda do ser humano",
-            "Natureza do pecado",
-            "Origem do pecado",
-            "Pecado original",
-            "Pecado e morte",
-            "Pecado voluntário e involuntário",
-            "Pecado individual e coletivo",
-            "Consequências do pecado",
-            "Corrupção humana",
-            "Arrependimento",
-            "Graça",
-            "Fé",
-            "Conversão",
-            "Justificação",
-            "Adoção",
-            "Santificação",
-            "Perseverança",
-            "Glorificação",
-            "Eleição",
-            "Predestinação",
-            "Segurança da salvação",
-            "Natureza da Igreja",
-            "Missão da Igreja",
-            "Igreja local e universal",
-            "Governo da Igreja",
-            "Batismo",
-            "Ceia do Senhor",
-            "Disciplina eclesiástica",
-            "Liderança da Igreja",
-            "Unidade da Igreja",
-            "Estado intermediário",
-            "Ressurreição dos mortos",
-            "Arrebatamento",
-            "Tribulação",
-            "Milênio",
-            "Juízo final",
-            "Novo céu e nova terra",
-            "Vida eterna",
-            "Inferno"
-        ],
+    avancado:[
+        "Teologia trinitária",
+        "Pericorese",
+        "Simplicidade divina",
+        "Impassibilidade divina",
+        "União hipostática",
+        "Kenosis",
+        "Comunicação das propriedades",
+        "Monergismo e sinergismo",
+        "Ordo salutis",
+        "Eleição e predestinação",
+        "Perseverança dos santos",
+        "Dons espirituais: cessacionismo e continuísmo",
+        "Teodiceia",
+        "Debates escatológicos",
+        "Crítica textual e autoridade bíblica"
+    ]
+},
 
-        avancado: [
-            "Teologia trinitária",
-            "Pericorese",
-            "Simplicidade divina",
-            "Impassibilidade divina",
-            "União hipostática",
-            "Kenosis",
-            "Comunicação das propriedades",
-            "Monergismo e sinergismo",
-            "Ordo salutis",
-            "Eleição e predestinação",
-            "Perseverança dos santos",
-            "Dons espirituais: cessacionismo e continuísmo",
-            "Teodiceia",
-            "Debates escatológicos",
-            "Crítica textual e autoridade bíblica"
-        ]
+historia_da_igreja:{
+    fundamental:[
+        "Igreja Primitiva",
+        "Igreja Antiga",
+        "Igreja Medieval",
+        "Reforma Protestante",
+        "Contrarreforma",
+        "Igreja Moderna",
+        "Igreja Contemporânea"
+    ],
 
-    },
+    intermediario:[
+        "Igreja Apostólica",
+        "Perseguições aos cristãos",
+        "Pais Apostólicos",
+        "Inácio de Antioquia",
+        "Justino Mártir",
+        "Irineu de Lyon",
+        "Tertuliano",
+        "Orígenes",
+        "Constantino",
+        "Édito de Milão",
+        "Concílio de Niceia",
+        "Concílio de Constantinopla",
+        "Concílio de Éfeso",
+        "Concílio de Calcedônia",
+        "Atanásio",
+        "Agostinho de Hipona",
+        "Patrística",
+        "Monasticismo",
+        "Escolástica",
+        "Anselmo de Cantuária",
+        "Tomás de Aquino",
+        "Cruzadas",
+        "Inquisição",
+        "Cisma do Oriente",
+        "Pré-Reformadores",
+        "Martinho Lutero",
+        "João Calvino",
+        "Ulrico Zuínglio",
+        "Reforma Radical",
+        "Anabatistas",
+        "Reforma na Inglaterra",
+        "Reforma na Escócia",
+        "Contrarreforma",
+        "Concílio de Trento",
+        "Puritanismo",
+        "Pietismo",
+        "Metodismo",
+        "Avivamentos",
+        "Iluminismo e cristianismo",
+        "Liberalismo teológico",
+        "Fundamentalismo",
+        "Evangelicalismo",
+        "Pentecostalismo",
+        "Movimento Carismático"
+    ],
 
+    avancado:[
+        "Concílio de Jerusalém",
+        "Primeiro Concílio de Niceia",
+        "Primeiro Concílio de Constantinopla",
+        "Concílio de Éfeso",
+        "Concílio de Calcedônia",
+        "Segundo Concílio de Constantinopla",
+        "Terceiro Concílio de Constantinopla",
+        "Segundo Concílio de Niceia",
+        "Concílio de Trento",
+        "Controvérsia Ariana",
+        "Controvérsias Cristológicas",
+        "Agostinianismo",
+        "Pelagianismo",
+        "Semipelagianismo",
+        "Tomismo",
+        "Escolástica",
+        "Cisma do Oriente",
+        "Confessionalização Protestante",
+        "Guerra dos Trinta Anos",
+        "Iluminismo e cristianismo",
+        "Liberalismo Teológico",
+        "Fundamentalismo",
+        "Pentecostalismo",
+        "História dos Avivamentos"
+    ]
+},
 
-    historia_da_igreja: {
+panorama_antigo_testamento:{
+    fundamental:[
+        "Pentateuco",
+        "Livros Históricos",
+        "Livros Poéticos",
+        "Profetas Maiores",
+        "Profetas Menores"
+    ],
 
-        fundamental: [
-            "Igreja Primitiva",
-            "Igreja Antiga",
-            "Igreja Medieval",
-            "Reforma Protestante",
-            "Contrarreforma",
-            "Igreja Moderna",
-            "Igreja Contemporânea"
-        ],
+    intermediario:[
+        "Gênesis","Êxodo","Levítico","Números","Deuteronômio",
+        "Josué","Juízes","Rute","1 Samuel","2 Samuel",
+        "1 Reis","2 Reis","1 Crônicas","2 Crônicas",
+        "Esdras","Neemias","Ester","Jó","Salmos",
+        "Provérbios","Eclesiastes","Cantares",
+        "Isaías","Jeremias","Lamentações","Ezequiel",
+        "Daniel","Oséias","Joel","Amós","Obadias",
+        "Jonas","Miquéias","Naum","Habacuque","Sofonias",
+        "Ageu","Zacarias","Malaquias"
+    ],
 
-        intermediario: [
-            "Igreja Apostólica",
-            "Perseguições aos cristãos",
-            "Pais Apostólicos",
-            "Inácio de Antioquia",
-            "Justino Mártir",
-            "Irineu de Lyon",
-            "Tertuliano",
-            "Orígenes",
-            "Constantino",
-            "Édito de Milão",
-            "Concílio de Niceia",
-            "Concílio de Constantinopla",
-            "Concílio de Éfeso",
-            "Concílio de Calcedônia",
-            "Atanásio",
-            "Agostinho de Hipona",
-            "Patrística",
-            "Monasticismo",
-            "Escolástica",
-            "Anselmo de Cantuária",
-            "Tomás de Aquino",
-            "Cruzadas",
-            "Inquisição",
-            "Cisma do Oriente",
-            "Pré-Reformadores",
-            "Martinho Lutero",
-            "João Calvino",
-            "Ulrico Zuínglio",
-            "Reforma Radical",
-            "Anabatistas",
-            "Reforma na Inglaterra",
-            "Reforma na Escócia",
-            "Contrarreforma",
-            "Concílio de Trento",
-            "Puritanismo",
-            "Pietismo",
-            "Metodismo",
-            "Avivamentos",
-            "Iluminismo e cristianismo",
-            "Liberalismo teológico",
-            "Fundamentalismo",
-            "Evangelicalismo",
-            "Pentecostalismo",
-            "Movimento Carismático"
-        ],
+    avancado:[
+        "Autoria do Pentateuco",
+        "Datação do Pentateuco",
+        "Formação do Pentateuco",
+        "Hipótese Documentária",
+        "Crítica das fontes",
+        "Crítica da forma",
+        "Crítica da redação",
+        "Crítica textual do Antigo Testamento",
+        "Texto Massorético",
+        "Septuaginta",
+        "Transmissão do texto hebraico",
+        "Teologia do Antigo Testamento",
+        "Aliança no Antigo Testamento",
+        "Reino de Deus",
+        "Messianismo",
+        "Profecia",
+        "Profecia e cumprimento",
+        "Lei e graça",
+        "Teologia da criação",
+        "Teologia da sabedoria",
+        "Literatura sapiencial",
+        "Problema do mal em Jó",
+        "Intertextualidade no Antigo Testamento",
+        "Estrutura literária do Antigo Testamento"
+    ]
+},
 
-        avancado: [
-            "Concílio de Jerusalém",
-            "Primeiro Concílio de Niceia",
-            "Primeiro Concílio de Constantinopla",
-            "Concílio de Éfeso",
-            "Concílio de Calcedônia",
-            "Segundo Concílio de Constantinopla",
-            "Terceiro Concílio de Constantinopla",
-            "Segundo Concílio de Niceia",
-            "Concílio de Trento",
-            "Controvérsia Ariana",
-            "Controvérsias Cristológicas",
-            "Agostinianismo",
-            "Pelagianismo",
-            "Semipelagianismo",
-            "Tomismo",
-            "Escolástica",
-            "Cisma do Oriente",
-            "Confessionalização Protestante",
-            "Guerra dos Trinta Anos",
-            "Iluminismo e cristianismo",
-            "Liberalismo Teológico",
-            "Fundamentalismo",
-            "Pentecostalismo",
-            "História dos Avivamentos"
-        ]
+panorama_novo_testamento:{
+    fundamental:[
+        "Evangelhos",
+        "Atos dos Apóstolos",
+        "Cartas",
+        "Apocalipse"
+    ],
 
-    },
+    intermediario:[
+        "Mateus","Marcos","Lucas","João","Atos dos Apóstolos",
+        "Romanos","1 Coríntios","2 Coríntios","Gálatas",
+        "Efésios","Filipenses","Colossenses",
+        "1 Tessalonicenses","2 Tessalonicenses",
+        "1 Timóteo","2 Timóteo","Tito","Filemom",
+        "Hebreus","Tiago","1 Pedro","2 Pedro",
+        "1 João","2 João","3 João","Judas","Apocalipse"
+    ],
 
+    avancado:[
+        "Problema dos Evangelhos Sinóticos",
+        "Questão Sinótica",
+        "Prioridade de Marcos",
+        "Fonte Q",
+        "Autoria dos Evangelhos",
+        "Datação dos Evangelhos",
+        "Formação dos Evangelhos",
+        "Crítica textual do Novo Testamento",
+        "Manuscritos do Novo Testamento",
+        "Texto Majoritário",
+        "Texto Crítico",
+        "Cânon do Novo Testamento",
+        "Autoria de Atos",
+        "Historicidade de Atos",
+        "Autoria das Cartas Paulinas",
+        "Pseudepigrafia",
+        "Nova Perspectiva sobre Paulo",
+        "Justificação em Paulo",
+        "União com Cristo",
+        "Teologia Paulina",
+        "Autoria de Hebreus",
+        "Contexto de Hebreus",
+        "Cristologia de Hebreus",
+        "Escatologia do Novo Testamento",
+        "Literatura apocalíptica",
+        "Interpretação do Apocalipse",
+        "Milênio em Apocalipse 20",
+        "Datação do Apocalipse",
+        "Autoria do Apocalipse"
+    ]
+},
 
-    panorama_antigo_testamento: {
+apologetica:{
+    avancado:[
+        "Existência de Deus",
+        "Argumento cosmológico",
+        "Argumento teleológico",
+        "Argumento moral",
+        "Argumento ontológico",
+        "Ateísmo",
+        "Agnosticismo",
+        "Confiabilidade da Bíblia",
+        "Inspiração bíblica",
+        "Inerrância",
+        "Cânon bíblico",
+        "Crítica textual",
+        "Supostas contradições bíblicas",
+        "Manuscritos bíblicos",
+        "Existência histórica de Jesus",
+        "Divindade de Jesus",
+        "Ressurreição de Jesus",
+        "Confiabilidade dos Evangelhos",
+        "Milagres de Jesus",
+        "Cristianismo e ciência",
+        "Criacionismo e evolução",
+        "Big Bang e cristianismo",
+        "Origem da vida",
+        "Design inteligente",
+        "Milagres e ciência",
+        "Problema do mal",
+        "Sofrimento e existência de Deus",
+        "Inferno",
+        "Exclusividade da salvação",
+        "Religião e violência",
+        "Cristianismo e outras religiões",
+        "Hipocrisia religiosa",
+        "Deus do Antigo Testamento",
+        "Pecado e justiça divina"
+    ]
+},
 
-        fundamental: [
-            "Pentateuco",
-            "Livros Históricos",
-            "Livros Poéticos",
-            "Profetas Maiores",
-            "Profetas Menores"
-        ],
+teologia_pratica:{
+    fundamental:[
+        "Oração",
+        "Discipulado",
+        "Evangelismo",
+        "Missões",
+        "Pregação",
+        "Ensino",
+        "Liderança",
+        "Adoração",
+        "Vida Cristã",
+        "Serviço Cristão"
+    ],
 
-        intermediario: [
-            "Gênesis",
-            "Êxodo",
-            "Levítico",
-            "Números",
-            "Deuteronômio",
-            "Josué",
-            "Juízes",
-            "Rute",
-            "1 Samuel",
-            "2 Samuel",
-            "1 Reis",
-            "2 Reis",
-            "1 Crônicas",
-            "2 Crônicas",
-            "Esdras",
-            "Neemias",
-            "Ester",
-            "Jó",
-            "Salmos",
-            "Provérbios",
-            "Eclesiastes",
-            "Cantares",
-            "Isaías",
-            "Jeremias",
-            "Lamentações",
-            "Ezequiel",
-            "Daniel",
-            "Oséias",
-            "Joel",
-            "Amós",
-            "Obadias",
-            "Jonas",
-            "Miquéias",
-            "Naum",
-            "Habacuque",
-            "Sofonias",
-            "Ageu",
-            "Zacarias",
-            "Malaquias"
-        ],
+    intermediario:[
+        "Homilética",
+        "Preparação de Sermões",
+        "Interpretação Bíblica para Pregação",
+        "Comunicação",
+        "Pedagogia Cristã",
+        "Formação de Líderes",
+        "Discipulado Cristão",
+        "Aconselhamento",
+        "Pastoreio",
+        "Evangelização",
+        "Missões Transculturais",
+        "Escola Bíblica Dominical",
+        "Liderança Cristã",
+        "Administração Eclesiástica",
+        "Culto Cristão",
+        "Dons Ministeriais",
+        "Ética Ministerial"
+    ],
 
-        avancado: [
-            "Autoria do Pentateuco",
-            "Datação do Pentateuco",
-            "Formação do Pentateuco",
-            "Hipótese Documentária",
-            "Crítica das fontes",
-            "Crítica da forma",
-            "Crítica da redação",
-            "Crítica textual do Antigo Testamento",
-            "Texto Massorético",
-            "Septuaginta",
-            "Transmissão do texto hebraico",
-            "Teologia do Antigo Testamento",
-            "Aliança no Antigo Testamento",
-            "Reino de Deus",
-            "Messianismo",
-            "Profecia",
-            "Profecia e cumprimento",
-            "Lei e graça",
-            "Teologia da criação",
-            "Teologia da sabedoria",
-            "Literatura sapiencial",
-            "Problema do mal em Jó",
-            "Intertextualidade no Antigo Testamento",
-            "Estrutura literária do Antigo Testamento"
-        ]
+    avancado:[
+        "Teologia Pastoral",
+        "Modelos de Liderança Cristã",
+        "Eclesiologia Aplicada",
+        "Formação Ministerial",
+        "Ética Pastoral",
+        "Aconselhamento Pastoral",
+        "Teologia da Missão",
+        "Contextualização",
+        "Teologia do Culto",
+        "Teologia da Pregação",
+        "Espiritualidade Pastoral",
+        "Vocação Ministerial",
+        "Liderança Eclesiástica",
+        "Formação de Discípulos",
+        "Ministério e Cultura Contemporânea"
+    ]
+},
 
-    },
+movimentos_tradicoes:{
+    intermediario:[
+        "Catolicismo Romano",
+        "Ortodoxia Oriental",
+        "Protestantismo",
+        "Luteranismo",
+        "Calvinismo",
+        "Arminianismo",
+        "Anglicanismo",
+        "Batistas",
+        "Anabatismo",
+        "Metodismo",
+        "Presbiterianismo",
+        "Pentecostalismo",
+        "Movimento Carismático",
+        "Adventismo",
+        "Puritanismo",
+        "Pietismo"
+    ],
 
+    avancado:[
+        "Teologia Calvinista",
+        "Cinco Pontos do Calvinismo",
+        "Teologia Arminiana",
+        "Cinco Artigos da Remonstrância",
+        "Confissão de Westminster",
+        "Confissão de Augsburgo",
+        "Teologia Luterana",
+        "Teologia Wesleyana",
+        "Teologia Pentecostal",
+        "Batismo no Espírito Santo na tradição pentecostal",
+        "Cessacionismo",
+        "Continuísmo",
+        "Credo Niceno na tradição cristã",
+        "Teologia Ortodoxa Oriental",
+        "Papado",
+        "Catolicismo Romano",
+        "Sola Scriptura",
+        "Sola Fide",
+        "Sola Gratia",
+        "Sacerdócio de todos os crentes",
+        "Predestinação no Calvinismo",
+        "Graça preveniente no Arminianismo"
+    ]
+},
 
-    panorama_novo_testamento: {
-
-        fundamental: [
-            "Evangelhos",
-            "Atos dos Apóstolos",
-            "Cartas",
-            "Apocalipse"
-        ],
-
-        intermediario: [
-            "Mateus",
-            "Marcos",
-            "Lucas",
-            "João",
-            "Atos dos Apóstolos",
-            "Romanos",
-            "1 Coríntios",
-            "2 Coríntios",
-            "Gálatas",
-            "Efésios",
-            "Filipenses",
-            "Colossenses",
-            "1 Tessalonicenses",
-            "2 Tessalonicenses",
-            "1 Timóteo",
-            "2 Timóteo",
-            "Tito",
-            "Filemom",
-            "Hebreus",
-            "Tiago",
-            "1 Pedro",
-            "2 Pedro",
-            "1 João",
-            "2 João",
-            "3 João",
-            "Judas",
-            "Apocalipse"
-        ],
-
-        avancado: [
-            "Problema dos Evangelhos Sinóticos",
-            "Questão Sinótica",
-            "Prioridade de Marcos",
-            "Fonte Q",
-            "Autoria dos Evangelhos",
-            "Datação dos Evangelhos",
-            "Formação dos Evangelhos",
-            "Crítica textual do Novo Testamento",
-            "Manuscritos do Novo Testamento",
-            "Texto Majoritário",
-            "Texto Crítico",
-            "Cânon do Novo Testamento",
-            "Autoria de Atos",
-            "Historicidade de Atos",
-            "Autoria das Cartas Paulinas",
-            "Pseudepigrafia",
-            "Nova Perspectiva sobre Paulo",
-            "Justificação em Paulo",
-            "União com Cristo",
-            "Teologia Paulina",
-            "Autoria de Hebreus",
-            "Contexto de Hebreus",
-            "Cristologia de Hebreus",
-            "Escatologia do Novo Testamento",
-            "Literatura apocalíptica",
-            "Interpretação do Apocalipse",
-            "Milênio em Apocalipse 20",
-            "Datação do Apocalipse",
-            "Autoria do Apocalipse"
-        ]
-
-    },
-
-
-    apologetica: {
-
-        avancado: [
-            "Existência de Deus",
-            "Argumento cosmológico",
-            "Argumento teleológico",
-            "Argumento moral",
-            "Argumento ontológico",
-            "Ateísmo",
-            "Agnosticismo",
-            "Confiabilidade da Bíblia",
-            "Inspiração bíblica",
-            "Inerrância",
-            "Cânon bíblico",
-            "Crítica textual",
-            "Supostas contradições bíblicas",
-            "Manuscritos bíblicos",
-            "Existência histórica de Jesus",
-            "Divindade de Jesus",
-            "Ressurreição de Jesus",
-            "Confiabilidade dos Evangelhos",
-            "Milagres de Jesus",
-            "Cristianismo e ciência",
-            "Criacionismo e evolução",
-            "Big Bang e cristianismo",
-            "Origem da vida",
-            "Design inteligente",
-            "Milagres e ciência",
-            "Problema do mal",
-            "Sofrimento e existência de Deus",
-            "Inferno",
-            "Exclusividade da salvação",
-            "Religião e violência",
-            "Cristianismo e outras religiões",
-            "Hipocrisia religiosa",
-            "Deus do Antigo Testamento",
-            "Pecado e justiça divina"
-        ]
-
-    },
-
-
-    teologia_pratica: {
-
-        fundamental: [
-            "Oração",
-            "Discipulado",
-            "Evangelismo",
-            "Missões",
-            "Pregação",
-            "Ensino",
-            "Liderança",
-            "Adoração",
-            "Vida Cristã",
-            "Serviço Cristão"
-        ],
-
-        intermediario: [
-            "Homilética",
-            "Preparação de Sermões",
-            "Interpretação Bíblica para Pregação",
-            "Comunicação",
-            "Pedagogia Cristã",
-            "Formação de Líderes",
-            "Discipulado Cristão",
-            "Aconselhamento",
-            "Pastoreio",
-            "Evangelização",
-            "Missões Transculturais",
-            "Escola Bíblica Dominical",
-            "Liderança Cristã",
-            "Administração Eclesiástica",
-            "Culto Cristão",
-            "Dons Ministeriais",
-            "Ética Ministerial"
-        ],
-
-        avancado: [
-            "Teologia Pastoral",
-            "Modelos de Liderança Cristã",
-            "Eclesiologia Aplicada",
-            "Formação Ministerial",
-            "Ética Pastoral",
-            "Aconselhamento Pastoral",
-            "Teologia da Missão",
-            "Contextualização",
-            "Teologia do Culto",
-            "Teologia da Pregação",
-            "Espiritualidade Pastoral",
-            "Vocação Ministerial",
-            "Liderança Eclesiástica",
-            "Formação de Discípulos",
-            "Ministério e Cultura Contemporânea"
-        ]
-
-    },
-
-
-    movimentos_tradicoes: {
-
-        intermediario: [
-            "Catolicismo Romano",
-            "Ortodoxia Oriental",
-            "Protestantismo",
-            "Luteranismo",
-            "Calvinismo",
-            "Arminianismo",
-            "Anglicanismo",
-            "Batistas",
-            "Anabatismo",
-            "Metodismo",
-            "Presbiterianismo",
-            "Pentecostalismo",
-            "Movimento Carismático",
-            "Adventismo",
-            "Puritanismo",
-            "Pietismo"
-        ],
-
-        avancado: [
-            "Teologia Calvinista",
-            "Cinco Pontos do Calvinismo",
-            "Teologia Arminiana",
-            "Cinco Artigos da Remonstrância",
-            "Confissão de Westminster",
-            "Confissão de Augsburgo",
-            "Teologia Luterana",
-            "Teologia Wesleyana",
-            "Teologia Pentecostal",
-            "Batismo no Espírito Santo na tradição pentecostal",
-            "Cessacionismo",
-            "Continuísmo",
-            "Credo Niceno na tradição cristã",
-            "Teologia Ortodoxa Oriental",
-            "Papado",
-            "Catolicismo Romano",
-            "Sola Scriptura",
-            "Sola Fide",
-            "Sola Gratia",
-            "Sacerdócio de todos os crentes",
-            "Predestinação no Calvinismo",
-            "Graça preveniente no Arminianismo"
-        ]
-
-    },
-
-
-    personagens_historia_teologia: [
-
+personagens_historia_teologia:{
+    characters:[
         "Inácio de Antioquia",
         "Justino Mártir",
         "Irineu de Lyon",
@@ -1961,107 +1637,30 @@ const DATA = {
         "J. I. Packer",
         "Gordon Fee",
         "Stanley Horton"
-
-    ],
-
-
-    personagens_biblicos: [
-
-        "Adão",
-        "Eva",
-        "Caim",
-        "Abel",
-        "Noé",
-        "Abraão",
-        "Sara",
-        "Ló",
-        "Melquisedeque",
-        "Isaque",
-        "Rebeca",
-        "Jacó",
-        "Esaú",
-        "José",
-        "Moisés",
-        "Arão",
-        "Miriã",
-        "Josué",
-        "Calebe",
-        "Raabe",
-        "Débora",
-        "Baraque",
-        "Gideão",
-        "Jefté",
-        "Sansão",
-        "Rute",
-        "Noemi",
-        "Samuel",
-        "Saul",
-        "Jônatas",
-        "Davi",
-        "Abigail",
-        "Salomão",
-        "Elias",
-        "Eliseu",
-        "Ezequias",
-        "Josias",
-        "Manassés",
-        "Esdras",
-        "Neemias",
-        "Ester",
-        "Jó",
-        "Isaías",
-        "Jeremias",
-        "Daniel",
-        "Ezequiel",
-        "Jonas",
-        "Micaías",
-        "Hulda",
-        "Zacarias",
-        "Isabel",
-        "João Batista",
-        "Maria",
-        "José",
-        "Simeão",
-        "Ana",
-        "Nicodemos",
-        "José de Arimateia",
-        "Jesus",
-        "Pedro",
-        "André",
-        "Tiago",
-        "João",
-        "Filipe",
-        "Bartolomeu",
-        "Tomé",
-        "Mateus",
-        "Tiago filho de Alfeu",
-        "Judas Tadeu",
-        "Simão o Zelote",
-        "Judas Iscariotes",
-        "Marta",
-        "Maria de Betânia",
-        "Lázaro",
-        "Zaqueu",
-        "Jairo",
-        "Bartimeu",
-        "Estêvão",
-        "Barnabé",
-        "Paulo",
-        "Silas",
-        "Timóteo",
-        "Tito",
-        "Apolo",
-        "Priscila",
-        "Áquila",
-        "Onésimo",
-        "Filemom",
-        "Gamaliel",
-        "Caifás",
-        "Herodes",
-        "Pôncio Pilatos",
-        "Barrabás"
-
     ]
+},
+
+personagens_biblicos:{
+    characters:[
+        "Adão","Eva","Caim","Abel","Noé","Abraão","Sara","Ló",
+        "Melquisedeque","Isaque","Rebeca","Jacó","Esaú","José",
+        "Moisés","Arão","Miriã","Josué","Calebe","Raabe",
+        "Débora","Baraque","Gideão","Jefté","Sansão","Rute",
+        "Noemi","Samuel","Saul","Jônatas","Davi","Abigail",
+        "Salomão","Elias","Eliseu","Ezequias","Josias","Manassés",
+        "Esdras","Neemias","Ester","Jó","Isaías","Jeremias",
+        "Daniel","Ezequiel","Jonas","Micaías","Hulda",
+        "Zacarias","Isabel","João Batista","Maria","José",
+        "Simeão","Ana","Nicodemos","José de Arimateia","Jesus",
+        "Pedro","André","Tiago","João","Filipe","Bartolomeu",
+        "Tomé","Mateus","Tiago filho de Alfeu","Judas Tadeu",
+        "Simão o Zelote","Judas Iscariotes","Marta","Maria de Betânia",
+        "Lázaro","Zaqueu","Jairo","Bartimeu","Estêvão","Barnabé",
+        "Paulo","Silas","Timóteo","Tito","Apolo","Priscila","Áquila",
+        "Onésimo","Filemom","Gamaliel","Caifás","Herodes",
+        "Pôncio Pilatos","Barrabás"
+    ]
+}
 
 };
 
@@ -2071,61 +1670,51 @@ const DATA = {
 ========================================================= */
 
 const AREAS = [
-
     {
-        key: "teologia_sistematica",
-        name: "Teologia Sistemática",
-        levels: ["fundamental","intermediario","avancado"]
+        key:"teologia_sistematica",
+        name:"Teologia Sistemática",
+        levels:["fundamental","intermediario","avancado"]
     },
-
     {
-        key: "historia_da_igreja",
-        name: "História da Igreja",
-        levels: ["fundamental","intermediario","avancado"]
+        key:"historia_da_igreja",
+        name:"História da Igreja",
+        levels:["fundamental","intermediario","avancado"]
     },
-
     {
-        key: "panorama_antigo_testamento",
-        name: "Panorama do Antigo Testamento",
-        levels: ["fundamental","intermediario","avancado"]
+        key:"panorama_antigo_testamento",
+        name:"Panorama do Antigo Testamento",
+        levels:["fundamental","intermediario","avancado"]
     },
-
     {
-        key: "panorama_novo_testamento",
-        name: "Panorama do Novo Testamento",
-        levels: ["fundamental","intermediario","avancado"]
+        key:"panorama_novo_testamento",
+        name:"Panorama do Novo Testamento",
+        levels:["fundamental","intermediario","avancado"]
     },
-
     {
-        key: "apologetica",
-        name: "Apologética",
-        levels: ["avancado"]
+        key:"apologetica",
+        name:"Apologética",
+        levels:["avancado"]
     },
-
     {
-        key: "teologia_pratica",
-        name: "Teologia Prática",
-        levels: ["fundamental","intermediario","avancado"]
+        key:"teologia_pratica",
+        name:"Teologia Prática",
+        levels:["fundamental","intermediario","avancado"]
     },
-
     {
-        key: "movimentos_tradicoes",
-        name: "Movimentos e Tradições",
-        levels: ["intermediario","avancado"]
+        key:"movimentos_tradicoes",
+        name:"Movimentos e Tradições",
+        levels:["intermediario","avancado"]
     },
-
     {
-        key: "personagens_historia_teologia",
-        name: "Personagens da História da Teologia",
-        characters: true
+        key:"personagens_historia_teologia",
+        name:"Personagens da História da Teologia",
+        characters:true
     },
-
     {
-        key: "personagens_biblicos",
-        name: "Personagens Bíblicos",
-        characters: true
+        key:"personagens_biblicos",
+        name:"Personagens Bíblicos",
+        characters:true
     }
-
 ];
 
 
@@ -2146,20 +1735,13 @@ const GUIDING_QUESTIONS = {
 
     teologia_pratica:
         "Qual é o fundamento bíblico desse tema e como ele pode ser aplicado à prática cristã?"
-
 };
 
-
 const BOOK_QUESTIONS = [
-
     "Quem foi o autor e quando o livro foi escrito?",
-
     "Qual era o contexto histórico em que o livro foi escrito?",
-
     "Para quem o livro foi destinado?",
-
     "Qual é a principal mensagem teológica do livro?"
-
 ];
 
 
@@ -2167,286 +1749,247 @@ const BOOK_QUESTIONS = [
    ESTADO
 ========================================================= */
 
-const state = {
+let state = {
 
-    level: "fundamental",
+    level:"fundamental",
 
-    time: 10,
+    time:10,
 
-    areaKey: "",
+    areaKey:null,
 
-    areaName: "",
+    areaName:"",
 
-    topic: "",
+    isCharacter:false,
 
-    isCharacter: false,
+    topic:"",
 
-    studySeconds: 600,
+    studying:false,
 
-    responseSeconds: 60,
+    responding:false,
 
-    studyInterval: null,
+    extraTimeUsed:false,
 
-    responseInterval: null
+    studySeconds:600,
+
+    responseSeconds:60,
+
+    initialStudySeconds:600,
+
+    initialResponseSeconds:60,
+
+    studyInterval:null,
+
+    responseInterval:null
 
 };
-
-
-/* =========================================================
-   ELEMENTOS
-========================================================= */
-
-const time10 =
-    document.getElementById("time10");
-
-const time20 =
-    document.getElementById("time20");
-
-const resultado =
-    document.getElementById("resultado");
-
-const rouletteLabel =
-    document.getElementById("rouletteLabel");
-
-const rouletteWord =
-    document.getElementById("rouletteWord");
-
-const resultContent =
-    document.getElementById("resultContent");
-
-const normalResult =
-    document.getElementById("normalResult");
-
-const characterResult =
-    document.getElementById("characterResult");
-
-const finalArea =
-    document.getElementById("finalArea");
-
-const characterArea =
-    document.getElementById("characterArea");
-
-const guidingQuestion =
-    document.getElementById("guidingQuestion");
-
-const bookQuestions =
-    document.getElementById("bookQuestions");
-
-const studySection =
-    document.getElementById("studySection");
-
-const studyTopic =
-    document.getElementById("studyTopic");
-
-const studyTimer =
-    document.getElementById("studyTimer");
-
-const responseSection =
-    document.getElementById("responseSection");
-
-const responseTopic =
-    document.getElementById("responseTopic");
-
-const responseTimer =
-    document.getElementById("responseTimer");
-
-const finishSection =
-    document.getElementById("finishSection");
-
-
-let rouletteInterval = null;
 
 
 /* =========================================================
    NAVEGAÇÃO
 ========================================================= */
 
-function scrollToSection(id) {
+function goTo(id){
 
-    const element =
-        document.getElementById(id);
+    const element = document.getElementById(id);
 
-    if (!element) return;
+    if(!element) return;
 
     element.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
+        behavior:"smooth",
+        block:"start"
     });
-
 }
 
 
 /* =========================================================
-   SELEÇÃO DO NÍVEL
+   NÍVEL
 ========================================================= */
 
-function selectLevel(level) {
+function selectLevel(level){
 
     state.level = level;
 
-
     document
         .querySelectorAll("[data-level]")
-        .forEach(button => {
-
-            button.classList.toggle(
+        .forEach(btn=>{
+            btn.classList.toggle(
                 "active",
-                button.dataset.level === level
+                btn.dataset.level === level
             );
-
         });
 
+    if(!state.isCharacter){
 
-    if (level === "fundamental") {
+        if(level === "fundamental"){
+            selectTime(10);
+        }
 
-        state.time = 10;
+        if(level === "intermediario"){
+            selectTime(state.time === 20 ? 20 : 10);
+        }
 
-        time10.classList.add("active");
-        time20.classList.remove("active");
-
-        time10.classList.add("locked");
-        time20.classList.add("locked");
-
+        if(level === "avancado"){
+            selectTime(20);
+        }
     }
-
-    else if (level === "avancado") {
-
-        state.time = 20;
-
-        time10.classList.remove("active");
-        time20.classList.add("active");
-
-        time10.classList.add("locked");
-        time20.classList.add("locked");
-
-    }
-
-    else {
-
-        time10.classList.remove("locked");
-        time20.classList.remove("locked");
-
-    }
-
 }
 
 
 /* =========================================================
-   SELEÇÃO DO TEMPO
+   TEMPO
 ========================================================= */
 
-function selectTime(minutes) {
+function selectTime(minutes){
 
-    if (
-        state.level === "fundamental" ||
-        state.level === "avancado"
-    ) {
+    if(
+        !state.isCharacter &&
+        state.level === "fundamental" &&
+        minutes !== 10
+    ){
         return;
     }
 
+    if(
+        !state.isCharacter &&
+        state.level === "avancado" &&
+        minutes !== 20
+    ){
+        return;
+    }
 
     state.time = minutes;
 
-
-    time10.classList.toggle(
-        "active",
-        minutes === 10
-    );
-
-
-    time20.classList.toggle(
-        "active",
-        minutes === 20
-    );
-
-}
-
-
-/* =========================================================
-   SELEÇÃO DA ÁREA
-========================================================= */
-
-function selectArea(areaKey) {
-
-    state.areaKey = areaKey;
-
-
-    const area =
-        AREAS.find(
-            item => item.key === areaKey
-        );
-
-
-    if (!area) return;
-
-
-    state.areaName =
-        area.name;
-
-    state.isCharacter =
-        !!area.characters;
-
+    document
+        .getElementById("time10")
+        .classList.toggle("active",minutes === 10);
 
     document
-        .querySelectorAll("[data-area]")
-        .forEach(button => {
-
-            button.classList.toggle(
-                "active",
-                button.dataset.area === areaKey
-            );
-
-        });
-
-
-    document.getElementById(
-        "selectedArea"
-    ).textContent =
-        area.name;
-
-
-    /*
-       Leva automaticamente
-       para o botão TEOLOGAR
-    */
-
-    setTimeout(() => {
-
-        document
-            .querySelector(".main-action")
-            .scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-
-    }, 150);
-
+        .getElementById("time20")
+        .classList.toggle("active",minutes === 20);
 }
 
 
 /* =========================================================
-   OBTÉM TEMAS
+   ÁREA
 ========================================================= */
 
-function getTopics() {
+function selectArea(areaKey){
 
-    if (!state.areaKey) {
-        return [];
+    const area = AREAS.find(a=>a.key===areaKey);
+
+    if(!area) return;
+
+    state.areaKey = area.key;
+    state.areaName = area.name;
+    state.isCharacter = !!area.characters;
+
+    document
+        .querySelectorAll(".area-button")
+        .forEach(btn=>{
+            btn.classList.toggle(
+                "active",
+                btn.dataset.area === areaKey
+            );
+        });
+
+    document.getElementById("selectedArea").textContent =
+        area.name.toUpperCase();
+
+    /*
+       Personagens podem escolher livremente 10 ou 20 minutos.
+    */
+
+    if(state.isCharacter){
+
+        document.getElementById("time10")
+            .classList.remove("locked");
+
+        document.getElementById("time20")
+            .classList.remove("locked");
+
+    }else{
+
+        if(state.level === "fundamental"){
+
+            selectTime(10);
+
+            document.getElementById("time20")
+                .classList.add("locked");
+
+        }else if(state.level === "avancado"){
+
+            selectTime(20);
+
+            document.getElementById("time10")
+                .classList.add("locked");
+
+        }else{
+
+            document.getElementById("time10")
+                .classList.remove("locked");
+
+            document.getElementById("time20")
+                .classList.remove("locked");
+        }
+    }
+}
+
+
+/* =========================================================
+   IR PARA O SORTEIO
+========================================================= */
+
+function goToRoulette(){
+
+    if(!state.areaKey){
+
+        alert("Escolha uma área primeiro.");
+
+        return;
     }
 
+    /*
+       Antes de entrar no sorteio,
+       limpamos qualquer cronômetro anterior.
+    */
 
-    if (state.isCharacter) {
+    clearAllTimers();
 
-        return DATA[state.areaKey] || [];
+    state.topic = "";
+    state.extraTimeUsed = false;
+    state.studying = false;
+    state.responding = false;
 
-    }
+    hideStudySections();
+
+    resetRouletteDisplay();
+
+    goTo("sorteio");
+}
 
 
-    return (
-        DATA[state.areaKey]?.[state.level]
-        || []
-    );
+/* =========================================================
+   RESET DO SORTEIO
+========================================================= */
 
+function resetRouletteDisplay(){
+
+    document.getElementById("rouletteLabel").textContent =
+        "CLIQUE EM TEOLOGAR PARA SORTEAR SEU TEMA";
+
+    document.getElementById("rouletteWord").textContent =
+        "—";
+
+    document.getElementById("rouletteWord")
+        .classList.remove("rolling");
+
+    document.getElementById("resultArea").textContent = "";
+
+    document.getElementById("resultActions")
+        .classList.remove("visible");
+
+    document.getElementById("saveThemeButton")
+        .style.display = "none";
 }
 
 
@@ -2454,711 +1997,720 @@ function getTopics() {
    SORTEIO
 ========================================================= */
 
-function startRoulette() {
-
-    if (!state.areaKey) {
-
-        alert(
-            "Escolha uma área para começar."
-        );
-
-        return;
-
-    }
-
-
-    const topics =
-        getTopics();
-
-
-    if (!topics.length) {
-
-        alert(
-            "Não existem temas disponíveis para essa combinação."
-        );
-
-        return;
-
-    }
-
-
-    clearInterval(
-        rouletteInterval
-    );
-
+function startRoulette(){
 
     /*
-       Esconde os botões enquanto
-       o novo sorteio acontece.
+       Toda vez que o usuário clicar em TEOLOGAR,
+       zeramos completamente a tentativa anterior.
     */
 
-    document.getElementById(
-        "resultActions"
-    ).style.display =
-        "none";
+    clearAllTimers();
 
+    state.topic = "";
+    state.extraTimeUsed = false;
+    state.studying = false;
+    state.responding = false;
 
-    resultContent.classList.remove(
-        "visible"
-    );
+    hideStudySections();
 
+    if(!state.areaKey){
 
-    resultado.classList.add(
-        "visible"
-    );
+        alert("Escolha uma área primeiro.");
 
+        goTo("areas");
 
-    rouletteLabel.textContent =
+        return;
+    }
+
+    const areaData = DATA[state.areaKey];
+
+    let pool = [];
+
+    if(state.isCharacter){
+
+        pool = areaData.characters || [];
+
+    }else{
+
+        pool = areaData[state.level] || [];
+
+        /*
+           Caso uma área não tenha conteúdo
+           no nível escolhido, usamos os conteúdos
+           disponíveis para aquela área.
+        */
+
+        if(pool.length === 0){
+
+            Object.values(areaData).forEach(group=>{
+
+                if(Array.isArray(group)){
+                    pool.push(...group);
+                }
+
+            });
+        }
+    }
+
+    if(pool.length === 0){
+
+        alert("Nenhum tema disponível para essa combinação.");
+
+        return;
+    }
+
+    document.getElementById("rouletteLabel").textContent =
         "SEU TEMA ESTÁ SENDO ESCOLHIDO...";
 
+    document.getElementById("resultActions")
+        .classList.remove("visible");
 
-    rouletteWord.textContent =
-        "—";
+    document.getElementById("saveThemeButton")
+        .style.display = "none";
 
+    document.getElementById("resultArea")
+        .textContent = "";
 
-    resultado.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
+    const word = document.getElementById("rouletteWord");
 
+    word.classList.add("rolling");
 
-    let counter = 0;
+    let cycles = 0;
 
+    const totalCycles = 28;
 
-    rouletteInterval =
-        setInterval(() => {
+    const interval = setInterval(()=>{
 
+        const random =
+            pool[Math.floor(Math.random()*pool.length)];
 
-            const random =
-                topics[
-                    Math.floor(
-                        Math.random() *
-                        topics.length
-                    )
-                ];
+        word.textContent =
+            random.toUpperCase();
 
+        cycles++;
 
-            rouletteWord.textContent =
-                random.toUpperCase();
+        if(cycles >= totalCycles){
 
+            clearInterval(interval);
 
-            counter++;
+            const finalTopic =
+                pool[Math.floor(Math.random()*pool.length)];
 
+            showFinalTopic(finalTopic);
 
-            if (counter >= 22) {
+        }
 
-                clearInterval(
-                    rouletteInterval
-                );
-
-
-                const finalTopic =
-                    topics[
-                        Math.floor(
-                            Math.random() *
-                            topics.length
-                        )
-                    ];
-
-
-                showFinalTopic(
-                    finalTopic
-                );
-
-            }
-
-        }, 85);
-
+    },75);
 }
 
 
 /* =========================================================
-   MOSTRA TEMA FINAL
+   TEMA FINAL
 ========================================================= */
 
-function showFinalTopic(topic) {
+function showFinalTopic(topic){
 
-    state.topic =
-        topic;
+    state.topic = topic;
+
+    const word =
+        document.getElementById("rouletteWord");
+
+    word.classList.remove("rolling");
+
+    document.getElementById("rouletteLabel").textContent =
+        state.isCharacter
+        ? "QUEM FOI"
+        : "SEU TEMA É";
+
+    word.textContent =
+        state.isCharacter
+        ? topic.toUpperCase() + "?"
+        : topic.toUpperCase();
+
+    document.getElementById("resultArea").textContent =
+        state.areaName;
+
+    document.getElementById("saveThemeButton")
+        .style.display = "flex";
+
+    updateSaveButton();
+
+    document.getElementById("resultActions")
+        .classList.add("visible");
+}
 
 
-    resultContent.classList.add(
-        "visible"
+/* =========================================================
+   SALVAR TEMA
+========================================================= */
+
+function getSavedThemes(){
+
+    try{
+
+        return JSON.parse(
+            localStorage.getItem("teologando_saved_themes")
+        ) || [];
+
+    }catch{
+
+        return [];
+    }
+}
+
+
+function setSavedThemes(themes){
+
+    localStorage.setItem(
+        "teologando_saved_themes",
+        JSON.stringify(themes)
+    );
+}
+
+
+function saveCurrentTheme(){
+
+    if(!state.topic) return;
+
+    let saved = getSavedThemes();
+
+    const alreadySaved = saved.some(item=>
+        item.topic === state.topic &&
+        item.areaKey === state.areaKey
     );
 
+    if(!alreadySaved){
 
-    /*
-       PERSONAGEM
-    */
+        saved.push({
+            topic:state.topic,
+            areaKey:state.areaKey,
+            areaName:state.areaName,
+            date:new Date().toISOString()
+        });
 
-    if (state.isCharacter) {
-
-        rouletteLabel.textContent =
-            "QUEM FOI";
-
-
-        rouletteWord.textContent =
-            topic.toUpperCase() + "?";
-
-
-        normalResult.style.display =
-            "none";
-
-
-        characterResult.style.display =
-            "block";
-
-
-        characterArea.textContent =
-            "Área: " +
-            state.areaName;
-
-
-        guidingQuestion.style.display =
-            "none";
-
-
-        bookQuestions.style.display =
-            "none";
-
+        setSavedThemes(saved);
     }
 
+    updateSaveButton();
 
-    /*
-       TEMA NORMAL
-    */
-
-    else {
-
-        rouletteLabel.textContent =
-            "SEU TEMA É";
+    renderSavedThemes();
+}
 
 
-        rouletteWord.textContent =
-            topic.toUpperCase();
+function updateSaveButton(){
 
+    const button =
+        document.getElementById("saveThemeButton");
 
-        normalResult.style.display =
-            "block";
+    const icon =
+        document.getElementById("heartIcon");
 
+    const text =
+        document.getElementById("saveThemeText");
 
-        characterResult.style.display =
-            "none";
+    const saved = getSavedThemes();
 
+    const exists = saved.some(item=>
+        item.topic === state.topic &&
+        item.areaKey === state.areaKey
+    );
 
-        finalArea.textContent =
-            "Área: " +
-            state.areaName;
+    if(exists){
 
+        button.classList.add("saved");
 
-        /*
-           PERGUNTA ORIENTADORA
-        */
+        icon.textContent = "♥";
 
-        if (
-            GUIDING_QUESTIONS[
-                state.areaKey
-            ]
-        ) {
+        text.textContent = "TEMA SALVO";
 
-            guidingQuestion.textContent =
-                GUIDING_QUESTIONS[
-                    state.areaKey
-                ];
+    }else{
 
+        button.classList.remove("saved");
 
-            guidingQuestion.style.display =
-                "block";
+        icon.textContent = "♡";
 
-        }
-
-        else {
-
-            guidingQuestion.style.display =
-                "none";
-
-        }
-
-
-        /*
-           PERGUNTAS DOS LIVROS
-        */
-
-        if (
-
-            state.areaKey ===
-            "panorama_antigo_testamento"
-
-            ||
-
-            state.areaKey ===
-            "panorama_novo_testamento"
-
-        ) {
-
-            bookQuestions.innerHTML =
-                "";
-
-
-            BOOK_QUESTIONS.forEach(
-                question => {
-
-                    const div =
-                        document.createElement(
-                            "div"
-                        );
-
-
-                    div.className =
-                        "book-question";
-
-
-                    div.textContent =
-                        question;
-
-
-                    bookQuestions.appendChild(
-                        div
-                    );
-
-                }
-            );
-
-
-            bookQuestions.style.display =
-                "block";
-
-        }
-
-        else {
-
-            bookQuestions.style.display =
-                "none";
-
-        }
-
+        text.textContent = "SALVAR TEMA";
     }
-
-
-    /*
-       MOSTRA OS BOTÕES
-    */
-
-    document.getElementById(
-        "resultActions"
-    ).style.display =
-        "flex";
-
-
-    /*
-       Prepara os cronômetros,
-       mas NÃO inicia nenhum deles.
-    */
-
-    setTimeState();
-
 }
 
 
 /* =========================================================
-   CONFIGURA TEMPO
+   ESTUDO
 ========================================================= */
 
-function setTimeState() {
+function startStudy(){
 
-    state.studySeconds =
+    if(!state.topic) return;
+
+    clearAllTimers();
+
+    state.studying = true;
+    state.responding = false;
+    state.extraTimeUsed = false;
+
+    state.initialStudySeconds =
         state.time * 60;
 
+    /*
+       Resposta normal:
+       10 minutos = 1 minuto
+       20 minutos = 2 minutos
+    */
+
+    state.initialResponseSeconds =
+        Math.round(state.time / 10) * 60;
+
+    state.studySeconds =
+        state.initialStudySeconds;
 
     state.responseSeconds =
-        state.time === 20
-            ? 120
-            : 60;
+        state.initialResponseSeconds;
 
+    document.getElementById("studyTopic").textContent =
+        state.topic.toUpperCase();
 
-    studyTimer.textContent =
-        formatTime(
-            state.studySeconds
-        );
+    document.getElementById("studyTimer").textContent =
+        formatTime(state.studySeconds);
 
+    document.getElementById("extraTimeButton")
+        .style.display = "block";
 
-    responseTimer.textContent =
-        formatTime(
-            state.responseSeconds
-        );
+    document.getElementById("pesquisa")
+        .classList.add("visible");
 
+    document.getElementById("explicacao")
+        .classList.remove("visible");
+
+    document.getElementById("final")
+        .classList.remove("visible");
+
+    goTo("pesquisa");
+
+    startStudyTimer();
 }
 
 
 /* =========================================================
-   COMEÇAR ESTUDO
+   CRONÔMETRO DE PESQUISA
 ========================================================= */
 
-function startStudy() {
+function startStudyTimer(){
 
-    clearInterval(
-        state.studyInterval
-    );
+    clearInterval(state.studyInterval);
 
-    clearInterval(
-        state.responseInterval
-    );
+    state.studyInterval = setInterval(()=>{
 
-
-    setTimeState();
-
-
-    resultado.classList.remove(
-        "visible"
-    );
-
-
-    studySection.classList.add(
-        "visible"
-    );
-
-
-    studyTopic.textContent =
-        state.isCharacter
-            ? "QUEM FOI " +
-              state.topic +
-              "?"
-            : state.topic.toUpperCase();
-
-
-    updateStudyTimer();
-
-
-    studySection.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
-
-
-    state.studyInterval =
-        setInterval(() => {
-
+        if(state.studySeconds > 0){
 
             state.studySeconds--;
 
-
             updateStudyTimer();
 
+        }else{
 
-            if (
-                state.studySeconds <= 0
-            ) {
+            clearInterval(state.studyInterval);
 
-                clearInterval(
-                    state.studyInterval
-                );
+            finishStudy();
+        }
+
+    },1000);
+}
 
 
-                startResponse();
+function updateStudyTimer(){
 
-            }
+    const timer =
+        document.getElementById("studyTimer");
 
-        }, 1000);
+    timer.textContent =
+        formatTime(state.studySeconds);
 
+    if(state.studySeconds <= 30){
+
+        timer.classList.add("warning");
+
+    }else{
+
+        timer.classList.remove("warning");
+    }
 }
 
 
 /* =========================================================
-   TIMER DE ESTUDO
+   PEDIR MAIS TEMPO
 ========================================================= */
 
-function updateStudyTimer() {
+function requestExtraTime(){
 
-    studyTimer.textContent =
-        formatTime(
-            state.studySeconds
-        );
+    /*
+       Pode ser usado no máximo uma vez.
+    */
 
-}
+    if(state.extraTimeUsed) return;
 
+    state.extraTimeUsed = true;
 
-/* =========================================================
-   ENCERRAR ESTUDO
-========================================================= */
-
-function finishStudy() {
-
-    clearInterval(
-        state.studyInterval
-    );
-
-
-    startResponse();
-
-}
-
-
-/* =========================================================
-   ESTUDAR MAIS
-========================================================= */
-
-function addStudyTime() {
+    /*
+       Adiciona novamente a mesma quantidade
+       do tempo inicial de pesquisa.
+    */
 
     state.studySeconds +=
-        300;
+        state.initialStudySeconds;
 
+    /*
+       E dobra automaticamente o tempo de resposta.
+    */
+
+    state.responseSeconds =
+        state.initialResponseSeconds * 2;
+
+    /*
+       O botão desaparece.
+    */
+
+    document.getElementById("extraTimeButton")
+        .style.display = "none";
 
     updateStudyTimer();
-
 }
 
 
 /* =========================================================
-   RESPOSTA
+   EXPLICAR
 ========================================================= */
 
-function startResponse() {
+function finishStudy(){
 
-    clearInterval(
-        state.studyInterval
-    );
+    clearInterval(state.studyInterval);
 
+    state.studying = false;
+    state.responding = true;
 
-    responseSection.classList.add(
-        "visible"
-    );
+    /*
+       Se não pediu tempo extra:
+       10 = 1 min
+       20 = 2 min
 
+       Se pediu:
+       10 = 2 min
+       20 = 4 min
+    */
 
-    studySection.classList.remove(
-        "visible"
-    );
+    document.getElementById("responseTopic")
+        .textContent =
+        state.topic.toUpperCase();
 
+    document.getElementById("responseTimer")
+        .textContent =
+        formatTime(state.responseSeconds);
 
-    responseTopic.textContent =
-        state.isCharacter
-            ? state.topic + "?"
-            : state.topic;
+    document.getElementById("pesquisa")
+        .classList.remove("visible");
 
+    document.getElementById("explicacao")
+        .classList.add("visible");
 
-    state.responseSeconds =
-        state.time === 20
-            ? 120
-            : 60;
+    goTo("explicacao");
 
-
-    updateResponseTimer();
-
-
-    responseSection.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
-
-
-    clearInterval(
-        state.responseInterval
-    );
+    startResponseTimer();
+}
 
 
-    state.responseInterval =
-        setInterval(() => {
+/* =========================================================
+   CRONÔMETRO DE EXPLICAÇÃO
+========================================================= */
 
+function startResponseTimer(){
+
+    clearInterval(state.responseInterval);
+
+    state.responseInterval = setInterval(()=>{
+
+        if(state.responseSeconds > 0){
 
             state.responseSeconds--;
 
-
             updateResponseTimer();
 
+        }else{
 
-            if (
-                state.responseSeconds <= 0
-            ) {
+            clearInterval(state.responseInterval);
 
-                clearInterval(
-                    state.responseInterval
-                );
+            finishTeologando();
+        }
+
+    },1000);
+}
 
 
-                finishTeologando();
+function updateResponseTimer(){
 
-            }
+    const timer =
+        document.getElementById("responseTimer");
 
-        }, 1000);
+    timer.textContent =
+        formatTime(state.responseSeconds);
 
+    if(state.responseSeconds <= 15){
+
+        timer.classList.add("warning");
+
+    }else{
+
+        timer.classList.remove("warning");
+    }
 }
 
 
 /* =========================================================
-   TIMER DE RESPOSTA
+   FINALIZAR
 ========================================================= */
 
-function updateResponseTimer() {
+function finishTeologando(){
 
-    responseTimer.textContent =
-        formatTime(
-            state.responseSeconds
-        );
+    clearAllTimers();
 
+    state.responding = false;
+
+    document.getElementById("explicacao")
+        .classList.remove("visible");
+
+    document.getElementById("pesquisa")
+        .classList.remove("visible");
+
+    document.getElementById("finishTopic")
+        .textContent =
+        state.topic.toUpperCase();
+
+    document.getElementById("final")
+        .classList.add("visible");
+
+    goTo("final");
 }
 
 
 /* =========================================================
-   FORMATA TEMPO
+   NOVO TEMA
 ========================================================= */
 
-function formatTime(seconds) {
+function newTheme(){
+
+    clearAllTimers();
+
+    state.topic = "";
+    state.extraTimeUsed = false;
+    state.studying = false;
+    state.responding = false;
+
+    hideStudySections();
+
+    resetRouletteDisplay();
+
+    goTo("sorteio");
+}
+
+
+/* =========================================================
+   LIMPAR CRONÔMETROS
+========================================================= */
+
+function clearAllTimers(){
+
+    if(state.studyInterval){
+
+        clearInterval(state.studyInterval);
+
+        state.studyInterval = null;
+    }
+
+    if(state.responseInterval){
+
+        clearInterval(state.responseInterval);
+
+        state.responseInterval = null;
+    }
+}
+
+
+/* =========================================================
+   ESCONDER TELAS DE ESTUDO
+========================================================= */
+
+function hideStudySections(){
+
+    document.getElementById("pesquisa")
+        .classList.remove("visible");
+
+    document.getElementById("explicacao")
+        .classList.remove("visible");
+
+    document.getElementById("final")
+        .classList.remove("visible");
+
+    document.getElementById("studyTimer")
+        .classList.remove("warning");
+
+    document.getElementById("responseTimer")
+        .classList.remove("warning");
+}
+
+
+/* =========================================================
+   FORMATAR TEMPO
+========================================================= */
+
+function formatTime(seconds){
 
     const minutes =
-        Math.floor(
-            seconds / 60
-        );
-
+        Math.floor(seconds / 60);
 
     const secs =
         seconds % 60;
 
-
-    return (
-
-        String(minutes)
-            .padStart(2, "0")
-
-        +
-
-        ":"
-
-        +
-
-        String(secs)
-            .padStart(2, "0")
-
-    );
-
+    return String(minutes).padStart(2,"0")
+        + ":" +
+        String(secs).padStart(2,"0");
 }
 
 
 /* =========================================================
-   FINALIZA
+   TEMAS SALVOS
 ========================================================= */
 
-function finishTeologando() {
+function toggleSaved(){
 
-    clearInterval(
-        state.studyInterval
-    );
+    const list =
+        document.getElementById("savedList");
 
+    const arrow =
+        document.getElementById("savedArrow");
 
-    clearInterval(
-        state.responseInterval
-    );
+    list.classList.toggle("open");
 
+    arrow.textContent =
+        list.classList.contains("open")
+        ? "⌃"
+        : "⌄";
 
-    responseSection.classList.remove(
-        "visible"
-    );
-
-
-    finishSection.classList.add(
-        "visible"
-    );
+    renderSavedThemes();
+}
 
 
-    finishSection.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
+function renderSavedThemes(){
+
+    const list =
+        document.getElementById("savedList");
+
+    const saved =
+        getSavedThemes();
+
+    if(saved.length === 0){
+
+        list.innerHTML =
+            `<div class="saved-empty">
+                Você ainda não salvou nenhum tema.
+            </div>`;
+
+        return;
+    }
+
+    list.innerHTML = "";
+
+    /*
+       Mais recentes primeiro.
+    */
+
+    [...saved].reverse().forEach((item,index)=>{
+
+        const div =
+            document.createElement("div");
+
+        div.className = "saved-item";
+
+        div.innerHTML = `
+            <strong>♥ ${escapeHTML(item.topic)}</strong>
+            <span>${escapeHTML(item.areaName)}</span>
+        `;
+
+        div.onclick = ()=>{
+
+            openSavedTheme(item);
+        };
+
+        list.appendChild(div);
     });
-
 }
 
 
 /* =========================================================
-   RESET
+   ABRIR TEMA SALVO
 ========================================================= */
 
-function resetTeologando() {
+function openSavedTheme(item){
 
-    clearInterval(
-        state.studyInterval
-    );
+    clearAllTimers();
 
+    state.topic = item.topic;
+    state.areaKey = item.areaKey;
+    state.areaName = item.areaName;
 
-    clearInterval(
-        state.responseInterval
-    );
+    const area =
+        AREAS.find(a=>a.key === item.areaKey);
 
+    state.isCharacter =
+        !!area?.characters;
 
-    clearInterval(
-        rouletteInterval
-    );
+    hideStudySections();
 
+    document.getElementById("rouletteLabel")
+        .textContent =
+        state.isCharacter
+        ? "QUEM FOI"
+        : "SEU TEMA É";
 
-    state.topic = "";
-    state.areaKey = "";
-    state.areaName = "";
-    state.isCharacter = false;
+    document.getElementById("rouletteWord")
+        .textContent =
+        state.isCharacter
+        ? item.topic.toUpperCase() + "?"
+        : item.topic.toUpperCase();
 
+    document.getElementById("resultArea")
+        .textContent =
+        item.areaName;
 
-    document.getElementById(
-        "selectedArea"
-    ).textContent =
-        "ESCOLHA UMA ÁREA";
+    document.getElementById("saveThemeButton")
+        .style.display = "flex";
 
+    updateSaveButton();
 
-    document
-        .querySelectorAll("[data-area]")
-        .forEach(button => {
+    document.getElementById("resultActions")
+        .classList.add("visible");
 
-            button.classList.remove(
-                "active"
-            );
-
-        });
-
-
-    resultado.classList.remove(
-        "visible"
-    );
-
-
-    resultContent.classList.remove(
-        "visible"
-    );
+    goTo("sorteio");
+}
 
 
-    studySection.classList.remove(
-        "visible"
-    );
+/* =========================================================
+   SEGURANÇA HTML
+========================================================= */
 
+function escapeHTML(text){
 
-    responseSection.classList.remove(
-        "visible"
-    );
+    const div =
+        document.createElement("div");
 
+    div.textContent = text;
 
-    finishSection.classList.remove(
-        "visible"
-    );
-
-
-    document.getElementById(
-        "resultActions"
-    ).style.display =
-        "none";
-
-
-    rouletteWord.textContent =
-        "—";
-
-
-    rouletteLabel.textContent =
-        "SEU TEMA ESTÁ SENDO ESCOLHIDO...";
-
-
-    scrollToSection(
-        "seletor"
-    );
-
+    return div.innerHTML;
 }
 
 
 /* =========================================================
    INICIALIZAÇÃO
 ========================================================= */
+
+renderSavedThemes();
 
 selectLevel("fundamental");
 
