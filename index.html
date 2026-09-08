@@ -397,6 +397,128 @@ button{
 
 
 /* =========================
+   MÉTODO DE ESTUDO
+========================= */
+
+.study-method{
+
+    max-width:680px;
+
+    margin:0 auto 22px;
+
+    padding:20px 22px;
+
+    border:1px solid rgba(139,92,246,.22);
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(139,92,246,.08),
+            rgba(139,92,246,.025)
+        );
+
+    text-align:left;
+
+}
+
+
+.study-method-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    color:#fff;
+
+    font-size:13px;
+
+    font-weight:900;
+
+    margin-bottom:9px;
+
+}
+
+
+.study-method-title span{
+
+    color:var(--highlight2);
+
+    font-size:17px;
+
+}
+
+
+.study-method p{
+
+    color:#9296a1;
+
+    font-size:12px;
+
+    line-height:1.6;
+
+    margin-bottom:10px;
+
+}
+
+
+.study-method strong{
+
+    color:#c7cad1;
+
+}
+
+
+.scholar-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-top:5px;
+
+    padding:11px 17px;
+
+    border-radius:999px;
+
+    border:1px solid var(--highlight);
+
+    background:var(--highlight);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:.7px;
+
+    transition:.22s;
+
+}
+
+
+.scholar-button:hover{
+
+    background:var(--highlight2);
+
+    border-color:var(--highlight2);
+
+    transform:translateY(-1px);
+
+}
+
+
+/* =========================
    CHOICES
 ========================= */
 
@@ -842,6 +964,206 @@ button{
     letter-spacing:-1.5px;
 
     margin-bottom:20px;
+
+}
+
+
+/* =========================
+   GUIA DE ESTUDO
+========================= */
+
+.study-guide{
+
+    width:100%;
+
+    max-width:680px;
+
+    margin:22px auto 0;
+
+    padding:20px;
+
+    border:1px solid var(--line);
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.012)
+        );
+
+    text-align:left;
+
+}
+
+
+.study-guide.hidden{
+
+    display:none;
+
+}
+
+
+.study-guide-header{
+
+    margin-bottom:15px;
+
+}
+
+
+.study-guide-kicker{
+
+    color:var(--highlight2);
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:2.2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:6px;
+
+}
+
+
+.study-guide-title{
+
+    font-size:17px;
+
+    font-weight:900;
+
+    color:#fff;
+
+}
+
+
+.study-guide-subtitle{
+
+    color:#777c87;
+
+    font-size:10px;
+
+    line-height:1.45;
+
+    margin-top:4px;
+
+}
+
+
+.guide-items{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:8px;
+
+}
+
+
+.guide-item{
+
+    padding:12px 13px;
+
+    border:1px solid rgba(255,255,255,.065);
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.025);
+
+}
+
+
+.guide-item strong{
+
+    display:block;
+
+    color:#d6d8dd;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    margin-bottom:4px;
+
+}
+
+
+.guide-item span{
+
+    display:block;
+
+    color:#818691;
+
+    font-size:10px;
+
+    line-height:1.45;
+
+}
+
+
+.guide-note{
+
+    margin-top:11px;
+
+    padding-top:11px;
+
+    border-top:1px solid var(--line);
+
+    color:#707580;
+
+    font-size:9px;
+
+    line-height:1.5;
+
+}
+
+
+.guide-note strong{
+
+    color:#aeb2bb;
+
+}
+
+
+.advanced-guide{
+
+    margin-top:20px;
+
+    padding:17px 18px;
+
+    border:1px solid rgba(139,92,246,.22);
+
+    border-radius:18px;
+
+    background:rgba(139,92,246,.045);
+
+}
+
+
+.advanced-guide strong{
+
+    display:block;
+
+    color:#fff;
+
+    font-size:11px;
+
+    margin-bottom:6px;
+
+}
+
+
+.advanced-guide p{
+
+    color:#858995;
+
+    font-size:10px;
+
+    line-height:1.55;
 
 }
 
@@ -1728,6 +2050,15 @@ button{
     }
 
 
+    .study-method{
+
+        padding:17px 18px;
+
+        border-radius:19px;
+
+    }
+
+
     .choice-group{
 
         margin:20px auto;
@@ -1770,6 +2101,22 @@ button{
         padding:21px 16px;
 
         margin:17px auto;
+
+    }
+
+
+    .study-guide{
+
+        padding:17px;
+
+        border-radius:19px;
+
+    }
+
+
+    .guide-items{
+
+        grid-template-columns:1fr;
 
     }
 
@@ -2067,6 +2414,59 @@ button{
         </div>
 
 
+        <div class="study-method">
+
+            <div class="study-method-title">
+
+                <span>✦</span>
+
+                UM ESTUDO SEM ATALHOS
+
+            </div>
+
+
+            <p>
+
+                Durante o desafio, <strong>não use inteligência artificial
+                para pesquisar, responder ou montar sua explicação.</strong>
+                A proposta é desenvolver sua própria capacidade de ler,
+                pesquisar, organizar informações e chegar a conclusões.
+
+            </p>
+
+
+            <p>
+
+                Use <strong>papel e caneta</strong> para registrar suas
+                descobertas e dê preferência a <strong>fontes confiáveis</strong>:
+                Bíblia, livros, artigos acadêmicos, obras teológicas,
+                documentos históricos e fontes primárias quando disponíveis.
+
+            </p>
+
+
+            <p>
+
+                Para pesquisas acadêmicas, você também pode utilizar o
+                <strong>Google Scholar</strong> para localizar artigos,
+                livros e trabalhos científicos.
+
+            </p>
+
+
+            <a
+                class="scholar-button"
+                href="https://scholar.google.com/"
+                target="_blank"
+                rel="noopener">
+
+                GOOGLE SCHOLAR ↗
+
+            </a>
+
+        </div>
+
+
         <button
             class="main-action"
             onclick="goTo('configuracao')">
@@ -2351,6 +2751,20 @@ button{
 
     <div class="page-inner">
 
+        <div class="eyebrow">
+
+            PASSO 03
+
+        </div>
+
+
+        <h2 class="page-title">
+
+            Seu tema
+
+        </h2>
+
+
         <div class="roulette-box">
 
 
@@ -2492,6 +2906,13 @@ button{
                 id="studyTimer">
 
                 10:00
+
+            </div>
+
+
+            <div
+                class="study-guide hidden"
+                id="studyGuide">
 
             </div>
 
@@ -2756,10 +3177,6 @@ button{
         </div>
 
 
-        <!-- =========================
-             PIX
-        ========================= -->
-
         <div class="pix-box">
 
             <div class="pix-label">
@@ -2971,12 +3388,6 @@ const PIX_CITY =
    PIX — FUNÇÕES
 ========================================================= */
 
-
-/*
-    Remove acentos e caracteres incompatíveis
-    com os campos do padrão Pix.
-*/
-
 function removeAccents(text){
 
     return text
@@ -2988,11 +3399,6 @@ function removeAccents(text){
 }
 
 
-/*
-    Gera campo EMV:
-    ID + tamanho + valor.
-*/
-
 function pixField(id,value){
 
     return (
@@ -3003,10 +3409,6 @@ function pixField(id,value){
 
 }
 
-
-/*
-    CRC16-CCITT utilizado no Pix.
-*/
 
 function crc16(payload){
 
@@ -3047,10 +3449,6 @@ function crc16(payload){
 }
 
 
-/*
-    Monta o Pix Copia e Cola.
-*/
-
 function generatePixCode(){
 
     const name =
@@ -3064,14 +3462,6 @@ function generatePixCode(){
         .substring(0,15)
         .toUpperCase();
 
-
-    /*
-        Merchant Account Information
-        ID 26:
-
-        00 = GUI Pix
-        01 = chave Pix
-    */
 
     const merchantAccountInformation =
 
@@ -3149,10 +3539,6 @@ function generatePixCode(){
 }
 
 
-/*
-    Copiar para área de transferência.
-*/
-
 async function copyToClipboard(text){
 
     try{
@@ -3209,10 +3595,6 @@ async function copyToClipboard(text){
 }
 
 
-/*
-    Copia somente a chave Pix.
-*/
-
 async function copyPixKey(){
 
     const success =
@@ -3246,10 +3628,6 @@ async function copyPixKey(){
 
 }
 
-
-/*
-    Gera e copia o Pix Copia e Cola.
-*/
 
 async function copyPixCode(){
 
@@ -3293,11 +3671,6 @@ async function copyPixCode(){
    CONTADOR GLOBAL
 ========================================================= */
 
-
-/*
-    Workspace do CounterAPI.
-*/
-
 const teologandoCounter = new Counter({
 
     workspace:"teologando"
@@ -3305,12 +3678,7 @@ const teologandoCounter = new Counter({
 });
 
 
-/*
-    Busca o número atual sem aumentar.
-*/
-
 function loadPlayCount(){
-
 
     const counterElement =
         document.getElementById("playCount");
@@ -3326,43 +3694,29 @@ function loadPlayCount(){
 
         .then(result=>{
 
-
             counterElement.textContent =
 
                 Number(result.value)
                     .toLocaleString("pt-BR");
 
-
         })
-
 
         .catch(error=>{
 
-
             console.log(
-
                 "Não foi possível carregar o contador:",
-
                 error
-
             );
-
 
             counterElement.textContent =
                 "—";
-
 
         });
 
 }
 
 
-/*
-    Registra uma nova utilização.
-*/
-
 function registerPlay(){
-
 
     const counterElement =
         document.getElementById("playCount");
@@ -3374,33 +3728,23 @@ function registerPlay(){
 
         .then(result=>{
 
-
             if(counterElement){
-
 
                 counterElement.textContent =
 
                     Number(result.value)
                         .toLocaleString("pt-BR");
 
-
             }
-
 
         })
 
-
         .catch(error=>{
 
-
             console.log(
-
                 "Não foi possível registrar a utilização:",
-
                 error
-
             );
-
 
         });
 
@@ -3417,7 +3761,6 @@ const DATA = {
 
 teologia_sistematica:{
 
-
     fundamental:[
 
         "Bibliologia",
@@ -3431,7 +3774,6 @@ teologia_sistematica:{
         "Escatologia"
 
     ],
-
 
     intermediario:[
 
@@ -3526,7 +3868,6 @@ teologia_sistematica:{
 
     ],
 
-
     avancado:[
 
         "Teologia trinitária",
@@ -3550,9 +3891,7 @@ teologia_sistematica:{
 },
 
 
-
 historia_da_igreja:{
-
 
     fundamental:[
 
@@ -3565,7 +3904,6 @@ historia_da_igreja:{
         "Igreja Contemporânea"
 
     ],
-
 
     intermediario:[
 
@@ -3616,7 +3954,6 @@ historia_da_igreja:{
 
     ],
 
-
     avancado:[
 
         "Concílio de Jerusalém",
@@ -3649,9 +3986,7 @@ historia_da_igreja:{
 },
 
 
-
 panorama_antigo_testamento:{
-
 
     fundamental:[
 
@@ -3662,7 +3997,6 @@ panorama_antigo_testamento:{
         "Profetas Menores"
 
     ],
-
 
     intermediario:[
 
@@ -3708,7 +4042,6 @@ panorama_antigo_testamento:{
 
     ],
 
-
     avancado:[
 
         "Autoria do Pentateuco",
@@ -3741,9 +4074,7 @@ panorama_antigo_testamento:{
 },
 
 
-
 panorama_novo_testamento:{
-
 
     fundamental:[
 
@@ -3753,7 +4084,6 @@ panorama_novo_testamento:{
         "Apocalipse"
 
     ],
-
 
     intermediario:[
 
@@ -3786,7 +4116,6 @@ panorama_novo_testamento:{
         "Apocalipse"
 
     ],
-
 
     avancado:[
 
@@ -3825,9 +4154,7 @@ panorama_novo_testamento:{
 },
 
 
-
 apologetica:{
-
 
     avancado:[
 
@@ -3871,9 +4198,7 @@ apologetica:{
 },
 
 
-
 teologia_pratica:{
-
 
     fundamental:[
 
@@ -3889,7 +4214,6 @@ teologia_pratica:{
         "Serviço Cristão"
 
     ],
-
 
     intermediario:[
 
@@ -3912,7 +4236,6 @@ teologia_pratica:{
         "Ética Ministerial"
 
     ],
-
 
     avancado:[
 
@@ -3937,9 +4260,7 @@ teologia_pratica:{
 },
 
 
-
 movimentos_tradicoes:{
-
 
     intermediario:[
 
@@ -3961,7 +4282,6 @@ movimentos_tradicoes:{
         "Pietismo"
 
     ],
-
 
     avancado:[
 
@@ -3993,9 +4313,7 @@ movimentos_tradicoes:{
 },
 
 
-
 personagens_historia_teologia:{
-
 
     characters:[
 
@@ -4035,9 +4353,7 @@ personagens_historia_teologia:{
 },
 
 
-
 personagens_biblicos:{
-
 
     characters:[
 
@@ -4149,7 +4465,6 @@ personagens_biblicos:{
 
 const AREAS = [
 
-
     {
         key:"teologia_sistematica",
         name:"Teologia Sistemática",
@@ -4159,7 +4474,6 @@ const AREAS = [
             "avancado"
         ]
     },
-
 
     {
         key:"historia_da_igreja",
@@ -4171,7 +4485,6 @@ const AREAS = [
         ]
     },
 
-
     {
         key:"panorama_antigo_testamento",
         name:"Panorama do Antigo Testamento",
@@ -4181,7 +4494,6 @@ const AREAS = [
             "avancado"
         ]
     },
-
 
     {
         key:"panorama_novo_testamento",
@@ -4193,7 +4505,6 @@ const AREAS = [
         ]
     },
 
-
     {
         key:"apologetica",
         name:"Apologética",
@@ -4201,7 +4512,6 @@ const AREAS = [
             "avancado"
         ]
     },
-
 
     {
         key:"teologia_pratica",
@@ -4213,7 +4523,6 @@ const AREAS = [
         ]
     },
 
-
     {
         key:"movimentos_tradicoes",
         name:"Movimentos e Tradições",
@@ -4223,13 +4532,11 @@ const AREAS = [
         ]
     },
 
-
     {
         key:"personagens_historia_teologia",
         name:"Personagens da História da Teologia",
         characters:true
     },
-
 
     {
         key:"personagens_biblicos",
@@ -4246,7 +4553,6 @@ const AREAS = [
 ========================================================= */
 
 let state = {
-
 
     level:"fundamental",
 
@@ -4288,7 +4594,6 @@ let state = {
 
 function goTo(id){
 
-
     const element =
         document.getElementById(id);
 
@@ -4315,7 +4620,6 @@ function goTo(id){
 
 function selectLevel(level){
 
-
     state.level = level;
 
 
@@ -4323,20 +4627,15 @@ function selectLevel(level){
         .querySelectorAll("[data-level]")
         .forEach(btn=>{
 
-
             btn.classList.toggle(
-
                 "active",
-
                 btn.dataset.level === level
-
             );
 
         });
 
 
     if(!state.isCharacter){
-
 
         if(level === "fundamental"){
 
@@ -4374,15 +4673,10 @@ function selectLevel(level){
 
 function selectTime(minutes){
 
-
     if(
-
         !state.isCharacter &&
-
         state.level === "fundamental" &&
-
         minutes !== 10
-
     ){
 
         return;
@@ -4391,13 +4685,9 @@ function selectTime(minutes){
 
 
     if(
-
         !state.isCharacter &&
-
         state.level === "avancado" &&
-
         minutes !== 20
-
     ){
 
         return;
@@ -4433,7 +4723,6 @@ function selectTime(minutes){
 
 function selectArea(areaKey){
 
-
     const area =
         AREAS.find(a=>a.key===areaKey);
 
@@ -4454,13 +4743,9 @@ function selectArea(areaKey){
         .querySelectorAll(".area-button")
         .forEach(btn=>{
 
-
             btn.classList.toggle(
-
                 "active",
-
                 btn.dataset.area === areaKey
-
             );
 
         });
@@ -4475,7 +4760,6 @@ function selectArea(areaKey){
 
     if(state.isCharacter){
 
-
         document.getElementById("time10")
             .classList.remove("locked");
 
@@ -4486,33 +4770,24 @@ function selectArea(areaKey){
 
     }else{
 
-
         if(state.level === "fundamental"){
 
-
             selectTime(10);
-
 
             document.getElementById("time20")
                 .classList.add("locked");
 
-
         }else if(state.level === "avancado"){
 
-
             selectTime(20);
-
 
             document.getElementById("time10")
                 .classList.add("locked");
 
-
         }else{
-
 
             document.getElementById("time10")
                 .classList.remove("locked");
-
 
             document.getElementById("time20")
                 .classList.remove("locked");
@@ -4523,7 +4798,6 @@ function selectArea(areaKey){
 
 
     clearAllTimers();
-
 
     state.topic = "";
 
@@ -4555,11 +4829,9 @@ function selectArea(areaKey){
 
 function resetRouletteDisplay(){
 
-
     document.getElementById(
         "rouletteLabel"
     ).textContent =
-
         "CLIQUE EM TEOLOGAR PARA SORTEAR SEU TEMA";
 
 
@@ -4602,9 +4874,7 @@ function resetRouletteDisplay(){
 
 function startRoulette(){
 
-
     clearAllTimers();
-
 
     state.topic = "";
 
@@ -4620,14 +4890,11 @@ function startRoulette(){
 
     if(!state.areaKey){
 
-
         alert(
             "Escolha uma área primeiro."
         );
 
-
         goTo("areas");
-
 
         return;
 
@@ -4643,13 +4910,11 @@ function startRoulette(){
 
     if(state.isCharacter){
 
-
         pool =
             areaData.characters || [];
 
 
     }else{
-
 
         pool =
             areaData[state.level] || [];
@@ -4657,10 +4922,8 @@ function startRoulette(){
 
         if(pool.length === 0){
 
-
             Object.values(areaData)
                 .forEach(group=>{
-
 
                     if(Array.isArray(group)){
 
@@ -4677,21 +4940,14 @@ function startRoulette(){
 
     if(pool.length === 0){
 
-
         alert(
             "Nenhum tema disponível para essa combinação."
         );
-
 
         return;
 
     }
 
-
-    /*
-        REGISTRA A UTILIZAÇÃO
-        NO CONTADOR GLOBAL.
-    */
 
     registerPlay();
 
@@ -4706,7 +4962,6 @@ function startRoulette(){
     document.getElementById(
         "rouletteLabel"
     ).textContent =
-
         "SEU TEMA ESTÁ SENDO ESCOLHIDO...";
 
 
@@ -4742,7 +4997,6 @@ function startRoulette(){
     const interval =
         setInterval(()=>{
 
-
             const random =
                 pool[
                     Math.floor(
@@ -4759,7 +5013,6 @@ function startRoulette(){
 
 
             if(cycles >= totalCycles){
-
 
                 clearInterval(interval);
 
@@ -4791,7 +5044,6 @@ function startRoulette(){
 
 function showFinalTopic(topic){
 
-
     state.topic = topic;
 
 
@@ -4809,14 +5061,12 @@ function showFinalTopic(topic){
     document.getElementById(
         "rouletteLabel"
     ).textContent =
-
         state.isCharacter
         ? "QUEM FOI"
         : "SEU TEMA É";
 
 
     word.textContent =
-
         state.isCharacter
         ? topic.toUpperCase() + "?"
         : topic.toUpperCase();
@@ -4860,21 +5110,16 @@ function showFinalTopic(topic){
 
 function getSavedThemes(){
 
-
     try{
 
-
         return JSON.parse(
-
             localStorage.getItem(
                 "teologando_saved_themes"
             )
-
         ) || [];
 
 
     }catch{
-
 
         return [];
 
@@ -4886,13 +5131,9 @@ function getSavedThemes(){
 
 function setSavedThemes(themes){
 
-
     localStorage.setItem(
-
         "teologando_saved_themes",
-
         JSON.stringify(themes)
-
     );
 
 }
@@ -4900,7 +5141,6 @@ function setSavedThemes(themes){
 
 
 function saveCurrentTheme(){
-
 
     if(!state.topic)
         return;
@@ -4912,16 +5152,12 @@ function saveCurrentTheme(){
 
     const alreadySaved =
         saved.some(item=>
-
             item.topic === state.topic &&
-
             item.areaKey === state.areaKey
-
         );
 
 
     if(!alreadySaved){
-
 
         saved.push({
 
@@ -4951,7 +5187,6 @@ function saveCurrentTheme(){
 
 function updateSaveButton(){
 
-
     const button =
         document.getElementById(
             "saveThemeButton"
@@ -4976,24 +5211,18 @@ function updateSaveButton(){
 
     const exists =
         saved.some(item=>
-
             item.topic === state.topic &&
-
             item.areaKey === state.areaKey
-
         );
 
 
     if(exists){
 
-
         button.classList.add(
             "saved"
         );
 
-
         icon.textContent = "♥";
-
 
         text.textContent =
             "TEMA SALVO";
@@ -5001,14 +5230,11 @@ function updateSaveButton(){
 
     }else{
 
-
         button.classList.remove(
             "saved"
         );
 
-
         icon.textContent = "♡";
-
 
         text.textContent =
             "SALVAR TEMA";
@@ -5020,11 +5246,844 @@ function updateSaveButton(){
 
 
 /* =========================================================
+   GUIAS DE ESTUDO
+========================================================= */
+
+/*
+    Algumas palavras-chave identificam temas que possuem
+    uma natureza específica. A orientação é adaptada ao
+    tipo do tema sorteado.
+*/
+
+const BOOKS_AND_LETTERS = [
+
+    "Gênesis",
+    "Êxodo",
+    "Levítico",
+    "Números",
+    "Deuteronômio",
+    "Josué",
+    "Juízes",
+    "Rute",
+    "1 Samuel",
+    "2 Samuel",
+    "1 Reis",
+    "2 Reis",
+    "1 Crônicas",
+    "2 Crônicas",
+    "Esdras",
+    "Neemias",
+    "Ester",
+    "Jó",
+    "Salmos",
+    "Provérbios",
+    "Eclesiastes",
+    "Cantares",
+    "Isaías",
+    "Jeremias",
+    "Lamentações",
+    "Ezequiel",
+    "Daniel",
+    "Oséias",
+    "Joel",
+    "Amós",
+    "Obadias",
+    "Jonas",
+    "Miquéias",
+    "Naum",
+    "Habacuque",
+    "Sofonias",
+    "Ageu",
+    "Zacarias",
+    "Malaquias",
+    "Mateus",
+    "Marcos",
+    "Lucas",
+    "João",
+    "Atos dos Apóstolos",
+    "Romanos",
+    "1 Coríntios",
+    "2 Coríntios",
+    "Gálatas",
+    "Efésios",
+    "Filipenses",
+    "Colossenses",
+    "1 Tessalonicenses",
+    "2 Tessalonicenses",
+    "1 Timóteo",
+    "2 Timóteo",
+    "Tito",
+    "Filemom",
+    "Hebreus",
+    "Tiago",
+    "1 Pedro",
+    "2 Pedro",
+    "1 João",
+    "2 João",
+    "3 João",
+    "Judas",
+    "Apocalipse"
+];
+
+
+const COUNCILS = [
+
+    "Concílio de Jerusalém",
+    "Concílio de Niceia",
+    "Primeiro Concílio de Niceia",
+    "Concílio de Constantinopla",
+    "Primeiro Concílio de Constantinopla",
+    "Segundo Concílio de Constantinopla",
+    "Terceiro Concílio de Constantinopla",
+    "Concílio de Éfeso",
+    "Concílio de Calcedônia",
+    "Segundo Concílio de Niceia",
+    "Concílio de Trento"
+
+];
+
+
+const SYSTEMATIC_AREAS = [
+
+    "teologia_sistematica"
+
+];
+
+
+function normalizeText(text){
+
+    return text
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"")
+        .toLowerCase();
+
+}
+
+
+function isBookOrLetter(topic){
+
+    return BOOKS_AND_LETTERS.some(book =>
+        normalizeText(book) === normalizeText(topic)
+    );
+
+}
+
+
+function isCouncil(topic){
+
+    const normalized =
+        normalizeText(topic);
+
+    return COUNCILS.some(council =>
+        normalized === normalizeText(council)
+    );
+
+}
+
+
+function getStudyGuideType(){
+
+    const topic =
+        state.topic;
+
+
+    if(state.isCharacter){
+
+        return "character";
+
+    }
+
+
+    if(isCouncil(topic)){
+
+        return "council";
+
+    }
+
+
+    if(isBookOrLetter(topic)){
+
+        return "book";
+
+    }
+
+
+    if(state.areaKey === "teologia_sistematica"){
+
+        return "systematic";
+
+    }
+
+
+    if(state.areaKey === "movimentos_tradicoes"){
+
+        return "theology";
+
+    }
+
+
+    if(state.areaKey === "historia_da_igreja"){
+
+        return "historical";
+
+    }
+
+
+    if(state.areaKey === "panorama_antigo_testamento" ||
+       state.areaKey === "panorama_novo_testamento"){
+
+        return "biblical_theme";
+
+    }
+
+
+    if(state.areaKey === "teologia_pratica"){
+
+        return "practical";
+
+    }
+
+
+    if(state.areaKey === "apologetica"){
+
+        return "apologetics";
+
+    }
+
+
+    return "general";
+
+}
+
+
+function createGuideItem(title,text){
+
+    return `
+
+        <div class="guide-item">
+
+            <strong>
+                ${escapeHTML(title)}
+            </strong>
+
+            <span>
+                ${escapeHTML(text)}
+            </span>
+
+        </div>
+
+    `;
+
+}
+
+
+function getGuideContent(){
+
+    const type =
+        getStudyGuideType();
+
+
+    const topic =
+        state.topic;
+
+
+    if(type === "character"){
+
+        return {
+
+            title:"ESTUDE ESTE PERSONAGEM",
+
+            subtitle:"Não procure apenas uma biografia. Entenda o personagem dentro do seu contexto.",
+
+            items:[
+
+                [
+                    "Quem foi?",
+                    "Identidade, função, família, profissão ou posição."
+                ],
+
+                [
+                    "Quando viveu?",
+                    "Período histórico e acontecimentos ao redor de sua vida."
+                ],
+
+                [
+                    "Onde viveu?",
+                    "Região, cidade, reino ou ambiente cultural."
+                ],
+
+                [
+                    "Contexto",
+                    "O que estava acontecendo no período em que viveu."
+                ],
+
+                [
+                    "Principais feitos",
+                    "Acontecimentos, obras, decisões ou contribuições."
+                ],
+
+                [
+                    "Importância",
+                    "Por que esse personagem é relevante para a Bíblia ou para a história da teologia."
+                ]
+
+            ],
+
+            note:"Procure distinguir o que é afirmado diretamente pelas fontes do que é reconstrução ou tradição posterior."
+
+        };
+
+    }
+
+
+    if(type === "council"){
+
+        return {
+
+            title:"ESTUDE ESTE CONCÍLIO",
+
+            subtitle:"Reconstrua o problema que levou à reunião e entenda por que suas decisões foram importantes.",
+
+            items:[
+
+                [
+                    "Ano e local",
+                    "Quando e onde ocorreu."
+                ],
+
+                [
+                    "Principais personagens",
+                    "Bispos, teólogos, autoridades e figuras diretamente envolvidas."
+                ],
+
+                [
+                    "Problema original",
+                    "Qual controvérsia ou questão provocou o concílio."
+                ],
+
+                [
+                    "Debate",
+                    "Quais eram as principais posições em disputa."
+                ],
+
+                [
+                    "Decisões",
+                    "O que foi definido, rejeitado ou aprovado."
+                ],
+
+                [
+                    "Consequências",
+                    "Como as decisões afetaram a Igreja e a teologia posterior."
+                ]
+
+            ],
+
+            note:"Se possível, consulte documentos conciliares, credos, cartas e fontes históricas além de manuais de história da Igreja."
+
+        };
+
+    }
+
+
+    if(type === "book"){
+
+        return {
+
+            title:"ESTUDE ESTE LIVRO / CARTA",
+
+            subtitle:"Leia o livro como uma obra completa e tente compreender sua mensagem dentro do contexto original.",
+
+            items:[
+
+                [
+                    "Autoria",
+                    "Quem escreveu? Observe também debates sobre autoria quando existirem."
+                ],
+
+                [
+                    "Data provável",
+                    "Em que período foi escrito e quais evidências sustentam essa data."
+                ],
+
+                [
+                    "Destinatários",
+                    "Para quem foi escrito: pessoa, igreja, povo ou público específico."
+                ],
+
+                [
+                    "Propósito",
+                    "Por que o autor escreveu? Qual problema ou necessidade enfrentava?"
+                ],
+
+                [
+                    "Contexto",
+                    "Contexto histórico, cultural, religioso e literário."
+                ],
+
+                [
+                    "Estrutura",
+                    "Principais partes, argumentos, temas e desenvolvimento da obra."
+                ]
+
+            ],
+
+            note:"Leia o texto bíblico antes de consultar comentários. A pesquisa deve ajudar você a compreender o texto, não substituir sua leitura."
+
+        };
+
+    }
+
+
+    if(type === "systematic"){
+
+        return {
+
+            title:"ESTUDE ESTE TEMA DA TEOLOGIA SISTEMÁTICA",
+
+            subtitle:"Defina o conceito antes de discutir posições teológicas.",
+
+            items:[
+
+                [
+                    "O que significa?",
+                    "Defina o conceito com suas próprias palavras."
+                ],
+
+                [
+                    "Qual disciplina?",
+                    "Identifique em qual área da Teologia Sistemática o tema se encaixa."
+                ],
+
+                [
+                    "Bases bíblicas",
+                    "Encontre textos relevantes e observe o contexto deles."
+                ],
+
+                [
+                    "Principais conceitos",
+                    "Quais ideias precisam ser compreendidas para explicar o tema."
+                ],
+
+                [
+                    "Posições teológicas",
+                    "Identifique interpretações diferentes quando elas existirem."
+                ],
+
+                [
+                    "Implicações",
+                    "O que essa doutrina significa para a fé, a Igreja e a vida cristã."
+                ]
+
+            ],
+
+            note:"Evite decorar definições isoladas. Tente construir uma explicação coerente a partir das Escrituras e da reflexão teológica."
+
+        };
+
+    }
+
+
+    if(type === "theology"){
+
+        return {
+
+            title:"ESTUDE ESTA TRADIÇÃO / TEOLOGIA",
+
+            subtitle:"Entenda de onde ela veio antes de avaliar suas afirmações.",
+
+            items:[
+
+                [
+                    "O que é?",
+                    "Defina a tradição, movimento ou posição teológica."
+                ],
+
+                [
+                    "Origem",
+                    "Quando, onde e em qual contexto surgiu."
+                ],
+
+                [
+                    "Principais representantes",
+                    "Quem foram seus principais formuladores ou divulgadores."
+                ],
+
+                [
+                    "Fundamentos",
+                    "Quais doutrinas, textos ou princípios sustentam essa posição."
+                ],
+
+                [
+                    "Documentos",
+                    "Confissões, credos, catecismos ou obras importantes."
+                ],
+
+                [
+                    "Diferenças",
+                    "Em que essa tradição se diferencia de outras posições cristãs."
+                ]
+
+            ],
+
+            note:"Quando houver posições internas diferentes, não trate uma corrente específica como se representasse toda a tradição."
+
+        };
+
+    }
+
+
+    if(type === "historical"){
+
+        return {
+
+            title:"ESTUDE ESTE FATO HISTÓRICO",
+
+            subtitle:"Não memorize apenas a data. Reconstrua a história que levou ao acontecimento.",
+
+            items:[
+
+                [
+                    "O que foi?",
+                    "Defina claramente o acontecimento ou fenômeno."
+                ],
+
+                [
+                    "Quando aconteceu?",
+                    "Identifique o período e as datas mais importantes."
+                ],
+
+                [
+                    "Onde aconteceu?",
+                    "Localize geograficamente o acontecimento."
+                ],
+
+                [
+                    "O que originou?",
+                    "Investigue causas, antecedentes e acontecimentos que levaram a ele."
+                ],
+
+                [
+                    "Contexto histórico",
+                    "O que estava acontecendo politicamente, socialmente e religiosamente."
+                ],
+
+                [
+                    "Consequências",
+                    "O que mudou depois e quais foram seus efeitos."
+                ]
+
+            ],
+
+            note:"Procure pelo menos duas fontes quando o assunto permitir e compare como cada autor interpreta o acontecimento."
+
+        };
+
+    }
+
+
+    if(type === "biblical_theme"){
+
+        return {
+
+            title:"ESTUDE ESTE TEMA BÍBLICO",
+
+            subtitle:"Parta do texto bíblico e depois amplie para o contexto histórico e literário.",
+
+            items:[
+
+                [
+                    "Onde aparece?",
+                    "Localize os principais textos relacionados ao tema."
+                ],
+
+                [
+                    "Contexto",
+                    "Observe autor, destinatários, situação histórica e contexto literário."
+                ],
+
+                [
+                    "Significado",
+                    "Explique o que o tema significa dentro dos textos estudados."
+                ],
+
+                [
+                    "Desenvolvimento",
+                    "Observe como o tema aparece e se desenvolve ao longo da Bíblia."
+                ],
+
+                [
+                    "Interpretações",
+                    "Identifique interpretações diferentes quando houver debate."
+                ],
+
+                [
+                    "Síntese",
+                    "Formule uma explicação clara baseada no conjunto das evidências."
+                ]
+
+            ],
+
+            note:"Não construa uma doutrina a partir de um versículo isolado. Observe contexto, gênero literário e conjunto das Escrituras."
+
+        };
+
+    }
+
+
+    if(type === "practical"){
+
+        return {
+
+            title:"ESTUDE ESTE TEMA DE TEOLOGIA PRÁTICA",
+
+            subtitle:"Entenda o fundamento teológico antes de pensar na aplicação.",
+
+            items:[
+
+                [
+                    "O que é?",
+                    "Defina a prática ou disciplina estudada."
+                ],
+
+                [
+                    "Fundamento bíblico",
+                    "Quais textos e princípios bíblicos sustentam essa prática?"
+                ],
+
+                [
+                    "Finalidade",
+                    "Para que essa prática existe dentro da vida cristã ou da Igreja?"
+                ],
+
+                [
+                    "Como funciona?",
+                    "Quais são seus principais princípios, métodos ou elementos."
+                ],
+
+                [
+                    "Aplicação",
+                    "Como pode ser praticada de forma saudável e coerente?"
+                ],
+
+                [
+                    "Limites e riscos",
+                    "Quais erros, excessos ou problemas precisam ser evitados?"
+                ]
+
+            ],
+
+            note:"Diferencie o princípio bíblico do método criado por determinada tradição ou igreja."
+
+        };
+
+    }
+
+
+    if(type === "apologetics"){
+
+        return {
+
+            title:"ESTUDE ESTE TEMA DE APOLOGÉTICA",
+
+            subtitle:"Conheça o argumento e também as objeções contra ele.",
+
+            items:[
+
+                [
+                    "Qual é a questão?",
+                    "Defina claramente o problema ou afirmação que está sendo analisado."
+                ],
+
+                [
+                    "Argumento cristão",
+                    "Qual é a principal defesa apresentada?"
+                ],
+
+                [
+                    "Evidências",
+                    "Quais evidências históricas, filosóficas ou científicas são utilizadas?"
+                ],
+
+                [
+                    "Objeções",
+                    "Quais são as principais críticas ao argumento?"
+                ],
+
+                [
+                    "Respostas",
+                    "Como diferentes autores respondem às objeções?"
+                ],
+
+                [
+                    "Sua conclusão",
+                    "Depois de pesquisar, explique o que você considera mais bem fundamentado e por quê."
+                ]
+
+            ],
+
+            note:"Apologética exige honestidade intelectual: conheça o melhor argumento do outro lado antes de responder."
+
+        };
+
+    }
+
+
+    return {
+
+        title:"ESTUDE O TEMA",
+
+        subtitle:"Pesquise, compare fontes e construa sua própria explicação.",
+
+        items:[
+
+            [
+                "Definição",
+                "O que é exatamente o tema?"
+            ],
+
+            [
+                "Contexto",
+                "Em que contexto surgiu ou deve ser compreendido?"
+            ],
+
+            [
+                "Fontes",
+                "Quais fontes confiáveis ajudam a compreender o assunto?"
+            ],
+
+            [
+                "Principais ideias",
+                "Quais são os conceitos essenciais?"
+            ],
+
+            [
+                "Debates",
+                "Existem interpretações ou posições diferentes?"
+            ],
+
+            [
+                "Síntese",
+                "Como você explicaria o assunto com suas próprias palavras?"
+            ]
+
+        ],
+
+        note:"Anote no papel as informações essenciais e registre de onde cada informação foi retirada."
+
+    };
+
+}
+
+
+function renderStudyGuide(){
+
+    const guide =
+        document.getElementById(
+            "studyGuide"
+        );
+
+
+    if(!guide)
+        return;
+
+
+    guide.innerHTML = "";
+
+    guide.classList.remove("hidden");
+
+
+    if(state.level === "avancado"){
+
+        guide.innerHTML = `
+
+            <div class="advanced-guide">
+
+                <strong>
+                    MODO AVANÇADO — PESQUISA AUTÔNOMA
+                </strong>
+
+                <p>
+                    Você está por conta própria. Não receberá um roteiro
+                    pronto para conduzir sua pesquisa. O objetivo é treinar
+                    sua capacidade de encontrar fontes, formular perguntas,
+                    comparar informações, identificar divergências e descobrir
+                    por si mesmo como o tema pode ser compreendido.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    const content =
+        getGuideContent();
+
+
+    const itemsHTML =
+        content.items
+            .map(item =>
+                createGuideItem(
+                    item[0],
+                    item[1]
+                )
+            )
+            .join("");
+
+
+    guide.innerHTML = `
+
+        <div class="study-guide-header">
+
+            <div class="study-guide-kicker">
+
+                ORIENTAÇÃO DE ESTUDO
+
+            </div>
+
+            <div class="study-guide-title">
+
+                ${escapeHTML(content.title)}
+
+            </div>
+
+            <div class="study-guide-subtitle">
+
+                ${escapeHTML(content.subtitle)}
+
+            </div>
+
+        </div>
+
+
+        <div class="guide-items">
+
+            ${itemsHTML}
+
+        </div>
+
+
+        <div class="guide-note">
+
+            <strong>LEMBRE-SE:</strong>
+            ${escapeHTML(content.note)}
+
+        </div>
+
+    `;
+
+}
+
+
+
+/* =========================================================
    ESTUDO
 ========================================================= */
 
 function startStudy(){
-
 
     if(!state.topic)
         return;
@@ -5078,6 +6137,9 @@ function startStudy(){
         "block";
 
 
+    renderStudyGuide();
+
+
     document.getElementById(
         "pesquisa"
     ).classList.add(
@@ -5114,7 +6176,6 @@ function startStudy(){
 
 function startStudyTimer(){
 
-
     clearInterval(
         state.studyInterval
     );
@@ -5123,30 +6184,23 @@ function startStudyTimer(){
     state.studyInterval =
         setInterval(()=>{
 
-
             if(
                 state.studySeconds > 0
             ){
 
-
                 state.studySeconds--;
-
 
                 updateStudyTimer();
 
-
             }else{
-
 
                 clearInterval(
                     state.studyInterval
                 );
 
-
                 finishStudy();
 
             }
-
 
         },1000);
 
@@ -5155,7 +6209,6 @@ function startStudyTimer(){
 
 
 function updateStudyTimer(){
-
 
     const timer =
         document.getElementById(
@@ -5173,14 +6226,11 @@ function updateStudyTimer(){
         state.studySeconds <= 30
     ){
 
-
         timer.classList.add(
             "warning"
         );
 
-
     }else{
-
 
         timer.classList.remove(
             "warning"
@@ -5197,7 +6247,6 @@ function updateStudyTimer(){
 ========================================================= */
 
 function requestExtraTime(){
-
 
     if(state.extraTimeUsed)
         return;
@@ -5231,7 +6280,6 @@ function requestExtraTime(){
 ========================================================= */
 
 function finishStudy(){
-
 
     clearInterval(
         state.studyInterval
@@ -5286,7 +6334,6 @@ function finishStudy(){
 
 function startResponseTimer(){
 
-
     clearInterval(
         state.responseInterval
     );
@@ -5295,30 +6342,23 @@ function startResponseTimer(){
     state.responseInterval =
         setInterval(()=>{
 
-
             if(
                 state.responseSeconds > 0
             ){
 
-
                 state.responseSeconds--;
-
 
                 updateResponseTimer();
 
-
             }else{
-
 
                 clearInterval(
                     state.responseInterval
                 );
 
-
                 finishTeologando();
 
             }
-
 
         },1000);
 
@@ -5327,7 +6367,6 @@ function startResponseTimer(){
 
 
 function updateResponseTimer(){
-
 
     const timer =
         document.getElementById(
@@ -5345,14 +6384,11 @@ function updateResponseTimer(){
         state.responseSeconds <= 15
     ){
 
-
         timer.classList.add(
             "warning"
         );
 
-
     }else{
-
 
         timer.classList.remove(
             "warning"
@@ -5369,7 +6405,6 @@ function updateResponseTimer(){
 ========================================================= */
 
 function finishTeologando(){
-
 
     clearAllTimers();
 
@@ -5416,7 +6451,6 @@ function finishTeologando(){
 
 function newTheme(){
 
-
     clearAllTimers();
 
 
@@ -5447,14 +6481,11 @@ function newTheme(){
 
 function clearAllTimers(){
 
-
     if(state.studyInterval){
-
 
         clearInterval(
             state.studyInterval
         );
-
 
         state.studyInterval =
             null;
@@ -5464,11 +6495,9 @@ function clearAllTimers(){
 
     if(state.responseInterval){
 
-
         clearInterval(
             state.responseInterval
         );
-
 
         state.responseInterval =
             null;
@@ -5484,7 +6513,6 @@ function clearAllTimers(){
 ========================================================= */
 
 function hideStudySections(){
-
 
     document.getElementById(
         "pesquisa"
@@ -5520,6 +6548,23 @@ function hideStudySections(){
         "warning"
     );
 
+
+    const guide =
+        document.getElementById(
+            "studyGuide"
+        );
+
+
+    if(guide){
+
+        guide.innerHTML = "";
+
+        guide.classList.add(
+            "hidden"
+        );
+
+    }
+
 }
 
 
@@ -5529,7 +6574,6 @@ function hideStudySections(){
 ========================================================= */
 
 function formatTime(seconds){
-
 
     const minutes =
         Math.floor(
@@ -5558,7 +6602,6 @@ function formatTime(seconds){
 ========================================================= */
 
 function toggleSaved(){
-
 
     const list =
         document.getElementById(
@@ -5595,7 +6638,6 @@ function toggleSaved(){
 
 function renderSavedThemes(){
 
-
     const list =
         document.getElementById(
             "savedList"
@@ -5608,7 +6650,6 @@ function renderSavedThemes(){
 
     if(saved.length === 0){
 
-
         list.innerHTML =
 
             `<div class="saved-empty">
@@ -5616,7 +6657,6 @@ function renderSavedThemes(){
                 Você ainda não salvou nenhum tema.
 
             </div>`;
-
 
         return;
 
@@ -5629,7 +6669,6 @@ function renderSavedThemes(){
     [...saved]
         .reverse()
         .forEach((item,index)=>{
-
 
             const div =
                 document.createElement(
@@ -5674,7 +6713,6 @@ function renderSavedThemes(){
 ========================================================= */
 
 function openSavedTheme(item){
-
 
     clearAllTimers();
 
@@ -5763,7 +6801,6 @@ function openSavedTheme(item){
 
 function escapeHTML(text){
 
-
     const div =
         document.createElement(
             "div"
@@ -5791,13 +6828,6 @@ selectLevel(
     "fundamental"
 );
 
-
-/*
-    Carrega o contador quando
-    o site abre.
-
-    Isso NÃO aumenta o número.
-*/
 
 loadPlayCount();
 
