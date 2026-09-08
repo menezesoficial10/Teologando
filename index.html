@@ -729,6 +729,8 @@ button{
 
     display:flex;
 
+    flex-direction:column;
+
     align-items:center;
 
     justify-content:center;
@@ -766,9 +768,50 @@ button{
 }
 
 
+/* =========================
+   INFORMAÇÃO AUXILIAR
+========================= */
+
+.theme-helper{
+
+    display:none;
+
+    max-width:620px;
+
+    margin:3px auto 0;
+
+    padding:0 12px;
+
+    color:#737883;
+
+    font-size:10px;
+
+    line-height:1.55;
+
+    font-weight:600;
+
+}
+
+
+.theme-helper.visible{
+
+    display:block;
+
+}
+
+
+.theme-helper strong{
+
+    color:#a2a6af;
+
+    font-weight:900;
+
+}
+
+
 .result-area{
 
-    margin-top:10px;
+    margin-top:14px;
 
     color:#747984;
 
@@ -2089,6 +2132,15 @@ button{
     }
 
 
+    .theme-helper{
+
+        font-size:9px;
+
+        padding:0 8px;
+
+    }
+
+
     .roulette-start{
 
         padding:15px 30px;
@@ -2568,7 +2620,7 @@ button{
                     id="time10"
                     onclick="selectTime(10)">
 
-                    10 MIN
+                    10 MIN · 1 MIN PARA EXPLICAR
 
                 </button>
 
@@ -2578,7 +2630,7 @@ button{
                     id="time20"
                     onclick="selectTime(20)">
 
-                    20 MIN
+                    20 MIN · 2 MIN PARA EXPLICAR
 
                 </button>
 
@@ -2794,6 +2846,13 @@ button{
                     id="rouletteWord">
 
                     —
+
+                </div>
+
+
+                <div
+                    class="theme-helper"
+                    id="themeHelper">
 
                 </div>
 
@@ -3015,7 +3074,6 @@ button{
 
 
             </div>
-
 
         </div>
 
@@ -4635,33 +4693,42 @@ function selectLevel(level){
         });
 
 
-    if(!state.isCharacter){
+    /*
+        REGRA DE TEMPO:
 
-        if(level === "fundamental"){
+        FUNDAMENTAL = 10 min / 1 min
+        INTERMEDIÁRIO = 10/1 ou 20/2
+        AVANÇADO = 20 min / 2 min
+    */
 
-            selectTime(10);
+    if(level === "fundamental"){
 
-        }
-
-
-        if(level === "intermediario"){
-
-            selectTime(
-                state.time === 20
-                ? 20
-                : 10
-            );
-
-        }
-
-
-        if(level === "avancado"){
-
-            selectTime(20);
-
-        }
+        selectTime(10);
 
     }
+
+
+    if(level === "intermediario"){
+
+        selectTime(
+            state.time === 20
+            ? 20
+            : 10
+        );
+
+    }
+
+
+    if(level === "avancado"){
+
+        selectTime(20);
+
+    }
+
+
+    updateTimeButtons();
+
+    filterAreas();
 
 }
 
@@ -4673,11 +4740,23 @@ function selectLevel(level){
 
 function selectTime(minutes){
 
+    /*
+        FUNDAMENTAL:
+        somente 10 minutos.
+
+        INTERMEDIÁRIO:
+        pode escolher 10 ou 20.
+
+        AVANÇADO:
+        somente 20 minutos.
+    */
+
     if(
-        !state.isCharacter &&
         state.level === "fundamental" &&
         minutes !== 10
     ){
+
+        state.time = 10;
 
         return;
 
@@ -4685,8 +4764,20 @@ function selectTime(minutes){
 
 
     if(
-        !state.isCharacter &&
         state.level === "avancado" &&
+        minutes !== 20
+    ){
+
+        state.time = 20;
+
+        return;
+
+    }
+
+
+    if(
+        state.level === "intermediario" &&
+        minutes !== 10 &&
         minutes !== 20
     ){
 
@@ -4698,20 +4789,179 @@ function selectTime(minutes){
     state.time = minutes;
 
 
-    document
-        .getElementById("time10")
-        .classList.toggle(
-            "active",
-            minutes === 10
-        );
+    updateTimeButtons();
+
+}
 
 
+function updateTimeButtons(){
+
+    const time10 =
+        document.getElementById("time10");
+
+    const time20 =
+        document.getElementById("time20");
+
+
+    if(!time10 || !time20)
+        return;
+
+
+    time10.classList.toggle(
+        "active",
+        state.time === 10
+    );
+
+
+    time20.classList.toggle(
+        "active",
+        state.time === 20
+    );
+
+
+    /*
+        FUNDAMENTAL
+    */
+
+    if(state.level === "fundamental"){
+
+        time10.classList.remove("locked");
+
+        time20.classList.add("locked");
+
+    }
+
+
+    /*
+        INTERMEDIÁRIO
+    */
+
+    else if(state.level === "intermediario"){
+
+        time10.classList.remove("locked");
+
+        time20.classList.remove("locked");
+
+    }
+
+
+    /*
+        AVANÇADO
+    */
+
+    else if(state.level === "avancado"){
+
+        time10.classList.add("locked");
+
+        time20.classList.remove("locked");
+
+    }
+
+}
+
+
+
+/* =========================================================
+   FILTRO DAS ÁREAS
+========================================================= */
+
+function filterAreas(){
+
     document
-        .getElementById("time20")
-        .classList.toggle(
-            "active",
-            minutes === 20
-        );
+        .querySelectorAll(".area-button")
+        .forEach(button=>{
+
+            const areaKey =
+                button.dataset.area;
+
+
+            const area =
+                AREAS.find(
+                    a=>a.key === areaKey
+                );
+
+
+            if(!area)
+                return;
+
+
+            let available = true;
+
+
+            /*
+                Apologética:
+                somente avançado.
+            */
+
+            if(
+                areaKey === "apologetica" &&
+                state.level !== "avancado"
+            ){
+
+                available = false;
+
+            }
+
+
+            /*
+                Movimentos e Tradições:
+                intermediário ou avançado.
+            */
+
+            if(
+                areaKey === "movimentos_tradicoes" &&
+                state.level === "fundamental"
+            ){
+
+                available = false;
+
+            }
+
+
+            /*
+                Outras áreas com níveis específicos.
+            */
+
+            if(
+                area.levels &&
+                !area.levels.includes(state.level)
+            ){
+
+                available = false;
+
+            }
+
+
+            button.classList.toggle(
+                "locked",
+                !available
+            );
+
+
+            /*
+                Se a área selecionada deixou de existir
+                no novo nível, limpa a seleção.
+            */
+
+            if(
+                !available &&
+                state.areaKey === areaKey
+            ){
+
+                state.areaKey = null;
+
+                state.areaName = "";
+
+                state.isCharacter = false;
+
+                document.getElementById(
+                    "selectedArea"
+                ).textContent =
+                    "ESCOLHA UMA ÁREA";
+
+            }
+
+        });
 
 }
 
@@ -4724,16 +4974,56 @@ function selectTime(minutes){
 function selectArea(areaKey){
 
     const area =
-        AREAS.find(a=>a.key===areaKey);
+        AREAS.find(
+            a=>a.key===areaKey
+        );
 
 
     if(!area)
         return;
 
 
-    state.areaKey = area.key;
+    /*
+        Impede seleção por chamada indevida
+        de uma área bloqueada.
+    */
 
-    state.areaName = area.name;
+    if(
+        areaKey === "apologetica" &&
+        state.level !== "avancado"
+    ){
+
+        return;
+
+    }
+
+
+    if(
+        areaKey === "movimentos_tradicoes" &&
+        state.level === "fundamental"
+    ){
+
+        return;
+
+    }
+
+
+    if(
+        area.levels &&
+        !area.levels.includes(state.level) &&
+        !area.characters
+    ){
+
+        return;
+
+    }
+
+
+    state.areaKey =
+        area.key;
+
+    state.areaName =
+        area.name;
 
     state.isCharacter =
         !!area.characters;
@@ -4757,44 +5047,28 @@ function selectArea(areaKey){
         area.name.toUpperCase();
 
 
+    /*
+        O tempo depende SOMENTE do nível.
+    */
 
-    if(state.isCharacter){
+    if(state.level === "fundamental"){
 
-        document.getElementById("time10")
-            .classList.remove("locked");
-
-
-        document.getElementById("time20")
-            .classList.remove("locked");
-
-
-    }else{
-
-        if(state.level === "fundamental"){
-
-            selectTime(10);
-
-            document.getElementById("time20")
-                .classList.add("locked");
-
-        }else if(state.level === "avancado"){
-
-            selectTime(20);
-
-            document.getElementById("time10")
-                .classList.add("locked");
-
-        }else{
-
-            document.getElementById("time10")
-                .classList.remove("locked");
-
-            document.getElementById("time20")
-                .classList.remove("locked");
-
-        }
+        state.time = 10;
 
     }
+
+    else if(state.level === "avancado"){
+
+        state.time = 20;
+
+    }
+
+    /*
+        No intermediário preserva 10 ou 20.
+    */
+
+
+    updateTimeButtons();
 
 
     clearAllTimers();
@@ -4864,6 +5138,23 @@ function resetRouletteDisplay(){
         "rouletteStartButton"
     ).classList.remove("hidden");
 
+
+    const helper =
+        document.getElementById(
+            "themeHelper"
+        );
+
+
+    if(helper){
+
+        helper.innerHTML = "";
+
+        helper.classList.remove(
+            "visible"
+        );
+
+    }
+
 }
 
 
@@ -4913,8 +5204,9 @@ function startRoulette(){
         pool =
             areaData.characters || [];
 
+    }
 
-    }else{
+    else{
 
         pool =
             areaData[state.level] || [];
@@ -4980,6 +5272,16 @@ function startRoulette(){
     ).textContent = "";
 
 
+    document.getElementById(
+        "themeHelper"
+    ).innerHTML = "";
+
+
+    document.getElementById(
+        "themeHelper"
+    ).classList.remove("visible");
+
+
     const word =
         document.getElementById(
             "rouletteWord"
@@ -5039,6 +5341,166 @@ function startRoulette(){
 
 
 /* =========================================================
+   INFORMAÇÃO AUXILIAR DO TEMA
+========================================================= */
+
+function getThemeHelper(){
+
+    const type =
+        getStudyGuideType();
+
+
+    if(type === "character"){
+
+        return `
+            <strong>Para auxiliar:</strong>
+            investigue quem foi, em que contexto viveu,
+            seus principais acontecimentos e sua importância.
+        `;
+
+    }
+
+
+    if(type === "council"){
+
+        return `
+            <strong>Para auxiliar:</strong>
+            descubra quando e onde aconteceu, qual problema estava
+            em debate, quem participou, o que foi decidido e quais
+            foram suas consequências.
+        `;
+
+    }
+
+
+    if(type === "book"){
+
+        return `
+            <strong>Para auxiliar:</strong>
+            observe autoria, data, destinatários, propósito,
+            contexto histórico e estrutura da obra.
+        `;
+
+    }
+
+
+    if(type === "systematic"){
+
+        return `
+            <strong>Para auxiliar:</strong>
+            procure uma definição, bases bíblicas, principais posições
+            teológicas e as implicações do tema.
+        `;
+
+    }
+
+
+    if(type === "theology"){
+
+        return `
+            <strong>Para auxiliar:</strong>
+            procure entender a origem, os principais representantes,
+            fundamentos, documentos e diferenças dessa tradição.
+        `;
+
+    }
+
+
+    if(type === "historical"){
+
+        return `
+            <strong>Para auxiliar:</strong>
+            investigue o que aconteceu, quando, onde, suas causas,
+            o contexto histórico e suas consequências.
+        `;
+
+    }
+
+
+    if(type === "biblical_theme"){
+
+        return `
+            <strong>Para auxiliar:</strong>
+            localize os principais textos, observe o contexto,
+            o significado e como o tema se desenvolve nas Escrituras.
+        `;
+
+    }
+
+
+    if(type === "practical"){
+
+        return `
+            <strong>Para auxiliar:</strong>
+            procure compreender o que é, seu fundamento bíblico,
+            finalidade, aplicação e possíveis limites.
+        `;
+
+    }
+
+
+    if(type === "apologetics"){
+
+        return `
+            <strong>Para auxiliar:</strong>
+            conheça a questão, o argumento cristão, as evidências,
+            as principais objeções e as respostas existentes.
+        `;
+
+    }
+
+
+    return `
+        <strong>Para auxiliar:</strong>
+        procure definir o tema, entender seu contexto,
+        consultar fontes confiáveis e identificar os principais debates.
+    `;
+
+}
+
+
+function renderThemeHelper(){
+
+    const helper =
+        document.getElementById(
+            "themeHelper"
+        );
+
+
+    if(!helper)
+        return;
+
+
+    /*
+        No avançado, mantemos a ideia de pesquisa autônoma,
+        mas ainda mostramos uma pequena indicação abaixo
+        do tema.
+    */
+
+    if(state.level === "avancado"){
+
+        helper.innerHTML = `
+            <strong>Pesquisa autônoma:</strong>
+            construa sua própria rota de investigação e compare fontes.
+        `;
+
+    }else{
+
+        helper.innerHTML =
+            getThemeHelper();
+
+    }
+
+
+    helper.classList.add(
+        "visible"
+    );
+
+}
+
+
+
+/* =========================================================
    TEMA FINAL
 ========================================================= */
 
@@ -5070,6 +5532,15 @@ function showFinalTopic(topic){
         state.isCharacter
         ? topic.toUpperCase() + "?"
         : topic.toUpperCase();
+
+
+    /*
+        NOVO:
+        informação auxiliar aparece imediatamente
+        abaixo do tema sorteado.
+    */
+
+    renderThemeHelper();
 
 
     document.getElementById(
@@ -5249,12 +5720,6 @@ function updateSaveButton(){
    GUIAS DE ESTUDO
 ========================================================= */
 
-/*
-    Algumas palavras-chave identificam temas que possuem
-    uma natureza específica. A orientação é adaptada ao
-    tipo do tema sorteado.
-*/
-
 const BOOKS_AND_LETTERS = [
 
     "Gênesis",
@@ -5323,6 +5788,7 @@ const BOOKS_AND_LETTERS = [
     "3 João",
     "Judas",
     "Apocalipse"
+
 ];
 
 
@@ -5339,13 +5805,6 @@ const COUNCILS = [
     "Concílio de Calcedônia",
     "Segundo Concílio de Niceia",
     "Concílio de Trento"
-
-];
-
-
-const SYSTEMATIC_AREAS = [
-
-    "teologia_sistematica"
 
 ];
 
@@ -5373,6 +5832,7 @@ function isCouncil(topic){
 
     const normalized =
         normalizeText(topic);
+
 
     return COUNCILS.some(council =>
         normalized === normalizeText(council)
@@ -5429,8 +5889,10 @@ function getStudyGuideType(){
     }
 
 
-    if(state.areaKey === "panorama_antigo_testamento" ||
-       state.areaKey === "panorama_novo_testamento"){
+    if(
+        state.areaKey === "panorama_antigo_testamento" ||
+        state.areaKey === "panorama_novo_testamento"
+    ){
 
         return "biblical_theme";
 
@@ -5481,10 +5943,6 @@ function getGuideContent(){
 
     const type =
         getStudyGuideType();
-
-
-    const topic =
-        state.topic;
 
 
     if(type === "character"){
@@ -6099,14 +6557,41 @@ function startStudy(){
     state.extraTimeUsed = false;
 
 
+    /*
+        TEMPOS OFICIAIS:
+
+        FUNDAMENTAL:
+        10 minutos / 1 minuto
+
+        INTERMEDIÁRIO:
+        10/1 ou 20/2
+
+        AVANÇADO:
+        20/2
+    */
+
+    if(state.level === "fundamental"){
+
+        state.time = 10;
+
+    }
+
+
+    if(state.level === "avancado"){
+
+        state.time = 20;
+
+    }
+
+
     state.initialStudySeconds =
         state.time * 60;
 
 
     state.initialResponseSeconds =
-        Math.round(
-            state.time / 10
-        ) * 60;
+        state.time === 20
+        ? 120
+        : 60;
 
 
     state.studySeconds =
@@ -6131,10 +6616,17 @@ function startStudy(){
         );
 
 
-    document.getElementById(
-        "extraTimeButton"
-    ).style.display =
+    const extraButton =
+        document.getElementById(
+            "extraTimeButton"
+        );
+
+
+    extraButton.style.display =
         "block";
+
+
+    extraButton.disabled = false;
 
 
     renderStudyGuide();
@@ -6248,24 +6740,54 @@ function updateStudyTimer(){
 
 function requestExtraTime(){
 
-    if(state.extraTimeUsed)
+    /*
+        Só pode pedir durante a pesquisa.
+        Apenas uma vez por desafio.
+    */
+
+    if(
+        !state.studying ||
+        state.extraTimeUsed
+    ){
+
         return;
+
+    }
 
 
     state.extraTimeUsed = true;
 
 
+    /*
+        Acrescenta novamente o tempo inicial
+        de pesquisa.
+
+        10 min -> ganha +10 min
+        20 min -> ganha +20 min
+    */
+
     state.studySeconds +=
         state.initialStudySeconds;
 
+
+    /*
+        O tempo de explicação é dobrado:
+
+        1 min -> 2 min
+        2 min -> 4 min
+    */
 
     state.responseSeconds =
         state.initialResponseSeconds * 2;
 
 
-    document.getElementById(
-        "extraTimeButton"
-    ).style.display =
+    const button =
+        document.getElementById(
+            "extraTimeButton"
+        );
+
+
+    button.style.display =
         "none";
 
 
@@ -6758,6 +7280,14 @@ function openSavedTheme(item){
         state.isCharacter
         ? item.topic.toUpperCase() + "?"
         : item.topic.toUpperCase();
+
+
+    /*
+        Mostra novamente a informação auxiliar
+        para temas salvos.
+    */
+
+    renderThemeHelper();
 
 
     document.getElementById(
